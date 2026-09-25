@@ -32,12 +32,9 @@ test('carte : « Me géolocaliser » centre sur la position (zoom 15)', async ({
 
 test('carte d’accueil : clic sur un marqueur → résultats dans un rayon de 10 km', async ({ page }) => {
   await page.goto(URLS.home);
-  // Zoom sur la zone de Nice via les clusters jusqu'à faire apparaître un marqueur individuel.
-  for (let i = 0; i < 4; i++) {
-    const marker = map(page).getByRole('button', { name: 'Pharmacie Saint Barthélémy', exact: true });
-    if (await marker.isVisible().catch(() => false)) break;
-    await page.evaluate(() => (window as unknown as { __tcMap?: { setView: (c: [number, number], z: number) => void } }).__tcMap?.setView([43.7148516, 7.26141699], 12));
-  }
+  // La carte est chargée à la demande : on attend son instance avant de recentrer sur Nice (zoom 12, sans clusters).
+  await page.waitForFunction(() => !!(window as unknown as { __tcMap?: unknown }).__tcMap);
+  await page.evaluate(() => (window as unknown as { __tcMap: { setView: (c: [number, number], z: number) => void } }).__tcMap.setView([43.7148516, 7.26141699], 12));
   await map(page).getByRole('button', { name: 'Pharmacie Saint Barthélémy', exact: true }).click();
   await expect(page).toHaveURL(/\/provence-alpes-cote-d-azur\/alpes-maritimes\/nice$/);
   await expect(page.getByRole('article').first()).toContainText('Pharmacie Saint Barthélémy');

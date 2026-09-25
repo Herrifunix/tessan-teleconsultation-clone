@@ -1,5 +1,28 @@
 {
  "home-1440": {
+  "masks": [
+   {
+    "kind": "carte",
+    "x": 88,
+    "y": 525,
+    "w": 1264,
+    "h": 600
+   },
+   {
+    "kind": "grille-zones",
+    "x": 88,
+    "y": 1365,
+    "w": 1264,
+    "h": 176
+   },
+   {
+    "kind": "grille-zones",
+    "x": 88,
+    "y": 1741,
+    "w": 1264,
+    "h": 200
+   }
+  ],
   "url": "https://teleconsultation.tessan.io/",
   "file": "docs/reference/home-1440.png",
   "title": "Trouvez le dispositif de téléconsultation Tessan",
@@ -19,6 +42,29 @@
  },
  "_fixedTime": "2026-09-25T13:00:00.000Z",
  "home-375": {
+  "masks": [
+   {
+    "kind": "carte",
+    "x": 48,
+    "y": 897,
+    "w": 279,
+    "h": 600
+   },
+   {
+    "kind": "grille-zones",
+    "x": 56,
+    "y": 1873,
+    "w": 263,
+    "h": 584
+   },
+   {
+    "kind": "grille-zones",
+    "x": 56,
+    "y": 2777,
+    "w": 263,
+    "h": 688
+   }
+  ],
   "url": "https://teleconsultation.tessan.io/",
   "file": "docs/reference/home-375.png",
   "title": "Trouvez le dispositif de téléconsultation Tessan",
@@ -27,7 +73,7 @@
   "scrollWidth": 375,
   "console": [
    "error: Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
-   "warning: [GroupMarkerNotSet(crbug.com/242999)!:A070200014300000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.",
+   "warning: [GroupMarkerNotSet(crbug.com/242999)!:A07020001C160000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.",
    "warning: As of March 1st, 2025, google.maps.places.Autocomplete is not available to new customers. Please use google.maps.places.PlaceAutocompleteElement instead. At this time, google.maps.places.Autocomplete is not scheduled to be discontinued, but google.maps.places.PlaceAutocompleteElement is rec",
    "warning: As of March 1st, 2025, google.maps.places.AutocompleteService is not available to new customers. Please use google.maps.places.AutocompleteSuggestion instead. At this time, google.maps.places.AutocompleteService is not scheduled to be discontinued, but google.maps.places.AutocompleteSuggest",
    "warning: As of March 1st, 2025, google.maps.places.PlacesService is not available to new customers. Please use google.maps.places.Place instead. At this time, google.maps.places.PlacesService is not scheduled to be discontinued, but google.maps.places.Place is recommended over google.maps.places.Pla",
@@ -35,6 +81,29 @@
   ]
  },
  "home-768": {
+  "masks": [
+   {
+    "kind": "carte",
+    "x": 56,
+    "y": 799,
+    "w": 656,
+    "h": 624
+   },
+   {
+    "kind": "grille-zones",
+    "x": 56,
+    "y": 1695,
+    "w": 656,
+    "h": 368
+   },
+   {
+    "kind": "grille-zones",
+    "x": 56,
+    "y": 2295,
+    "w": 656,
+    "h": 416
+   }
+  ],
   "url": "https://teleconsultation.tessan.io/",
   "file": "docs/reference/home-768.png",
   "title": "Trouvez le dispositif de téléconsultation Tessan",
@@ -53,6 +122,29 @@
   ]
  },
  "results-375": {
+  "masks": [
+   {
+    "kind": "carte",
+    "x": 48,
+    "y": 1729,
+    "w": 279,
+    "h": 888
+   },
+   {
+    "kind": "grille-zones",
+    "x": 56,
+    "y": 2993,
+    "w": 263,
+    "h": 584
+   },
+   {
+    "kind": "grille-zones",
+    "x": 56,
+    "y": 3897,
+    "w": 263,
+    "h": 732
+   }
+  ],
   "url": "https://teleconsultation.tessan.io/fr/france-FR/nice/results",
   "file": "docs/reference/results-375.png",
   "title": "Téléconsultation à Nice (france-FR) - Tessan",
@@ -60,8 +152,6 @@
   "scrollHeight": 6761,
   "scrollWidth": 375,
   "console": [
-   "error: Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
-   "warning: [GroupMarkerNotSet(crbug.com/242999)!:A0702000C40D0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.",
    "warning: As of March 1st, 2025, google.maps.places.Autocomplete is not available to new customers. Please use google.maps.places.PlaceAutocompleteElement instead. At this time, google.maps.places.Autocomplete is not scheduled to be discontinued, but google.maps.places.PlaceAutocompleteElement is rec",
    "warning: As of March 1st, 2025, google.maps.places.AutocompleteService is not available to new customers. Please use google.maps.places.AutocompleteSuggestion instead. At this time, google.maps.places.AutocompleteService is not scheduled to be discontinued, but google.maps.places.AutocompleteSuggest",
    "warning: As of March 1st, 2025, google.maps.places.PlacesService is not available to new customers. Please use google.maps.places.Place instead. At this time, google.maps.places.PlacesService is not scheduled to be discontinued, but google.maps.places.Place is recommended over google.maps.places.Pla",
@@ -69,6 +159,29 @@
   ]
  },
  "results-768": {
+  "masks": [
+   {
+    "kind": "carte",
+    "x": 56,
+    "y": 1661,
+    "w": 656,
+    "h": 888
+   },
+   {
+    "kind": "grille-zones",
+    "x": 56,
+    "y": 2821,
+    "w": 656,
+    "h": 392
+   },
+   {
+    "kind": "grille-zones",
+    "x": 56,
+    "y": 3445,
+    "w": 656,
+    "h": 416
+   }
+  ],
   "url": "https://teleconsultation.tessan.io/fr/france-FR/nice/results",
   "file": "docs/reference/results-768.png",
   "title": "Téléconsultation à Nice (france-FR) - Tessan",
@@ -83,6 +196,29 @@
   ]
  },
  "results-1440": {
+  "masks": [
+   {
+    "kind": "carte",
+    "x": 550,
+    "y": 537,
+    "w": 802,
+    "h": 888
+   },
+   {
+    "kind": "grille-zones",
+    "x": 88,
+    "y": 1665,
+    "w": 1264,
+    "h": 200
+   },
+   {
+    "kind": "grille-zones",
+    "x": 88,
+    "y": 2065,
+    "w": 1264,
+    "h": 200
+   }
+  ],
   "url": "https://teleconsultation.tessan.io/fr/france-FR/nice/results",
   "file": "docs/reference/results-1440.png",
   "title": "Téléconsultation à Nice (france-FR) - Tessan",
@@ -101,6 +237,29 @@
   ]
  },
  "fiche-375": {
+  "masks": [
+   {
+    "kind": "carte",
+    "x": 56,
+    "y": 4992,
+    "w": 263,
+    "h": 500
+   },
+   {
+    "kind": "grille-zones",
+    "x": 56,
+    "y": 9092,
+    "w": 263,
+    "h": 560
+   },
+   {
+    "kind": "grille-zones",
+    "x": 56,
+    "y": 9988,
+    "w": 263,
+    "h": 732
+   }
+  ],
   "url": "https://teleconsultation.tessan.io/provence-alpes-cote-d-azur/alpes-maritimes/nice/557/pharmacie-saint-barthelemy",
   "file": "docs/reference/fiche-375.png",
   "title": "Pharmacie Saint Barthélémy - Téléconsultation à Nice",
@@ -115,6 +274,29 @@
   ]
  },
  "fiche-768": {
+  "masks": [
+   {
+    "kind": "carte",
+    "x": 56,
+    "y": 3782,
+    "w": 656,
+    "h": 500
+   },
+   {
+    "kind": "grille-zones",
+    "x": 56,
+    "y": 6428,
+    "w": 656,
+    "h": 392
+   },
+   {
+    "kind": "grille-zones",
+    "x": 56,
+    "y": 7068,
+    "w": 656,
+    "h": 416
+   }
+  ],
   "url": "https://teleconsultation.tessan.io/provence-alpes-cote-d-azur/alpes-maritimes/nice/557/pharmacie-saint-barthelemy",
   "file": "docs/reference/fiche-768.png",
   "title": "Pharmacie Saint Barthélémy - Téléconsultation à Nice",
@@ -129,6 +311,29 @@
   ]
  },
  "fiche-1440": {
+  "masks": [
+   {
+    "kind": "carte",
+    "x": 740,
+    "y": 2614,
+    "w": 588,
+    "h": 500
+   },
+   {
+    "kind": "grille-zones",
+    "x": 112,
+    "y": 4798,
+    "w": 1216,
+    "h": 200
+   },
+   {
+    "kind": "grille-zones",
+    "x": 112,
+    "y": 5214,
+    "w": 1216,
+    "h": 200
+   }
+  ],
   "url": "https://teleconsultation.tessan.io/provence-alpes-cote-d-azur/alpes-maritimes/nice/557/pharmacie-saint-barthelemy",
   "file": "docs/reference/fiche-1440.png",
   "title": "Pharmacie Saint Barthélémy - Téléconsultation à Nice",

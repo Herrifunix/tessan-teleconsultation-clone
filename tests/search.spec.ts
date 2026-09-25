@@ -104,12 +104,12 @@ test('spécialités : menu, sélection, URL de spécialité et « Effacer le fil
   const menu = page.getByRole('listbox', { name: 'Spécialités médicales' });
   await expect(menu.getByRole('option')).toHaveText(['Généraliste', 'Dermatologue', 'Pédiatre', 'Ophtalmologue', 'Gériatre', 'Pneumologue']);
   await menu.getByRole('option', { name: 'Dermatologue' }).click();
-  await expect(page.getByRole('button', { name: 'Dermatologue' })).toBeVisible();
+  await expect(page.getByRole('search').getByRole('button', { name: 'Dermatologue' })).toBeVisible();
   await cityInput(page).fill('Nice');
   await page.getByRole('button', { name: 'Recherche', exact: true }).click();
   await expect(page).toHaveURL(/\/dermatologues\/provence-alpes-cote-d-azur\/alpes-maritimes\/nice$/);
   await expect(page).toHaveTitle('Dermatologue - Téléconsultation Dermatologue à Nice (Alpes-Maritimes) - Tessan');
-  await page.getByRole('button', { name: 'Dermatologue' }).click();
+  await page.getByRole('search').getByRole('button', { name: 'Dermatologue' }).click();
   await expect(page.getByRole('option', { name: 'Effacer le filtre' })).toBeVisible();
 });
 

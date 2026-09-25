@@ -19,6 +19,18 @@ export const VIEWPORTS = { 375: { width: 375, height: 812 }, 768: { width: 768, 
 
 const FREEZE_CSS = `*,*::before,*::after{animation-duration:0s!important;animation-delay:0s!important;transition-duration:0s!important;transition-delay:0s!important;caret-color:transparent!important;scroll-behavior:auto!important}`;
 
+async function gotoRetry(page, url) {
+  for (let i = 1; ; i++) {
+    try {
+      return await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 90000 });
+    } catch (e) {
+      if (i >= 3) throw e;
+      console.warn(`navigation échouée (${i}/3), nouvelle tentative : ${String(e).split('\n')[0]}`);
+      await sleep(3000 * i);
+    }
+  }
+}
+
 async function waitReady(page) {
   for (let i = 0; i < 60; i++) {
     await sleep(1000);
@@ -72,11 +84,11 @@ export async function capture({ side, baseUrl, outDir, templates = Object.keys(T
       const url = baseUrl.replace(/\/$/, '') + TEMPLATES[tpl];
       if (isRef) {
         // 1er chargement : passe le challenge Vercel avec l'horloge réelle.
-        await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 90000 });
+        await gotoRetry(page, url);
         await waitReady(page);
       }
       await page.clock.setFixedTime(FIXED_TIME);
-      await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 90000 });
+      await gotoRetry(page, url);
       await waitReady(page);
       await page.addStyleTag({ content: FREEZE_CSS });
       // Bannière cookies : refus (même geste des deux côtés).

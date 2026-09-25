@@ -17,16 +17,18 @@ for (const width of [320, 375, 768, 1024, 1440]) {
   });
 }
 
-test('zoom texte 200 % : contenu lisible, sans défilement horizontal', async ({ page }) => {
-  await page.setViewportSize({ width: 1280, height: 900 });
+test.describe('zoom navigateur 200 % (fenêtre 1280 × 900 → 640 × 450 px CSS, densité 2)', () => {
+  test.use({ viewport: { width: 640, height: 450 }, deviceScaleFactor: 2 });
+  test('contenu lisible, sans défilement horizontal', async ({ page }) => {
   for (const url of [URLS.home, URLS.nice, URLS.fiche]) {
     await page.goto(url);
-    await page.addStyleTag({ content: 'html{font-size:200% !important}' });
     await page.getByRole('contentinfo').waitFor();
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
     const sw = await page.evaluate(() => document.documentElement.scrollWidth);
-    expect(sw, url).toBeLessThanOrEqual(1280);
+    expect(sw, url).toBeLessThanOrEqual(640);
+    await expect(page.getByRole('button', { name: 'Recherche', exact: true })).toBeVisible();
   }
+  });
 });
 
 test('navigation au clavier : en-tête, formulaire, autocomplétion, focus visible', async ({ page }) => {

@@ -27,7 +27,7 @@ test('fil d’Ariane : retour à l’accueil et au niveau département', async (
   const crumbs = page.getByRole('navigation', { name: 'breadcrumb' });
   await crumbs.getByRole('button', { name: 'Alpes-Maritimes' }).click();
   await expect(page).toHaveURL(/\/provence-alpes-cote-d-azur\/alpes-maritimes$/);
-  await expect(page.getByRole('heading', { name: /dispositifs de téléconsultation Tessan autour de vous$/ })).toBeVisible();
+  await expect(page.getByRole('heading', { name: /^\d+ dispositifs? de téléconsultation Tessan autour de vous$/ })).toBeVisible();
   await page.getByRole('navigation', { name: 'breadcrumb' }).getByRole('button', { name: 'Trouver un dispositif de téléconsultation' }).click();
   await expect(page).toHaveURL(/\/$/);
 });
@@ -37,7 +37,7 @@ test('ville inconnue : vue d’accueil conservée, URL inchangée (comme l’ori
   await expect(page).toHaveURL(new RegExp(URLS.unknownCity + '$'));
   await expect(page).toHaveTitle('Téléconsultation à Choisy-Le-Roi (france-FR) - Tessan');
   await expect(page.getByRole('navigation', { name: 'breadcrumb' })).toHaveCount(0);
-  await expect(page.getByRole('heading', { name: /dispositifs? de téléconsultation Tessan autour de vous$/ })).toHaveCount(0);
+  await expect(page.getByRole('heading', { name: /^\d+ dispositifs? de téléconsultation Tessan autour de vous$/ })).toHaveCount(0);
   await expect(page.getByRole('heading', { name: 'Les dispositifs de téléconsultation Tessan dans les départements à proximité' })).toBeVisible();
 });
 
@@ -88,7 +88,7 @@ test('clic sur un département à proximité (accueil) → résultats du départ
   await page.goto(URLS.home);
   await page.getByRole('button', { name: /^Val-de-Marne/ }).click();
   await expect(page).toHaveURL(/\/ile-de-france\/val-de-marne$/);
-  await expect(page.getByRole('heading', { name: /dispositifs? de téléconsultation Tessan autour de vous$/ })).toBeVisible();
+  await expect(page.getByRole('heading', { name: /^\d+ dispositifs? de téléconsultation Tessan autour de vous$/ })).toBeVisible();
 });
 
 test('clic sur une région à proximité → résultats de la région', async ({ page }) => {

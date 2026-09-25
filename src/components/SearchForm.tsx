@@ -99,7 +99,10 @@ export function SearchForm({ onSearchSubmit, initialCity = '', initialSpecialtyI
     setCity(s.name);
     setListOpen(false);
     setActive(-1);
-    setPostalCode(s.postcode || null);
+    // Comme Google Places sur l'original : une commune n'a pas de composant « code postal » ;
+    // seul un code postal saisi tel quel restreint la recherche à ce code.
+    const pc = /^\d{5}$/.test(city.trim()) ? s.postcode || null : null;
+    setPostalCode(pc);
     let c = s.coords;
     if (!c) {
       try {
@@ -110,7 +113,7 @@ export function SearchForm({ onSearchSubmit, initialCity = '', initialSpecialtyI
     coordsRef.current = c;
     setCoords(c);
     // Comme l'original (place_changed) : la sélection lance la recherche. Sans coordonnées → correspondance de ville.
-    await submit({ text: s.name, coords: c, postalCode: c ? s.postcode || null : null });
+    await submit({ text: s.name, coords: c, postalCode: pc });
   };
 
   const onInputKey = (e: KeyboardEvent<HTMLInputElement>) => {

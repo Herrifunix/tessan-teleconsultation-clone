@@ -6,16 +6,29 @@
  },
  "result": {
   "400": {
-   "sizeAdjust": "93.9%",
-   "minRatio": "0.9306",
-   "maxRatio": "0.9538",
+   "sizes": [
+    24,
+    30,
+    35.2
+   ],
+   "sizeAdjust": "94.9%",
+   "minRatio": "0.9231",
+   "maxRatio": "0.9622",
    "lineHeightNormal40px": {
-    "recoleta": 54,
-    "tcSerif": 49,
+    "recoleta": 33,
+    "tcSerif": 29,
     "tcSerifWithOverrides": 54
-   }
+   },
+   "fonts": [
+    "Rec400:loaded",
+    "TC400:loaded",
+    "TCo400:loaded"
+   ]
   },
   "500": {
+   "sizes": [
+    40
+   ],
    "sizeAdjust": "94.2%",
    "minRatio": "0.9322",
    "maxRatio": "0.9566",
@@ -23,27 +36,48 @@
     "recoleta": 54,
     "tcSerif": 49,
     "tcSerifWithOverrides": 54
-   }
+   },
+   "fonts": [
+    "Rec500:loaded",
+    "TC500:loaded",
+    "TCo500:loaded"
+   ]
   },
   "600": {
-   "sizeAdjust": "95%",
-   "minRatio": "0.9390",
-   "maxRatio": "0.9587",
+   "sizes": [
+    20
+   ],
+   "sizeAdjust": "100.8%",
+   "minRatio": "0.9740",
+   "maxRatio": "1.0285",
    "lineHeightNormal40px": {
-    "recoleta": 54,
-    "tcSerif": 49,
+    "recoleta": 27,
+    "tcSerif": 25,
     "tcSerifWithOverrides": 54
-   }
+   },
+   "fonts": [
+    "Rec600:loaded",
+    "TC600:loaded",
+    "TCo600:loaded"
+   ]
   },
   "700": {
-   "sizeAdjust": "94.2%",
-   "minRatio": "0.9264",
-   "maxRatio": "0.9495",
+   "sizes": [
+    20
+   ],
+   "sizeAdjust": "100.9%",
+   "minRatio": "0.9286",
+   "maxRatio": "1.0355",
    "lineHeightNormal40px": {
-    "recoleta": 54,
-    "tcSerif": 49,
+    "recoleta": 27,
+    "tcSerif": 25,
     "tcSerifWithOverrides": 54
-   }
+   },
+   "fonts": [
+    "Rec700:loaded",
+    "TC700:loaded",
+    "TCo700:loaded"
+   ]
   }
  }
 }
