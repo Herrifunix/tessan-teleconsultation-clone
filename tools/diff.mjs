@@ -35,10 +35,25 @@ for (const key of Object.keys(refMeta).filter((k) => !k.startsWith('_'))) {
   if (!existsSync(cloneFile)) continue;
   const [a, b] = await Promise.all([sharp(refFile).metadata(), sharp(cloneFile).metadata()]);
   const W = Math.max(a.width, b.width);
-  const H = Math.max(a.height, b.height);
+  const H = a.height;
   const ref = await load(refFile, W, H);
-  const clone = await load(cloneFile, W, H);
-  const masks = [...(refMeta[key].masks || []), ...((cloneMeta[key] || {}).masks || [])];
+  const rawClone = await load(cloneFile, W, Math.max(H, b.height));
+  const rm = [...(refMeta[key].masks || [])].sort((p, q) => p.y - q.y);
+  const cm = [...((cloneMeta[key] || {}).masks || [])].sort((p, q) => p.y - q.y);
+  // Réalignement : les zones masquées appariées (même type, même rang) servent d'ancres ; chaque segment du clone
+  // situé entre deux ancres est recopié à la position du segment correspondant de la référence.
+  const anchors = [];
+  if (rm.length === cm.length && rm.every((m, i) => m.kind === cm[i].kind)) for (let i = 0; i < rm.length; i++) anchors.push([rm[i], cm[i]]);
+  const clone = new PNG({ width: W, height: H });
+  clone.data.fill(255);
+  const copyRows = (fromY, toY, n) => { for (let k = 0; k < n; k++) { const sy = fromY + k, dy2 = toY + k; if (sy < 0 || dy2 < 0 || sy >= rawClone.height || dy2 >= H) continue; rawClone.data.copy(clone.data, dy2 * W * 4, sy * W * 4, (sy + 1) * W * 4); } };
+  let rPrev = 0, cPrev = 0;
+  for (const [ra, ca] of anchors) {
+    copyRows(cPrev, rPrev, Math.min(ra.y - rPrev, ca.y - cPrev));
+    rPrev = ra.y + ra.h; cPrev = ca.y + ca.h;
+  }
+  copyRows(cPrev, rPrev, Math.min(H - rPrev, rawClone.height - cPrev));
+  const masks = anchors.length ? rm : [...rm, ...cm];
   paint(ref, masks);
   paint(clone, masks);
   const diff = new PNG({ width: W, height: H });
@@ -55,8 +70,8 @@ for (const key of Object.keys(refMeta).filter((k) => !k.startsWith('_'))) {
   const compFile = `${OUT}/${key}-composite.png`;
   const scale = W > 800 ? 0.5 : 1;
   await sharp(await comp.png().toBuffer()).resize({ width: Math.round((W * 3 + gap * 2) * scale) }).png({ compressionLevel: 9 }).toFile(compFile);
-  rows.push({ key, width: W, height: H, refHeight: a.height, cloneHeight: b.height, diffPixels: n, maskedPixels: masked, ratio: +ratio.toFixed(5), composite: compFile, masks: masks.length });
-  console.log(`${key.padEnd(12)} ${String(W).padStart(4)}×${String(H).padEnd(5)} réf ${a.height}px / clone ${b.height}px  diff ${(ratio * 100).toFixed(2)} % hors masques (${masks.length} masques)`);
+  rows.push({ key, aligned: anchors.length, width: W, height: H, refHeight: a.height, cloneHeight: b.height, diffPixels: n, maskedPixels: masked, ratio: +ratio.toFixed(5), composite: compFile, masks: masks.length });
+  console.log(`${key.padEnd(12)} ${String(W).padStart(4)}×${String(H).padEnd(5)} réf ${a.height}px / clone ${b.height}px  diff ${(ratio * 100).toFixed(2)} % hors masques (${masks.length} masques, ${anchors.length ? 'réaligné' : 'non réaligné'})`);
 }
 report.iterations = report.iterations.filter((it) => it.label !== label);
 report.iterations.push({ label, date: new Date().toISOString(), rows });

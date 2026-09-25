@@ -188,6 +188,26 @@
   "raison": "dept Haute-Corse"
  },
  {
+  "code_magasin": "1048",
+  "raison": "dept Alpes-de-Haute-Provence"
+ },
+ {
+  "code_magasin": "1129",
+  "raison": "dept Hautes-Alpes"
+ },
+ {
+  "code_magasin": "101",
+  "raison": "dept Drôme"
+ },
+ {
+  "code_magasin": "1102",
+  "raison": "dept Gard"
+ },
+ {
+  "code_magasin": "1019",
+  "raison": "dept Isère"
+ },
+ {
   "code_magasin": "1040",
   "raison": "région Bretagne"
  },

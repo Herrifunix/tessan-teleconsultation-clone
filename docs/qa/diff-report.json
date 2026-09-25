@@ -113,6 +113,120 @@
      "masks": 3
     }
    ]
+  },
+  {
+   "label": "iteration-2",
+   "date": "2026-09-25T17:53:25.259Z",
+   "rows": [
+    {
+     "key": "home-1440",
+     "width": 1440,
+     "height": 2672,
+     "refHeight": 2632,
+     "cloneHeight": 2672,
+     "diffPixels": 74944,
+     "maskedPixels": 1233664,
+     "ratio": 0.02867,
+     "composite": "docs/qa/home-1440-composite.png",
+     "masks": 6
+    },
+    {
+     "key": "home-375",
+     "width": 375,
+     "height": 5597,
+     "refHeight": 5597,
+     "cloneHeight": 5573,
+     "diffPixels": 121306,
+     "maskedPixels": 508248,
+     "ratio": 0.07626,
+     "composite": "docs/qa/home-375-composite.png",
+     "masks": 6
+    },
+    {
+     "key": "home-768",
+     "width": 768,
+     "height": 4311,
+     "refHeight": 4271,
+     "cloneHeight": 4311,
+     "diffPixels": 47879,
+     "maskedPixels": 923648,
+     "ratio": 0.02006,
+     "composite": "docs/qa/home-768-composite.png",
+     "masks": 6
+    },
+    {
+     "key": "results-375",
+     "width": 375,
+     "height": 6761,
+     "refHeight": 6761,
+     "cloneHeight": 6693,
+     "diffPixels": 149750,
+     "maskedPixels": 600172,
+     "ratio": 0.07738,
+     "composite": "docs/qa/results-375-composite.png",
+     "masks": 6
+    },
+    {
+     "key": "results-768",
+     "width": 768,
+     "height": 5437,
+     "refHeight": 5421,
+     "cloneHeight": 5437,
+     "diffPixels": 128739,
+     "maskedPixels": 1128320,
+     "ratio": 0.04225,
+     "composite": "docs/qa/results-768-composite.png",
+     "masks": 6
+    },
+    {
+     "key": "results-1440",
+     "width": 1440,
+     "height": 2972,
+     "refHeight": 2956,
+     "cloneHeight": 2972,
+     "diffPixels": 159397,
+     "maskedPixels": 1248112,
+     "ratio": 0.05258,
+     "composite": "docs/qa/results-1440-composite.png",
+     "masks": 6
+    },
+    {
+     "key": "fiche-375",
+     "width": 375,
+     "height": 12876,
+     "refHeight": 12876,
+     "cloneHeight": 12796,
+     "diffPixels": 302371,
+     "maskedPixels": 483920,
+     "ratio": 0.0696,
+     "composite": "docs/qa/fiche-375-composite.png",
+     "masks": 6
+    },
+    {
+     "key": "fiche-768",
+     "width": 768,
+     "height": 9078,
+     "refHeight": 9068,
+     "cloneHeight": 9078,
+     "diffPixels": 234800,
+     "maskedPixels": 881664,
+     "ratio": 0.03855,
+     "composite": "docs/qa/fiche-768-composite.png",
+     "masks": 6
+    },
+    {
+     "key": "fiche-1440",
+     "width": 1440,
+     "height": 6139,
+     "refHeight": 6129,
+     "cloneHeight": 6139,
+     "diffPixels": 278529,
+     "maskedPixels": 824176,
+     "ratio": 0.03475,
+     "composite": "docs/qa/fiche-1440-composite.png",
+     "masks": 6
+    }
+   ]
   }
  ]
 }

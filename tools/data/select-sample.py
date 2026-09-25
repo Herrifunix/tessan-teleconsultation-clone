@@ -34,7 +34,9 @@ for r in city('Saint-Étienne')[:2]: add(r, 'Saint-Etienne (accents, nom long)')
 long = next(r for r in rows if r['code_magasin'] == '330'); add(long, 'nom très long')
 # Couverture départements / régions (≥ 10 de chaque pour garder des grilles de 10 cartes)
 DEPTS = {'92': 'Hauts-de-Seine', '93': 'Seine-Saint-Denis', '78': 'Yvelines', '91': 'Essonne', '77': 'Seine-et-Marne',
-         '60': 'Oise', '28': 'Eure-et-Loir', '27': 'Eure', '83': 'Var', '84': 'Vaucluse', '2B': 'Haute-Corse'}
+         '60': 'Oise', '28': 'Eure-et-Loir', '27': 'Eure', '83': 'Var', '84': 'Vaucluse', '2B': 'Haute-Corse',
+         # Départements listés « à proximité » de Nice par l'original (docs/reference/results-1440.png) : même grille, même retour à la ligne.
+         '04': 'Alpes-de-Haute-Provence', '05': 'Hautes-Alpes', '26': 'Drôme', '30': 'Gard', '38': 'Isère'}
 for d, name in DEPTS.items():
     cand = [r for r in rows if (r['code_postal'] or '').startswith('20' if d == '2B' else d)]
     if d == '2B': cand = [r for r in cand if int(r['code_postal']) >= 20200]

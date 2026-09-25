@@ -1,0 +1,1236 @@
+{
+ "home-375": {
+  "refTextElements": 99,
+  "matched": 78,
+  "within2px": 62,
+  "withinRatio": 0.795,
+  "spacingIssues": [
+   {
+    "text": "Val-de-Marne",
+    "tag": "p",
+    "y": 1889,
+    "dx": 0,
+    "dyLocal": 144,
+    "dyAbs": 144,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Seine-Saint-Denis",
+    "tag": "p",
+    "y": 2009,
+    "dx": 139.5,
+    "dyLocal": -264,
+    "dyAbs": -120,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Val-d'Oise",
+    "tag": "p",
+    "y": 2033,
+    "dx": -139.5,
+    "dyLocal": 240,
+    "dyAbs": 120,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Yvelines",
+    "tag": "p",
+    "y": 2153,
+    "dx": 0,
+    "dyLocal": -24,
+    "dyAbs": 96,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Essonne",
+    "tag": "p",
+    "y": 2153,
+    "dx": 0,
+    "dyLocal": -96,
+    "dyAbs": 0,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Seine-et-Marne",
+    "tag": "p",
+    "y": 2249,
+    "dx": 139.5,
+    "dyLocal": 96,
+    "dyAbs": 96,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Oise",
+    "tag": "p",
+    "y": 2261,
+    "dx": 0,
+    "dyLocal": -108,
+    "dyAbs": -12,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Eure-et-Loir",
+    "tag": "p",
+    "y": 2369,
+    "dx": 0,
+    "dyLocal": -12,
+    "dyAbs": -24,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Centre-Val de Loire",
+    "tag": "p",
+    "y": 2933,
+    "dx": -139.5,
+    "dyLocal": -20,
+    "dyAbs": -44,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Normandie",
+    "tag": "p",
+    "y": 2935,
+    "dx": 139.5,
+    "dyLocal": 10,
+    "dyAbs": -34,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Bourgogne-Franche-Comté",
+    "tag": "p",
+    "y": 3053,
+    "dx": 0,
+    "dyLocal": -10,
+    "dyAbs": -44,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Pays de la Loire",
+    "tag": "p",
+    "y": 3075,
+    "dx": -139.5,
+    "dyLocal": 122,
+    "dyAbs": 78,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Grand Est",
+    "tag": "p",
+    "y": 3217,
+    "dx": 139.5,
+    "dyLocal": -130,
+    "dyAbs": -52,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Bretagne",
+    "tag": "p",
+    "y": 3227,
+    "dx": 0,
+    "dyLocal": -142,
+    "dyAbs": -194,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Auvergne-Rhône-Alpes",
+    "tag": "p",
+    "y": 3333,
+    "dx": 0,
+    "dyLocal": 134,
+    "dyAbs": -60,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Adresse",
+    "tag": "h3",
+    "y": 3659.8,
+    "dx": 0,
+    "dyLocal": -20,
+    "dyAbs": -80,
+    "dw": 0,
+    "dh": 0
+   }
+  ],
+  "styleIssues": []
+ },
+ "home-768": {
+  "refTextElements": 101,
+  "matched": 80,
+  "within2px": 64,
+  "withinRatio": 0.8,
+  "spacingIssues": [
+   {
+    "text": "Val-de-Marne",
+    "tag": "p",
+    "y": 1711.4,
+    "dx": 448,
+    "dyLocal": 0,
+    "dyAbs": 0,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Hauts-de-Seine",
+    "tag": "p",
+    "y": 1711.4,
+    "dx": -224,
+    "dyLocal": 96,
+    "dyAbs": 96,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Seine-Saint-Denis",
+    "tag": "p",
+    "y": 1711.4,
+    "dx": -224,
+    "dyLocal": -96,
+    "dyAbs": 0,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Val-d'Oise",
+    "tag": "p",
+    "y": 1807.4,
+    "dx": 224,
+    "dyLocal": 0,
+    "dyAbs": 0,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Yvelines",
+    "tag": "p",
+    "y": 1807.4,
+    "dx": -224,
+    "dyLocal": 96,
+    "dyAbs": 96,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Essonne",
+    "tag": "p",
+    "y": 1807.4,
+    "dx": 0,
+    "dyLocal": -96,
+    "dyAbs": 0,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Seine-et-Marne",
+    "tag": "p",
+    "y": 1903.4,
+    "dx": 0,
+    "dyLocal": 96,
+    "dyAbs": 96,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Oise",
+    "tag": "p",
+    "y": 1903.4,
+    "dx": 0,
+    "dyLocal": -96,
+    "dyAbs": 0,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Normandie",
+    "tag": "p",
+    "y": 2311.4,
+    "dx": -448,
+    "dyLocal": 108,
+    "dyAbs": 108,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Bourgogne-Franche-Comté",
+    "tag": "p",
+    "y": 2407.4,
+    "dx": 0,
+    "dyLocal": -108,
+    "dyAbs": 0,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Centre-Val de Loire",
+    "tag": "p",
+    "y": 2419.4,
+    "dx": 448,
+    "dyLocal": -108,
+    "dyAbs": -108,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Pays de la Loire",
+    "tag": "p",
+    "y": 2419.4,
+    "dx": -448,
+    "dyLocal": 228,
+    "dyAbs": 120,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Auvergne-Rhône-Alpes",
+    "tag": "p",
+    "y": 2527.4,
+    "dx": 0,
+    "dyLocal": -120,
+    "dyAbs": 0,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Grand Est",
+    "tag": "p",
+    "y": 2539.4,
+    "dx": 224,
+    "dyLocal": 0,
+    "dyAbs": 0,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Bretagne",
+    "tag": "p",
+    "y": 2539.4,
+    "dx": 224,
+    "dyLocal": -120,
+    "dyAbs": -120,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Nouvelle-Aquitaine",
+    "tag": "p",
+    "y": 2647.4,
+    "dx": 0,
+    "dyLocal": 120,
+    "dyAbs": 0,
+    "dw": 0,
+    "dh": 0
+   }
+  ],
+  "styleIssues": []
+ },
+ "home-1440": {
+  "refTextElements": 104,
+  "matched": 83,
+  "within2px": 70,
+  "withinRatio": 0.843,
+  "spacingIssues": [
+   {
+    "text": "autour de vous",
+    "tag": "span",
+    "y": 122,
+    "dx": -3,
+    "dyLocal": 0,
+    "dyAbs": 0,
+    "dw": -3,
+    "dh": 0
+   },
+   {
+    "text": "Val-de-Marne",
+    "tag": "p",
+    "y": 1381,
+    "dx": 512,
+    "dyLocal": 0,
+    "dyAbs": 0,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Hauts-de-Seine",
+    "tag": "p",
+    "y": 1381,
+    "dx": 512,
+    "dyLocal": 0,
+    "dyAbs": 0,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Seine-Saint-Denis",
+    "tag": "p",
+    "y": 1381,
+    "dx": -256,
+    "dyLocal": 0,
+    "dyAbs": 0,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Val-d'Oise",
+    "tag": "p",
+    "y": 1381,
+    "dx": 256,
+    "dyLocal": 0,
+    "dyAbs": 0,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Yvelines",
+    "tag": "p",
+    "y": 1381,
+    "dx": -768,
+    "dyLocal": 96,
+    "dyAbs": 96,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Essonne",
+    "tag": "p",
+    "y": 1477,
+    "dx": 0,
+    "dyLocal": -96,
+    "dyAbs": 0,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Seine-et-Marne",
+    "tag": "p",
+    "y": 1477,
+    "dx": 768,
+    "dyLocal": 0,
+    "dyAbs": 0,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Normandie",
+    "tag": "p",
+    "y": 1769,
+    "dx": 256,
+    "dyLocal": 0,
+    "dyAbs": 0,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Centre-Val de Loire",
+    "tag": "p",
+    "y": 1769,
+    "dx": -256,
+    "dyLocal": 0,
+    "dyAbs": 0,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Pays de la Loire",
+    "tag": "p",
+    "y": 1877,
+    "dx": 256,
+    "dyLocal": 0,
+    "dyAbs": 0,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Grand Est",
+    "tag": "p",
+    "y": 1877,
+    "dx": 256,
+    "dyLocal": 0,
+    "dyAbs": 0,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Bretagne",
+    "tag": "p",
+    "y": 1877,
+    "dx": -512,
+    "dyLocal": 0,
+    "dyAbs": 0,
+    "dw": 0,
+    "dh": 0
+   }
+  ],
+  "styleIssues": []
+ },
+ "results-375": {
+  "refTextElements": 142,
+  "matched": 116,
+  "within2px": 106,
+  "withinRatio": 0.914,
+  "spacingIssues": [
+   {
+    "text": "( 2.6 km )",
+    "tag": "span",
+    "y": 1494,
+    "dx": -3,
+    "dyLocal": 0,
+    "dyAbs": 0,
+    "dw": 1,
+    "dh": 0
+   },
+   {
+    "text": "Bouches-du-Rhône",
+    "tag": "p",
+    "y": 3273,
+    "dx": 0,
+    "dyLocal": -144,
+    "dyAbs": -144,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Les dispositifs de téléconsultation Tessan dans le",
+    "tag": "h2",
+    "y": 3673,
+    "dx": 0,
+    "dyLocal": 120,
+    "dyAbs": -24,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Corse",
+    "tag": "p",
+    "y": 3959,
+    "dx": 0,
+    "dyLocal": -10,
+    "dyAbs": -34,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Auvergne-Rhône-Alpes",
+    "tag": "p",
+    "y": 4101,
+    "dx": 0,
+    "dyLocal": -10,
+    "dyAbs": -44,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Occitanie",
+    "tag": "p",
+    "y": 4265,
+    "dx": 0,
+    "dyLocal": -20,
+    "dyAbs": -64,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Nouvelle-Aquitaine",
+    "tag": "p",
+    "y": 4381,
+    "dx": 0,
+    "dyLocal": -20,
+    "dyAbs": -84,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Centre-Val de Loire",
+    "tag": "p",
+    "y": 4391,
+    "dx": 0,
+    "dyLocal": 110,
+    "dyAbs": 26,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Île-de-France",
+    "tag": "p",
+    "y": 4521,
+    "dx": 139.5,
+    "dyLocal": -250,
+    "dyAbs": -224,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Adresse",
+    "tag": "h3",
+    "y": 4823.8,
+    "dx": 0,
+    "dyLocal": 100,
+    "dyAbs": -124,
+    "dw": 0,
+    "dh": 0
+   }
+  ],
+  "styleIssues": []
+ },
+ "results-768": {
+  "refTextElements": 149,
+  "matched": 123,
+  "within2px": 114,
+  "withinRatio": 0.927,
+  "spacingIssues": [
+   {
+    "text": "( 0.0 km )",
+    "tag": "span",
+    "y": 778.4,
+    "dx": -4,
+    "dyLocal": 0,
+    "dyAbs": 0,
+    "dw": 1,
+    "dh": 0
+   },
+   {
+    "text": "( 5.8 km )",
+    "tag": "span",
+    "y": 1906.4,
+    "dx": -3,
+    "dyLocal": 0,
+    "dyAbs": 0,
+    "dw": 1,
+    "dh": 0
+   },
+   {
+    "text": "Alpes-Maritimes",
+    "tag": "p",
+    "y": 2849.4,
+    "dx": 0,
+    "dyLocal": -12,
+    "dyAbs": -12,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Bouches-du-Rhône",
+    "tag": "p",
+    "y": 2957.4,
+    "dx": 224,
+    "dyLocal": -108,
+    "dyAbs": -120,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Vaucluse",
+    "tag": "p",
+    "y": 2957.4,
+    "dx": -448,
+    "dyLocal": 96,
+    "dyAbs": -24,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Haute-Corse",
+    "tag": "p",
+    "y": 3053.4,
+    "dx": 224,
+    "dyLocal": -96,
+    "dyAbs": -120,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Les dispositifs de téléconsultation Tessan dans le",
+    "tag": "h2",
+    "y": 3309.4,
+    "dx": 0,
+    "dyLocal": 96,
+    "dyAbs": -24,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Centre-Val de Loire",
+    "tag": "p",
+    "y": 3701.4,
+    "dx": -224,
+    "dyLocal": 96,
+    "dyAbs": 72,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Île-de-France",
+    "tag": "p",
+    "y": 3701.4,
+    "dx": -224,
+    "dyLocal": -96,
+    "dyAbs": -24,
+    "dw": 0,
+    "dh": 0
+   }
+  ],
+  "styleIssues": []
+ },
+ "results-1440": {
+  "refTextElements": 152,
+  "matched": 126,
+  "within2px": 114,
+  "withinRatio": 0.905,
+  "spacingIssues": [
+   {
+    "text": "autour de vous",
+    "tag": "span",
+    "y": 146,
+    "dx": -3,
+    "dyLocal": 0,
+    "dyAbs": 0,
+    "dw": -3,
+    "dh": 0
+   },
+   {
+    "text": "( 0.0 km )",
+    "tag": "span",
+    "y": 562,
+    "dx": -4,
+    "dyLocal": 0,
+    "dyAbs": 0,
+    "dw": 1,
+    "dh": 0
+   },
+   {
+    "text": "( 5.8 km )",
+    "tag": "span",
+    "y": 1690,
+    "dx": -3,
+    "dyLocal": 0,
+    "dyAbs": 0,
+    "dw": 1,
+    "dh": 0
+   },
+   {
+    "text": "Alpes-Maritimes",
+    "tag": "p",
+    "y": 1693,
+    "dx": 0,
+    "dyLocal": -12,
+    "dyAbs": -12,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Bouches-du-Rhône",
+    "tag": "p",
+    "y": 1693,
+    "dx": -512,
+    "dyLocal": 0,
+    "dyAbs": -12,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "CC E. Leclerc RD6202 Quartier",
+    "tag": "p",
+    "y": 1714,
+    "dx": 0,
+    "dyLocal": 12,
+    "dyAbs": 0,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Vaucluse",
+    "tag": "p",
+    "y": 1801,
+    "dx": 768,
+    "dyLocal": -120,
+    "dyAbs": -120,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Haute-Corse",
+    "tag": "p",
+    "y": 1801,
+    "dx": 768,
+    "dyLocal": 0,
+    "dyAbs": -120,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Réserver un créneau",
+    "tag": "span",
+    "y": 1820,
+    "dx": 0,
+    "dyLocal": 120,
+    "dyAbs": 0,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Les dispositifs de téléconsultation Tessan dans le",
+    "tag": "h2",
+    "y": 1961,
+    "dx": 0,
+    "dyLocal": -24,
+    "dyAbs": -24,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Centre-Val de Loire",
+    "tag": "p",
+    "y": 2201,
+    "dx": 512,
+    "dyLocal": 0,
+    "dyAbs": -24,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Île-de-France",
+    "tag": "p",
+    "y": 2201,
+    "dx": -256,
+    "dyLocal": 0,
+    "dyAbs": -24,
+    "dw": 0,
+    "dh": 0
+   }
+  ],
+  "styleIssues": []
+ },
+ "fiche-375": {
+  "refTextElements": 213,
+  "matched": 170,
+  "within2px": 156,
+  "withinRatio": 0.918,
+  "spacingIssues": [
+   {
+    "text": "Quels sont les horaires de téléconsultation ?",
+    "tag": "span",
+    "y": 5727.7,
+    "dx": 0,
+    "dyLocal": -12,
+    "dyAbs": -12,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "( 2.6 km )",
+    "tag": "span",
+    "y": 7266.7,
+    "dx": -3,
+    "dyLocal": 0,
+    "dyAbs": -12,
+    "dw": 1,
+    "dh": 0
+   },
+   {
+    "text": "( 8.5 km )",
+    "tag": "span",
+    "y": 8498.7,
+    "dx": 7,
+    "dyLocal": 0,
+    "dyAbs": -12,
+    "dw": 1,
+    "dh": 0
+   },
+   {
+    "text": "Var",
+    "tag": "p",
+    "y": 9131.7,
+    "dx": 0,
+    "dyLocal": -12,
+    "dyAbs": -24,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Bouches-du-Rhône",
+    "tag": "p",
+    "y": 9251.7,
+    "dx": 0,
+    "dyLocal": -132,
+    "dyAbs": -156,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "5 dispositifs",
+    "tag": "p",
+    "y": 9615.7,
+    "dx": 0,
+    "dyLocal": -312,
+    "dyAbs": -468,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Les dispositifs de téléconsultation Tessan dans le",
+    "tag": "h2",
+    "y": 9763.7,
+    "dx": 0,
+    "dyLocal": 432,
+    "dyAbs": -36,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Corse",
+    "tag": "p",
+    "y": 10049.7,
+    "dx": 0,
+    "dyLocal": -10,
+    "dyAbs": -46,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Auvergne-Rhône-Alpes",
+    "tag": "p",
+    "y": 10191.7,
+    "dx": 0,
+    "dyLocal": -10,
+    "dyAbs": -56,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Occitanie",
+    "tag": "p",
+    "y": 10355.7,
+    "dx": 0,
+    "dyLocal": -20,
+    "dyAbs": -76,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Nouvelle-Aquitaine",
+    "tag": "p",
+    "y": 10471.7,
+    "dx": 0,
+    "dyLocal": -20,
+    "dyAbs": -96,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Centre-Val de Loire",
+    "tag": "p",
+    "y": 10481.7,
+    "dx": 0,
+    "dyLocal": 110,
+    "dyAbs": 14,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Île-de-France",
+    "tag": "p",
+    "y": 10611.7,
+    "dx": 139.5,
+    "dyLocal": -250,
+    "dyAbs": -236,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Adresse",
+    "tag": "h3",
+    "y": 10938.5,
+    "dx": 0,
+    "dyLocal": 100,
+    "dyAbs": -136,
+    "dw": 0,
+    "dh": 0
+   }
+  ],
+  "styleIssues": [
+   {
+    "text": "Foire Aux Questions",
+    "tag": "h2",
+    "diff": {
+     "lineHeight": [
+      "60px",
+      "normal"
+     ]
+    }
+   }
+  ]
+ },
+ "fiche-768": {
+  "refTextElements": 221,
+  "matched": 178,
+  "within2px": 167,
+  "withinRatio": 0.938,
+  "spacingIssues": [
+   {
+    "text": "Quels sont les horaires de téléconsultation ?",
+    "tag": "span",
+    "y": 4457.8,
+    "dx": 0,
+    "dyLocal": -6,
+    "dyAbs": -6,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "( 2.6 km )",
+    "tag": "span",
+    "y": 5342.8,
+    "dx": -3,
+    "dyLocal": 0,
+    "dyAbs": -6,
+    "dw": 1,
+    "dh": 0
+   },
+   {
+    "text": "( 8.5 km )",
+    "tag": "span",
+    "y": 5946.8,
+    "dx": 7,
+    "dyLocal": 0,
+    "dyAbs": -6,
+    "dw": 1,
+    "dh": 0
+   },
+   {
+    "text": "Var",
+    "tag": "p",
+    "y": 6455.8,
+    "dx": 0,
+    "dyLocal": -12,
+    "dyAbs": -18,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Bouches-du-Rhône",
+    "tag": "p",
+    "y": 6563.8,
+    "dx": 224,
+    "dyLocal": -108,
+    "dyAbs": -126,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Vaucluse",
+    "tag": "p",
+    "y": 6563.8,
+    "dx": 224,
+    "dyLocal": 0,
+    "dyAbs": -126,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Haute-Corse",
+    "tag": "p",
+    "y": 6563.8,
+    "dx": -448,
+    "dyLocal": 96,
+    "dyAbs": -30,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "5 dispositifs",
+    "tag": "p",
+    "y": 6783.8,
+    "dx": 224,
+    "dyLocal": -288,
+    "dyAbs": -318,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Les dispositifs de téléconsultation Tessan dans le",
+    "tag": "h2",
+    "y": 6931.8,
+    "dx": 0,
+    "dyLocal": 288,
+    "dyAbs": -30,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Centre-Val de Loire",
+    "tag": "p",
+    "y": 7323.8,
+    "dx": -224,
+    "dyLocal": 96,
+    "dyAbs": 66,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Île-de-France",
+    "tag": "p",
+    "y": 7323.8,
+    "dx": -224,
+    "dyLocal": -96,
+    "dyAbs": -30,
+    "dw": 0,
+    "dh": 0
+   }
+  ],
+  "styleIssues": [
+   {
+    "text": "Foire Aux Questions",
+    "tag": "h2",
+    "diff": {
+     "lineHeight": [
+      "60px",
+      "normal"
+     ]
+    }
+   }
+  ]
+ },
+ "fiche-1440": {
+  "refTextElements": 224,
+  "matched": 181,
+  "within2px": 170,
+  "withinRatio": 0.939,
+  "spacingIssues": [
+   {
+    "text": "Quels sont les horaires de téléconsultation ?",
+    "tag": "span",
+    "y": 3290.2,
+    "dx": 0,
+    "dyLocal": -6,
+    "dyAbs": -6,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "( 5.8 km )",
+    "tag": "span",
+    "y": 4349.2,
+    "dx": -3,
+    "dyLocal": 0,
+    "dyAbs": -6,
+    "dw": 1,
+    "dh": 0
+   },
+   {
+    "text": "( 8.5 km )",
+    "tag": "span",
+    "y": 4349.2,
+    "dx": 24,
+    "dyLocal": 0,
+    "dyAbs": -6,
+    "dw": 1,
+    "dh": 0
+   },
+   {
+    "text": "Var",
+    "tag": "p",
+    "y": 4826.2,
+    "dx": 0,
+    "dyLocal": -12,
+    "dyAbs": -18,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Bouches-du-Rhône",
+    "tag": "p",
+    "y": 4826.2,
+    "dx": -492.8,
+    "dyLocal": 0,
+    "dyAbs": -18,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Vaucluse",
+    "tag": "p",
+    "y": 4826.2,
+    "dx": -492.8,
+    "dyLocal": 0,
+    "dyAbs": -18,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Haute-Corse",
+    "tag": "p",
+    "y": 4934.2,
+    "dx": 739.2,
+    "dyLocal": -108,
+    "dyAbs": -126,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "5 dispositifs",
+    "tag": "p",
+    "y": 4962.2,
+    "dx": -739.2,
+    "dyLocal": 0,
+    "dyAbs": -126,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Les dispositifs de téléconsultation Tessan dans le",
+    "tag": "h2",
+    "y": 5110.2,
+    "dx": 0,
+    "dyLocal": 96,
+    "dyAbs": -30,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Centre-Val de Loire",
+    "tag": "p",
+    "y": 5350.2,
+    "dx": 492.8,
+    "dyLocal": 0,
+    "dyAbs": -30,
+    "dw": 0,
+    "dh": 0
+   },
+   {
+    "text": "Île-de-France",
+    "tag": "p",
+    "y": 5350.2,
+    "dx": -246.4,
+    "dyLocal": 0,
+    "dyAbs": -30,
+    "dw": 0,
+    "dh": 0
+   }
+  ],
+  "styleIssues": [
+   {
+    "text": "Foire Aux Questions",
+    "tag": "h2",
+    "diff": {
+     "lineHeight": [
+      "60px",
+      "normal"
+     ]
+    }
+   }
+  ]
+ }
+}

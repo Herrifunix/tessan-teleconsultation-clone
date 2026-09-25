@@ -126,7 +126,7 @@ for (const [k, v] of Object.entries(T)) {
 }
 // Tailles issues de styles inline de l'original (bundle 541, fiche).
 tokens.text['fiche-h1'] = { value: '2.2rem', lineHeight: 'calc(2.25 / 1.875)', source: 'bundle 541 : h1 fiche style fontSize 2.2rem (interligne hérité de text-3xl)' };
-tokens.text['faq-title'] = { value: '2.5rem', lineHeight: 'normal', source: 'bundle 541 : h2 « Foire Aux Questions » style fontSize 2.5rem, fontWeight 500' };
+tokens.text['faq-title'] = { value: '2.5rem', lineHeight: '1.5', source: 'bundle 541 : h2 « Foire Aux Questions » style fontSize 2.5rem, fontWeight 500 ; interligne hérité de html (1.5) mesuré 60px aux 3 largeurs — docs/research/pages/fiche/computed-1440.json' };
 tokens.container['page'] = { value: '1328px', source: src('.max-w-\\[1328px\\]{max-width:1328px}'), measured: measured('home', 1440, (e) => e.cls.includes('max-w-[1328px]'), 'rect') };
 tokens.container['footer'] = { value: '1300px', source: src('.max-w-\\[1300px\\]{max-width:1300px}'), measured: measured('home', 1440, (e) => e.cls.includes('max-w-[1300px]'), 'rect') };
 

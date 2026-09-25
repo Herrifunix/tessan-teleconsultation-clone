@@ -10,7 +10,7 @@
   const path = (el) => { const p=[]; while (el && el !== document.body) { const i=[...el.parentElement.children].indexOf(el); p.unshift(el.tagName.toLowerCase()+':'+i); el=el.parentElement; } return p.join('>'); };
   const all = document.querySelectorAll('body *');
   for (const el of all) {
-    if (el.closest('.gm-style, .cky-consent-container, .cky-modal, .cky-btn-revisit-wrapper, .pac-container, svg, script, style, noscript, next-route-announcer')) continue;
+    if (el.closest('.gm-style, .leaflet-container, .cky-consent-container, .cky-modal, .cky-btn-revisit-wrapper, .pac-container, svg, script, style, noscript, next-route-announcer')) continue;
     const r = el.getBoundingClientRect();
     if (r.width === 0 && r.height === 0) continue;
     const c = getComputedStyle(el);

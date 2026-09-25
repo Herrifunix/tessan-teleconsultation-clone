@@ -7,6 +7,7 @@
 // cookies refusés via la bannière, défilement complet (chargements différés), animations et
 // transitions coupées, curseur masqué, document.fonts.ready, images chargées, réseau stable.
 import { mkdirSync, writeFileSync, existsSync, readFileSync } from 'node:fs';
+const DUMP = readFileSync(new URL('./recon/dump-styles.js', import.meta.url), 'utf8');
 import { launch, newContext, sleep } from './recon/browser.mjs';
 
 export const FIXED_TIME = new Date('2026-09-25T15:00:00+02:00'); // vendredi, 15 h à Paris
@@ -96,6 +97,8 @@ export async function capture({ side, baseUrl, outDir, templates = Object.keys(T
       if (await refuse.isVisible().catch(() => false)) { await refuse.click(); await sleep(800); }
       await page.mouse.move(0, 0); // aucun survol résiduel
       await settle(page);
+      // Styles calculés et positions de chaque élément visible (comparaison ±2 px, tools/compare-layout.mjs).
+      writeFileSync(`${outDir}/${tpl}-${w}.layout.json`, JSON.stringify(await page.evaluate(DUMP)));
       const file = `${outDir}/${tpl}-${w}.png`;
       await page.screenshot({ path: file, fullPage: true, animations: 'disabled', caret: 'hide' });
       // Zones intrinsèquement différentes à masquer dans le diff : cartes (tuiles), grilles dépendantes des données.

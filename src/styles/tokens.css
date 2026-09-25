@@ -84,7 +84,7 @@
   --text-fiche-h1: 2.2rem;
   --text-fiche-h1--line-height: calc(2.25 / 1.875);
   --text-faq-title: 2.5rem;
-  --text-faq-title--line-height: normal;
+  --text-faq-title--line-height: 1.5;
   --text-xs--line-height: calc(1/.75);
   --text-sm--line-height: calc(1.25/.875);
   --text-base--line-height: calc(1.5/1);

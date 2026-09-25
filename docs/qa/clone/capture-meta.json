@@ -268,14 +268,14 @@
    {
     "kind": "grille-zones",
     "x": 56,
-    "y": 6394,
+    "y": 6422,
     "w": 656,
     "h": 368
    },
    {
     "kind": "grille-zones",
     "x": 56,
-    "y": 7010,
+    "y": 7038,
     "w": 656,
     "h": 416
    }
@@ -284,7 +284,7 @@
   "file": "docs/qa/clone/fiche-768.png",
   "title": "Pharmacie Saint Barthélémy - Téléconsultation à Nice",
   "description": "Trouvez une cabine de téléconsultation en pharmacie près de chez vous et consultez un médecin en quelques minutes grâce aux dispositifs Tessan",
-  "scrollHeight": 9050,
+  "scrollHeight": 9078,
   "scrollWidth": 768,
   "console": []
  }
