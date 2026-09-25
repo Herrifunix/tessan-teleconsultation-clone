@@ -1,0 +1,15 @@
+{
+  "cookies": [
+    {
+      "name": "_vcrcs",
+      "value": "1.1790353642.3600.OWMxZDhhNmYzMTE1MzFjZGIzMGU4YTUyZDEwOTBjNWQ=.ff21f3f31c6b271dc5b66c4973a4b4d4",
+      "domain": "teleconsultation.tessan.io",
+      "path": "/",
+      "expires": 1790357242.003905,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": []
+}

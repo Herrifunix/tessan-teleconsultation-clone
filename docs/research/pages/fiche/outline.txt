@@ -1,0 +1,480 @@
+main.bg-slate-50.min-h-screen.py-12
+  div.max-w-[1328px].mx-auto
+    section.p-6.bg-slate-50
+      div.max-w-[1328px].mx-auto
+        nav.hidden.md:block.mb-6 [aria-label=breadcrumb]
+          ol.text-muted-foreground.flex.flex-wrap.items-center.gap-1.5.text-sm.break-words.sm:gap-2.5
+            li.inline-flex.items-center.gap-1.5
+              button.hover:text-foreground.transition-colors.hover:underline.cursor-pointer "Trouver un dispositif de téléconsultation"
+            li.[&>svg]:size-3.5 [role=presentation]
+              svg.lucide.lucide-chevron-right
+            li.inline-flex.items-center.gap-1.5
+              span.text-foreground.font-normal [role=link] "Spécialités médicales"
+            li.[&>svg]:size-3.5 [role=presentation]
+              svg.lucide.lucide-chevron-right
+            li.inline-flex.items-center.gap-1.5
+              button.hover:text-foreground.transition-colors.hover:underline.cursor-pointer "Provence-Alpes-Côte d'Azur"
+            li.[&>svg]:size-3.5 [role=presentation]
+              svg.lucide.lucide-chevron-right
+            li.inline-flex.items-center.gap-1.5
+              button.hover:text-foreground.transition-colors.hover:underline.cursor-pointer "Alpes-Maritimes"
+            li.[&>svg]:size-3.5 [role=presentation]
+              svg.lucide.lucide-chevron-right
+            li.inline-flex.items-center.gap-1.5
+              button.hover:text-foreground.transition-colors.hover:underline.cursor-pointer "Nice"
+            li.[&>svg]:size-3.5 [role=presentation]
+              svg.lucide.lucide-chevron-right
+            li.inline-flex.items-center.gap-1.5
+              span.text-foreground.font-normal [role=link] "Pharmacie Saint Barthélémy"
+        h1.text-3xl.md:text-3xl.text-center.text-gray-800.mb-8 [style=font-family: Recoleta, recoleta, "recoleta Fallback", sans-serif; font-size: 2.2rem;] "Votre dispositif de téléconsultation Tessan à "
+          span.text-tessan-green-hover "Nice"
+        div.mx-auto.bg-white.p-6.md:p-8.rounded-lg.shadow-lg
+          div.mb-6.flex.items-center.gap-3
+            svg.lucide.lucide-search.text-gray-500
+            h2.text-lg.text-gray-700 [style=font-family: "Plus Jakarta Sans", "Plus Jakarta Sans", "Plus Jakarta Sans Fallback", sans-serif;] "Effectuer une nouvelle recherche"
+          form.flex.flex-col.lg:flex-row.gap-4.md:gap-[1.2rem].items-stretch
+            div.w-full.md:min-w-[280px].md:w-auto.relative
+              button.w-full.h-11.flex.items-center.font-semibold.justify-between.space-x-2.border.rounded-lg.px-4.transition-colors.focus:outline-none.focus:ring-2.focus:ring-blue-300.cursor-pointer.border-tessan-green-hover.text-tessan-green-hover.hover:bg-tessan-green-hover.hover:text-white [type=button]
+                span.truncate "Spécialités médicales"
+                svg.lucide.lucide-chevron-down.transition-transform
+            div.relative.flex-1
+              input.flex.bg-transparent.py-1.text-base.shadow-xs.transition-colors.file:border-0.file:bg-transparent.file:text-sm.file:font-medium.file:text-foreground.placeholder:text-muted-foreground.focus-visible:outline-none.focus-visible:ring-1.focus-visible:ring-ring.disabled:cursor-not-allowed.disabled:opacity-50.md:text-sm.w-full.h-11.border.border-gray-300.placeholder-gray-700.rounded-lg.px-4.pr-24.focus:outline-none.focus:ring-2.focus:ring-blue-300.pac-target-input [placeholder=Ville / Code postal type=text]
+              button.absolute.top-1/2.right-4.-translate-y-1/2.text-gray-400.hover:text-tessan-green-hover.transition-colors.disabled:opacity-50.disabled:cursor-not-allowed.cursor-pointer [type=button title=Me géolocaliser]
+                svg.lucide.lucide-locate-fixed
+            button.w-full.md:min-w-[288px].md:w-auto.h-11.flex.items-center.justify-center.gap-2.bg-tessan-green.hover:bg-tessan-green-hover.text-white.font-semibold.rounded-lg.px-4.transition-colors.focus:outline-none.focus:ring-2.focus:ring-offset-2.focus:ring-blue-500.disabled:opacity-50.disabled:cursor-not-allowed.cursor-pointer [type=submit]
+              svg.lucide.lucide-search
+              span "Recherche"
+    div.p-6
+      div.bg-white.rounded-lg.shadow-lg.p-4.md:p-6
+        div.flex.flex-col.lg:flex-row.lg:items-start.lg:justify-between.gap-4.md:gap-6.mb-6
+          div
+            h1.text-xl.md:text-3xl.text-gray-800.mb-2.font-bold [style=font-family: Recoleta, recoleta, "recoleta Fallback", sans-serif;]
+              span.cursor-pointer "Pharmacie Saint Barthélémy"
+            div
+              address.text-sm.md:text-base.flex.flex-col.not-italic.lg:text-lg.font-medium.text-gray-600.mb-2
+                span "51 Av. Alfred Borriglione"
+                span "06100  Nice"
+              p.flex.items-center.gap-2.text-sm.md:text-base.font-medium.text-gray-700 "  Ferme à 19:30"
+                svg.lucide.lucide-clock.text-[#238700]
+                span.font-extrabold.text-base.md:text-lg.text-[#238700] "Ouvert"
+                span.text-xs "•"
+          div.flex.flex-col.lg:flex-row.lg:items-center.lg:flex-wrap.gap-3
+            button.flex.items-center.justify-center.gap-2.5.bg-[#FFF198].hover:bg-[#f5e76b].text-tessan-green.font-bold.rounded-lg.py-3.5.px-6.transition-colors.text-base.md:text-lg.cursor-pointer.shadow-sm
+              svg.lucide.lucide-calendar-days.md:w-6.md:h-6
+              span "Réserver un créneau"
+            a.flex.items-center.justify-center.gap-2.bg-tessan-green.hover:bg-tessan-green-hover.text-white.font-medium.rounded-lg.py-2.px-4.transition-colors.text-xs.md:text-base.cursor-pointer [href=tel:0492091000]
+              svg.lucide.lucide-phone.md:w-5.md:h-5
+              span.truncate "0492091000"
+            button.flex.items-center.justify-center.gap-2.bg-white.border-2.border-tessan-green.text-tessan-green.hover:bg-[#fcf5cc].font-medium.rounded-lg.py-2.px-4.transition-colors.text-xs.md:text-base.cursor-pointer
+              svg.lucide.lucide-navigation.md:w-5.md:h-5
+              span "Itinéraire"
+        div.pt-6.border-t.border-gray-200
+          div.overflow-hidden
+            div.float-right.ml-6.mb-4.relative.w-1/2
+              img.rounded-lg.shadow-md.w-full.h-auto.max-h-[600px].object-contain [alt=Photo du dispositif Tessan src=https://partoo-media.s3.amazonaws.com/prod/google_my_business__photos/29bbcbc9-45ae-4c0c-ad1a-fde504187f1d.jpeg]
+              button.absolute.left-2.top-1/2.-translate-y-1/2.bg-white/80.hover:bg-white.rounded-full.p-2.shadow-md.transition-all [aria-label=Image précédente]
+                svg.lucide.lucide-chevron-left.text-gray-800
+              button.absolute.right-2.top-1/2.-translate-y-1/2.bg-white/80.hover:bg-white.rounded-full.p-2.shadow-md.transition-all [aria-label=Image suivante]
+                svg.lucide.lucide-chevron-right.text-gray-800
+              div.absolute.bottom-4.left-1/2.-translate-x-1/2.bg-black/50.text-white.px-3.py-1.rounded-full.text-sm "1 / 5"
+            div.text-gray-700.leading-relaxed.space-y-3.prose.prose-sm.max-w-none "À la Pharmacie Saint Barthélémy, le dispositif de téléconsultation Tessan vous permet de c"
+              b "Vous cherchez un médecin disponible rapidement à Nice ou près de chez vous ?"
+              br
+              br
+              br
+              br
+              br
+              br
+              b "Consultez pour les motifs du quotidien"
+              br
+              br
+              br
+              br
+              ul.list-disc.list-inside.my-2.space-y-1
+                li "Fièvre, mal de gorge, angine, symptômes grippaux"
+                li "Vomissements, infection urinaire, cystite"
+                li "Ordonnance et arrêt de travail (jusqu'à 3 jours) si nécessaire"
+                li "Certificat médical"
+                li "Besoin d'un avis médical rapide"
+                li "..."
+              br
+              i "En cas d'urgence vitale, appelez le ou le ."
+                b "15"
+                b "112"
+              br
+              br
+              b "Sans rendez-vous et sur rendez-vous : ce qui est disponible"
+              br
+              br
+              i "Sans rendez-vous :"
+              br
+              br
+              ul.list-disc.list-inside.my-2.space-y-1
+                li "Médecin généraliste, en moins de 15 minutes"
+                li "Avis dermatologique en moins de 48 h (consultation généraliste suivie d'un avis spécialisé"
+                li "Pédiatrie sur créneaux dédiés aux familles"
+              br
+              i "Sur rendez-vous, sous 7 jours en moyenne :"
+              br
+              br
+              ul.list-disc.list-inside.my-2.space-y-1
+                li "Gériatrie"
+                li "Pneumologie"
+              br
+              b "Une téléconsultation de qualité, avec des outils médicaux connectés"
+              br
+              br
+              br
+              br
+              b "Accessibilité du dispositif"
+              br
+              br
+              br
+              br
+              b "Tarif et remboursement"
+              br
+              br
+              br
+              br
+              b "Réservez votre créneau avant de venir"
+              br
+              br
+              br
+              br
+              b "Trouver un médecin disponible aujourd'hui à Nice"
+              br
+              br
+    div.p-6
+      div.bg-white.rounded-lg.shadow-lg.p-8
+        div.grid.grid-cols-1.lg:grid-cols-2.gap-10.items-start
+          div
+            div.mb-8
+              h3.text-xl.font-bold.text-gray-800.mb-4 [style=font-family: Recoleta, recoleta, "recoleta Fallback", sans-serif;] "Horaires d'ouverture"
+              div.space-y-2
+                div.flex.justify-between.items-center.py-2.border-b.border-gray-200
+                  span.font-bold.text-gray-700.capitalize "Vendredi"
+                  span.font-bold.text-gray-600 "  09:00-12:30, 14:30-19:30"
+                    span.font-extrabold.text-[#238700] "Ouvert"
+                    span.text-xs.text-gray-600.font-normal "•"
+                div.flex.justify-between.items-center.py-2.border-b.border-gray-200
+                  span.font-medium.text-gray-700.capitalize "Samedi"
+                  span..text-gray-600 "09:00-12:30, 14:30-19:00"
+                div.flex.justify-between.items-center.py-2.border-b.border-gray-200
+                  span.font-medium.text-gray-700.capitalize "Dimanche"
+                  span..text-gray-600 "Fermé"
+                div.flex.justify-between.items-center.py-2.border-b.border-gray-200
+                  span.font-medium.text-gray-700.capitalize "Lundi"
+                  span..text-gray-600 "09:00-12:30, 14:30-19:30"
+                div.flex.justify-between.items-center.py-2.border-b.border-gray-200
+                  span.font-medium.text-gray-700.capitalize "Mardi"
+                  span..text-gray-600 "09:00-12:30, 14:30-19:30"
+                div.flex.justify-between.items-center.py-2.border-b.border-gray-200
+                  span.font-medium.text-gray-700.capitalize "Mercredi"
+                  span..text-gray-600 "09:00-12:30, 14:30-19:30"
+                div.flex.justify-between.items-center.py-2.border-b.border-gray-200
+                  span.font-medium.text-gray-700.capitalize "Jeudi"
+                  span..text-gray-600 "09:00-12:30, 14:30-19:30"
+          div.rounded-lg.overflow-hidden.shadow-md.h-[500px].lg:sticky.lg:top-24
+            div [style=position: relative; width: 100%; height: 100%;]
+              div [style=width: 100%; height: 100%; position: relative; overflow: hidden;]
+                div [style=height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);]
+                  div
+                    button [aria-label=Raccourcis clavier type=button title=Raccourcis clavier style=background: none transparent; display: block; border: none; margin: 0px; padding: 0px; text-transform: none; appearance:]
+                  div [role=region aria-label=Carte style=position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px;]
+                    div [style=display: none;]
+                      div.LGLeeN-keyboard-shortcuts-view
+                        table
+                          tbody
+                            tr
+                              td
+                                kbd [aria-label=Flèche vers la gauche] "←"
+                              td [aria-label=Déplacement vers la gauche.] "Déplacement vers la gauche"
+                            tr
+                              td
+                                kbd [aria-label=Flèche vers la droite] "→"
+                              td [aria-label=Déplacement vers la droite.] "Déplacement vers la droite"
+                            tr
+                              td
+                                kbd [aria-label=Flèche vers le haut] "↑"
+                              td [aria-label=Déplacement vers le haut.] "Déplacement vers le haut"
+                            tr
+                              td
+                                kbd [aria-label=Flèche vers le bas] "↓"
+                              td [aria-label=Déplacement vers le bas.] "Déplacement vers le bas"
+                            tr
+                              td
+                                kbd "+"
+                              td [aria-label=Zoom avant.] "Zoom avant"
+                            tr
+                              td
+                                kbd "-"
+                              td [aria-label=Zoom arrière.] "Zoom arrière"
+                            tr
+                              td
+                                kbd "Accueil"
+                              td [aria-label=Déplacement de 75 % vers la gauche.] "Déplacement de 75 % vers la gauche"
+                            tr
+                              td
+                                kbd "Fin"
+                              td [aria-label=Déplacement de 75 % vers la droite.] "Déplacement de 75 % vers la droite"
+                            tr
+                              td
+                                kbd "Page précédente"
+                              td [aria-label=Déplacement de 75 % vers le haut.] "Déplacement de 75 % vers le haut"
+                            tr
+                              td
+                                kbd "Page suivante"
+                              td [aria-label=Déplacement de 75 % vers le bas.] "Déplacement de 75 % vers le bas"
+                  div.gm-style [style=position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin:]
+              div.absolute.top-4.left-4.flex.flex-col.gap-2.z-10
+                button.bg-white.hover:bg-[#fcf5cc].text-tessan-green.rounded-lg.shadow-lg.p-3.transition-colors.duration-200.flex.items-center.gap-2.font-medium.cursor-pointer [title=Réinitialiser la vue]
+                  svg.lucide.lucide-maximize2.lucide-maximize-2
+                  span.hidden.sm:inline "Réinitialiser"
+                button.bg-white.hover:bg-[#fcf5cc].text-tessan-green.rounded-lg.shadow-lg.p-3.transition-colors.duration-200.flex.items-center.gap-2.font-medium.cursor-pointer [title=Me géolocaliser]
+                  svg.lucide.lucide-locate-fixed
+                  span.hidden.sm:inline.font-bold "Me géolocaliser"
+    section
+      div [style=padding: 0px 24px 24px;]
+        h2 [style=font-family: Recoleta, recoleta, "recoleta Fallback", sans-serif; font-size: 2.5rem; color: rgb(15, 53, 45); text-align:] "Foire Aux Questions"
+        div [style=display: flex; flex-direction: column; gap: 12px;]
+          div [style=background-color: white; border-radius: 12px; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 4px;]
+            button [style=width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 1.5rem; background: no]
+              span [style=font-family: "Plus Jakarta Sans", sans-serif; font-size: 18px; line-height: 24px; color: rgb(15, 53, 45); font-weight: 6] "Quels sont les horaires de téléconsultation ?"
+              span [style=flex-shrink: 0; transform: rotate(0deg); transition: transform 0.25s; display: flex; align-items: center;]
+                svg
+          div [style=background-color: white; border-radius: 12px; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 4px;]
+            button [style=width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 1.5rem; background: no]
+              span [style=font-family: "Plus Jakarta Sans", sans-serif; font-size: 18px; line-height: 24px; color: rgb(15, 53, 45); font-weight: 6] "La consultation est-elle remboursée ?"
+              span [style=flex-shrink: 0; transform: rotate(0deg); transition: transform 0.25s; display: flex; align-items: center;]
+                svg
+          div [style=background-color: white; border-radius: 12px; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 4px;]
+            button [style=width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 1.5rem; background: no]
+              span [style=font-family: "Plus Jakarta Sans", sans-serif; font-size: 18px; line-height: 24px; color: rgb(15, 53, 45); font-weight: 6] "Dois-je prendre rendez-vous ?"
+              span [style=flex-shrink: 0; transform: rotate(0deg); transition: transform 0.25s; display: flex; align-items: center;]
+                svg
+          div [style=background-color: white; border-radius: 12px; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 4px;]
+            button [style=width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 1.5rem; background: no]
+              span [style=font-family: "Plus Jakarta Sans", sans-serif; font-size: 18px; line-height: 24px; color: rgb(15, 53, 45); font-weight: 6] "Puis-je obtenir une ordonnance ou un arrêt de travail ?"
+              span [style=flex-shrink: 0; transform: rotate(0deg); transition: transform 0.25s; display: flex; align-items: center;]
+                svg
+          div [style=background-color: white; border-radius: 12px; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 4px;]
+            button [style=width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 1.5rem; background: no]
+              span [style=font-family: "Plus Jakarta Sans", sans-serif; font-size: 18px; line-height: 24px; color: rgb(15, 53, 45); font-weight: 6] "Que dois-je apporter pour la consultation ?"
+              span [style=flex-shrink: 0; transform: rotate(0deg); transition: transform 0.25s; display: flex; align-items: center;]
+                svg
+          div [style=background-color: white; border-radius: 12px; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 4px;]
+            button [style=width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 1.5rem; background: no]
+              span [style=font-family: "Plus Jakarta Sans", sans-serif; font-size: 18px; line-height: 24px; color: rgb(15, 53, 45); font-weight: 6] "Une téléconsultation est-elle possible pour mon enfant de moins de deux ans ?"
+              span [style=flex-shrink: 0; transform: rotate(0deg); transition: transform 0.25s; display: flex; align-items: center;]
+                svg
+          div [style=background-color: white; border-radius: 12px; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 4px;]
+            button [style=width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 1.5rem; background: no]
+              span [style=font-family: "Plus Jakarta Sans", sans-serif; font-size: 18px; line-height: 24px; color: rgb(15, 53, 45); font-weight: 6] "Puis-je faire une téléconsultation pour une déclaration d'accident de travail ?"
+              span [style=flex-shrink: 0; transform: rotate(0deg); transition: transform 0.25s; display: flex; align-items: center;]
+                svg
+          div [style=background-color: white; border-radius: 12px; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 4px;]
+            button [style=width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 1.5rem; background: no]
+              span [style=font-family: "Plus Jakarta Sans", sans-serif; font-size: 18px; line-height: 24px; color: rgb(15, 53, 45); font-weight: 6] "Puis-je obtenir un certificat médical pour faire du sport en téléconsultation ?"
+              span [style=flex-shrink: 0; transform: rotate(0deg); transition: transform 0.25s; display: flex; align-items: center;]
+                svg
+    div.p-6
+      div.bg-white.rounded-lg.shadow-lg.p-8
+        h2.text-2xl.text-gray-800.mb-6 [style=font-family: Recoleta, recoleta, "recoleta Fallback", sans-serif;] "Les dispositifs de téléconsultation Tessan à proximité"
+        p.text-gray-600.mb-6 "Découvrez les 6 dispositifs les plus proches"
+        div.grid.grid-cols-1.md:grid-cols-2.lg:grid-cols-3.gap-4
+          div.bg-white.p-5.border.border-gray-200.rounded-lg.hover:shadow-xl.transition.cursor-pointer
+            div.flex.gap-4
+              div.flex-1
+                div.flex.justify-between.items-start
+                  h3.text-gray-800.text-xl.flex-1
+                    span.cursor-pointer.font-bold "Pharmacie Nice Etoile"
+                    a.cursor-pointer [href=#]
+                      span.text-base.font-normal.underline.cursor-pointer.ml-2 "( 1.6 km )"
+                p.text-gray-500.font-medium.text-base "24 Av. Jean Médecin"
+                p.text-gray-500.font-medium.text-base.mb-3 "06000  Nice "
+                p.font-medium.mb-3.flex.items-center.gap-1.5.text-gray-700 "  Ferme à 20:00"
+                  svg.lucide.lucide-clock.h-5.w-5.text-[#238700]
+                  span.font-extrabold.text-base.text-[#238700] "Ouvert"
+                  span.text-xs "•"
+                div.flex.flex-col.gap-2.w-full
+                  button.w-full.flex.items-center.justify-center.gap-2.bg-tessan-green.hover:bg-tessan-green-hover.text-white.font-semibold.rounded-lg.h-11.px-3.transition-colors.text-base.cursor-pointer
+                    svg.lucide.lucide-calendar-days
+                    span "Réserver un créneau"
+                  button.inline-flex.items-center.justify-center.gap-2.whitespace-nowrap.rounded-md.font-medium.transition-all.disabled:pointer-events-none.disabled:opacity-50.[&_svg]:pointer-events-none.[&_svg:not([class*='size-'])]:size-4.shrink-0.[&_svg]:shrink-0.outline-none.focus-visible:border-ring.focus-visible:ring-ring/50.focus-visible:ring-[3px].aria-invalid:ring-destructive/20.dark:aria-invalid:ring-destructive/40.aria-invalid:border-destructive.shadow-xs.hover:text-accent-foreground.dark:bg-input/30.dark:border-input.dark:hover:bg-input/50.py-2.has-[>svg]:px-3.border-tessan-green.hover:opacity-[.7].border.border-none.bg-[#FFF198].text-tessan-green.w-full.h-10.px-3.cursor-pointer.text-base
+                    svg.lucide.lucide-info.w-4.h-4
+                    span.truncate "Voir plus"
+          div.bg-white.p-5.border.border-gray-200.rounded-lg.hover:shadow-xl.transition.cursor-pointer
+            div.flex.gap-4
+              div.flex-1
+                div.flex.justify-between.items-start
+                  h3.text-gray-800.text-xl.flex-1
+                    span.cursor-pointer.font-bold "Pharmacie Grande Corniche"
+                    a.cursor-pointer [href=#]
+                      span.text-base.font-normal.underline.cursor-pointer.ml-2 "( 2.6 km )"
+                p.text-gray-500.font-medium.text-base "2 Bd Saint-Roch"
+                p.text-gray-500.font-medium.text-base.mb-3 "06300  Nice "
+                p.font-medium.mb-3.flex.items-center.gap-1.5.text-gray-700 "  Ferme à 19:30"
+                  svg.lucide.lucide-clock.h-5.w-5.text-[#238700]
+                  span.font-extrabold.text-base.text-[#238700] "Ouvert"
+                  span.text-xs "•"
+                div.flex.flex-col.gap-2.w-full
+                  button.w-full.flex.items-center.justify-center.gap-2.bg-tessan-green.hover:bg-tessan-green-hover.text-white.font-semibold.rounded-lg.h-11.px-3.transition-colors.text-base.cursor-pointer
+                    svg.lucide.lucide-calendar-days
+                    span "Réserver un créneau"
+                  button.inline-flex.items-center.justify-center.gap-2.whitespace-nowrap.rounded-md.font-medium.transition-all.disabled:pointer-events-none.disabled:opacity-50.[&_svg]:pointer-events-none.[&_svg:not([class*='size-'])]:size-4.shrink-0.[&_svg]:shrink-0.outline-none.focus-visible:border-ring.focus-visible:ring-ring/50.focus-visible:ring-[3px].aria-invalid:ring-destructive/20.dark:aria-invalid:ring-destructive/40.aria-invalid:border-destructive.shadow-xs.hover:text-accent-foreground.dark:bg-input/30.dark:border-input.dark:hover:bg-input/50.py-2.has-[>svg]:px-3.border-tessan-green.hover:opacity-[.7].border.border-none.bg-[#FFF198].text-tessan-green.w-full.h-10.px-3.cursor-pointer.text-base
+                    svg.lucide.lucide-info.w-4.h-4
+                    span.truncate "Voir plus"
+          div.bg-white.p-5.border.border-gray-200.rounded-lg.hover:shadow-xl.transition.cursor-pointer
+            div.flex.gap-4
+              div.flex-1
+                div.flex.justify-between.items-start
+                  h3.text-gray-800.text-xl.flex-1
+                    span.cursor-pointer.font-bold "Pharmacie de l'Ariane"
+                    a.cursor-pointer [href=#]
+                      span.text-base.font-normal.underline.cursor-pointer.ml-2 "( 4.3 km )"
+                p.text-gray-500.font-medium.text-base "137 Bd de l'Ariane"
+                p.text-gray-500.font-medium.text-base.mb-3 "06300  Nice "
+                p.font-medium.mb-3.flex.items-center.gap-1.5.text-gray-700 "  Ferme à 19:30"
+                  svg.lucide.lucide-clock.h-5.w-5.text-[#238700]
+                  span.font-extrabold.text-base.text-[#238700] "Ouvert"
+                  span.text-xs "•"
+                div.flex.flex-col.gap-2.w-full
+                  button.w-full.flex.items-center.justify-center.gap-2.bg-tessan-green.hover:bg-tessan-green-hover.text-white.font-semibold.rounded-lg.h-11.px-3.transition-colors.text-base.cursor-pointer
+                    svg.lucide.lucide-calendar-days
+                    span "Réserver un créneau"
+                  button.inline-flex.items-center.justify-center.gap-2.whitespace-nowrap.rounded-md.font-medium.transition-all.disabled:pointer-events-none.disabled:opacity-50.[&_svg]:pointer-events-none.[&_svg:not([class*='size-'])]:size-4.shrink-0.[&_svg]:shrink-0.outline-none.focus-visible:border-ring.focus-visible:ring-ring/50.focus-visible:ring-[3px].aria-invalid:ring-destructive/20.dark:aria-invalid:ring-destructive/40.aria-invalid:border-destructive.shadow-xs.hover:text-accent-foreground.dark:bg-input/30.dark:border-input.dark:hover:bg-input/50.py-2.has-[>svg]:px-3.border-tessan-green.hover:opacity-[.7].border.border-none.bg-[#FFF198].text-tessan-green.w-full.h-10.px-3.cursor-pointer.text-base
+                    svg.lucide.lucide-info.w-4.h-4
+                    span.truncate "Voir plus"
+          div.bg-white.p-5.border.border-gray-200.rounded-lg.hover:shadow-xl.transition.cursor-pointer
+            div.flex.gap-4
+              div.flex-1
+                div.flex.justify-between.items-start
+                  h3.text-gray-800.text-xl.flex-1
+                    span.cursor-pointer.font-bold "Pharmacie la Trinité"
+                    a.cursor-pointer [href=#]
+                      span.text-base.font-normal.underline.cursor-pointer.ml-2 "( 5.5 km )"
+                p.text-gray-500.font-medium.text-base "2 Rte de Laghet"
+                p.text-gray-500.font-medium.text-base.mb-3 "06340  La Trinité "
+                p.font-medium.mb-3.flex.items-center.gap-1.5.text-gray-700 "  Ferme à 20:00"
+                  svg.lucide.lucide-clock.h-5.w-5.text-[#238700]
+                  span.font-extrabold.text-base.text-[#238700] "Ouvert"
+                  span.text-xs "•"
+                div.flex.flex-col.gap-2.w-full
+                  button.w-full.flex.items-center.justify-center.gap-2.bg-tessan-green.hover:bg-tessan-green-hover.text-white.font-semibold.rounded-lg.h-11.px-3.transition-colors.text-base.cursor-pointer
+                    svg.lucide.lucide-calendar-days
+                    span "Réserver un créneau"
+                  button.inline-flex.items-center.justify-center.gap-2.whitespace-nowrap.rounded-md.font-medium.transition-all.disabled:pointer-events-none.disabled:opacity-50.[&_svg]:pointer-events-none.[&_svg:not([class*='size-'])]:size-4.shrink-0.[&_svg]:shrink-0.outline-none.focus-visible:border-ring.focus-visible:ring-ring/50.focus-visible:ring-[3px].aria-invalid:ring-destructive/20.dark:aria-invalid:ring-destructive/40.aria-invalid:border-destructive.shadow-xs.hover:text-accent-foreground.dark:bg-input/30.dark:border-input.dark:hover:bg-input/50.py-2.has-[>svg]:px-3.border-tessan-green.hover:opacity-[.7].border.border-none.bg-[#FFF198].text-tessan-green.w-full.h-10.px-3.cursor-pointer.text-base
+                    svg.lucide.lucide-info.w-4.h-4
+                    span.truncate "Voir plus"
+          div.bg-white.p-5.border.border-gray-200.rounded-lg.hover:shadow-xl.transition.cursor-pointer
+            div.flex.gap-4
+              div.flex-1
+                div.flex.justify-between.items-start
+                  h3.text-gray-800.text-xl.flex-1
+                    span.cursor-pointer.font-bold "Pharmacie Saint-Isidore"
+                    a.cursor-pointer [href=#]
+                      span.text-base.font-normal.underline.cursor-pointer.ml-2 "( 5.8 km )"
+                p.text-gray-500.font-medium.text-base "CC E. Leclerc RD6202 Quartier"
+                p.text-gray-500.font-medium.text-base.mb-3 "06200  Nice "
+                p.font-medium.mb-3.flex.items-center.gap-1.5.text-gray-700 "  Ferme à 20:00"
+                  svg.lucide.lucide-clock.h-5.w-5.text-[#238700]
+                  span.font-extrabold.text-base.text-[#238700] "Ouvert"
+                  span.text-xs "•"
+                div.flex.flex-col.gap-2.w-full
+                  button.w-full.flex.items-center.justify-center.gap-2.bg-tessan-green.hover:bg-tessan-green-hover.text-white.font-semibold.rounded-lg.h-11.px-3.transition-colors.text-base.cursor-pointer
+                    svg.lucide.lucide-calendar-days
+                    span "Réserver un créneau"
+                  button.inline-flex.items-center.justify-center.gap-2.whitespace-nowrap.rounded-md.font-medium.transition-all.disabled:pointer-events-none.disabled:opacity-50.[&_svg]:pointer-events-none.[&_svg:not([class*='size-'])]:size-4.shrink-0.[&_svg]:shrink-0.outline-none.focus-visible:border-ring.focus-visible:ring-ring/50.focus-visible:ring-[3px].aria-invalid:ring-destructive/20.dark:aria-invalid:ring-destructive/40.aria-invalid:border-destructive.shadow-xs.hover:text-accent-foreground.dark:bg-input/30.dark:border-input.dark:hover:bg-input/50.py-2.has-[>svg]:px-3.border-tessan-green.hover:opacity-[.7].border.border-none.bg-[#FFF198].text-tessan-green.w-full.h-10.px-3.cursor-pointer.text-base
+                    svg.lucide.lucide-info.w-4.h-4
+                    span.truncate "Voir plus"
+          div.bg-white.p-5.border.border-gray-200.rounded-lg.hover:shadow-xl.transition.cursor-pointer
+            div.flex.gap-4
+              div.flex-1
+                div.flex.justify-between.items-start
+                  h3.text-gray-800.text-xl.flex-1
+                    span.cursor-pointer.font-bold "PHARMACIE DE FAMAJOR"
+                    a.cursor-pointer [href=#]
+                      span.text-base.font-normal.underline.cursor-pointer.ml-2 "( 8.5 km )"
+                p.text-gray-500.font-medium.text-base "5 Rte d'Aspremont"
+                p.text-gray-500.font-medium.text-base.mb-3 "06690  Tourrette-Levens "
+                p.font-medium.mb-3.flex.items-center.gap-1.5.text-gray-700 "  Ferme à 19:00"
+                  svg.lucide.lucide-clock.h-5.w-5.text-[#238700]
+                  span.font-extrabold.text-base.text-[#238700] "Ouvert"
+                  span.text-xs "•"
+                div.flex.flex-col.gap-2.w-full
+                  button.w-full.flex.items-center.justify-center.gap-2.bg-tessan-green.hover:bg-tessan-green-hover.text-white.font-semibold.rounded-lg.h-11.px-3.transition-colors.text-base.cursor-pointer
+                    svg.lucide.lucide-calendar-days
+                    span "Réserver un créneau"
+                  button.inline-flex.items-center.justify-center.gap-2.whitespace-nowrap.rounded-md.font-medium.transition-all.disabled:pointer-events-none.disabled:opacity-50.[&_svg]:pointer-events-none.[&_svg:not([class*='size-'])]:size-4.shrink-0.[&_svg]:shrink-0.outline-none.focus-visible:border-ring.focus-visible:ring-ring/50.focus-visible:ring-[3px].aria-invalid:ring-destructive/20.dark:aria-invalid:ring-destructive/40.aria-invalid:border-destructive.shadow-xs.hover:text-accent-foreground.dark:bg-input/30.dark:border-input.dark:hover:bg-input/50.py-2.has-[>svg]:px-3.border-tessan-green.hover:opacity-[.7].border.border-none.bg-[#FFF198].text-tessan-green.w-full.h-10.px-3.cursor-pointer.text-base
+                    svg.lucide.lucide-info.w-4.h-4
+                    span.truncate "Voir plus"
+    div.p-6
+      div.bg-white.rounded-lg.shadow-lg.p-8
+        h2.text-2xl.text-gray-800.mb-6 [style=font-family: Recoleta, recoleta, "recoleta Fallback", sans-serif;] "Les dispositifs de téléconsultation Tessan dans les départements à proximité"
+        p.text-gray-600.mb-6 "Explorez les dispositifs disponibles dans les 10 départements les plus proches"
+        div.grid.grid-cols-2.md:grid-cols-3.lg:grid-cols-5.gap-4
+          button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+            p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Var"
+            p.text-sm.text-gray-500.group-hover:text-white "47  dispositifs"
+          button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+            p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Alpes-de-Haute-Provence"
+            p.text-sm.text-gray-500.group-hover:text-white "10  dispositifs"
+          button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+            p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Hautes-Alpes"
+            p.text-sm.text-gray-500.group-hover:text-white "6  dispositifs"
+          button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+            p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Bouches-du-Rhône"
+            p.text-sm.text-gray-500.group-hover:text-white "39  dispositifs"
+          button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+            p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Vaucluse"
+            p.text-sm.text-gray-500.group-hover:text-white "27  dispositifs"
+          button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+            p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Haute-Corse"
+            p.text-sm.text-gray-500.group-hover:text-white "8  dispositifs"
+          button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+            p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Drôme"
+            p.text-sm.text-gray-500.group-hover:text-white "26  dispositifs"
+          button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+            p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Gard"
+            p.text-sm.text-gray-500.group-hover:text-white "33  dispositifs"
+          button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+            p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Isère"
+            p.text-sm.text-gray-500.group-hover:text-white "31  dispositifs"
+          button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+            p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Savoie"
+            p.text-sm.text-gray-500.group-hover:text-white "5  dispositifs"
+    div.p-6
+      div.bg-white.rounded-lg.shadow-lg.p-8
+        h2.text-2xl.text-gray-800.mb-6 [style=font-family: Recoleta, recoleta, "recoleta Fallback", sans-serif;] "Les dispositifs de téléconsultation Tessan dans les régions à proximité"
+        p.text-gray-600.mb-6 "Explorez les dispositifs disponibles dans les 10 régions les plus proches"
+        div.grid.grid-cols-2.md:grid-cols-3.lg:grid-cols-5.gap-4
+          button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+            p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Provence-Alpes-Côte d'Azur"
+            p.text-sm.text-gray-500.group-hover:text-white "143  dispositifs"
+          button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+            p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Corse"
+            p.text-sm.text-gray-500.group-hover:text-white "11  dispositifs"
+          button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+            p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Auvergne-Rhône-Alpes"
+            p.text-sm.text-gray-500.group-hover:text-white "195  dispositifs"
+          button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+            p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Bourgogne-Franche-Comté"
+            p.text-sm.text-gray-500.group-hover:text-white "102  dispositifs"
+          button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+            p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Occitanie"
+            p.text-sm.text-gray-500.group-hover:text-white "198  dispositifs"
+          button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+            p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Grand Est"
+            p.text-sm.text-gray-500.group-hover:text-white "169  dispositifs"
+          button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+            p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Nouvelle-Aquitaine"
+            p.text-sm.text-gray-500.group-hover:text-white "183  dispositifs"
+          button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+            p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Centre-Val de Loire"
+            p.text-sm.text-gray-500.group-hover:text-white "66  dispositifs"
+          button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+            p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Île-de-France"
+            p.text-sm.text-gray-500.group-hover:text-white "211  dispositifs"
+          button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+            p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Pays de la Loire"
+            p.text-sm.text-gray-500.group-hover:text-white "97  dispositifs"

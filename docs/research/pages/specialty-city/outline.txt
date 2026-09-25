@@ -1,0 +1,283 @@
+main
+  section.p-6.bg-slate-50
+    div.max-w-[1328px].mx-auto
+      nav.hidden.md:block.mb-6 [aria-label=breadcrumb]
+        ol.text-muted-foreground.flex.flex-wrap.items-center.gap-1.5.text-sm.break-words.sm:gap-2.5
+          li.inline-flex.items-center.gap-1.5
+            button.hover:text-foreground.transition-colors.hover:underline.cursor-pointer "Trouver un dispositif de téléconsultation"
+          li.[&>svg]:size-3.5 [role=presentation]
+            svg.lucide.lucide-chevron-right
+          li.inline-flex.items-center.gap-1.5
+            button.hover:text-foreground.transition-colors.hover:underline.cursor-pointer "Dermatologue"
+          li.[&>svg]:size-3.5 [role=presentation]
+            svg.lucide.lucide-chevron-right
+          li.inline-flex.items-center.gap-1.5
+            button.hover:text-foreground.transition-colors.hover:underline.cursor-pointer "Provence-Alpes-Côte d'Azur"
+          li.[&>svg]:size-3.5 [role=presentation]
+            svg.lucide.lucide-chevron-right
+          li.inline-flex.items-center.gap-1.5
+            button.hover:text-foreground.transition-colors.hover:underline.cursor-pointer "Alpes-Maritimes"
+          li.[&>svg]:size-3.5 [role=presentation]
+            svg.lucide.lucide-chevron-right
+          li.inline-flex.items-center.gap-1.5
+            span.text-foreground.font-normal [role=link] "Nice"
+      h1.text-center.text-3xl.text-gray-800.mb-5 "Les dispositifs de téléconsultation Tessan"
+        span.text-tessan-green-hover "autour de vous"
+      p.text-center.text-gray-600.mb-10 "Tessan, c'est une téléconsultation augmentée par des dispositifs médic"
+      div.mx-auto.bg-white.p-6.md:p-8.rounded-lg.shadow-lg
+        form.flex.flex-col.lg:flex-row.gap-4.md:gap-[1.2rem].items-stretch
+          div.w-full.md:min-w-[280px].md:w-auto.relative
+            button.w-full.h-11.flex.items-center.font-semibold.justify-between.space-x-2.border.rounded-lg.px-4.transition-colors.focus:outline-none.focus:ring-2.focus:ring-blue-300.cursor-pointer.border-tessan-green.bg-tessan-green.text-w [type=button]
+              span.truncate "Dermatologue"
+              svg.lucide.lucide-chevron-down.transition-transform
+          div.relative.flex-1
+            input.flex.bg-transparent.py-1.text-base.shadow-xs.transition-colors.file:border-0.file:bg-transparent.file:text-sm.file:font-medium.file:text-foreground.placeholder:text-muted-foreground.focus-visible:outline-none.focus-visib [placeholder=Ville / Code postal type=text]
+            button.absolute.top-1/2.right-12.-translate-y-1/2.text-gray-400.hover:text-red-500.transition-colors.cursor-pointer [type=button title=Effacer la recherche]
+              svg
+            button.absolute.top-1/2.right-4.-translate-y-1/2.text-gray-400.hover:text-tessan-green-hover.transition-colors.disabled:opacity-50.disabled:cursor-not-allowed.cursor-pointer [type=button title=Me géolocaliser]
+              svg.lucide.lucide-locate-fixed
+          button.w-full.md:min-w-[288px].md:w-auto.h-11.flex.items-center.justify-center.gap-2.bg-tessan-green.hover:bg-tessan-green-hover.text-white.font-semibold.rounded-lg.px-4.transition-colors.focus:outline-none.focus:ring-2.focus:r [type=submit]
+            svg.lucide.lucide-search
+            span "Recherche"
+  div.bg-slate-50.p-6.pb-12
+    div.max-w-[1328px].mx-auto
+      div.bg-white.p-6.md:p-8.rounded-lg.shadow-lg
+        h2.text-center.text-2xl.text-gray-800.mb-6.font-bold "5 dispositif s de téléconsultation Tessan autour de vous"
+        div.grid.grid-cols-1.lg:grid-cols-[35%_1fr].gap-5
+          div.flex.flex-col.gap-6.overflow-y-auto.max-h-[calc(3*280px+2*24px)]
+            div.bg-white.p-5.border.border-gray-200.rounded-lg.hover:shadow-xl.transition.cursor-pointer
+              div.flex.gap-4
+                div.flex-1
+                  div.flex.justify-between.items-start
+                    h3.text-gray-800.text-xl.flex-1
+                      span.cursor-pointer.font-bold "Pharmacie Saint Barthélémy"
+                      a.cursor-pointer [href=#]
+                        span.text-base.font-normal.underline.cursor-pointer.ml-2 "( 0.0 km )"
+                  p.text-gray-500.font-medium.text-base "51 Av. Alfred Borriglione"
+                  p.text-gray-500.font-medium.text-base.mb-3 "06100  Nice "
+                  p.font-medium.mb-3.flex.items-center.gap-1.5.text-gray-700 "  Ferme à 19:30"
+                    svg.lucide.lucide-clock.h-5.w-5.text-[#238700]
+                    span.font-extrabold.text-base.text-[#238700] "Ouvert"
+                    span.text-xs "•"
+                  div.flex.flex-col.gap-2.w-full
+                    button.w-full.flex.items-center.justify-center.gap-2.bg-tessan-green.hover:bg-tessan-green-hover.text-white.font-semibold.rounded-lg.h-11.px-3.transition-colors.text-base.cursor-pointer
+                      svg.lucide.lucide-calendar-days
+                      span "Réserver un créneau"
+                    button.inline-flex.items-center.justify-center.gap-2.whitespace-nowrap.rounded-md.font-medium.transition-all.disabled:pointer-events-none.disabled:opacity-50.[&_svg]:pointer-events-none.[&_svg:not([class*='size-'])]:size-4.shri
+                      svg.lucide.lucide-info.w-4.h-4
+                      span.truncate "Voir plus"
+            div.bg-white.p-5.border.border-gray-200.rounded-lg.hover:shadow-xl.transition.cursor-pointer
+              div.flex.gap-4
+                div.flex-1
+                  div.flex.justify-between.items-start
+                    h3.text-gray-800.text-xl.flex-1
+                      span.cursor-pointer.font-bold "Pharmacie Nice Etoile"
+                      a.cursor-pointer [href=#]
+                        span.text-base.font-normal.underline.cursor-pointer.ml-2 "( 1.6 km )"
+                  p.text-gray-500.font-medium.text-base "24 Av. Jean Médecin"
+                  p.text-gray-500.font-medium.text-base.mb-3 "06000  Nice "
+                  p.font-medium.mb-3.flex.items-center.gap-1.5.text-gray-700 "  Ferme à 20:00"
+                    svg.lucide.lucide-clock.h-5.w-5.text-[#238700]
+                    span.font-extrabold.text-base.text-[#238700] "Ouvert"
+                    span.text-xs "•"
+                  div.flex.flex-col.gap-2.w-full
+                    button.w-full.flex.items-center.justify-center.gap-2.bg-tessan-green.hover:bg-tessan-green-hover.text-white.font-semibold.rounded-lg.h-11.px-3.transition-colors.text-base.cursor-pointer
+                      svg.lucide.lucide-calendar-days
+                      span "Réserver un créneau"
+                    button.inline-flex.items-center.justify-center.gap-2.whitespace-nowrap.rounded-md.font-medium.transition-all.disabled:pointer-events-none.disabled:opacity-50.[&_svg]:pointer-events-none.[&_svg:not([class*='size-'])]:size-4.shri
+                      svg.lucide.lucide-info.w-4.h-4
+                      span.truncate "Voir plus"
+            div.bg-white.p-5.border.border-gray-200.rounded-lg.hover:shadow-xl.transition.cursor-pointer
+              div.flex.gap-4
+                div.flex-1
+                  div.flex.justify-between.items-start
+                    h3.text-gray-800.text-xl.flex-1
+                      span.cursor-pointer.font-bold "Pharmacie Grande Corniche"
+                      a.cursor-pointer [href=#]
+                        span.text-base.font-normal.underline.cursor-pointer.ml-2 "( 2.6 km )"
+                  p.text-gray-500.font-medium.text-base "2 Bd Saint-Roch"
+                  p.text-gray-500.font-medium.text-base.mb-3 "06300  Nice "
+                  p.font-medium.mb-3.flex.items-center.gap-1.5.text-gray-700 "  Ferme à 19:30"
+                    svg.lucide.lucide-clock.h-5.w-5.text-[#238700]
+                    span.font-extrabold.text-base.text-[#238700] "Ouvert"
+                    span.text-xs "•"
+                  div.flex.flex-col.gap-2.w-full
+                    button.w-full.flex.items-center.justify-center.gap-2.bg-tessan-green.hover:bg-tessan-green-hover.text-white.font-semibold.rounded-lg.h-11.px-3.transition-colors.text-base.cursor-pointer
+                      svg.lucide.lucide-calendar-days
+                      span "Réserver un créneau"
+                    button.inline-flex.items-center.justify-center.gap-2.whitespace-nowrap.rounded-md.font-medium.transition-all.disabled:pointer-events-none.disabled:opacity-50.[&_svg]:pointer-events-none.[&_svg:not([class*='size-'])]:size-4.shri
+                      svg.lucide.lucide-info.w-4.h-4
+                      span.truncate "Voir plus"
+            div.bg-white.p-5.border.border-gray-200.rounded-lg.hover:shadow-xl.transition.cursor-pointer
+              div.flex.gap-4
+                div.flex-1
+                  div.flex.justify-between.items-start
+                    h3.text-gray-800.text-xl.flex-1
+                      span.cursor-pointer.font-bold "Pharmacie de l'Ariane"
+                      a.cursor-pointer [href=#]
+                        span.text-base.font-normal.underline.cursor-pointer.ml-2 "( 4.3 km )"
+                  p.text-gray-500.font-medium.text-base "137 Bd de l'Ariane"
+                  p.text-gray-500.font-medium.text-base.mb-3 "06300  Nice "
+                  p.font-medium.mb-3.flex.items-center.gap-1.5.text-gray-700 "  Ferme à 19:30"
+                    svg.lucide.lucide-clock.h-5.w-5.text-[#238700]
+                    span.font-extrabold.text-base.text-[#238700] "Ouvert"
+                    span.text-xs "•"
+                  div.flex.flex-col.gap-2.w-full
+                    button.w-full.flex.items-center.justify-center.gap-2.bg-tessan-green.hover:bg-tessan-green-hover.text-white.font-semibold.rounded-lg.h-11.px-3.transition-colors.text-base.cursor-pointer
+                      svg.lucide.lucide-calendar-days
+                      span "Réserver un créneau"
+                    button.inline-flex.items-center.justify-center.gap-2.whitespace-nowrap.rounded-md.font-medium.transition-all.disabled:pointer-events-none.disabled:opacity-50.[&_svg]:pointer-events-none.[&_svg:not([class*='size-'])]:size-4.shri
+                      svg.lucide.lucide-info.w-4.h-4
+                      span.truncate "Voir plus"
+            div.bg-white.p-5.border.border-gray-200.rounded-lg.hover:shadow-xl.transition.cursor-pointer
+              div.flex.gap-4
+                div.flex-1
+                  div.flex.justify-between.items-start
+                    h3.text-gray-800.text-xl.flex-1
+                      span.cursor-pointer.font-bold "Pharmacie Saint-Isidore"
+                      a.cursor-pointer [href=#]
+                        span.text-base.font-normal.underline.cursor-pointer.ml-2 "( 5.8 km )"
+                  p.text-gray-500.font-medium.text-base "CC E. Leclerc RD6202 Quartier"
+                  p.text-gray-500.font-medium.text-base.mb-3 "06200  Nice "
+                  p.font-medium.mb-3.flex.items-center.gap-1.5.text-gray-700 "  Ferme à 20:00"
+                    svg.lucide.lucide-clock.h-5.w-5.text-[#238700]
+                    span.font-extrabold.text-base.text-[#238700] "Ouvert"
+                    span.text-xs "•"
+                  div.flex.flex-col.gap-2.w-full
+                    button.w-full.flex.items-center.justify-center.gap-2.bg-tessan-green.hover:bg-tessan-green-hover.text-white.font-semibold.rounded-lg.h-11.px-3.transition-colors.text-base.cursor-pointer
+                      svg.lucide.lucide-calendar-days
+                      span "Réserver un créneau"
+                    button.inline-flex.items-center.justify-center.gap-2.whitespace-nowrap.rounded-md.font-medium.transition-all.disabled:pointer-events-none.disabled:opacity-50.[&_svg]:pointer-events-none.[&_svg:not([class*='size-'])]:size-4.shri
+                      svg.lucide.lucide-info.w-4.h-4
+                      span.truncate "Voir plus"
+          div.rounded-r-md.overflow-hidden.shadow-md.h-[calc(3*280px+2*24px)].lg:sticky.lg:top-24
+            div
+              div
+                div
+                  div
+                    button [aria-label=Raccourcis clavier type=button title=Raccourcis clavier]
+                  div [role=region aria-label=Carte]
+                    div
+                      div.LGLeeN-keyboard-shortcuts-view
+                        table
+                          tbody
+                            tr
+                              td
+                                kbd [aria-label=Flèche vers la gauche] "←"
+                              td [aria-label=Déplacement vers la gauche.] "Déplacement vers la gauche"
+                            tr
+                              td
+                                kbd [aria-label=Flèche vers la droite] "→"
+                              td [aria-label=Déplacement vers la droite.] "Déplacement vers la droite"
+                            tr
+                              td
+                                kbd [aria-label=Flèche vers le haut] "↑"
+                              td [aria-label=Déplacement vers le haut.] "Déplacement vers le haut"
+                            tr
+                              td
+                                kbd [aria-label=Flèche vers le bas] "↓"
+                              td [aria-label=Déplacement vers le bas.] "Déplacement vers le bas"
+                            tr
+                              td
+                                kbd "+"
+                              td [aria-label=Zoom avant.] "Zoom avant"
+                            tr
+                              td
+                                kbd "-"
+                              td [aria-label=Zoom arrière.] "Zoom arrière"
+                            tr
+                              td
+                                kbd "Accueil"
+                              td [aria-label=Déplacement de 75 % vers la gauche.] "Déplacement de 75 % vers la gauche"
+                            tr
+                              td
+                                kbd "Fin"
+                              td [aria-label=Déplacement de 75 % vers la droite.] "Déplacement de 75 % vers la droite"
+                            tr
+                              td
+                                kbd "Page précédente"
+                              td [aria-label=Déplacement de 75 % vers le haut.] "Déplacement de 75 % vers le haut"
+                            tr
+                              td
+                                kbd "Page suivante"
+                              td [aria-label=Déplacement de 75 % vers le bas.] "Déplacement de 75 % vers le bas"
+                  div.gm-style
+              div.absolute.top-4.left-4.flex.flex-col.gap-2.z-10
+                button.bg-white.hover:bg-[#fcf5cc].text-tessan-green.rounded-lg.shadow-lg.p-3.transition-colors.duration-200.flex.items-center.gap-2.font-medium.cursor-pointer [title=Réinitialiser la vue]
+                  svg.lucide.lucide-maximize2.lucide-maximize-2
+                  span.hidden.sm:inline "Réinitialiser"
+                button.bg-white.hover:bg-[#fcf5cc].text-tessan-green.rounded-lg.shadow-lg.p-3.transition-colors.duration-200.flex.items-center.gap-2.font-medium.cursor-pointer [title=Me géolocaliser]
+                  svg.lucide.lucide-locate-fixed
+                  span.hidden.sm:inline.font-bold "Me géolocaliser"
+  div.bg-slate-50.p-6.pb-12
+    div.max-w-[1328px].mx-auto
+      div.mb-8
+        div.bg-white.rounded-lg.shadow-lg.p-8
+          h2.text-2xl.text-gray-800.mb-6 "Les dispositifs de téléconsultation Tessan dans les départements à pro"
+          p.text-gray-600.mb-6 "Explorez les dispositifs disponibles dans les 10 départements les plus"
+          div.grid.grid-cols-2.md:grid-cols-3.lg:grid-cols-5.gap-4
+            button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+              p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Alpes-Maritimes"
+              p.text-sm.text-gray-500.group-hover:text-white "15  dispositifs"
+            button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+              p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Var"
+              p.text-sm.text-gray-500.group-hover:text-white "47  dispositifs"
+            button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+              p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Alpes-de-Haute-Provence"
+              p.text-sm.text-gray-500.group-hover:text-white "10  dispositifs"
+            button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+              p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Hautes-Alpes"
+              p.text-sm.text-gray-500.group-hover:text-white "6  dispositifs"
+            button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+              p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Bouches-du-Rhône"
+              p.text-sm.text-gray-500.group-hover:text-white "39  dispositifs"
+            button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+              p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Vaucluse"
+              p.text-sm.text-gray-500.group-hover:text-white "27  dispositifs"
+            button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+              p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Haute-Corse"
+              p.text-sm.text-gray-500.group-hover:text-white "8  dispositifs"
+            button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+              p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Drôme"
+              p.text-sm.text-gray-500.group-hover:text-white "26  dispositifs"
+            button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+              p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Gard"
+              p.text-sm.text-gray-500.group-hover:text-white "33  dispositifs"
+            button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+              p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Isère"
+              p.text-sm.text-gray-500.group-hover:text-white "31  dispositifs"
+      div
+        div.bg-white.rounded-lg.shadow-lg.p-8
+          h2.text-2xl.text-gray-800.mb-6 "Les dispositifs de téléconsultation Tessan dans les régions à proximit"
+          p.text-gray-600.mb-6 "Explorez les dispositifs disponibles dans les 10 régions les plus proc"
+          div.grid.grid-cols-2.md:grid-cols-3.lg:grid-cols-5.gap-4
+            button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+              p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Provence-Alpes-Côte d'Azur"
+              p.text-sm.text-gray-500.group-hover:text-white "144  dispositifs"
+            button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+              p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Corse"
+              p.text-sm.text-gray-500.group-hover:text-white "11  dispositifs"
+            button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+              p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Auvergne-Rhône-Alpes"
+              p.text-sm.text-gray-500.group-hover:text-white "195  dispositifs"
+            button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+              p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Bourgogne-Franche-Comté"
+              p.text-sm.text-gray-500.group-hover:text-white "102  dispositifs"
+            button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+              p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Occitanie"
+              p.text-sm.text-gray-500.group-hover:text-white "198  dispositifs"
+            button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+              p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Grand Est"
+              p.text-sm.text-gray-500.group-hover:text-white "169  dispositifs"
+            button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+              p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Nouvelle-Aquitaine"
+              p.text-sm.text-gray-500.group-hover:text-white "183  dispositifs"
+            button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+              p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Centre-Val de Loire"
+              p.text-sm.text-gray-500.group-hover:text-white "66  dispositifs"
+            button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+              p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Île-de-France"
+              p.text-sm.text-gray-500.group-hover:text-white "211  dispositifs"
+            button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+              p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Pays de la Loire"
+              p.text-sm.text-gray-500.group-hover:text-white "97  dispositifs"

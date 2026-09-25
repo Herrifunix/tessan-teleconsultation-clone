@@ -1,0 +1,46 @@
+{
+ "id": 557,
+ "nom": "Pharmacie Saint Barthélémy",
+ "adresse": "51 Av. Alfred Borriglione",
+ "ville": "Nice",
+ "codePostal": "06100",
+ "telephone": "0492091000",
+ "email": "sav@tessan.io",
+ "siteWeb": "https://teleconsultation.tessan.io/557/pharmacie-saint-barthelemy",
+ "coordonnees": {
+  "lat": 43.7148516,
+  "lng": 7.26141699
+ },
+ "horaires": {
+  "lundi": "09:00-12:30, 14:30-19:30",
+  "mardi": "09:00-12:30, 14:30-19:30",
+  "mercredi": "09:00-12:30, 14:30-19:30",
+  "jeudi": "09:00-12:30, 14:30-19:30",
+  "vendredi": "09:00-12:30, 14:30-19:30",
+  "samedi": "09:00-12:30, 14:30-19:00",
+  "dimanche": "Fermé"
+ },
+ "services": [
+  "Cabinet médical",
+  "Médecin généraliste",
+  "Pneumologue",
+  "Gériatre",
+  "Dermatologue",
+  "Pédiatre"
+ ],
+ "garde": false,
+ "ouvert": true,
+ "distance": null,
+ "codeMagasin": "557",
+ "idTechnique": "CAB_PHA_542_06100_1",
+ "description": "<b>Vous cherchez un médecin disponible rapidement à Nice ou près de chez vous ?</b><br><br>\nÀ la Pharmacie Saint Barthélémy, le dispositif de téléconsultation Tessan vous permet de consulter un médecin généraliste sans rendez-vous, en moins de 15 minutes, pendant les horaires d'ouverture de la pharmacie. Tessan propose également des consultations spécialisées en dermatologie, pédiatrie, gériatrie et pneumologie, sans avoir à attendre plusieurs jours pour un rendez-vous médical.<br><br>\nAgréé Société de Téléconsultation par le Ministère de la Santé, Tessan accompagne plus de 1 500 000 patients avec un réseau de plus de 500 médecins inscrits au Conseil National de l'Ordre des Médecins.<br><br>\n\n<b>Consultez pour les motifs du quotidien</b><br><br>\nLa téléconsultation prend en charge de nombreux motifs médicaux courants :<br><br>\n- Fièvre, mal de gorge, angine, symptômes grippaux<br>\n- Vomissements, infection urinaire, cystite<br>\n- Ordonnance et arrêt de travail (jusqu'à 3 jours) si nécessaire<br>\n- Certificat médical<br>\n- Besoin d'un avis médical rapide<br>\n- ...<br><br>\n\n<i>En cas d'urgence vitale, appelez le <b>15</b> ou le <b>112</b>.</i><br><br>\n\n<b>Sans rendez-vous et sur rendez-vous : ce qui est disponible</b><br><br>\n<i>Sans rendez-vous :</i><br><br>\n- Médecin généraliste, en moins de 15 minutes<br>\n- Avis dermatologique en moins de 48 h (consultation généraliste suivie d'un avis spécialisé à distance)<br>\n- Pédiatrie sur créneaux dédiés aux familles<br><br>\n\n<i>Sur rendez-vous, sous 7 jours en moyenne :</i><br><br>\n- Gériatrie<br>\n- Pneumologie<br><br>\n\n<b>Une téléconsultation de qualité, avec des outils médicaux connectés</b><br><br>\nLe dispositif Tessan est équipé d'outils médicaux connectés qui permettent au médecin de réaliser un examen clinique à distance dans de bonnes conditions : tensiomètre, oxymètre, dermatoscope, otoscope, stéthoscope connecté et thermomètre. Ces outils transmettent les mesures en temps réel au médecin pendant la consultation.<br><br>\n\n<b>Accessibilité du dispositif</b><br><br>\nLe dispositif n'est pas accessible aux personnes en fauteuil roulant compte tenu de sa configuration. Il est en revanche adapté aux personnes malvoyantes et malentendantes, sous réserve d'un accompagnement par un proche ou un professionnel de santé présent sur place.<br><br>\n\n<b>Tarif et remboursement</b><br><br>\nLa consultation en médecine générale est facturée 25 €. Médecins conventionnés secteur 1 : remboursée par l'Assurance Maladie, jusqu'à 100 % avec votre mutuelle dans les conditions habituelles. Les tarifs des consultations spécialisées peuvent varier. Pensez à apporter votre carte Vitale. Vos ordonnances et documents médicaux sont disponibles immédiatement sur votre espace patient à l'issue de la consultation.<br><br>\n\n<b>Réservez votre créneau avant de venir</b><br><br>\nPour éviter toute attente, réservez un créneau en ligne directement depuis cette page. À votre arrivée à la Pharmacie Saint Barthélémy, connectez-vous avec la même adresse email pour bénéficier d'un passage prioritaire.<br><br>\n\n<b>Trouver un médecin disponible aujourd'hui à Nice</b><br><br>\nSi vous cherchez un médecin disponible à Nice, la téléconsultation en pharmacie permet d'obtenir rapidement un avis médical, sans délai de plusieurs jours. De nombreux patients utilisent ce service pour des motifs courants comme : angine, cystite, infection urinaire, symptômes grippaux, fièvre, ordonnance et arrêt de travail si nécessaire, certificat médical ou avis dermatologique.",
+ "nomEtablissement": "Cabine Téléconsultation Médecin Tessan",
+ "images": [
+  "https://partoo-media.s3.amazonaws.com/prod/google_my_business__photos/29bbcbc9-45ae-4c0c-ad1a-fde504187f1d.jpeg",
+  "https://partoo-media.s3.amazonaws.com/prod/google_my_business__photos/b7dd232c-4041-40e5-9ce3-aa9f1646330b.jpeg",
+  "https://partoo-media.s3.amazonaws.com/prod/google_my_business__photos/f0459a18-4b2a-4a85-9df3-65fa309d174d.jpeg",
+  "https://partoo-media.s3.amazonaws.com/prod/google_my_business__photos/af009371-3dc1-4413-9a16-19f011bae99e.jpeg",
+  "https://partoo-media.s3.amazonaws.com/prod/google_my_business__photos/9156865b-ab87-4d99-b254-8342ba5c2014.jpeg"
+ ],
+ "pays": "FR"
+}

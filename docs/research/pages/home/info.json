@@ -1,0 +1,454 @@
+{
+ "title": "Trouvez le dispositif de téléconsultation Tessan",
+ "url": "https://teleconsultation.tessan.io/",
+ "lang": "fr",
+ "metas": [
+  "<meta charset=\"utf-8\">",
+  "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+  "<meta name=\"next-size-adjust\" content=\"\">",
+  "<meta name=\"description\" content=\"Trouvez une cabine de téléconsultation en pharmacie près de chez vous et consultez un médecin en quelques minutes grâce aux dispositifs Tessan\">"
+ ],
+ "links": [
+  {
+   "text": "Politique relative aux cookies",
+   "href": "https://tessan.io/cookies/"
+  },
+  {
+   "text": "",
+   "href": "https://www.tessan.io/politique-de-confidentialite"
+  },
+  {
+   "text": "",
+   "href": "https://www.cookieyes.com/product/cookie-consent/?ref=cypbcyb&utm_source=cookie-banner&utm_medium=powered-by-cookieyes"
+  },
+  {
+   "text": "",
+   "href": "https://www.tessan.io/"
+  },
+  {
+   "text": "Téléconsultation",
+   "href": "https://www.tessan.io/la-teleconsultation-augmentee"
+  },
+  {
+   "text": "Vous êtes médecin ?",
+   "href": "https://www.tessan.io/medecins"
+  },
+  {
+   "text": "Vous êtes un professionnel ?",
+   "href": "https://www.tessan.io/"
+  },
+  {
+   "text": "Compte patient",
+   "href": "https://patient.prod.tessan.cloud/auth/login"
+  },
+  {
+   "text": "",
+   "href": "https://maps.google.com/maps?ll=46.603354,1.888334&z=6&t=m&hl=fr-FR&gl=US&mapclient=apiv3"
+  },
+  {
+   "text": "Conditions d'utilisation",
+   "href": "https://www.google.com/intl/fr-FR_US/help/terms_maps.html"
+  },
+  {
+   "text": "Signaler une erreur cartographique",
+   "href": "https://www.google.com/maps/@46.603354,1.888334,6z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3"
+  },
+  {
+   "text": "Nous contacter\n→",
+   "href": "http://tessan.io/nous-contacter"
+  },
+  {
+   "text": "",
+   "href": "https://www.facebook.com/Tessan.io/"
+  },
+  {
+   "text": "",
+   "href": "https://www.instagram.com/tessan.io/"
+  },
+  {
+   "text": "",
+   "href": "https://www.linkedin.com/company/tessan/"
+  },
+  {
+   "text": "",
+   "href": "https://www.youtube.com/@tessan2706"
+  },
+  {
+   "text": "Pharmaciens",
+   "href": "https://www.tessan.io/pharmaciens"
+  },
+  {
+   "text": "Opticiens",
+   "href": "https://www.tessan.io/opticiens-teleconsultation"
+  },
+  {
+   "text": "Infirmiers",
+   "href": "https://www.tessan.io/infirmiers"
+  },
+  {
+   "text": "Collectivités",
+   "href": "https://www.tessan.io/collectivites"
+  },
+  {
+   "text": "Dirigeants",
+   "href": "https://www.tessan.io/dirigeants"
+  },
+  {
+   "text": "EHPAD",
+   "href": "https://www.tessan.io/ehpad"
+  },
+  {
+   "text": "Nos solutions",
+   "href": "https://www.tessan.io/nos-solutions"
+  },
+  {
+   "text": "La cabine Premium",
+   "href": "https://www.tessan.io/nos-solutions/cabine-premium"
+  },
+  {
+   "text": "La cabine Slim",
+   "href": "https://www.tessan.io/nos-solutions/cabine-teleconsultation-slim"
+  },
+  {
+   "text": "La borne",
+   "href": "https://www.tessan.io/nos-solutions/borne-teleconsultation"
+  },
+  {
+   "text": "La console",
+   "href": "https://www.tessan.io/nos-solutions/console-teleconsultation"
+  },
+  {
+   "text": "La mallette",
+   "href": "https://www.tessan.io/nos-solutions/mallette-teleconsultation"
+  },
+  {
+   "text": "La table de téléophtalmologie",
+   "href": "https://www.tessan.io/nos-solutions/table-teleophtalmologie"
+  },
+  {
+   "text": "Tessan IA",
+   "href": "https://www.tessan.io/tessan-ia"
+  },
+  {
+   "text": "- Téléconsultation",
+   "href": "https://www.tessan.io/tessan-ia/teleconsultation"
+  },
+  {
+   "text": "La téléexpertise dermatologique",
+   "href": "https://www.tessan.io/nos-solutions/teleexpertise-dermatologique"
+  },
+  {
+   "text": "Médecins généralistes",
+   "href": "https://www.tessan.io/medecins"
+  },
+  {
+   "text": "Dermatologues",
+   "href": "https://www.tessan.io/dermatologues"
+  },
+  {
+   "text": "Ophtalmologues",
+   "href": "https://www.tessan.io/ophtalmologues-teleconsultation"
+  },
+  {
+   "text": "Pédiatres",
+   "href": "https://www.tessan.io/pediatre"
+  },
+  {
+   "text": "La téléconsultation augmentée",
+   "href": "https://www.tessan.io/la-teleconsultation-augmentee"
+  },
+  {
+   "text": "Tarifs et remboursements",
+   "href": "https://www.tessan.io/tarifs-et-remboursements"
+  },
+  {
+   "text": "Médecine générale",
+   "href": "https://www.tessan.io/medecine-generale"
+  },
+  {
+   "text": "Dermatologie",
+   "href": "https://www.tessan.io/dermatologie"
+  },
+  {
+   "text": "Ophtalmologie",
+   "href": "https://www.tessan.io/ophtalmologue-teleconsultation"
+  },
+  {
+   "text": "Pneumologie",
+   "href": "https://www.tessan.io/pneumologie"
+  },
+  {
+   "text": "Gériatrie",
+   "href": "https://www.tessan.io/geriatrie"
+  },
+  {
+   "text": "Blog",
+   "href": "https://www.tessan.io/blog"
+  },
+  {
+   "text": "FAQ",
+   "href": "https://aide.tessan.io/fr/"
+  },
+  {
+   "text": "Qui sommes-nous ?",
+   "href": "https://www.tessan.io/qui-sommes-nous"
+  },
+  {
+   "text": "Carrières",
+   "href": "https://www.welcometothejungle.com/fr/companies/tessan"
+  },
+  {
+   "text": "Politique de confidentialité",
+   "href": "https://www.tessan.io/politique-de-confidentialite"
+  },
+  {
+   "text": "CGU",
+   "href": "https://www.tessan.io/cgu"
+  },
+  {
+   "text": "Mentions légales",
+   "href": "https://www.tessan.io/mentions-legales"
+  },
+  {
+   "text": "Cookies",
+   "href": "https://www.tessan.io/cookies"
+  },
+  {
+   "text": "CGV Téléexpertise dermatologique",
+   "href": "https://www.tessan.io/cgv-teleexpertise-dermatologie"
+  }
+ ],
+ "scrollH": 2632,
+ "stylesheets": [
+  null,
+  null,
+  "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans:400,500,700|Google+Sans+Text:400,500,700&lang=fr",
+  "https://fonts.googleapis.com/css?family=Google+Sans+Text:400&text=%E2%86%90%E2%86%92%E2%86%91%E2%86%93&lang=fr",
+  null,
+  null,
+  null,
+  null,
+  null,
+  "https://teleconsultation.tessan.io/_next/static/css/323d88a92ac6be07.css?dpl=dpl_FBL7ijwRnEnjvrF4EkkasGtU6GX2",
+  "https://teleconsultation.tessan.io/_next/static/css/b2e1955b359df2cc.css?dpl=dpl_FBL7ijwRnEnjvrF4EkkasGtU6GX2",
+  null
+ ],
+ "fonts": [
+  "Google Sans 400 normal unloaded",
+  "Google Sans 400 normal unloaded",
+  "Google Sans 400 normal unloaded",
+  "Google Sans 400 normal unloaded",
+  "Google Sans 400 normal unloaded",
+  "Google Sans 400 normal unloaded",
+  "Google Sans 400 normal unloaded",
+  "Google Sans 400 normal unloaded",
+  "Google Sans 400 normal unloaded",
+  "Google Sans 400 normal unloaded",
+  "Google Sans 400 normal unloaded",
+  "Google Sans 400 normal unloaded",
+  "Google Sans 400 normal unloaded",
+  "Google Sans 400 normal unloaded",
+  "Google Sans 400 normal unloaded",
+  "Google Sans 400 normal unloaded",
+  "Google Sans 400 normal unloaded",
+  "Google Sans 400 normal unloaded",
+  "Google Sans 400 normal unloaded",
+  "Google Sans 400 normal unloaded",
+  "Google Sans 400 normal unloaded",
+  "Google Sans 400 normal unloaded",
+  "Google Sans 400 normal unloaded",
+  "Google Sans 400 normal unloaded",
+  "Google Sans 400 normal unloaded",
+  "Google Sans 500 normal unloaded",
+  "Google Sans 500 normal unloaded",
+  "Google Sans 500 normal unloaded",
+  "Google Sans 500 normal unloaded",
+  "Google Sans 500 normal unloaded",
+  "Google Sans 500 normal unloaded",
+  "Google Sans 500 normal unloaded",
+  "Google Sans 500 normal unloaded",
+  "Google Sans 500 normal unloaded",
+  "Google Sans 500 normal unloaded",
+  "Google Sans 500 normal unloaded",
+  "Google Sans 500 normal unloaded",
+  "Google Sans 500 normal unloaded",
+  "Google Sans 500 normal unloaded",
+  "Google Sans 500 normal unloaded",
+  "Google Sans 500 normal unloaded",
+  "Google Sans 500 normal unloaded",
+  "Google Sans 500 normal unloaded",
+  "Google Sans 500 normal unloaded",
+  "Google Sans 500 normal unloaded",
+  "Google Sans 500 normal unloaded",
+  "Google Sans 500 normal unloaded",
+  "Google Sans 500 normal unloaded",
+  "Google Sans 500 normal unloaded",
+  "Google Sans 500 normal unloaded",
+  "Google Sans 700 normal unloaded",
+  "Google Sans 700 normal unloaded",
+  "Google Sans 700 normal unloaded",
+  "Google Sans 700 normal unloaded",
+  "Google Sans 700 normal unloaded",
+  "Google Sans 700 normal unloaded",
+  "Google Sans 700 normal unloaded",
+  "Google Sans 700 normal unloaded",
+  "Google Sans 700 normal unloaded",
+  "Google Sans 700 normal unloaded",
+  "Google Sans 700 normal unloaded",
+  "Google Sans 700 normal unloaded",
+  "Google Sans 700 normal unloaded",
+  "Google Sans 700 normal unloaded",
+  "Google Sans 700 normal unloaded",
+  "Google Sans 700 normal unloaded",
+  "Google Sans 700 normal unloaded",
+  "Google Sans 700 normal unloaded",
+  "Google Sans 700 normal unloaded",
+  "Google Sans 700 normal unloaded",
+  "Google Sans 700 normal unloaded",
+  "Google Sans 700 normal unloaded",
+  "Google Sans 700 normal unloaded",
+  "Google Sans 700 normal unloaded",
+  "Google Sans 700 normal unloaded",
+  "Google Sans Text 400 normal unloaded",
+  "Google Sans Text 400 normal unloaded",
+  "Google Sans Text 400 normal unloaded",
+  "Google Sans Text 400 normal unloaded",
+  "Google Sans Text 400 normal unloaded",
+  "Google Sans Text 400 normal unloaded",
+  "Google Sans Text 400 normal unloaded",
+  "Google Sans Text 400 normal unloaded",
+  "Google Sans Text 400 normal unloaded",
+  "Google Sans Text 400 normal unloaded",
+  "Google Sans Text 400 normal unloaded",
+  "Google Sans Text 400 normal unloaded",
+  "Google Sans Text 400 normal unloaded",
+  "Google Sans Text 400 normal unloaded",
+  "Google Sans Text 400 normal unloaded",
+  "Google Sans Text 400 normal unloaded",
+  "Google Sans Text 400 normal unloaded",
+  "Google Sans Text 400 normal unloaded",
+  "Google Sans Text 400 normal unloaded",
+  "Google Sans Text 400 normal unloaded",
+  "Google Sans Text 400 normal unloaded",
+  "Google Sans Text 400 normal unloaded",
+  "Google Sans Text 400 normal unloaded",
+  "Google Sans Text 400 normal unloaded",
+  "Google Sans Text 400 normal unloaded",
+  "Google Sans Text 400 normal unloaded",
+  "Google Sans Text 500 normal unloaded",
+  "Google Sans Text 500 normal unloaded",
+  "Google Sans Text 500 normal unloaded",
+  "Google Sans Text 500 normal unloaded",
+  "Google Sans Text 500 normal unloaded",
+  "Google Sans Text 500 normal unloaded",
+  "Google Sans Text 500 normal unloaded",
+  "Google Sans Text 500 normal unloaded",
+  "Google Sans Text 500 normal unloaded",
+  "Google Sans Text 500 normal unloaded",
+  "Google Sans Text 500 normal unloaded",
+  "Google Sans Text 500 normal unloaded",
+  "Google Sans Text 500 normal unloaded",
+  "Google Sans Text 500 normal unloaded",
+  "Google Sans Text 500 normal unloaded",
+  "Google Sans Text 500 normal unloaded",
+  "Google Sans Text 500 normal unloaded",
+  "Google Sans Text 500 normal unloaded",
+  "Google Sans Text 500 normal unloaded",
+  "Google Sans Text 500 normal unloaded",
+  "Google Sans Text 500 normal unloaded",
+  "Google Sans Text 500 normal unloaded",
+  "Google Sans Text 500 normal unloaded",
+  "Google Sans Text 500 normal unloaded",
+  "Google Sans Text 500 normal unloaded",
+  "Google Sans Text 500 normal unloaded",
+  "Google Sans Text 700 normal unloaded",
+  "Google Sans Text 700 normal unloaded",
+  "Google Sans Text 700 normal unloaded",
+  "Google Sans Text 700 normal unloaded",
+  "Google Sans Text 700 normal unloaded",
+  "Google Sans Text 700 normal unloaded",
+  "Google Sans Text 700 normal unloaded",
+  "Google Sans Text 700 normal unloaded",
+  "Google Sans Text 700 normal unloaded",
+  "Google Sans Text 700 normal unloaded",
+  "Google Sans Text 700 normal unloaded",
+  "Google Sans Text 700 normal unloaded",
+  "Google Sans Text 700 normal unloaded",
+  "Google Sans Text 700 normal unloaded",
+  "Google Sans Text 700 normal unloaded",
+  "Google Sans Text 700 normal unloaded",
+  "Google Sans Text 700 normal unloaded",
+  "Google Sans Text 700 normal unloaded",
+  "Google Sans Text 700 normal unloaded",
+  "Google Sans Text 700 normal unloaded",
+  "Google Sans Text 700 normal unloaded",
+  "Google Sans Text 700 normal unloaded",
+  "Google Sans Text 700 normal unloaded",
+  "Google Sans Text 700 normal unloaded",
+  "Google Sans Text 700 normal unloaded",
+  "Google Sans Text 700 normal unloaded",
+  "Roboto 300 normal unloaded",
+  "Roboto 300 normal unloaded",
+  "Roboto 300 normal unloaded",
+  "Roboto 300 normal unloaded",
+  "Roboto 300 normal unloaded",
+  "Roboto 300 normal unloaded",
+  "Roboto 300 normal unloaded",
+  "Roboto 300 normal unloaded",
+  "Roboto 300 normal unloaded",
+  "Roboto 400 normal unloaded",
+  "Roboto 400 normal unloaded",
+  "Roboto 400 normal unloaded",
+  "Roboto 400 normal unloaded",
+  "Roboto 400 normal unloaded",
+  "Roboto 400 normal unloaded",
+  "Roboto 400 normal unloaded",
+  "Roboto 400 normal unloaded",
+  "Roboto 400 normal loaded",
+  "Roboto 500 normal unloaded",
+  "Roboto 500 normal unloaded",
+  "Roboto 500 normal unloaded",
+  "Roboto 500 normal unloaded",
+  "Roboto 500 normal unloaded",
+  "Roboto 500 normal unloaded",
+  "Roboto 500 normal unloaded",
+  "Roboto 500 normal unloaded",
+  "Roboto 500 normal unloaded",
+  "Roboto 700 normal unloaded",
+  "Roboto 700 normal unloaded",
+  "Roboto 700 normal unloaded",
+  "Roboto 700 normal unloaded",
+  "Roboto 700 normal unloaded",
+  "Roboto 700 normal unloaded",
+  "Roboto 700 normal unloaded",
+  "Roboto 700 normal unloaded",
+  "Roboto 700 normal unloaded",
+  "Google Sans Text 400 normal unloaded",
+  "Plus Jakarta Sans 300 normal unloaded",
+  "Plus Jakarta Sans 300 normal unloaded",
+  "Plus Jakarta Sans 300 normal unloaded",
+  "Plus Jakarta Sans 300 normal unloaded",
+  "Plus Jakarta Sans 400 normal unloaded",
+  "Plus Jakarta Sans 400 normal unloaded",
+  "Plus Jakarta Sans 400 normal unloaded",
+  "Plus Jakarta Sans 400 normal loaded",
+  "Plus Jakarta Sans 500 normal unloaded",
+  "Plus Jakarta Sans 500 normal unloaded",
+  "Plus Jakarta Sans 500 normal unloaded",
+  "Plus Jakarta Sans 500 normal loaded",
+  "Plus Jakarta Sans 600 normal unloaded",
+  "Plus Jakarta Sans 600 normal unloaded",
+  "Plus Jakarta Sans 600 normal unloaded",
+  "Plus Jakarta Sans 600 normal loaded",
+  "Plus Jakarta Sans 700 normal unloaded",
+  "Plus Jakarta Sans 700 normal unloaded",
+  "Plus Jakarta Sans 700 normal unloaded",
+  "Plus Jakarta Sans 700 normal loaded",
+  "Plus Jakarta Sans Fallback normal normal error",
+  "recoleta 400 normal loaded",
+  "recoleta 500 normal unloaded",
+  "recoleta 600 normal unloaded",
+  "recoleta 700 normal unloaded",
+  "recoleta Fallback normal normal unloaded"
+ ]
+}

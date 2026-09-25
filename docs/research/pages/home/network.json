@@ -1,0 +1,697 @@
+[
+ {
+  "url": "https://teleconsultation.tessan.io/",
+  "method": "GET",
+  "type": "document",
+  "status": 429,
+  "ct": "text/html; charset=utf-8"
+ },
+ {
+  "url": "https://teleconsultation.tessan.io/.well-known/vercel/security/static/challenge.v2.min.js",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "application/javascript"
+ },
+ {
+  "url": "https://teleconsultation.tessan.io/.well-known/vercel/security/static/challenge.v2.wasm",
+  "method": "GET",
+  "type": "fetch",
+  "status": 200,
+  "ct": "application/wasm",
+  "body": "docs/research/pages/home/bodies/596a7abaf9.txt"
+ },
+ {
+  "url": "https://teleconsultation.tessan.io/.well-known/vercel/security/request-challenge",
+  "method": "POST",
+  "type": "fetch",
+  "status": 204,
+  "ct": ""
+ },
+ {
+  "url": "https://teleconsultation.tessan.io/",
+  "method": "GET",
+  "type": "document",
+  "status": 200,
+  "ct": "text/html; charset=utf-8"
+ },
+ {
+  "url": "https://teleconsultation.tessan.io/_next/static/media/636a5ac981f94f8b-s.p.woff2",
+  "method": "GET",
+  "type": "font",
+  "status": 200,
+  "ct": "font/woff2"
+ },
+ {
+  "url": "https://teleconsultation.tessan.io/_next/static/media/65c5b5fc5f0a56ba-s.p.woff2",
+  "method": "GET",
+  "type": "font",
+  "status": 200,
+  "ct": "font/woff2"
+ },
+ {
+  "url": "https://teleconsultation.tessan.io/_next/static/media/8fd0ea0421adf98a-s.p.woff2",
+  "method": "GET",
+  "type": "font",
+  "status": 200,
+  "ct": "font/woff2"
+ },
+ {
+  "url": "https://teleconsultation.tessan.io/_next/static/media/e36f8fd0616e37d2-s.p.woff2",
+  "method": "GET",
+  "type": "font",
+  "status": 200,
+  "ct": "font/woff2"
+ },
+ {
+  "url": "https://teleconsultation.tessan.io/_next/static/media/ec5c5f347a7e1514-s.p.woff2",
+  "method": "GET",
+  "type": "font",
+  "status": 200,
+  "ct": "font/woff2"
+ },
+ {
+  "url": "https://teleconsultation.tessan.io/_next/static/css/323d88a92ac6be07.css?dpl=dpl_FBL7ijwRnEnjvrF4EkkasGtU6GX2",
+  "method": "GET",
+  "type": "stylesheet",
+  "status": 200,
+  "ct": "text/css; charset=utf-8",
+  "saved": "docs/research/css/323d88a92ac6be07.css"
+ },
+ {
+  "url": "https://teleconsultation.tessan.io/_next/static/css/b2e1955b359df2cc.css?dpl=dpl_FBL7ijwRnEnjvrF4EkkasGtU6GX2",
+  "method": "GET",
+  "type": "stylesheet",
+  "status": 200,
+  "ct": "text/css; charset=utf-8",
+  "saved": "docs/research/css/b2e1955b359df2cc.css"
+ },
+ {
+  "url": "https://teleconsultation.tessan.io/logo.svg",
+  "method": "GET",
+  "type": "image",
+  "status": 200,
+  "ct": "image/svg+xml"
+ },
+ {
+  "url": "https://teleconsultation.tessan.io/_next/static/chunks/webpack-83212ca0d57c608b.js?dpl=dpl_FBL7ijwRnEnjvrF4EkkasGtU6GX2",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "application/javascript; charset=utf-8"
+ },
+ {
+  "url": "https://teleconsultation.tessan.io/_next/static/chunks/4bd1b696-c023c6e3521b1417.js?dpl=dpl_FBL7ijwRnEnjvrF4EkkasGtU6GX2",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "application/javascript; charset=utf-8"
+ },
+ {
+  "url": "https://teleconsultation.tessan.io/_next/static/chunks/255-a3b4e98938316006.js?dpl=dpl_FBL7ijwRnEnjvrF4EkkasGtU6GX2",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "application/javascript; charset=utf-8"
+ },
+ {
+  "url": "https://teleconsultation.tessan.io/_next/static/chunks/main-app-f9b5d20365cb8be2.js?dpl=dpl_FBL7ijwRnEnjvrF4EkkasGtU6GX2",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "application/javascript; charset=utf-8"
+ },
+ {
+  "url": "https://teleconsultation.tessan.io/_next/static/chunks/4e6af11a-d47739c3565d80f2.js?dpl=dpl_FBL7ijwRnEnjvrF4EkkasGtU6GX2",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "application/javascript; charset=utf-8"
+ },
+ {
+  "url": "https://teleconsultation.tessan.io/_next/static/chunks/921-e6633bf8f448901c.js?dpl=dpl_FBL7ijwRnEnjvrF4EkkasGtU6GX2",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "application/javascript; charset=utf-8"
+ },
+ {
+  "url": "https://teleconsultation.tessan.io/_next/static/chunks/app/layout-ae5373d3d10bafec.js?dpl=dpl_FBL7ijwRnEnjvrF4EkkasGtU6GX2",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "application/javascript; charset=utf-8"
+ },
+ {
+  "url": "https://teleconsultation.tessan.io/_next/static/chunks/950-bc85ee46b8dc195f.js?dpl=dpl_FBL7ijwRnEnjvrF4EkkasGtU6GX2",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "application/javascript; charset=utf-8"
+ },
+ {
+  "url": "https://teleconsultation.tessan.io/_next/static/chunks/990-ede1d18ec8eaf918.js?dpl=dpl_FBL7ijwRnEnjvrF4EkkasGtU6GX2",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "application/javascript; charset=utf-8"
+ },
+ {
+  "url": "https://teleconsultation.tessan.io/_next/static/chunks/467-4c092da56609776e.js?dpl=dpl_FBL7ijwRnEnjvrF4EkkasGtU6GX2",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "application/javascript; charset=utf-8"
+ },
+ {
+  "url": "https://teleconsultation.tessan.io/_next/static/chunks/128-230074a16c9361a5.js?dpl=dpl_FBL7ijwRnEnjvrF4EkkasGtU6GX2",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "application/javascript; charset=utf-8"
+ },
+ {
+  "url": "https://teleconsultation.tessan.io/_next/static/chunks/app/page-e71196b7e9c608fa.js?dpl=dpl_FBL7ijwRnEnjvrF4EkkasGtU6GX2",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "application/javascript; charset=utf-8"
+ },
+ {
+  "url": "https://www.googletagmanager.com/gtm.js?id=GTM-PFJQ9PS",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "application/javascript; charset=UTF-8"
+ },
+ {
+  "url": "https://cdn-cookieyes.com/client_data/026ec920fc49a8dacb6495fc/script.js",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "application/javascript"
+ },
+ {
+  "url": "https://www.googletagmanager.com/gtag/js?id=AW-401156789&cx=c&gtm=4e69n1",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "application/javascript; charset=UTF-8"
+ },
+ {
+  "url": "https://www.googletagmanager.com/gtag/destination?id=G-59HZ49CTKM&cx=c&gtm=4e69n1",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "application/javascript; charset=UTF-8"
+ },
+ {
+  "url": "https://log.cookieyes.com/api/v1/log",
+  "method": "POST",
+  "type": "ping",
+  "status": 200,
+  "ct": "text/plain; charset=utf-8"
+ },
+ {
+  "url": "https://analytics.tiktok.com/i18n/pixel/events.js?sdkid=CGRDB9BC77U3UDPKHVVG&lib=ttq",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "application/javascript; charset=UTF-8"
+ },
+ {
+  "url": "https://www.googletagmanager.com/gtag/js?id=G-59HZ49CTKM&cx=c&gtm=4e69n1",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "application/javascript; charset=UTF-8"
+ },
+ {
+  "url": "https://cdn-cookieyes.com/client_data/026ec920fc49a8dacb6495fc/banner.js",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "application/javascript"
+ },
+ {
+  "url": "https://cdn-cookieyes.com/client_data/026ec920fc49a8dacb6495fc/cP8Dzf0Z.json",
+  "method": "GET",
+  "type": "fetch",
+  "status": 200,
+  "ct": "application/json",
+  "body": "docs/research/pages/home/bodies/b9d4725fac.txt"
+ },
+ {
+  "url": "https://cdn-cookieyes.com/client_data/026ec920fc49a8dacb6495fc/config/0FnW4Bm4.json",
+  "method": "GET",
+  "type": "fetch",
+  "status": 200,
+  "ct": "application/json",
+  "body": "docs/research/pages/home/bodies/5f9a061d4d.txt"
+ },
+ {
+  "url": "https://cdn-cookieyes.com/client_data/026ec920fc49a8dacb6495fc/translations/xlyUcskC.json",
+  "method": "GET",
+  "type": "fetch",
+  "status": 200,
+  "ct": "application/json",
+  "body": "docs/research/pages/home/bodies/fb70588cea.txt"
+ },
+ {
+  "url": "https://cdn-cookieyes.com/client_data/026ec920fc49a8dacb6495fc/audit-table/D8Amh1sr.json",
+  "method": "GET",
+  "type": "fetch",
+  "status": 200,
+  "ct": "application/json",
+  "body": "docs/research/pages/home/bodies/ce911e1c67.txt"
+ },
+ {
+  "url": "https://cdn-cookieyes.com/assets/images/close.svg",
+  "method": "GET",
+  "type": "image",
+  "status": 200,
+  "ct": "image/svg+xml"
+ },
+ {
+  "url": "https://cdn-cookieyes.com/assets/images/poweredbtcky.svg",
+  "method": "GET",
+  "type": "image",
+  "status": 200,
+  "ct": "image/svg+xml"
+ },
+ {
+  "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-59HZ49CTKM&gtm=45je69n1v876072147z8831433022za20gzb831433022zd831433022xf1&_p=1790353833307&gcs=G100&gcd=13q3q3q3q5l1&npa=1&dma_cps=-&dma=0&gdid=dY2Q2ZW&_eu=EAAAAGAC&are=1&cid=35907896.1790353835&frm=0&gtm_up=1&ir=1&pscdl=denied&rcb=5&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B141.0.7390.37%7CNot%253FA_Brand%3B8.0.0.0%7CChromium%3B141.0.7390.37&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=2&_s=1&tag_exp=115938466~115938468~118012008~118897920~118897930~120213116~120385423~120420415~120469145~120469153&sid=1790353834&sct=1&seg=0&dl=https%3A%2F%2Fteleconsultation.tessan.io%2F&dr=https%3A%2F%2Fteleconsultation.tessan.io%2F&dt=Trouvez%20le%20dispositif%20de%20t%C3%A9l%C3%A9consultation%20Tessan&_tu=DA&en=gtm.init_consent&_fv=1&_nsi=1&_ss=1&evnid=d264824a-8110-4855-8983-03654b847216_undefined_1&ep.is_tt=true&tfd=3339",
+  "method": "POST",
+  "type": "fetch",
+  "status": 204,
+  "ct": "text/plain"
+ },
+ {
+  "url": "https://cdn-cookieyes.com/assets/images/revisit.svg",
+  "method": "GET",
+  "type": "image",
+  "status": 200,
+  "ct": "image/svg+xml"
+ },
+ {
+  "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-59HZ49CTKM&gtm=45je69n1v876072147z8831433022za20gzb831433022zd831433022xf1&_p=1790353833307&gcs=G100&gcd=13q3q3q3q5l1&npa=1&dma_cps=-&dma=0&gdid=dY2Q2ZW&_eu=EAAAAGAC&are=1&cid=35907896.1790353835&frm=0&gtm_up=1&ir=1&pscdl=denied&rcb=5&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B141.0.7390.37%7CNot%253FA_Brand%3B8.0.0.0%7CChromium%3B141.0.7390.37&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&gaf=2&_s=2&tag_exp=115938466~115938468~118012008~118897920~118897930~120213116~120385423~120420415~120469145~120469153&sid=1790353834&sct=1&seg=0&dl=https%3A%2F%2Fteleconsultation.tessan.io%2F&dr=https%3A%2F%2Fteleconsultation.tessan.io%2F&dt=Trouvez%20le%20dispositif%20de%20t%C3%A9l%C3%A9consultation%20Tessan&_tu=DA&en=gtm.init&evnid=d264824a-8110-4855-8983-03654b847216_undefined_2&ep.is_tt=true&_et=5&tfd=3349",
+  "method": "POST",
+  "type": "fetch",
+  "status": 204,
+  "ct": "text/plain"
+ },
+ {
+  "url": "https://pagead2.googlesyndication.com/ccm/collect?rcb=6&frm=0&apvc=1&ae=g&en=page_view&dl=https%3A%2F%2Fteleconsultation.tessan.io%2F&dr=https%3A%2F%2Fteleconsultation.tessan.io%2F&scrsrc=www.googletagmanager.com&rnd=1043674437.1790353835&navt=r&npa=1&ep.ads_data_redaction=0&gdid=dY2Q2ZW&_tu=CA&gtm=45He69n1v831433022za200zd831433022xeaxf1&gcs=G100&gcd=13q3q3q3q5l1&dma_cps=-&dma=0&tag_exp=115938466~115938469~118012007~118897920~118897930~120385422~120469145~120469153~121246026~121246034&tft=1790353835294&tfd=3359&fmt=8",
+  "method": "POST",
+  "type": "fetch",
+  "status": 200,
+  "ct": ""
+ },
+ {
+  "url": "https://pagead2.googlesyndication.com/ccm/collect?rcb=4&frm=0&apvc=0&tid=AW-401156789&en=page_view&dl=https%3A%2F%2Fteleconsultation.tessan.io%2F&dr=https%3A%2F%2Fteleconsultation.tessan.io%2F&scrsrc=www.googletagmanager.com&rnd=1043674437.1790353835&navt=r&npa=1&did=dY2Q2ZW&gdid=dY2Q2ZW&_tu=CA&gtm=45be69n1v9181814858z8831433022za20gzb831433022zd831433022xecxf1&gcs=G100&gcd=13q3q3q3q5l1&dma_cps=-&dma=0&tag_exp=115938466~115938469~118897920~118897930~120213116~120385422~120469145~120469153&tft=1790353835296&tfd=3361&tids=AW-401156789&fmt=8",
+  "method": "POST",
+  "type": "fetch",
+  "status": 200,
+  "ct": ""
+ },
+ {
+  "url": "https://laiphfefgayozfxtjclb.supabase.co/rest/v1/gmb_locations?select=*&actif_inactif=eq.Actif&order=nom_etablissement.asc&offset=0&limit=1000",
+  "method": "GET",
+  "type": "fetch",
+  "status": 200,
+  "ct": "application/json; charset=utf-8",
+  "body": "docs/research/pages/home/bodies/1c03685dc0.txt"
+ },
+ {
+  "url": "https://pagead2.googlesyndication.com/ccm/collect?rcb=4&frm=0&apvc=0&ae=g&tid=AW-401156789&dl=https%3A%2F%2Fteleconsultation.tessan.io%2F&dr=https%3A%2F%2Fteleconsultation.tessan.io%2F&scrsrc=www.googletagmanager.com&rnd=1043674437.1790353835&navt=r&npa=1&ep.ads_data_redaction=0&did=dY2Q2ZW&gdid=dY2Q2ZW&_tu=CA&gtm=45be69n1v9181814858z8831433022za20gzb831433022zd831433022xeaxf1&gcs=G100&gcd=13q3q3q3q5l1&dma_cps=-&dma=0&tag_exp=115938466~115938469~118897920~118897930~120213116~120385422~120469145~120469153&tft=1790353835298&tfd=3363&tids=AW-401156789&fmt=8",
+  "method": "POST",
+  "type": "fetch",
+  "status": 200,
+  "ct": ""
+ },
+ {
+  "url": "https://collect.tessan.io/g/collect?v=2&tid=G-59HZ49CTKM&gtm=45je69n1v876072147z8831433022za20gzb831433022zd831433022xf1&_p=1790353833307&gcs=G100&gcd=13q3q3q3q5l1&npa=1&dma_cps=-&dma=0&gdid=dY2Q2ZW&ecid=1815086235&_eu=EAAAAGA&_fplc=0&are=1&cid=35907896.1790353835&frm=0&gtm_up=1&ir=1&pscdl=denied&rcb=5&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B141.0.7390.37%7CNot%253FA_Brand%3B8.0.0.0%7CChromium%3B141.0.7390.37&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&ur=&sst.rnd=1043674437.1790353835&sst.tft=1790353833307&sst.lpc=79191057&sst.navt=r&sst.ude=0&gaf=2&_s=3&tag_exp=115938466~115938468~118012008~118897920~118897930~120213116~120385423~120420415~120469145~120469153&sid=1790353834&sct=1&seg=1&dl=https%3A%2F%2Fteleconsultation.tessan.io%2F&dr=https%3A%2F%2Fteleconsultation.tessan.io%2F&dt=Trouvez%20le%20dispositif%20de%20t%C3%A9l%C3%A9consultation%20Tessan&_tu=DA&en=page_view&gap.sstd=5&ep.allow_linker=true&_et=1&tfd=3350&richsstsse",
+  "method": "GET",
+  "type": "fetch",
+  "status": 200,
+  "ct": "text/plain",
+  "body": "docs/research/pages/home/bodies/522fcc1f43.txt"
+ },
+ {
+  "url": "https://collect.tessan.io/g/collect?v=2&tid=G-59HZ49CTKM&gtm=45je69n1v876072147z8831433022za20gzb831433022zd831433022xf1&_p=1790353833307&gcs=G100&gcd=13q3q3q3q5l1&npa=1&dma_cps=-&dma=0&gdid=dY2Q2ZW&ecid=1815086235&_eu=EAAAAGA&_fplc=0&are=1&cid=35907896.1790353835&frm=0&gtm_up=1&ir=1&pscdl=denied&rcb=5&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B141.0.7390.37%7CNot%253FA_Brand%3B8.0.0.0%7CChromium%3B141.0.7390.37&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=fr-fr&ur=&sst.rnd=1043674437.1790353835&sst.tft=1790353833307&sst.lpc=79191057&sst.navt=r&sst.ude=0&gaf=2&tag_exp=115938466~115938468~118012008~118897920~118897930~120213116~120385423~120420415~120469145~120469153&sid=1790353834&sct=1&seg=1&dl=https%3A%2F%2Fteleconsultation.tessan.io%2F&dr=https%3A%2F%2Fteleconsultation.tessan.io%2F&dt=Trouvez%20le%20dispositif%20de%20t%C3%A9l%C3%A9consultation%20Tessan&_tu=DA&_s=4&tfd=3995&richsstsse",
+  "method": "POST",
+  "type": "fetch",
+  "status": 200,
+  "ct": "text/plain",
+  "body": "docs/research/pages/home/bodies/8ed7e29e9a.txt",
+  "postData": "en=gtm.js&gap.sstd=5&ep.allow_linker=true&evnid=d264824a-8110-4855-8983-03654b847216_1790353833307_3&ep.is_tt=true&_et=3\r\nen=gtm.dom&gap.sstd=5&ep.allow_linker=true&evnid=d264824a-8110-4855-8983-03654b847216_1790353833307_62&ep.is_tt=true\r\nen=gtm.load&gap.sstd=5&ep.allow_linker=true&evnid=d264824a-8110-4855-8983-03654b847216_1790353833307_74&ep.is_tt=true\r\nen=cookie_consent_update&gap.sstd=5&ep.allow_linker=true&evnid=d264824a-8110-4855-8983-03654b847216_1790353833307_95&ep.is_tt=true&_et=12"
+ },
+ {
+  "url": "https://laiphfefgayozfxtjclb.supabase.co/rest/v1/gmb_locations?select=*&actif_inactif=eq.Actif&order=nom_etablissement.asc&offset=1000&limit=1000",
+  "method": "GET",
+  "type": "fetch",
+  "status": 200,
+  "ct": "application/json; charset=utf-8",
+  "body": "docs/research/pages/home/bodies/e8a4c9327f.txt"
+ },
+ {
+  "url": "https://teleconsultation.tessan.io/logo.svg",
+  "method": "GET",
+  "type": "image",
+  "status": 200,
+  "ct": "image/svg+xml"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps/api/js?key=AIzaSyBxNT6q_JhYHAsGflwirGtbaLeHsXl-BVc&v=weekly&libraries=places&loading=async&callback=initMap",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "text/javascript; charset=UTF-8"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps-api-v3/api/js/66/6c/intl/fr_ALL/util.js",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "text/javascript"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps-api-v3/api/js/66/6c/intl/fr_ALL/controls.js",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "text/javascript"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps-api-v3/api/js/66/6c/intl/fr_ALL/places_impl.js",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "text/javascript"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps-api-v3/api/js/66/6c/intl/fr_ALL/places.js",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "text/javascript"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps-api-v3/api/js/66/6c/intl/fr_ALL/common.js",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "text/javascript"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps-api-v3/api/js/66/6c/intl/fr_ALL/main.js",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "text/javascript"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true",
+  "method": "GET",
+  "type": "xhr",
+  "status": 200,
+  "ct": "application/json; charset=UTF-8",
+  "body": "docs/research/pages/home/bodies/a31caccfb9.txt"
+ },
+ {
+  "url": "https://laiphfefgayozfxtjclb.supabase.co/rest/v1/gmb_locations?select=*&actif_inactif=eq.Actif&order=nom_etablissement.asc&offset=0&limit=1000",
+  "method": "GET",
+  "type": "fetch",
+  "status": 200,
+  "ct": "application/json; charset=utf-8",
+  "body": "docs/research/pages/home/bodies/1c03685dc0.txt"
+ },
+ {
+  "url": "https://laiphfefgayozfxtjclb.supabase.co/rest/v1/gmb_locations?select=*&actif_inactif=eq.Actif&order=nom_etablissement.asc&offset=0&limit=1000",
+  "method": "GET",
+  "type": "fetch",
+  "status": 200,
+  "ct": "application/json; charset=utf-8",
+  "body": "docs/research/pages/home/bodies/1c03685dc0.txt"
+ },
+ {
+  "url": "https://laiphfefgayozfxtjclb.supabase.co/rest/v1/gmb_locations?select=*&actif_inactif=eq.Actif&order=nom_etablissement.asc&offset=1000&limit=1000",
+  "method": "GET",
+  "type": "fetch",
+  "status": 200,
+  "ct": "application/json; charset=utf-8",
+  "body": "docs/research/pages/home/bodies/e8a4c9327f.txt"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps-api-v3/api/js/66/6c/intl/fr_ALL/map.js",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "text/javascript"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps-api-v3/api/js/66/6c/intl/fr_ALL/marker.js",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "text/javascript"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps-api-v3/api/js/66/6c/intl/fr_ALL/overlay.js",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "text/javascript"
+ },
+ {
+  "url": "https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png",
+  "method": "GET",
+  "type": "image",
+  "status": 200,
+  "ct": "image/png"
+ },
+ {
+  "url": "https://teleconsultation.tessan.io/marker.svg",
+  "method": "GET",
+  "type": "image",
+  "status": 200,
+  "ct": "image/svg+xml"
+ },
+ {
+  "url": "https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons.png",
+  "method": "GET",
+  "type": "image",
+  "status": 200,
+  "ct": "image/png"
+ },
+ {
+  "url": "https://maps.gstatic.com/mapfiles/openhand_8_8.cur",
+  "method": "GET",
+  "type": "image",
+  "status": 200,
+  "ct": "image/bmp"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps-api-v3/api/js/66/6c/intl/fr_ALL/log.js",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "text/javascript"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps-api-v3/api/js/66/6c/intl/fr_ALL/onion.js",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "text/javascript"
+ },
+ {
+  "url": "https://maps.googleapis.com/$rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService/GetViewportInfo",
+  "method": "POST",
+  "type": "xhr",
+  "status": 200,
+  "ct": "application/json+protobuf; charset=UTF-8",
+  "body": "docs/research/pages/home/bodies/02a1dee381.txt",
+  "postData": "[[[32.61167572478621,-39.8587147747387],[60.69395204335211,44.38811418095901]],6,null,\"fr-FR\",0,\"m@796000000\",0,0,null,null,null,1,\"https://teleconsultation.tessan.io/\",1,null,null,\"B1CCD678-68A0-4028-9555-D9CEF5291E1D\"]"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i32!3i22!4i256!2m3!1e0!2sm!3i796562520!3m18!2sfr-FR!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjJ8cy5lOmx8cC52Om9mZg!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&key=AIzaSyBxNT6q_JhYHAsGflwirGtbaLeHsXl-BVc&token=26515",
+  "method": "GET",
+  "type": "image",
+  "status": 200,
+  "ct": "image/webp"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i31!3i22!4i256!2m3!1e0!2sm!3i796562520!3m18!2sfr-FR!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjJ8cy5lOmx8cC52Om9mZg!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&key=AIzaSyBxNT6q_JhYHAsGflwirGtbaLeHsXl-BVc&token=68743",
+  "method": "GET",
+  "type": "image",
+  "status": 200,
+  "ct": "image/webp"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i31!3i21!4i256!2m3!1e0!2sm!3i796562520!3m18!2sfr-FR!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjJ8cy5lOmx8cC52Om9mZg!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&key=AIzaSyBxNT6q_JhYHAsGflwirGtbaLeHsXl-BVc&token=98885",
+  "method": "GET",
+  "type": "image",
+  "status": 200,
+  "ct": "image/webp"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i32!3i21!4i256!2m3!1e0!2sm!3i796562520!3m18!2sfr-FR!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjJ8cy5lOmx8cC52Om9mZg!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&key=AIzaSyBxNT6q_JhYHAsGflwirGtbaLeHsXl-BVc&token=56657",
+  "method": "GET",
+  "type": "image",
+  "status": 200,
+  "ct": "image/webp"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i33!3i21!4i256!2m3!1e0!2sm!3i796562520!3m18!2sfr-FR!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjJ8cy5lOmx8cC52Om9mZg!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&key=AIzaSyBxNT6q_JhYHAsGflwirGtbaLeHsXl-BVc&token=14429",
+  "method": "GET",
+  "type": "image",
+  "status": 200,
+  "ct": "image/webp"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i31!3i23!4i256!2m3!1e0!2sm!3i796562520!3m18!2sfr-FR!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjJ8cy5lOmx8cC52Om9mZg!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&key=AIzaSyBxNT6q_JhYHAsGflwirGtbaLeHsXl-BVc&token=38601",
+  "method": "GET",
+  "type": "image",
+  "status": 200,
+  "ct": "image/webp"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i33!3i23!4i256!2m3!1e0!2sm!3i796562520!3m18!2sfr-FR!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjJ8cy5lOmx8cC52Om9mZg!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&key=AIzaSyBxNT6q_JhYHAsGflwirGtbaLeHsXl-BVc&token=85216",
+  "method": "GET",
+  "type": "image",
+  "status": 200,
+  "ct": "image/webp"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i30!3i23!4i256!2m3!1e0!2sm!3i796562520!3m18!2sfr-FR!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjJ8cy5lOmx8cC52Om9mZg!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&key=AIzaSyBxNT6q_JhYHAsGflwirGtbaLeHsXl-BVc&token=80829",
+  "method": "GET",
+  "type": "image",
+  "status": 200,
+  "ct": "image/webp"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i33!3i22!4i256!2m3!1e0!2sm!3i796562520!3m18!2sfr-FR!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjJ8cy5lOmx8cC52Om9mZg!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&key=AIzaSyBxNT6q_JhYHAsGflwirGtbaLeHsXl-BVc&token=115358",
+  "method": "GET",
+  "type": "image",
+  "status": 200,
+  "ct": "image/webp"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i32!3i23!4i256!2m3!1e0!2sm!3i796562520!3m18!2sfr-FR!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjJ8cy5lOmx8cC52Om9mZg!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&key=AIzaSyBxNT6q_JhYHAsGflwirGtbaLeHsXl-BVc&token=127444",
+  "method": "GET",
+  "type": "image",
+  "status": 200,
+  "ct": "image/webp"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i30!3i22!4i256!2m3!1e0!2sm!3i796562520!3m18!2sfr-FR!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjJ8cy5lOmx8cC52Om9mZg!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&key=AIzaSyBxNT6q_JhYHAsGflwirGtbaLeHsXl-BVc&token=110971",
+  "method": "GET",
+  "type": "image",
+  "status": 200,
+  "ct": "image/webp"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i34!3i21!4i256!2m3!1e0!2sm!3i796562520!3m18!2sfr-FR!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjJ8cy5lOmx8cC52Om9mZg!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&key=AIzaSyBxNT6q_JhYHAsGflwirGtbaLeHsXl-BVc&token=103272",
+  "method": "GET",
+  "type": "image",
+  "status": 200,
+  "ct": "image/webp"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i34!3i22!4i256!2m3!1e0!2sm!3i796562520!3m18!2sfr-FR!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjJ8cy5lOmx8cC52Om9mZg!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&key=AIzaSyBxNT6q_JhYHAsGflwirGtbaLeHsXl-BVc&token=73130",
+  "method": "GET",
+  "type": "image",
+  "status": 200,
+  "ct": "image/webp"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i30!3i21!4i256!2m3!1e0!2sm!3i796562520!3m18!2sfr-FR!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjJ8cy5lOmx8cC52Om9mZg!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&key=AIzaSyBxNT6q_JhYHAsGflwirGtbaLeHsXl-BVc&token=10042",
+  "method": "GET",
+  "type": "image",
+  "status": 200,
+  "ct": "image/webp"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i29!3i23!4i256!2m3!1e0!2sm!3i796562304!3m18!2sfr-FR!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjJ8cy5lOmx8cC52Om9mZg!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&key=AIzaSyBxNT6q_JhYHAsGflwirGtbaLeHsXl-BVc&token=76996",
+  "method": "GET",
+  "type": "image",
+  "status": 200,
+  "ct": "image/webp"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i29!3i22!4i256!2m3!1e0!2sm!3i796562520!3m18!2sfr-FR!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjJ8cy5lOmx8cC52Om9mZg!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&key=AIzaSyBxNT6q_JhYHAsGflwirGtbaLeHsXl-BVc&token=129797",
+  "method": "GET",
+  "type": "image",
+  "status": 200,
+  "ct": "image/webp"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i34!3i23!4i256!2m3!1e0!2sm!3i796562520!3m18!2sfr-FR!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjJ8cy5lOmx8cC52Om9mZg!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&key=AIzaSyBxNT6q_JhYHAsGflwirGtbaLeHsXl-BVc&token=42988",
+  "method": "GET",
+  "type": "image",
+  "status": 200,
+  "ct": "image/webp"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i29!3i21!4i256!2m3!1e0!2sm!3i796562520!3m18!2sfr-FR!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjJ8cy5lOmx8cC52Om9mZg!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&key=AIzaSyBxNT6q_JhYHAsGflwirGtbaLeHsXl-BVc&token=28868",
+  "method": "GET",
+  "type": "image",
+  "status": 200,
+  "ct": "image/webp"
+ },
+ {
+  "url": "https://laiphfefgayozfxtjclb.supabase.co/rest/v1/gmb_locations?select=*&actif_inactif=eq.Actif&order=nom_etablissement.asc&offset=0&limit=1000",
+  "method": "GET",
+  "type": "fetch",
+  "status": 200,
+  "ct": "application/json; charset=utf-8",
+  "body": "docs/research/pages/home/bodies/1c03685dc0.txt"
+ },
+ {
+  "url": "https://maps.googleapis.com/maps/vt?pb=!1m4!1m3!1i6!2i29!3i21!1m4!1m3!1i6!2i29!3i22!1m4!1m3!1i6!2i29!3i23!1m4!1m3!1i6!2i30!3i21!1m4!1m3!1i6!2i31!3i21!1m4!1m3!1i6!2i30!3i22!1m4!1m3!1i6!2i30!3i23!1m4!1m3!1i6!2i31!3i22!1m4!1m3!1i6!2i31!3i23!1m4!1m3!1i6!2i32!3i21!1m4!1m3!1i6!2i33!3i21!1m4!1m3!1i6!2i32!3i22!1m4!1m3!1i6!2i32!3i23!1m4!1m3!1i6!2i33!3i22!1m4!1m3!1i6!2i33!3i23!1m4!1m3!1i6!2i34!3i21!1m4!1m3!1i6!2i34!3i22!1m4!1m3!1i6!2i34!3i23!2m3!1e0!2sm!3i796562520!3m18!2sfr-FR!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjJ8cy5lOmx8cC52Om9mZg!4e3!12m2!5b1!6b1!23i46991212!23i47054750&callback=_xdc_._9ef6am&key=AIzaSyBxNT6q_JhYHAsGflwirGtbaLeHsXl-BVc&token=58216",
+  "method": "GET",
+  "type": "script",
+  "status": 200,
+  "ct": "text/javascript"
+ },
+ {
+  "url": "https://fonts.googleapis.com/css?family=Google+Sans+Text:400&text=%E2%86%90%E2%86%92%E2%86%91%E2%86%93&lang=fr",
+  "method": "GET",
+  "type": "stylesheet",
+  "status": 200,
+  "ct": "text/css; charset=utf-8",
+  "saved": "docs/research/css/css"
+ },
+ {
+  "url": "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans:400,500,700|Google+Sans+Text:400,500,700&lang=fr",
+  "method": "GET",
+  "type": "stylesheet",
+  "status": 200,
+  "ct": "text/css; charset=utf-8",
+  "saved": "docs/research/css/css"
+ },
+ {
+  "url": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+  "method": "GET",
+  "type": "font",
+  "status": 200,
+  "ct": "font/woff2"
+ },
+ {
+  "url": "https://laiphfefgayozfxtjclb.supabase.co/rest/v1/gmb_locations?select=*&actif_inactif=eq.Actif&order=nom_etablissement.asc&offset=1000&limit=1000",
+  "method": "GET",
+  "type": "fetch",
+  "status": 200,
+  "ct": "application/json; charset=utf-8",
+  "body": "docs/research/pages/home/bodies/e8a4c9327f.txt"
+ },
+ {
+  "url": "https://laiphfefgayozfxtjclb.supabase.co/rest/v1/gmb_locations?select=*&actif_inactif=eq.Actif&order=nom_etablissement.asc&offset=1000&limit=1000",
+  "method": "GET",
+  "type": "fetch",
+  "status": 200,
+  "ct": "application/json; charset=utf-8",
+  "body": "docs/research/pages/home/bodies/e8a4c9327f.txt"
+ }
+]

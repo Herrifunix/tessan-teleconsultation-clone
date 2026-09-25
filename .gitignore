@@ -1,0 +1,12 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+blob-report/
+.vite/
+*.log
+!docs/research/visits.log
+# Corps réseau bruts volumineux (jeu complet Supabase ~11 Mo) : régénérables via tools/recon/explore.mjs
+docs/research/pages/*/bodies/
+.vercel
+.env*

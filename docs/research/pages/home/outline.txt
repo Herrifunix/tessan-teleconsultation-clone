@@ -1,0 +1,876 @@
+body.__variable_2392b8.__variable_764305.antialiased "  "
+  div.cky-hide.cky-overlay
+  div.cky-btn-revisit-wrapper.cky-revisit-hide.cky-revisit-bottom-left
+    button.cky-btn-revisit [aria-label=Choix de consentement]
+      img [alt=Revisit consent button src=https://cdn-cookieyes.com/assets/images/revisit.svg]
+  div.cky-consent-container.cky-box-bottom-left [role=region aria-label=Nous respectons votre vie privée.]
+    div.cky-consent-bar
+      div.cky-notice
+        p.cky-title [role=heading] "Nous respectons votre vie privée."
+        div.cky-notice-group
+          div.cky-notice-des " "
+            p "Nous utilisons les cookies pour la mesure de notre audience "
+            p "En cliquant sur « Accepter », vous consentez à notre utilisa"
+            p "Pour en savoir plus sur les traceurs utilisés et les traitem"
+              a.cky-policy [href=https://tessan.io/cookies/ aria-label=Politique relative aux cookies] "Politique relative aux cookies"
+          div.cky-notice-btn-wrapper [role=group] "  "
+            button.cky-btn.cky-btn-customize [aria-label=Personnaliser] "Personnaliser"
+            button.cky-btn.cky-btn-reject [aria-label=Refuser] "Refuser"
+            button.cky-btn.cky-btn-accept [aria-label=Accepter] "Accepter"
+  div.cky-modal
+    div.cky-preference-center [role=dialog id=ckyPreferenceCenter]
+      div.cky-preference-header
+        span.cky-preference-title [role=heading id=ckyPreferenceTitle] "Personnaliser les préférences en matière de consentement"
+        button.cky-btn-close [aria-label=Fermer]
+          img [src=https://cdn-cookieyes.com/assets/images/close.svg]
+      div.cky-preference-body-wrapper
+        div.cky-preference-content-wrapper
+          p "Nous utilisons des cookies pour vous aider à naviguer effica"
+          p "Les cookies qui sont catégorisés comme « nécessaires » sont "
+            button.cky-show-desc-btn [aria-label=Afficher plus] "Afficher plus"
+        div.cky-dma-content-wrapper
+          p "Pour plus d’informations sur la manière dont les cookies tie"
+            a.cky-policy [href=https://www.tessan.io/politique-de-confidentialite aria-label=Politique de confidentialité de Tessan] "Politique de confidentialité de Tessan"
+        div.cky-horizontal-separator
+        div.cky-accordion-wrapper
+          div.cky-accordion [id=ckyDetailCategorynecessary]
+            div.cky-accordion-item
+              div.cky-accordion-chevron
+                i.cky-chevron-right
+              div.cky-accordion-header-wrapper
+                div.cky-accordion-header
+                  button.cky-accordion-btn [aria-label=Nécessaire] "Nécessaire"
+                  span.cky-always-active "Toujours actif"
+                div.cky-accordion-header-des
+                  p "Les cookies nécessaires sont cruciaux pour les fonctions de "
+            div.cky-accordion-body [id=ckyDetailCategorynecessaryBody]
+              div.cky-audit-table
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "_cfuvid"
+                  li
+                    div "Durée"
+                    div "session"
+                  li
+                    div "Description"
+                    div "Cloudflare sets this cookie to track users across sessions t"
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "__cf_bm"
+                  li
+                    div "Durée"
+                    div "1 heure"
+                  li
+                    div "Description"
+                    div "Cloudflare a placé ce témoin pour prendre en charge la gesti"
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "cookietest"
+                  li
+                    div "Durée"
+                    div "session"
+                  li
+                    div "Description"
+                    div "The cookietest cookie is typically used to determine whether"
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "cookieyes-*"
+                  li
+                    div "Durée"
+                    div "1 an"
+                  li
+                    div "Description"
+                    div "CookieYes sets this cookie for consent solution management."
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "__hs_do_not_track"
+                  li
+                    div "Durée"
+                    div "6 mois"
+                  li
+                    div "Description"
+                    div "HubSpot sets this cookie to prevent the tracking code from s"
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "__hs_opt_out"
+                  li
+                    div "Durée"
+                    div "6 mois"
+                  li
+                    div "Description"
+                    div "HubSpot sets this cookie, which is used by the opt-in privac"
+          div.cky-accordion [id=ckyDetailCategoryfunctional]
+            div.cky-accordion-item
+              div.cky-accordion-chevron
+                i.cky-chevron-right
+              div.cky-accordion-header-wrapper
+                div.cky-accordion-header
+                  button.cky-accordion-btn [aria-label=Fonctionnelle] "Fonctionnelle"
+                  div.cky-switch
+                    input [role=switch aria-label=Activer Fonctionnelle type=checkbox id=ckySwitchfunctional]
+                div.cky-accordion-header-des
+                  p "Les cookies fonctionnels permettent d'exécuter certaines fon"
+            div.cky-accordion-body [id=ckyDetailCategoryfunctionalBody]
+              div.cky-audit-table
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "gtm_id"
+                  li
+                    div "Durée"
+                    div "1 an"
+                  li
+                    div "Description"
+                    div
+                      p "No description available."
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "recent_write"
+                  li
+                    div "Durée"
+                    div "Moins d'une minute"
+                  li
+                    div "Description"
+                    div
+                      p "Description is currently not available."
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "intercom-id-*"
+                  li
+                    div "Durée"
+                    div "8 mois 26 jour 1 heure"
+                  li
+                    div "Description"
+                    div
+                      pre "Intercom définit ce cookie qui permet aux visiteurs de voir "
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "intercom-session-*"
+                  li
+                    div "Durée"
+                    div "7 jour"
+                  li
+                    div "Description"
+                    div
+                      pre "Intercom définit ce cookie qui permet aux visiteurs de voir "
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "intercom-device-id-*"
+                  li
+                    div "Durée"
+                    div "8 mois 26 jour 1 heure"
+                  li
+                    div "Description"
+                    div
+                      pre "Intercom définit ce cookie qui permet aux visiteurs de voir "
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "ytidb::LAST_RESULT_ENTRY_KEY"
+                  li
+                    div "Durée"
+                    div "N'expire jamais"
+                  li
+                    div "Description"
+                    div "The cookie ytidb::LAST_RESULT_ENTRY_KEY is used by YouTube t"
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "AWSALBTGCORS"
+                  li
+                    div "Durée"
+                    div "7 jour"
+                  li
+                    div "Description"
+                    div
+                      p "No description available."
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "AWSALBTG"
+                  li
+                    div "Durée"
+                    div "7 jour"
+                  li
+                    div "Description"
+                    div
+                      p "No description available."
+          div.cky-accordion [id=ckyDetailCategoryanalytics]
+            div.cky-accordion-item
+              div.cky-accordion-chevron
+                i.cky-chevron-right
+              div.cky-accordion-header-wrapper
+                div.cky-accordion-header
+                  button.cky-accordion-btn [aria-label=Analytique] "Analytique"
+                  div.cky-switch
+                    input [role=switch aria-label=Activer Analytique type=checkbox id=ckySwitchanalytics]
+                div.cky-accordion-header-des
+                  p "Les cookies analytiques sont utilisés pour comprendre commen"
+            div.cky-accordion-body [id=ckyDetailCategoryanalyticsBody]
+              div.cky-audit-table
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "_ga"
+                  li
+                    div "Durée"
+                    div "1 an 1 mois 4 jour"
+                  li
+                    div "Description"
+                    div "Google Analytics utilise ce témoin pour calculer les données"
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "_ga_*"
+                  li
+                    div "Durée"
+                    div "1 an 1 mois 4 jour"
+                  li
+                    div "Description"
+                    div
+                      pre
+                        span "Google Analytics définit ce cookie pour stocker et compter l"
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "vuid"
+                  li
+                    div "Durée"
+                    div "1 an 1 mois 4 jour"
+                  li
+                    div "Description"
+                    div "Vimeo installe ce témoin pour collecter des informations de "
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "landing_page"
+                  li
+                    div "Durée"
+                    div "session"
+                  li
+                    div "Description"
+                    div
+                      p "The _landing_page cookie tracks the first page a user visits"
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "__hstc"
+                  li
+                    div "Durée"
+                    div "6 mois"
+                  li
+                    div "Description"
+                    div "Hubspot définit ce cookie principal pour le suivi des visite"
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "hubspotutk"
+                  li
+                    div "Durée"
+                    div "6 mois"
+                  li
+                    div "Description"
+                    div "HubSpot définit ce cookie pour assurer le suivi des visiteur"
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "__hssrc"
+                  li
+                    div "Durée"
+                    div "session"
+                  li
+                    div "Description"
+                    div "Ce cookie est défini par Hubspot chaque fois qu'il modifie l"
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "__hssc"
+                  li
+                    div "Durée"
+                    div "1 heure"
+                  li
+                    div "Description"
+                    div "HubSpot définit ce cookie pour assurer le suivi des sessions"
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "FPID"
+                  li
+                    div "Durée"
+                    div "1 an 1 mois 4 jour"
+                  li
+                    div "Description"
+                    div "Google Tag Manager sets this cookie for server-side tagging."
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "FPLC"
+                  li
+                    div "Durée"
+                    div "20 heure"
+                  li
+                    div "Description"
+                    div "Google Tag Manager sets this cookie for tracking between dom"
+          div.cky-accordion [id=ckyDetailCategoryperformance]
+            div.cky-accordion-item
+              div.cky-accordion-chevron
+                i.cky-chevron-right
+              div.cky-accordion-header-wrapper
+                div.cky-accordion-header
+                  button.cky-accordion-btn [aria-label=Performance] "Performance"
+                  div.cky-switch
+                    input [role=switch aria-label=Activer Performance type=checkbox id=ckySwitchperformance]
+                div.cky-accordion-header-des
+                  p "Les cookies de performance sont utilisés pour comprendre et "
+            div.cky-accordion-body [id=ckyDetailCategoryperformanceBody]
+              div.cky-audit-table
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "INGRESSCOOKIE"
+                  li
+                    div "Durée"
+                    div "session"
+                  li
+                    div "Description"
+                    div "This cookie is used for load balancing and session stickines"
+          div.cky-accordion [id=ckyDetailCategoryadvertisement]
+            div.cky-accordion-item
+              div.cky-accordion-chevron
+                i.cky-chevron-right
+              div.cky-accordion-header-wrapper
+                div.cky-accordion-header
+                  button.cky-accordion-btn [aria-label=Publicité] "Publicité"
+                  div.cky-switch
+                    input [role=switch aria-label=Activer Publicité type=checkbox id=ckySwitchadvertisement]
+                div.cky-accordion-header-des
+                  p "Les cookies de publicité sont utilisés pour fournir aux visi"
+            div.cky-accordion-body [id=ckyDetailCategoryadvertisementBody]
+              div.cky-audit-table
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "VISITOR_PRIVACY_METADATA"
+                  li
+                    div "Durée"
+                    div "6 mois"
+                  li
+                    div "Description"
+                    div
+                      p "YouTube sets this cookie to store the user's cookie consent "
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "YSC"
+                  li
+                    div "Durée"
+                    div "session"
+                  li
+                    div "Description"
+                    div "YouTube place ce témoin pour suivre les vues des vidéos inté"
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "VISITOR_INFO1_LIVE"
+                  li
+                    div "Durée"
+                    div "6 mois"
+                  li
+                    div "Description"
+                    div "YouTube utilise ce témoin pour mesurer la bande passante et "
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "__Secure-YEC"
+                  li
+                    div "Durée"
+                    div "passé(e)"
+                  li
+                    div "Description"
+                    div
+                      p "Description is currently not available."
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "_fbp"
+                  li
+                    div "Durée"
+                    div "3 mois"
+                  li
+                    div "Description"
+                    div "Facebook définit ce témoin pour afficher des publicités lors"
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "test_cookie"
+                  li
+                    div "Durée"
+                    div "15 minute"
+                  li
+                    div "Description"
+                    div
+                      pre
+                        span "doubleclick.net place ce témoin pour déterminer si le naviga"
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "_ttp"
+                  li
+                    div "Durée"
+                    div "3 mois"
+                  li
+                    div "Description"
+                    div
+                      div "  "
+                        div "    "
+                          div " "
+                            div " "
+                          div
+                          div
+                          div " "
+                            div
+                        div " "
+                          div " "
+                            div " "
+                      div
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "bcookie"
+                  li
+                    div "Durée"
+                    div "1 an"
+                  li
+                    div "Description"
+                    div "LinkedIn définit ce témoin à partir des boutons de partage L"
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "MUID"
+                  li
+                    div "Durée"
+                    div "1 an 24 jour"
+                  li
+                    div "Description"
+                    div "Bing utilise ce témoin pour reconnaître les navigateurs uniq"
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "_tt_enable_cookie"
+                  li
+                    div "Durée"
+                    div "3 mois"
+                  li
+                    div "Description"
+                    div
+                      p "Tiktok a défini ce cookie pour collecter des données sur le "
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "_gcl_au"
+                  li
+                    div "Durée"
+                    div "3 mois"
+                  li
+                    div "Description"
+                    div
+                      p "Google Tag Manager place le témoin pour expérimenter l’effic"
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "lidc"
+                  li
+                    div "Durée"
+                    div "1 jour"
+                  li
+                    div "Description"
+                    div "LinkedIn définit le témoin lidc pour faciliter la sélection "
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "li_gc"
+                  li
+                    div "Durée"
+                    div "6 mois"
+                  li
+                    div "Description"
+                    div "Linkedin place ce témoin pour stocker le consentement du vis"
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "IDE"
+                  li
+                    div "Durée"
+                    div "1 an 24 jour"
+                  li
+                    div "Description"
+                    div "Les témoins Google DoubleClick IDE stockent des informations"
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "__Secure-YNID"
+                  li
+                    div "Durée"
+                    div "6 mois"
+                  li
+                    div "Description"
+                    div
+                      p "Description is currently not available."
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "__Secure-ROLLOUT_TOKEN"
+                  li
+                    div "Durée"
+                    div "6 mois"
+                  li
+                    div "Description"
+                    div
+                      p "Description is currently not available."
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "ttcsid_*"
+                  li
+                    div "Durée"
+                    div "3 mois"
+                  li
+                    div "Description"
+                    div "TikTok sets this cookie as a session identification cookie t"
+          div.cky-accordion [id=ckyDetailCategoryother]
+            div.cky-accordion-item
+              div.cky-accordion-chevron
+                i.cky-chevron-right
+              div.cky-accordion-header-wrapper
+                div.cky-accordion-header
+                  button.cky-accordion-btn [aria-label=Non classé] "Non classé"
+                  div.cky-switch
+                    input [role=switch aria-label=Activer Non classé type=checkbox id=ckySwitchother]
+                div.cky-accordion-header-des
+                  p "Les autres cookies non classés sont ceux qui sont en cours d"
+            div.cky-accordion-body [id=ckyDetailCategoryotherBody]
+              div.cky-audit-table
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "__hs_initial_opt_in"
+                  li
+                    div "Durée"
+                    div "7 jour"
+                  li
+                    div "Description"
+                    div "Records a visitor’s initial consent choice to manage cookie "
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "tessan_origin"
+                  li
+                    div "Durée"
+                    div "3 mois"
+                  li
+                    div "Description"
+                    div "Stores the visitor’s original traffic source from the blog t"
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "FPGSID"
+                  li
+                    div "Durée"
+                    div "1 heure"
+                  li
+                    div "Description"
+                    div "Stores a temporary session identifier for analytics, linking"
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "ttcsid"
+                  li
+                    div "Durée"
+                    div "3 mois"
+                  li
+                    div "Description"
+                    div "Stores a session identifier for TikTok Pixel to measure site"
+                ul.cky-cookie-des-table
+                  li
+                    div "Cookie"
+                    div "_dd_s"
+                  li
+                    div "Durée"
+                    div "15 minute"
+                  li
+                    div "Description"
+                    div "No description available."
+      div.cky-footer-wrapper
+        span.cky-footer-shadow
+        div.cky-prefrence-btn-wrapper [role=group] " "
+          button.cky-btn.cky-btn-reject [aria-label=Refuser] "Refuser"
+          button.cky-btn.cky-btn-preferences [aria-label=Enregistrer mes préférences] "Enregistrer mes préférences"
+          button.cky-btn.cky-btn-accept [aria-label=Accepter] "Accepter"
+        div "Powered by"
+          a [href=https://www.cookieyes.com/product/cookie-consent/?ref=cypbcy aria-label=Visit CookieYes website]
+            img [src=https://cdn-cookieyes.com/assets/images/poweredbtcky.svg]
+  div
+  next-route-announcer
+  header.bg-white.shadow-sm.border-b.border-gray-200.top-0.z-50
+    nav.max-w-[1328px].mx-auto.flex.justify-between.items-center.h-[80px].px-6
+      div.flex.items-center
+        a.font-bold.cursor-pointer [href=https://www.tessan.io/]
+          img [alt=Logo Tessan src=/logo.svg]
+      div.hidden.lg:flex.items-center.gap-12
+        a.text-base.text-gray-700.hover:text-tessan-green.font-medium.transition-colors.cursor-pointer [href=https://www.tessan.io/la-teleconsultation-augmentee] "Téléconsultation"
+        a.text-base.text-gray-700.hover:text-tessan-green.font-medium.transition-colors.cursor-pointer [href=https://www.tessan.io/medecins] "Vous êtes médecin ?"
+        a.text-base.text-gray-700.hover:text-tessan-green.font-medium.transition-colors.cursor-pointer [href=https://www.tessan.io/] "Vous êtes un professionnel ?"
+      div.flex.items-center
+        a.flex.items-center.gap-2.bg-[#0f352d].text-white.text-base.px-6.py-3.rounded.font-semibold.hover:bg-[#153f3f].transition-colors.cursor-pointer [href=https://patient.prod.tessan.cloud/auth/login] "Compte patient"
+          svg.lucide.lucide-user
+            circle
+  div
+    main
+      section.p-6.bg-slate-50
+        div.max-w-[1328px].mx-auto
+          h1.text-center.text-2xl.md:text-3xl.text-gray-800.mb-8.mt-3.md:mt-5 "Les dispositifs de téléconsultation Tessan"
+            span.text-tessan-green-hover "autour de vous"
+          h5.text-center.text-l.md:text-xl.text-gray-800.mb-8 "Tessan, c'est une (stéthoscope, thermomètre, tensiomètre, de"
+            strong "téléconsultation augmentée par des dispositifs médicaux conn"
+            strong "500 médecins généralistes et spécialistes"
+            strong "1 600 pharmacies et lieux de santé"
+          div.mx-auto.bg-white.p-6.md:p-8.rounded-lg.shadow-lg
+            form.flex.flex-col.lg:flex-row.gap-4.md:gap-[1.2rem].items-stretch
+              div.w-full.md:min-w-[280px].md:w-auto.relative
+                button.w-full.h-11.flex.items-center.font-semibold.justify-between.space-x-2.border.rounded-lg.px-4.transition-colors.focus:outline-none.focus:ring-2.focus:ring-blue-3 [type=button]
+                  span.truncate "Spécialités médicales"
+                  svg.lucide.lucide-chevron-down.transition-transform
+              div.relative.flex-1
+                input.flex.bg-transparent.py-1.text-base.shadow-xs.transition-colors.file:border-0.file:bg-transparent.file:text-sm.file:font-medium.file:text-foreground.placeholder: [placeholder=Ville / Code postal type=text]
+                button.absolute.top-1/2.right-4.-translate-y-1/2.text-gray-400.hover:text-tessan-green-hover.transition-colors.disabled:opacity-50.disabled:cursor-not-allowed.cursor-p [type=button]
+                  svg.lucide.lucide-locate-fixed
+                    line
+                    line
+                    line
+                    line
+                    circle
+                    circle
+              button.w-full.md:min-w-[288px].md:w-auto.h-11.flex.items-center.justify-center.gap-2.bg-tessan-green.hover:bg-tessan-green-hover.text-white.font-semibold.rounded-lg.px [type=submit]
+                svg.lucide.lucide-search
+                  circle
+                span "Recherche"
+      div.bg-slate-50.p-6.pb-12
+        div.max-w-[1328px].mx-auto
+          div.bg-white.p-6.md:p-8.rounded-lg.shadow-lg
+            div.rounded-md.overflow-hidden.shadow-md.h-[calc(100vh-400px)].min-h-[600px]
+              div
+                div
+                  div
+                    div
+                      button [aria-label=Raccourcis clavier type=button]
+                    div [role=region aria-label=Carte]
+                      div [id=08A2EE63-CCEE-4517-AB89-DC12FE7D4C28]
+                        div.LGLeeN-keyboard-shortcuts-view
+                          table
+                            tbody
+                    div.gm-style
+                div.absolute.top-4.left-4.flex.flex-col.gap-2.z-10
+                  button.bg-white.hover:bg-[#fcf5cc].text-tessan-green.rounded-lg.shadow-lg.p-3.transition-colors.duration-200.flex.items-center.gap-2.font-medium.cursor-pointer
+                    svg.lucide.lucide-maximize2.lucide-maximize-2
+                    span.hidden.sm:inline "Réinitialiser"
+                  button.bg-white.hover:bg-[#fcf5cc].text-tessan-green.rounded-lg.shadow-lg.p-3.transition-colors.duration-200.flex.items-center.gap-2.font-medium.cursor-pointer
+                    svg.lucide.lucide-locate-fixed
+                      line
+                      line
+                      line
+                      line
+                      circle
+                      circle
+                    span.hidden.sm:inline.font-bold "Me géolocaliser"
+      div.bg-slate-50.p-6.pb-12
+        div.max-w-[1328px].mx-auto
+          div.mb-8
+            div.bg-white.rounded-lg.shadow-lg.p-8
+              h2.text-2xl.text-gray-800.mb-6 "Les dispositifs de téléconsultation Tessan dans les départem"
+              p.text-gray-600.mb-6 "Explorez les dispositifs disponibles dans les 10 département"
+              div.grid.grid-cols-2.md:grid-cols-3.lg:grid-cols-5.gap-4
+                button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+                  p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Val-de-Marne"
+                  p.text-sm.text-gray-500.group-hover:text-white "15  dispositifs"
+                button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+                  p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Hauts-de-Seine"
+                  p.text-sm.text-gray-500.group-hover:text-white "21  dispositifs"
+                button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+                  p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Seine-Saint-Denis"
+                  p.text-sm.text-gray-500.group-hover:text-white "28  dispositifs"
+                button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+                  p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Val-d'Oise"
+                  p.text-sm.text-gray-500.group-hover:text-white "37  dispositifs"
+                button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+                  p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Yvelines"
+                  p.text-sm.text-gray-500.group-hover:text-white "23  dispositifs"
+                button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+                  p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Essonne"
+                  p.text-sm.text-gray-500.group-hover:text-white "20  dispositifs"
+                button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+                  p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Seine-et-Marne"
+                  p.text-sm.text-gray-500.group-hover:text-white "44  dispositifs"
+                button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+                  p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Oise"
+                  p.text-sm.text-gray-500.group-hover:text-white "25  dispositifs"
+                button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+                  p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Eure-et-Loir"
+                  p.text-sm.text-gray-500.group-hover:text-white "9  dispositifs"
+                button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+                  p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Eure"
+                  p.text-sm.text-gray-500.group-hover:text-white "18  dispositifs"
+          div
+            div.bg-white.rounded-lg.shadow-lg.p-8
+              h2.text-2xl.text-gray-800.mb-6 "Les dispositifs de téléconsultation Tessan dans les régions "
+              p.text-gray-600.mb-6 "Explorez les dispositifs disponibles dans les 10 régions les"
+              div.grid.grid-cols-2.md:grid-cols-3.lg:grid-cols-5.gap-4
+                button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+                  p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Île-de-France"
+                  p.text-sm.text-gray-500.group-hover:text-white "211  dispositifs"
+                button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+                  p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Hauts-de-France"
+                  p.text-sm.text-gray-500.group-hover:text-white "220  dispositifs"
+                button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+                  p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Normandie"
+                  p.text-sm.text-gray-500.group-hover:text-white "118  dispositifs"
+                button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+                  p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Centre-Val de Loire"
+                  p.text-sm.text-gray-500.group-hover:text-white "66  dispositifs"
+                button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+                  p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Bourgogne-Franche-Comté"
+                  p.text-sm.text-gray-500.group-hover:text-white "102  dispositifs"
+                button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+                  p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Pays de la Loire"
+                  p.text-sm.text-gray-500.group-hover:text-white "97  dispositifs"
+                button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+                  p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Grand Est"
+                  p.text-sm.text-gray-500.group-hover:text-white "169  dispositifs"
+                button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+                  p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Bretagne"
+                  p.text-sm.text-gray-500.group-hover:text-white "92  dispositifs"
+                button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+                  p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Auvergne-Rhône-Alpes"
+                  p.text-sm.text-gray-500.group-hover:text-white "195  dispositifs"
+                button.bg-slate-50.hover:bg-tessan-green.hover:text-white.transition-colors.rounded-lg.p-4.text-center.group.cursor-pointer
+                  p.font-semibold.text-gray-800.group-hover:text-white.mb-1 "Nouvelle-Aquitaine"
+                  p.text-sm.text-gray-500.group-hover:text-white "183  dispositifs"
+  footer.bg-[#0f352d].text-white
+    div.max-w-[1300px].mx-auto.px-8.py-12
+      div.flex.flex-col.lg:flex-row.gap-10.lg:gap-28
+        div.lg:w-[150px].flex-shrink-0
+          div.mb-10
+            img.brightness-0.invert [alt=Logo Tessan src=/logo.svg]
+          div.mb-6
+            h3.mb-2.text-sm.text-white.font-semibold "Adresse"
+            p.text-base.leading-relaxed.font-semibold "TESSAN 10 Rue Pergolèse 75016 Paris"
+              br
+              br
+          div.mb-8
+            a.inline-flex.items-center.gap-3.bg-[#feee80].text-[#1a4d4d].px-5.py-3.rounded.font-semibold.hover:bg-[#f0e060].transition-colors.cursor-pointer [href=http://tessan.io/nous-contacter] "Nous contacter"
+              span.text-xl "→"
+          div.flex.gap-4.mb-0.lg:mb-8
+            a.hover:opacity-80.transition-opacity.cursor-pointer [href=https://www.facebook.com/Tessan.io/]
+              svg
+            a.hover:opacity-80.transition-opacity.cursor-pointer [href=https://www.instagram.com/tessan.io/]
+              svg
+            a.hover:opacity-80.transition-opacity.cursor-pointer [href=https://www.linkedin.com/company/tessan/]
+              svg
+            a.hover:opacity-80.transition-opacity.cursor-pointer [href=https://www.youtube.com/@tessan2706]
+              svg
+        div.flex-1.grid.grid-cols-1.md:grid-cols-2.lg:grid-cols-5.gap-x-8.gap-y-12
+          div
+            h3.mb-3.5.text-sm "PARTENAIRES"
+            ul.space-y-3.text-base.font-semibold
+              li
+                a.hover:underline.cursor-pointer [href=https://www.tessan.io/pharmaciens] "Pharmaciens"
+              li
+                a.hover:underline.cursor-pointer [href=https://www.tessan.io/opticiens-teleconsultation] "Opticiens"
+              li
+                a.hover:underline.cursor-pointer [href=https://www.tessan.io/infirmiers] "Infirmiers"
+              li
+                a.hover:underline.cursor-pointer [href=https://www.tessan.io/collectivites] "Collectivités"
+              li
+                a.hover:underline.cursor-pointer [href=https://www.tessan.io/dirigeants] "Dirigeants"
+              li
+                a.hover:underline.cursor-pointer [href=https://www.tessan.io/ehpad] "EHPAD"
+          div
+            h3.mb-3.5.text-sm "SOLUTIONS"
+            ul.space-y-3.text-base.font-semibold
+              li
+                a.hover:underline.cursor-pointer [href=https://www.tessan.io/nos-solutions] "Nos solutions"
+              li
+                a.hover:underline.cursor-pointer [href=https://www.tessan.io/nos-solutions/cabine-premium] "La cabine Premium"
+              li
+                a.hover:underline.cursor-pointer [href=https://www.tessan.io/nos-solutions/cabine-teleconsultation-] "La cabine Slim"
+              li
+                a.hover:underline.cursor-pointer [href=https://www.tessan.io/nos-solutions/borne-teleconsultation] "La borne"
+              li
+                a.hover:underline.cursor-pointer [href=https://www.tessan.io/nos-solutions/console-teleconsultation] "La console"
+              li
+                a.hover:underline.cursor-pointer [href=https://www.tessan.io/nos-solutions/mallette-teleconsultatio] "La mallette"
+              li
+                a.hover:underline.cursor-pointer [href=https://www.tessan.io/nos-solutions/table-teleophtalmologie] "La table de téléophtalmologie"
+              li
+                a.hover:underline.cursor-pointer [href=https://www.tessan.io/tessan-ia] "Tessan IA"
+              li.pt-2
+                a.hover:underline.cursor-pointer [href=https://www.tessan.io/tessan-ia/teleconsultation] "- Téléconsultation"
+              li
+                a.hover:underline.cursor-pointer [href=https://www.tessan.io/nos-solutions/teleexpertise-dermatolog] "La téléexpertise dermatologique"
+          div.min-w-[180px]
+            h3.mb-3.5.text-sm "MEDECINS"
+            ul.space-y-3.text-base.font-semibold
+              li
+                a.hover:underline.cursor-pointer [href=https://www.tessan.io/medecins] "Médecins généralistes"
+              li
+                a.hover:underline.cursor-pointer [href=https://www.tessan.io/dermatologues] "Dermatologues"
+              li
+                a.hover:underline.cursor-pointer [href=https://www.tessan.io/ophtalmologues-teleconsultation] "Ophtalmologues"
+              li
+                a.hover:underline.cursor-pointer [href=https://www.tessan.io/pediatre] "Pédiatres"
+          div
+            h3.mb-3.5.text-sm "PATIENTS"
+            ul.space-y-3.text-base.font-semibold
+              li
+                a.hover:underline.cursor-pointer [href=https://www.tessan.io/la-teleconsultation-augmentee] "La téléconsultation augmentée"
+              li
+                a.hover:underline.cursor-pointer [href=https://www.tessan.io/tarifs-et-remboursements] "Tarifs et remboursements"
+              li
+                a.hover:underline.cursor-pointer [href=https://www.tessan.io/medecine-generale] "Médecine générale"
+              li
+                a.hover:underline.cursor-pointer [href=https://www.tessan.io/dermatologie] "Dermatologie"
+              li
+                a.hover:underline.cursor-pointer [href=https://www.tessan.io/ophtalmologue-teleconsultation] "Ophtalmologie"
+              li
+                a.hover:underline.cursor-pointer [href=https://www.tessan.io/pneumologie] "Pneumologie"
+              li
+                a.hover:underline.cursor-pointer [href=https://www.tessan.io/geriatrie] "Gériatrie"
+          div
+            h3.mb-3.5.text-sm "RESSOURCES"
+            ul.space-y-3.text-base.font-semibold
+              li
+                a.hover:underline.cursor-pointer [href=https://www.tessan.io/blog] "Blog"
+              li
+                a.hover:underline.cursor-pointer [href=https://aide.tessan.io/fr/] "FAQ"
+              li
+                a.hover:underline.cursor-pointer [href=https://www.tessan.io/qui-sommes-nous] "Qui sommes-nous ?"
+              li
+                a.hover:underline.cursor-pointer [href=https://www.welcometothejungle.com/fr/companies/tessan] "Carrières"
+      div.border-t.border-white/20.mt-6.pt-8.flex.flex-col.md:flex-row.justify-between.items-center.gap-4.text-sm
+        p "© 2025 Tessan. Tous droits réservés."
+        div.flex.flex-wrap.gap-4.justify-center
+          a.underline.hover:opacity-80.cursor-pointer [href=https://www.tessan.io/politique-de-confidentialite] "Politique de confidentialité"
+          a.underline.hover:opacity-80.cursor-pointer [href=https://www.tessan.io/cgu] "CGU"
+          a.underline.hover:opacity-80.cursor-pointer [href=https://www.tessan.io/mentions-legales] "Mentions légales"
+          a.underline.hover:opacity-80.cursor-pointer [href=https://www.tessan.io/cookies] "Cookies"
+          a.underline.hover:opacity-80.cursor-pointer [href=https://www.tessan.io/cgv-teleexpertise-dermatologie] "CGV Téléexpertise dermatologique"
+  div.pac-container.pac-logo
