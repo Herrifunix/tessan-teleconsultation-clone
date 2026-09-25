@@ -1,4 +1,5 @@
-import { useEffect, useId, useRef, useState } from 'react';
+import { useId, useRef, useState } from 'react';
+import { ModalFocus } from '../lib/useModalFocus';
 import audit from '../data/cookie-audit.json';
 
 // Reproduction de la bannière CookieYes de l'original. Aucun traceur n'est chargé par le clone : le choix est
@@ -38,6 +39,7 @@ export function CookieConsent() {
   const [showMore, setShowMore] = useState(false);
   const titleId = useId();
   const closeRef = useRef<HTMLButtonElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
 
   const decide = (action: Consent['action'], categories: Categories) => {
     const c = { action, categories };
@@ -47,14 +49,6 @@ export function CookieConsent() {
     setPrefsOpen(false);
   };
   const all = (v: boolean) => Object.fromEntries(OPTIONAL.map((s) => [s, v]));
-
-  useEffect(() => {
-    if (!prefsOpen) return;
-    closeRef.current?.focus();
-    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setPrefsOpen(false); };
-    document.addEventListener('keydown', onKey);
-    return () => document.removeEventListener('keydown', onKey);
-  }, [prefsOpen]);
 
   const bannerVisible = !consent && !prefsOpen;
   return (
@@ -82,7 +76,7 @@ export function CookieConsent() {
 
       {consent && !prefsOpen && (
         <div className="fixed z-[999999] bottom-3.75 left-3.75 max-[480px]:bottom-2 max-[480px]:left-2 group">
-          <button type="button" aria-label="Choix de consentement" onClick={() => setPrefsOpen(true)} className="size-11.25 max-[480px]:size-9 rounded-full bg-cookie-text flex items-center justify-center cursor-pointer">
+          <button type="button" data-cky-revisit aria-label="Choix de consentement" onClick={() => setPrefsOpen(true)} className="size-11.25 max-[480px]:size-9 rounded-full bg-cookie-text flex items-center justify-center cursor-pointer">
             <img src="/icons/cky-revisit.svg" alt="" className="size-7.5 max-[480px]:size-5.5" />
           </button>
           <span className="pointer-events-none absolute left-[calc(100%+7px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded bg-cookie-tooltip text-white text-xs px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity">Choix de consentement</span>
@@ -92,7 +86,8 @@ export function CookieConsent() {
       {prefsOpen && (
         <>
           <div className="fixed inset-0 bg-black opacity-40 z-[99999998]" onClick={() => setPrefsOpen(false)} />
-          <div role="dialog" aria-modal="true" aria-labelledby={titleId} className="fixed z-[99999999] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-211.25 max-w-[calc(100%-16px)] max-[576px]:max-w-full max-h-[79vh] max-[576px]:max-h-screen flex flex-col overflow-hidden rounded-cookie bg-cookie-bg border border-cookie-bg text-cookie-text">
+          <ModalFocus container={dialogRef} initial={closeRef} onClose={() => setPrefsOpen(false)} fallback={() => document.querySelector<HTMLElement>('[data-cky-revisit]')} />
+          <div ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby={titleId} className="fixed z-[99999999] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-211.25 max-w-[calc(100%-16px)] max-[576px]:max-w-full max-h-[79vh] max-[576px]:max-h-screen flex flex-col overflow-hidden rounded-cookie bg-cookie-bg border border-cookie-bg text-cookie-text">
             <div className="flex items-center justify-between px-6 py-5.5 max-[352px]:py-4">
               <span id={titleId} role="heading" aria-level={2} className="text-lg leading-6 font-bold max-[352px]:text-base">Personnaliser les préférences en matière de consentement</span>
               <button ref={closeRef} type="button" aria-label="Fermer" onClick={() => setPrefsOpen(false)} className="size-6 flex items-center justify-center cursor-pointer">

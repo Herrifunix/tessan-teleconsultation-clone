@@ -10,12 +10,14 @@ type Props = {
   onSearchSubmit: (out: SearchOutput) => void;
   initialCity?: string;
   initialSpecialtyId?: string | null;
+  /** Une recherche a déjà eu lieu (l'original garde la même instance de formulaire d'une page à l'autre). */
+  initialSubmitted?: boolean;
 };
 
 const MSG_GENERIC = 'Une erreur est survenue lors de la recherche. Veuillez réessayer.';
 
 /** Formulaire de recherche (spécialité, ville / code postal, géolocalisation) — reproduction du formulaire de l'original. */
-export function SearchForm({ onSearchSubmit, initialCity = '', initialSpecialtyId = null }: Props) {
+export function SearchForm({ onSearchSubmit, initialCity = '', initialSpecialtyId = null, initialSubmitted = false }: Props) {
   const uid = useId();
   const [city, setCity] = useState(initialCity);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -25,7 +27,7 @@ export function SearchForm({ onSearchSubmit, initialCity = '', initialSpecialtyI
   const [searching, setSearching] = useState(false);
   const [coords, setCoords] = useState<LatLng | null>(null);
   const [postalCode, setPostalCode] = useState<string | null>(null);
-  const [submittedOnce, setSubmittedOnce] = useState(false);
+  const [submittedOnce, setSubmittedOnce] = useState(initialSubmitted);
   const [remote, setRemote] = useState<{ q: string; list: Suggestion[] } | null>(null);
   const [listOpen, setListOpen] = useState(false);
   const [active, setActive] = useState(-1);
@@ -79,7 +81,7 @@ export function SearchForm({ onSearchSubmit, initialCity = '', initialSpecialtyI
       const out = await runSearch(data, {
         text: override?.text ?? city,
         coords: override && 'coords' in override ? override.coords ?? null : coordsRef.current ?? coords,
-        postalCode: override && 'postalCode' in override ? override.postalCode ?? null : postalCode,
+        postalCode: override && 'postalCode' in override ? override.postalCode ?? null : postalCode ?? (/^\d{5}$/.test(city.trim()) ? city.trim() : null),
         specialtyId: override && 'specialtyId' in override ? override.specialtyId ?? null : specialtyId,
       }, cacheRef.current);
       onSearchSubmit(out);
@@ -127,6 +129,9 @@ export function SearchForm({ onSearchSubmit, initialCity = '', initialSpecialtyI
       setActive((i) => (suggestions.length ? (i <= 0 ? suggestions.length - 1 : i - 1) : -1));
     } else if (e.key === 'Enter') {
       if (open && active >= 0) { e.preventDefault(); void choose(suggestions[active]); }
+      // Comme l'original (1ʳᵉ prédiction Google) : Entrée sans sélection prend la 1ʳᵉ suggestion, sinon le texte brut.
+      // Une position déjà connue (géolocalisation, sélection) est conservée.
+      else if (!coordsRef.current && city.trim() && suggestions.length) { e.preventDefault(); void choose(suggestions[0]); }
     } else if (e.key === 'Escape') {
       if (listOpen) { e.preventDefault(); setListOpen(false); setActive(-1); }
     }

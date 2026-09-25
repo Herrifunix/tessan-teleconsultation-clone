@@ -7,18 +7,17 @@ import { filterBySpecialty, specialtyById } from './specialties';
 export const norm = (s: string) =>
   s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[’']/g, "'").replace(/[-_\s]+/g, ' ').trim();
 
+/** Distance d'édition (Damerau restreinte) : l'inversion de deux lettres voisines (« Parsi ») compte pour une faute. */
 function levenshtein(a: string, b: string): number {
-  const dp = Array.from({ length: b.length + 1 }, (_, i) => i);
+  const d: number[][] = Array.from({ length: a.length + 1 }, (_, i) => Array.from({ length: b.length + 1 }, (_, j) => (i === 0 ? j : j === 0 ? i : 0)));
   for (let i = 1; i <= a.length; i++) {
-    let prev = dp[0];
-    dp[0] = i;
     for (let j = 1; j <= b.length; j++) {
-      const tmp = dp[j];
-      dp[j] = Math.min(dp[j] + 1, dp[j - 1] + 1, prev + (a[i - 1] === b[j - 1] ? 0 : 1));
-      prev = tmp;
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+      d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + cost);
+      if (i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) d[i][j] = Math.min(d[i][j], d[i - 2][j - 2] + 1);
     }
   }
-  return dp[b.length];
+  return d[a.length][b.length];
 }
 
 export type Suggestion = { id: string; name: string; secondary: string; postcode: string; coords: LatLng | null; score: number };
@@ -55,7 +54,12 @@ export const toSuggestion = (g: GeocodeResult): Suggestion => ({
 });
 
 /** Correspondance ville (ilike de l'original, tolérante aux accents) : repli quand le géocodage échoue. */
-export const cityMatch = (all: Pharmacy[], q: string) => all.filter((p) => norm(p.ville).includes(norm(q)));
+export const cityMatch = (all: Pharmacy[], q: string) => {
+  const t = q.trim();
+  // Code postal saisi : même repli local que pour un nom de ville.
+  if (/^\d{5}$/.test(t)) return all.filter((p) => p.codePostal === t);
+  return all.filter((p) => norm(p.ville).includes(norm(t)));
+};
 
 export type SearchInput = { text: string; coords: LatLng | null; postalCode: string | null; specialtyId: string | null };
 export type SearchOutput = { results: Pharmacy[]; query: string; specialtyLabel?: string; coords: LatLng | null; postalCode: string | null };
@@ -66,7 +70,8 @@ export class SearchMessageError extends Error {}
 
 /** Exécute la recherche comme l'original : région/département, point géocodé (20 plus proches), ville, ou tout. */
 export async function runSearch(all: Pharmacy[], input: SearchInput, geocodeCache: Map<string, LatLng>): Promise<SearchOutput> {
-  const text = input.text;
+  // Saisie réduite à des espaces = champ vide (l'original affiche alors tout et revient à l'accueil).
+  const text = input.text.trim();
   let coords = text.trim() ? input.coords : null;
   const first = text.split(',')[0].trim();
   const isRegion = REGIONS.some((r) => r.toLowerCase() === first.toLowerCase());

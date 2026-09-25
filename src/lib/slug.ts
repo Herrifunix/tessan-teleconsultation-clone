@@ -25,8 +25,13 @@ export function buildPath(crumbs: Crumb[], specialtySlug?: string | null): strin
   return parts.length ? `/${parts.join('/')}` : '/';
 }
 
+/** Segment d'URL mal encodé (ex. `/%E9%E9`) : conservé brut au lieu de lever « URI malformed ». */
+const safeDecode = (seg: string) => {
+  try { return decodeURIComponent(seg); } catch { return seg; }
+};
+
 export function parsePath(pathname: string): { specialtySlug: string | null; segments: string[] } {
-  const segs = pathname === '/' ? [] : pathname.split('/').filter(Boolean).map((s) => decodeURIComponent(s));
+  const segs = pathname === '/' ? [] : pathname.split('/').filter(Boolean).map(safeDecode);
   if (segs.length && isSpecialtySlug(segs[0])) return { specialtySlug: segs[0], segments: segs.slice(1) };
   return { specialtySlug: null, segments: segs };
 }

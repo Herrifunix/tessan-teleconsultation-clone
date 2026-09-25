@@ -84,7 +84,17 @@ export default function LeafletMap({ pharmacies, focusedPharmacy, onPharmacyClic
     map.on('zoomend', () => setZoom(map.getZoom()));
     mapRef.current = map;
     (window as unknown as { __tcMap?: L.Map }).__tcMap = map;
-    return () => { map.remove(); mapRef.current = null; };
+    return () => {
+      // Démontage possible en pleine animation (clic sur un marqueur de l'accueil → navigation immédiate) :
+      // on arrête pan/zoom et on détache les écouteurs avant de retirer la carte.
+      map.stop();
+      map.off();
+      // Leaflet 1.9 programme `_onZoomTransitionEnd` par un setTimeout non annulable (contournement WebKit) ;
+      // ce rappel ne s'arrête tôt que si `_animatingZoom` est faux : sinon il lit les panneaux déjà supprimés.
+      (map as unknown as { _animatingZoom: boolean })._animatingZoom = false;
+      map.remove();
+      mapRef.current = null;
+    };
   }, [animate, popupHost]);
 
   // Rendu des clusters / marqueurs (SuperCluster, mêmes paramètres que l'original).
@@ -92,7 +102,20 @@ export default function LeafletMap({ pharmacies, focusedPharmacy, onPharmacyClic
     const map = mapRef.current;
     const layer = layerRef.current;
     if (!map || !layer) return;
+    // Accès clavier : Entrée / Espace activent marqueurs et clusters (Leaflet ne leur donne qu'un tabindex),
+    // et le focus est rendu au même élément après chaque recalcul des clusters.
+    const keyable = (m: L.Marker, key: string) => {
+      m.on('add', () => {
+        const node = m.getElement();
+        if (!node) return;
+        node.dataset.key = key;
+        node.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); m.fire('click'); }
+        });
+      });
+    };
     const render = () => {
+      const active = document.activeElement instanceof HTMLElement && el.current?.contains(document.activeElement) ? document.activeElement.dataset.key : undefined;
       layer.clearLayers();
       const b = map.getBounds().pad(0.5);
       const z = Math.round(map.getZoom());
@@ -111,14 +134,17 @@ export default function LeafletMap({ pharmacies, focusedPharmacy, onPharmacyClic
             if (node) { node.style.backgroundImage = `url("${clusterSvg(count)}")`; node.setAttribute('aria-label', `Groupe de ${count} dispositifs`); }
           });
           m.on('click', () => map.setView([lat, lng], (map.getZoom() || 6) + 3, { animate }));
+          keyable(m, `c-${props.cluster_id}`);
           layer.addLayer(m);
         } else {
           const p = pharmacies[props.i ?? 0];
           const m = L.marker([lat, lng], { icon: markerIcon, title: p.nom, alt: p.nom, keyboard: true });
           m.on('click', () => { setSelected(p); clickRef.current?.(p); });
+          keyable(m, `p-${p.id}`);
           layer.addLayer(m);
         }
       }
+      if (active) el.current?.querySelector<HTMLElement>(`[data-key="${active}"]`)?.focus({ preventScroll: true });
     };
     render();
     map.on('moveend zoomend', render);
@@ -162,6 +188,13 @@ export default function LeafletMap({ pharmacies, focusedPharmacy, onPharmacyClic
       map.setView([pos.coords.latitude, pos.coords.longitude], 15, { animate });
     });
   };
+  // Libellé du bouton comme la commande Google Maps : « Passer en » / « Quitter le » plein écran.
+  const [isFull, setIsFull] = useState(false);
+  useEffect(() => {
+    const onChange = () => { setIsFull(document.fullscreenElement === regionRef.current); mapRef.current?.invalidateSize(); };
+    document.addEventListener('fullscreenchange', onChange);
+    return () => document.removeEventListener('fullscreenchange', onChange);
+  }, []);
   const fullscreen = () => {
     const node = regionRef.current;
     if (!node) return;
@@ -183,7 +216,7 @@ export default function LeafletMap({ pharmacies, focusedPharmacy, onPharmacyClic
           <span className="hidden sm:inline font-bold">Me géolocaliser</span>
         </button>
       </div>
-      <button type="button" onClick={fullscreen} className="tc-map-ctrl absolute top-2.5 right-2.5 z-10" title="Passer en plein écran" aria-label="Passer en plein écran">
+      <button type="button" onClick={fullscreen} className="tc-map-ctrl absolute top-2.5 right-2.5 z-10" title={isFull ? 'Quitter le plein écran' : 'Passer en plein écran'} aria-label={isFull ? 'Quitter le plein écran' : 'Passer en plein écran'}>
         <svg viewBox="0 0 18 18" width="18" height="18" aria-hidden="true"><path fill="#666" d="M0 0v6h2V2h4V0H0zm16 0h-4v2h4v4h2V0h-2zm0 16h-4v2h6v-6h-2v4zM2 12H0v6h6v-2H2v-4z" /></svg>
       </button>
       <div className="absolute right-2.5 bottom-6 z-10 flex flex-col items-center gap-1">

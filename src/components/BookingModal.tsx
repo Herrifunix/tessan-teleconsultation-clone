@@ -1,9 +1,10 @@
 import { CalendarDays, ChevronDown, ChevronLeft, ChevronUp, CircleCheck, Clock, Mail, X } from 'lucide-react';
-import { useEffect, useId, useMemo, useRef, useState } from 'react';
+import { useId, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import type { Pharmacy } from '../lib/data';
 import { DERMATO_ALLOWED, isValidEmail, isWithinSchedule, SERVICES, slotRange, upcomingSlots, type ServiceId, type Slot } from '../lib/booking';
 import { useNow } from '../lib/useNow';
+import { useModalFocus } from '../lib/useModalFocus';
 
 type Step = 'service' | 'slot' | 'email' | 'confirmation';
 const back = 'flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700 mb-3 cursor-pointer';
@@ -25,14 +26,8 @@ export function BookingModal({ pharmacy: p, onClose }: { pharmacy: Pharmacy; onC
   const days = useMemo(() => (service ? upcomingSlots(service, now) : []), [service, now]);
   const canNow = !!service && isWithinSchedule(service, now);
 
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
-    document.addEventListener('keydown', onKey);
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-    closeRef.current?.focus();
-    return () => { document.removeEventListener('keydown', onKey); document.body.style.overflow = prev; };
-  }, [onClose]);
+  const boxRef = useRef<HTMLDivElement>(null);
+  useModalFocus(boxRef, onClose, closeRef);
 
   const confirm = () => {
     if (!email || !service) return;
@@ -51,7 +46,7 @@ export function BookingModal({ pharmacy: p, onClose }: { pharmacy: Pharmacy; onC
       aria-labelledby={titleId}
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
-      <div className="bg-white rounded-lg shadow-xl w-full max-w-lg my-auto p-5 md:p-6 relative" onClick={(e) => e.stopPropagation()}>
+      <div ref={boxRef} className="bg-white rounded-lg shadow-xl w-full max-w-lg my-auto p-5 md:p-6 relative" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-start justify-between mb-3 gap-3">
           <div className="flex-1 min-w-0">
             <h3 className="text-gray-800 font-bold text-base md:text-lg truncate">{p.nom}</h3>

@@ -10,6 +10,7 @@ import { buildPath, matchLabel, parsePath, type Crumb } from '../lib/slug';
 import { filterBySpecialty, specialtyByLabel, specialtyBySlug } from '../lib/specialties';
 import type { SearchOutput } from '../lib/search';
 import { useDocumentTitle, titleForPath, descriptionForPath } from '../lib/title';
+import { scrollToTop } from '../lib/scroll';
 
 type View = {
   mode: 'home' | 'results';
@@ -76,6 +77,22 @@ function crumbsFromQuery(query: string, first: Pharmacy | undefined): Crumb[] {
   return out;
 }
 
+// Rechargement de la page : l'original relit l'URL, car il supprime ses clés sessionStorage après les avoir lues.
+// Équivalent : les entrées d'historique dont l'état de recherche a déjà été lu sont notées en sessionStorage ;
+// au chargement suivant (F5), leur état est ignoré et la vue est recalculée depuis l'URL.
+const CONSUMED_KEY = 'tc-search-consumed';
+const CONSUMED_AT_LOAD: ReadonlySet<string> = (() => {
+  try { return new Set<string>(JSON.parse(sessionStorage.getItem(CONSUMED_KEY) || '[]')); } catch { return new Set<string>(); }
+})();
+function markConsumed(key: string) {
+  try {
+    const list: string[] = JSON.parse(sessionStorage.getItem(CONSUMED_KEY) || '[]');
+    if (!list.includes(key)) sessionStorage.setItem(CONSUMED_KEY, JSON.stringify([...list, key].slice(-50)));
+  } catch { /* stockage indisponible : comportement par défaut */ }
+}
+const searchState = (location: { key: string; state: unknown }) =>
+  CONSUMED_AT_LOAD.has(location.key) ? undefined : (location.state as NavState | null)?.fromSearch;
+
 export function LocationPage() {
   const location = useLocation();
   const navigate = useNavigate();
@@ -91,8 +108,8 @@ export function LocationPage() {
   const view: View | null = useMemo(() => {
     if (!all) return null;
     if (override && override.key === location.key) return override.view;
-    const st = (location.state as NavState | null)?.fromSearch;
-    if (st) return { mode: 'results', results: st.results, query: st.query, specialty: st.specialty, coords: st.coords };
+    const st = searchState(location);
+    if (st) { markConsumed(location.key); return { mode: 'results', results: st.results, query: st.query, specialty: st.specialty, coords: st.coords }; }
     return resolve(location.pathname, all);
   }, [all, location, override]);
 
@@ -100,7 +117,7 @@ export function LocationPage() {
   const onSearchSubmit = (out: SearchOutput) => {
     const sp = out.specialtyLabel ? specialtyByLabel(out.specialtyLabel) : null;
     const slug = sp?.slug ?? null;
-    if (!out.query && !out.specialtyLabel) { navigate('/'); window.scrollTo({ top: 0 }); return; }
+    if (!out.query && !out.specialtyLabel) { navigate('/'); scrollToTop(false); return; }
     if (!out.query && sp) {
       navigate(`/${sp.slug}`, { state: { fromSearch: { results: out.results, query: '', specialty: sp.label, coords: null } } satisfies NavState });
       return;
@@ -125,7 +142,7 @@ export function LocationPage() {
     const c = list[0].coordonnees;
     const results = ensureMinimum(sortByDistance(list, c), all, c);
     onSearchSubmit({ results, query: name, coords: c, postalCode: null });
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    scrollToTop();
   };
 
   // Accueil : clic sur un marqueur → dispositifs à moins de 10 km (comportement de l'original).
@@ -154,6 +171,8 @@ export function LocationPage() {
   }
 
   const specialtyId = view.specialty ? specialtyByLabel(view.specialty)?.id ?? null : null;
+  // Vue issue d'une recherche (navigation ou résultat vide sur place) : le formulaire relance au changement de spécialité.
+  const searched = !!searchState(location) || (!!override && override.key === location.key);
   if (view.mode === 'home') {
     return (
       <>
@@ -177,14 +196,14 @@ export function LocationPage() {
   }
 
   const spObj = view.specialty ? specialtyByLabel(view.specialty) : null;
-  const items: BreadcrumbItem[] = [{ label: 'Trouver un dispositif de téléconsultation', onClick: () => { navigate('/'); window.scrollTo({ top: 0, behavior: 'smooth' }); } }];
+  const items: BreadcrumbItem[] = [{ label: 'Trouver un dispositif de téléconsultation', onClick: () => { navigate('/'); scrollToTop(); } }];
   if (spObj) items.push(view.query && view.results.length > 0 ? { label: spObj.label, onClick: () => navigate(`/${spObj.slug}`) } : { label: spObj.label });
   else items.push({ label: 'Spécialités médicales' });
   if (view.query && view.results.length > 0) {
     const crumbs = crumbsFromQuery(view.query, view.results[0]);
     crumbs.forEach((c, i) => {
       const lastOne = i === crumbs.length - 1;
-      items.push(lastOne ? { label: c.label } : { label: c.label, onClick: () => { navigate(buildPath(crumbs.slice(0, i + 1), spObj?.slug)); window.scrollTo({ top: 0, behavior: 'smooth' }); } });
+      items.push(lastOne ? { label: c.label } : { label: c.label, onClick: () => { navigate(buildPath(crumbs.slice(0, i + 1), spObj?.slug)); scrollToTop(); } });
     });
   }
   return (
@@ -199,7 +218,7 @@ export function LocationPage() {
             Tessan, c'est une téléconsultation augmentée par des dispositifs médicaux connectés (stéthoscope, thermomètre, tensiomètre, dermatoscope...) pour un examen fiable, accompagné sur place par un professionnel de santé.
           </p>
           <div className="mx-auto bg-white p-6 md:p-8 rounded-lg shadow-lg">
-            <SearchForm key={location.key} onSearchSubmit={onSearchSubmit} initialCity={view.query} initialSpecialtyId={specialtyId} />
+            <SearchForm key={location.key} onSearchSubmit={onSearchSubmit} initialCity={view.query} initialSpecialtyId={specialtyId} initialSubmitted={searched} />
           </div>
         </div>
       </section>

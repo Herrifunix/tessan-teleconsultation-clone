@@ -18,6 +18,7 @@ import type { SearchOutput } from '../lib/search';
 import { useDocumentTitle } from '../lib/title';
 import { useNow } from '../lib/useNow';
 import type { NavState } from './LocationPage';
+import { scrollToTop } from '../lib/scroll';
 
 function Inlines({ parts }: { parts: Inline[] }) {
   return (
@@ -219,7 +220,7 @@ export function PharmacyPage() {
     p ? `${p.nom} - Téléconsultation à ${p.ville}` : all ? 'Pharmacie non trouvée - Tessan' : 'Tessan',
     p ? `Consultez un médecin en téléconsultation à ${p.nom}, ${p.adresse}, ${p.codePostal} ${p.ville}.` : undefined,
   );
-  useEffect(() => { window.scrollTo({ top: 0 }); }, [id]);
+  useEffect(() => { scrollToTop(false); }, [id]);
 
   const others = useMemo(() => (p && all ? nearest(all.filter((x) => x.id !== p.id), p.coordonnees) : []), [p, all]);
   if (!all) {
@@ -242,7 +243,7 @@ export function PharmacyPage() {
   const items: BreadcrumbItem[] = [
     { label: 'Trouver un dispositif de téléconsultation', onClick: () => navigate('/') },
     { label: 'Spécialités médicales' },
-    ...crumbs.map((c, i) => ({ label: c.label, onClick: () => { navigate(buildPath(crumbs.slice(0, i + 1))); window.scrollTo({ top: 0, behavior: 'smooth' }); } })),
+    ...crumbs.map((c, i) => ({ label: c.label, onClick: () => { navigate(buildPath(crumbs.slice(0, i + 1))); scrollToTop(); } })),
     { label: p.nom },
   ];
 
@@ -268,12 +269,14 @@ export function PharmacyPage() {
   };
 
   const onAreaClick = (name: string, kind: 'departement' | 'region') => {
-    if (kind === 'region') { navigate(buildPath([{ label: name, type: 'region' }])); return; }
+    // Comme `router.push` de Next.js : la nouvelle page s'affiche en haut.
+    if (kind === 'region') { navigate(buildPath([{ label: name, type: 'region' }])); scrollToTop(false); return; }
     const sample = all.find((x) => departmentNameOf(x.codePostal) === name);
     const c: Crumb[] = [];
     if (sample) { const r = regionOf(sample.codePostal); if (r) c.push({ label: r, type: 'region' }); }
     c.push({ label: name, type: 'departement' });
     navigate(buildPath(c));
+    scrollToTop(false);
   };
 
   const showFaq = p.nomEtablissement === 'Cabine Téléconsultation Médecin Tessan';

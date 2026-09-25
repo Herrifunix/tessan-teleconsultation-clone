@@ -21,11 +21,18 @@
     font-family: var(--font-serif);
     font-weight: 400;
   }
-  /* Accessibilité : focus clavier toujours visible (l'original n'en définit pas sur la plupart des liens). */
-  :where(a, button, input, [tabindex]):focus-visible {
-    outline: 2px solid var(--color-tessan-green-hover);
-    outline-offset: 2px;
-  }
+}
+
+/* Accessibilité : focus clavier toujours visible et contrasté (≥ 3:1). Hors couche pour l'emporter sur les
+   `outline-none` + anneaux pâles hérités de shadcn/ui ; ne s'affiche qu'à la navigation au clavier. */
+:where(a, button, [role='button'], [role='switch'], [tabindex]:not([tabindex='-1'])):focus-visible {
+  outline: 2px solid var(--color-tessan-green-hover);
+  outline-offset: 2px;
+}
+/* Champs texte : l'anneau d'origine (1 px gris) est remplacé par un anneau vert de 2 px, sans décaler la mise en page. */
+input:where([type='text'], [type='email'], [type='search']):focus-visible {
+  outline: 2px solid var(--color-tessan-green-hover);
+  outline-offset: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {

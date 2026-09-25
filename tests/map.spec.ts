@@ -31,6 +31,8 @@ test('carte : « Me géolocaliser » centre sur la position (zoom 15)', async ({
 });
 
 test('carte d’accueil : clic sur un marqueur → résultats dans un rayon de 10 km', async ({ page }) => {
+  const pageErrors: string[] = [];
+  page.on('pageerror', (e) => pageErrors.push(e.message));
   await page.goto(URLS.home);
   // La carte est chargée à la demande : on attend son instance avant de recentrer sur Nice (zoom 12, sans clusters).
   await page.waitForFunction(() => !!(window as unknown as { __tcMap?: unknown }).__tcMap);
@@ -38,6 +40,9 @@ test('carte d’accueil : clic sur un marqueur → résultats dans un rayon de 1
   await map(page).getByRole('button', { name: 'Pharmacie Saint Barthélémy', exact: true }).click();
   await expect(page).toHaveURL(/\/provence-alpes-cote-d-azur\/alpes-maritimes\/nice$/);
   await expect(page.getByRole('article').first()).toContainText('Pharmacie Saint Barthélémy');
+  // La carte d'accueil est démontée pendant son animation : aucune exception ne doit remonter (évaluation n° 1).
+  await page.waitForTimeout(600);
+  expect(pageErrors).toEqual([]);
 });
 
 test('chargement différé de la carte (fiche) : espace réservé avant défilement', async ({ page }) => {

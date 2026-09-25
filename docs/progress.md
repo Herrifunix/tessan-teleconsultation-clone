@@ -101,3 +101,26 @@ Traitement de chaque point relevé :
 8. **Catégories décalées de 7 px** — *corrigé* : le chevron est positionné en absolu comme `.cky-chevron-right::before` (1 px d'écart résiduel).
 9. **Attribution de carte sur 2 lignes à 375 px** — *corrigé* : texte raccourci en conservant tous les crédits (Esri, HERE, Garmin, USGS, OSM).
 10. **Repli sans empattement si la police échoue** — *justifié* : identique à l'original (`recoleta, "recoleta Fallback", sans-serif`) ; observé une fois lors d'un échec réseau de l'environnement de l'évaluateur.
+
+### Évaluateur fonctionnel et responsive (contexte neuf, lecture seule, contre l'URL publique)
+Notes : géolocalisation 5, horaires/statut 5, responsive 5 ; navigation 3, recherche 3, carte 3, réservation 3, cookies 3, accessibilité 3, robustesse 3. Aucune note de 1.
+Traitement (tests de non-régression : `tests/evaluation.spec.ts`, 14 cas) :
+1. **Modale de réservation : focus volé toutes les 60 s** (effet dépendant d'un `onClose` recréé à chaque minute) — *corrigé* : hook `src/lib/useModalFocus.ts` monté une seule fois (focus initial, Échap via une ref).
+2. **Exception `_leaflet_pos` au clic sur un marqueur de l'accueil** — *corrigé* : cause mesurée par la pile d'appels (`_onZoomTransitionEnd` programmé par un `setTimeout` non annulable de Leaflet après `map.remove()`) ; au démontage : `stop()`, `off()`, `_animatingZoom = false`. 0 exception sur 4 essais (3/3 avant), assertion ajoutée dans `tests/map.spec.ts`.
+3. **Marqueurs et clusters inutilisables au clavier, focus perdu au déplacement** — *corrigé* : Entrée/Espace déclenchent le clic ; le focus est rendu au même marqueur après chaque recalcul des clusters.
+4. **Changement de spécialité après une recherche sans relance** — *corrigé* : l'indicateur « recherche déjà faite » suit la navigation (l'original garde la même instance de formulaire).
+5. **Saisie réduite à des espaces** — *corrigé* (saisie normalisée par `trim`, retour à l'accueil).
+6. **Entrée sans sélection soumettait le texte brut** — *corrigé* selon la spec (§ 4.2) : 1ʳᵉ suggestion si elle existe, sinon texte brut ; un code postal saisi (5 chiffres) filtre les résultats ; une position déjà connue (géolocalisation) est conservée.
+7. **Modale de réservation sans piège ni retour du focus** — *corrigé* (même hook).
+8. **Bannière cookies en fin d'ordre de tabulation ; préférences sans piège ni retour** — *corrigé* : composant rendu en premier dans le DOM comme `.cky-consent-container` ; focus piégé et rendu au bouton « Choix de consentement ».
+9. **Fiche → département voisin affiché en bas de page** — *corrigé* (retour en haut, comme `router.push`).
+10. **URL mal encodée → page blanche** — *corrigé* (`decodeURIComponent` protégé). Vercel sert l'application pour cette URL ; `vite preview` répond 404, le test y arrive donc par navigation côté client.
+11. **Code postal sans repli local si le géocodeur tombe** — *corrigé*.
+12. **Rechargement après une recherche : anciens résultats conservés** — *corrigé* : comme l'original, qui supprime ses clés sessionStorage après lecture, un état de recherche déjà lu est ignoré au chargement suivant, et la vue est recalculée depuis l'URL. La détection par `performance` était faussée par l'horloge simulée des tests ; elle a été remplacée par un registre en sessionStorage.
+13. **Anneaux de focus pâles** — *corrigé* : contour vert 2 px hors couche CSS, prioritaire sur les `outline-none` hérités de shadcn/ui ; visible seulement à la navigation au clavier.
+14. **Focus perdu après une navigation** — *corrigé* : focus sur le `h1` de la nouvelle page.
+15. **Défilement doux malgré `prefers-reduced-motion`** — *corrigé* (`src/lib/scroll.ts`).
+16. **Libellé plein écran figé** — *corrigé* (« Quitter le plein écran » en plein écran).
+17. **Inversion de lettres non tolérée** — *corrigé* : distance de Damerau restreinte (« Parsi » → Paris).
+18. **En-tête à 320 px : « Compte patient » sur 2 lignes** — *justifié* : mêmes classes que l'original (`docs/research/components/header.md`), sans débordement horizontal.
+- **Test adapté** : `a11y-responsive.spec.ts` « navigation au clavier » partait du principe que le logo recevait la 1ʳᵉ tabulation. Avec la bannière cookies placée en tête comme dans l'original, le consentement est donné avant ce parcours ; l'ordre de la bannière est testé dans `evaluation.spec.ts`.

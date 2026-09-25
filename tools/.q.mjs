@@ -1,0 +1,11 @@
+import { chromium } from '@playwright/test';
+const b = await chromium.launch(); const ctx = await b.newContext({ viewport: { width: 1440, height: 900 } });
+const p = await ctx.newPage();
+for (const h of ['https://api-adresse.data.gouv.fr/**', 'https://data.geopf.fr/geocodage/**']) await p.route(h, (r) => r.fulfill({ json: { features: [{ geometry: { coordinates: [7.2661, 43.7031] }, properties: { label: 'Nice', city: 'Nice', name: 'Nice', postcode: '06000', type: 'municipality', context: '' } }] } }));
+await p.goto('http://localhost:4173/');
+await p.getByRole('combobox', { name: 'Ville / Code postal' }).fill('Nice');
+await p.getByRole('option', { name: /^Nice/ }).click(); await p.waitForTimeout(2000);
+console.log(p.url(), await p.getByRole('heading', { name: /autour de vous$/ }).nth(1).textContent(), await p.evaluate(() => (history.state||{}).key));
+await p.reload(); await p.waitForTimeout(2000);
+console.log(await p.getByRole('heading', { name: /autour de vous$/ }).nth(1).textContent(), await p.evaluate(() => [performance.getEntriesByType('navigation')[0].type, (history.state||{}).key]));
+await b.close();
