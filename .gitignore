@@ -10,3 +10,7 @@ blob-report/
 docs/research/pages/*/bodies/
 .vercel
 .env*
+# Code JavaScript propriétaire de l'original : conservé localement pour l'analyse, jamais publié
+docs/research/js/*.js
+docs/research/js/pretty/
+docs/research/js-logic-raw.md

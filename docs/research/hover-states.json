@@ -1,0 +1,162 @@
+{
+ "compte-patient": {
+  "before": {
+   "bg": "rgb(15, 53, 45)",
+   "color": "rgb(255, 255, 255)",
+   "shadow": "none",
+   "opacity": "1",
+   "td": "none"
+  },
+  "after": {
+   "bg": "rgb(21, 63, 63)",
+   "color": "rgb(255, 255, 255)",
+   "shadow": "none",
+   "opacity": "1",
+   "td": "none"
+  }
+ },
+ "nav-link": {
+  "before": {
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "oklch(0.373 0.034 259.733)",
+   "shadow": "none",
+   "opacity": "1",
+   "td": "none"
+  },
+  "after": {
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(15, 53, 45)",
+   "shadow": "none",
+   "opacity": "1",
+   "td": "none"
+  }
+ },
+ "specialites": {
+  "before": {
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(29, 92, 77)",
+   "shadow": "none",
+   "opacity": "1",
+   "td": "none"
+  },
+  "after": {
+   "bg": "rgb(29, 92, 77)",
+   "color": "rgb(255, 255, 255)",
+   "shadow": "none",
+   "opacity": "1",
+   "td": "none"
+  }
+ },
+ "recherche": {
+  "before": {
+   "bg": "rgb(15, 53, 45)",
+   "color": "rgb(255, 255, 255)",
+   "shadow": "none",
+   "opacity": "1",
+   "td": "none"
+  },
+  "after": {
+   "bg": "rgb(29, 92, 77)",
+   "color": "rgb(255, 255, 255)",
+   "shadow": "none",
+   "opacity": "1",
+   "td": "none"
+  }
+ },
+ "card": {
+  "before": {
+   "bg": "rgb(255, 255, 255)",
+   "color": "oklch(0.141 0.005 285.823)",
+   "shadow": "none",
+   "opacity": "1",
+   "td": "none"
+  },
+  "after": {
+   "bg": "rgb(255, 255, 255)",
+   "color": "oklch(0.141 0.005 285.823)",
+   "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.1) 0px 8px 10px -6px",
+   "opacity": "1",
+   "td": "none"
+  }
+ },
+ "reserver": {
+  "before": {
+   "bg": "rgb(15, 53, 45)",
+   "color": "rgb(255, 255, 255)",
+   "shadow": "none",
+   "opacity": "1",
+   "td": "none"
+  },
+  "after": {
+   "bg": "rgb(29, 92, 77)",
+   "color": "rgb(255, 255, 255)",
+   "shadow": "none",
+   "opacity": "1",
+   "td": "none"
+  }
+ },
+ "voir-plus": {
+  "before": {
+   "bg": "rgb(255, 241, 152)",
+   "color": "rgb(15, 53, 45)",
+   "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+   "opacity": "1",
+   "td": "none"
+  },
+  "after": {
+   "bg": "rgb(255, 241, 152)",
+   "color": "oklch(0.21 0.006 285.885)",
+   "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+   "opacity": "0.7",
+   "td": "none"
+  }
+ },
+ "map-reset": {
+  "before": {
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(15, 53, 45)",
+   "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
+   "opacity": "1",
+   "td": "none"
+  },
+  "after": {
+   "bg": "rgb(252, 245, 204)",
+   "color": "rgb(15, 53, 45)",
+   "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
+   "opacity": "1",
+   "td": "none"
+  }
+ },
+ "dept-card": {
+  "before": {
+   "bg": "oklch(0.984 0.003 247.858)",
+   "color": "oklch(0.141 0.005 285.823)",
+   "shadow": "none",
+   "opacity": "1",
+   "td": "none"
+  },
+  "after": {
+   "bg": "rgb(15, 53, 45)",
+   "color": "rgb(255, 255, 255)",
+   "shadow": "none",
+   "opacity": "1",
+   "td": "none"
+  }
+ },
+ "breadcrumb": {
+  "before": {
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "oklch(0.552 0.016 285.938)",
+   "shadow": "none",
+   "opacity": "1",
+   "td": "none"
+  },
+  "after": {
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "oklch(0.141 0.005 285.823)",
+   "shadow": "none",
+   "opacity": "1",
+   "td": "underline"
+  }
+ }
+}
