@@ -19,4 +19,6 @@ export default tseslint.config(
       'no-restricted-syntax': ['error', { selector: "JSXAttribute[name.name='dangerouslySetInnerHTML']", message: 'dangerouslySetInnerHTML est interdit dans ce projet.' }],
     },
   },
+  // Fixtures Playwright : `use` n'est pas le hook React du même nom.
+  { files: ['tests/**/*.ts', 'playwright.config.ts'], rules: { 'react-hooks/rules-of-hooks': 'off' } },
 );

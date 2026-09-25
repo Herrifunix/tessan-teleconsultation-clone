@@ -21,9 +21,12 @@ export async function dismissCookies(page: Page) {
   });
 }
 
-/** Réponses simulées de l'API Adresse (géocodage déterministe). */
+/** Hôtes de géocodage : API Adresse et son successeur Géoplateforme (même format). */
+export const GEOCODERS = ['https://api-adresse.data.gouv.fr/**', 'https://data.geopf.fr/geocodage/**'];
+
+/** Réponses simulées de l'API Adresse (géocodage déterministe, coordonnées réelles de la BAN). */
 export async function mockAdresseApi(page: Page) {
-  await page.route('https://api-adresse.data.gouv.fr/**', async (route) => {
+  for (const host of GEOCODERS) await page.route(host, async (route) => {
     const url = new URL(route.request().url());
     if (url.pathname.startsWith('/reverse')) {
       return route.fulfill({ json: { features: [{ geometry: { coordinates: [7.262, 43.7102] }, properties: { city: 'Nice', postcode: '06000', label: 'Nice', type: 'municipality' } }] } });
@@ -31,7 +34,7 @@ export async function mockAdresseApi(page: Page) {
     const q = (url.searchParams.get('q') || '').toLowerCase();
     const known: Record<string, [number, number, string, string]> = {
       nice: [7.2661, 43.7031, 'Nice', '06000'],
-      'choisy-le-roi': [2.4094, 48.7633, 'Choisy-le-Roi', '94600'],
+      'choisy-le-roi': [2.412807, 48.764115, 'Choisy-le-Roi', '94600'],
       lyon: [4.8357, 45.764, 'Lyon', '69001'],
     };
     const hit = Object.entries(known).find(([k]) => q.startsWith(k));

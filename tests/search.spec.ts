@@ -1,4 +1,4 @@
-import { test, expect, URLS, dismissCookies, mockAdresseApi } from './fixtures';
+import { test, expect, URLS, dismissCookies, mockAdresseApi, GEOCODERS } from './fixtures';
 
 test.beforeEach(async ({ page }) => {
   await dismissCookies(page);
@@ -17,7 +17,9 @@ test('autocomplétion : suggestion, sélection au clavier et recherche automatiq
   await expect(list.getByRole('option').first()).toHaveAttribute('aria-selected', 'true');
   await cityInput(page).press('Enter');
   await expect(page).toHaveURL(/\/provence-alpes-cote-d-azur\/alpes-maritimes\/nice$/);
-  await expect(page.getByRole('heading', { name: '5 dispositifs de téléconsultation Tessan autour de vous' })).toBeVisible();
+  // Comme l'original : une recherche géocodée liste les 20 dispositifs les plus proches, triés par distance.
+  await expect(page.getByRole('heading', { name: '20 dispositifs de téléconsultation Tessan autour de vous' })).toBeVisible();
+  await expect(page.getByRole('article').first()).toContainText('Nice');
 });
 
 test('autocomplétion : Échap ferme la liste', async ({ page }) => {
@@ -63,12 +65,12 @@ test('ville hors échantillon géocodée : tri par distance (Choisy-le-Roi)', as
   await expect(page).toHaveURL(/\/ile-de-france\/val-de-marne\/choisy-le-roi$/);
   const names = page.getByRole('article').getByRole('heading', { level: 3 });
   await expect(names.first()).toContainText('Pharmacie Saffar');
-  await expect(names.first()).toContainText('(2.1 km)');
+  await expect(names.first()).toContainText(/\(\d+\.\d km\)/);
+  await expect(names.nth(1)).toContainText('Pharmacie Souir');
 });
 
 test('API Adresse lente : délai dépassé et message clair', async ({ page }) => {
-  await page.unroute('https://api-adresse.data.gouv.fr/**');
-  await page.route('https://api-adresse.data.gouv.fr/**', () => new Promise(() => {})); // ne répond jamais
+  for (const h of GEOCODERS) { await page.unroute(h); await page.route(h, () => new Promise(() => {})); } // ne répondent jamais
   const dialogs: string[] = [];
   page.on('dialog', (d) => { dialogs.push(d.message()); void d.dismiss(); });
   await page.goto(URLS.home);
@@ -79,8 +81,7 @@ test('API Adresse lente : délai dépassé et message clair', async ({ page }) =
 });
 
 test('API Adresse en erreur : repli sur les villes connues', async ({ page }) => {
-  await page.unroute('https://api-adresse.data.gouv.fr/**');
-  await page.route('https://api-adresse.data.gouv.fr/**', (r) => r.fulfill({ status: 503, body: 'down' }));
+  for (const h of GEOCODERS) { await page.unroute(h); await page.route(h, (r) => r.fulfill({ status: 503, body: 'down' })); }
   await page.goto(URLS.home);
   await cityInput(page).fill('Lyon');
   await page.getByRole('button', { name: 'Recherche', exact: true }).click();

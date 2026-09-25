@@ -39,7 +39,7 @@ test('pied de page : liens réels, adresse et mention de non-affiliation', async
   await expect(footer.getByRole('link', { name: 'FAQ' })).toHaveAttribute('href', 'https://aide.tessan.io/fr/');
   await expect(footer.getByRole('link', { name: 'CGV Téléexpertise dermatologique' })).toHaveAttribute('href', 'https://www.tessan.io/cgv-teleexpertise-dermatologie');
   await expect(footer.getByText('© 2025 Tessan. Tous droits réservés.')).toBeVisible();
-  await expect(footer.getByText('Reproduction réalisée dans le cadre d'un test technique — non affiliée à Tessan', { exact: false })).toBeVisible();
+  await expect(footer.getByText("Reproduction réalisée dans le cadre d'un test technique — non affiliée à Tessan", { exact: false })).toBeVisible();
   const hrefs = await footer.getByRole('link').evaluateAll((as) => as.map((a) => (a as HTMLAnchorElement).href));
   expect(hrefs.length).toBeGreaterThanOrEqual(40);
   for (const h of hrefs) expect(h).toMatch(/^https?:\/\/[^/]+\.[a-z]+/);

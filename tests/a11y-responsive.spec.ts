@@ -63,7 +63,7 @@ test('fil d’Ariane et cartes accessibles au clavier', async ({ page }) => {
 });
 
 test.describe('prefers-reduced-motion', () => {
-  test.use({ reducedMotion: 'reduce' });
+  test.use({ contextOptions: { reducedMotion: 'reduce' } });
   test('animations et transitions neutralisées', async ({ page }) => {
     await page.goto(URLS.home);
     const btn = page.getByRole('button', { name: 'Recherche', exact: true });

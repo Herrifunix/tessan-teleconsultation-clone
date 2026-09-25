@@ -75,8 +75,30 @@ const arbitrary = {
   'open-green': ['#238700', 'text-[#238700] (statut « Ouvert »)'],
   'footer-bg': ['#0f352d', 'bg-[#0f352d] (footer, bouton « Compte patient »)'],
   'faq-border': ['#f0ece4', 'style inline borderTop 1px solid #f0ece4 (réponse FAQ, bundle 541)'],
+  'footer-heading': ['#adbab8', 'style inline color: rgb(173, 186, 184) des h3 du footer — docs/research/pages/home/dom.html'],
 };
-for (const [k, [v, why]] of Object.entries(arbitrary)) tokens.color[k] = { value: v, source: why.includes('bundle') ? why : src(why) };
+for (const [k, [v, why]] of Object.entries(arbitrary)) tokens.color[k] = { value: v, source: why.includes('bundle') || why.includes('dom.html') ? why : src(why) };
+// Couleurs de la liste d'autocomplétion (.pac-container personnalisé par l'original).
+const PAC = 'docs/research/css/b2e1955b359df2cc.css';
+for (const [k, v, why] of [
+  ['pac-border', '#e5e7eb', '.pac-container{border:1px solid #e5e7eb}'],
+  ['pac-item-border', '#f3f4f6', '.pac-item{border-top:1px solid #f3f4f6}'],
+  ['pac-item-hover', '#f9fafb', '.pac-item-selected,.pac-item:hover{background-color:#f9fafb}'],
+  ['pac-query', '#111827', '.pac-item-query{color:#111827}'],
+  ['pac-secondary', '#6b7280', '.pac-item-query+span{color:#6b7280}'],
+  ['pac-matched', '#0f352d', '.pac-matched{color:#0F352D}'],
+]) tokens.color[k] = { value: v, source: `${PAC} — ${why}` };
+// Couleurs CookieYes relevées dans la feuille <style id="cky-style"> et la config (docs/research/components/cookie-consent.md).
+const CKY = 'docs/research/pages/home/dom.html — <style id="cky-style"> CookieYes';
+for (const [k, v, why] of [
+  ['cookie-save-bg', '#eafbaf', 'bouton « Enregistrer mes préférences »'],
+  ['cookie-link', '#1863dc', 'lien « Afficher plus » et contour :focus-visible'],
+  ['cookie-always', '#008000', '« Toujours actif » (green)'],
+  ['cookie-powered-text', '#293c5b', 'bandeau « Powered by »'],
+  ['cookie-powered-bg', '#ededed', 'bandeau « Powered by »'],
+  ['cookie-tooltip', '#4e4b66', 'infobulle du bouton de rappel'],
+  ['cookie-table-bg', '#f4f4f4', '.cky-audit-table'],
+]) tokens.color[k] = { value: v, source: `${CKY} — ${why}` };
 // Couleurs CookieYes (mesurées par getComputedStyle sur la bannière, fichier dédié).
 if (existsSync('docs/research/pages/home/cookie-banner.json')) {
   const cb = load('docs/research/pages/home/cookie-banner.json');
@@ -102,6 +124,9 @@ for (const [k, v] of Object.entries(T)) {
   if (k.startsWith('--default-transition')) tokens.transition[k.slice(2)] = { value: v.trim(), source: src(`@layer theme ${k}`) };
   if (k.startsWith('--animate-')) tokens.animation[k.slice(10)] = { value: v.trim(), source: src(`@layer theme ${k}`) };
 }
+// Tailles issues de styles inline de l'original (bundle 541, fiche).
+tokens.text['fiche-h1'] = { value: '2.2rem', lineHeight: 'calc(2.25 / 1.875)', source: 'bundle 541 : h1 fiche style fontSize 2.2rem (interligne hérité de text-3xl)' };
+tokens.text['faq-title'] = { value: '2.5rem', lineHeight: 'normal', source: 'bundle 541 : h2 « Foire Aux Questions » style fontSize 2.5rem, fontWeight 500' };
 tokens.container['page'] = { value: '1328px', source: src('.max-w-\\[1328px\\]{max-width:1328px}'), measured: measured('home', 1440, (e) => e.cls.includes('max-w-[1328px]'), 'rect') };
 tokens.container['footer'] = { value: '1300px', source: src('.max-w-\\[1300px\\]{max-width:1300px}'), measured: measured('home', 1440, (e) => e.cls.includes('max-w-[1300px]'), 'rect') };
 
@@ -113,12 +138,17 @@ tokens.radius = {
   DEFAULT: { value: '.25rem', source: src('.rounded{border-radius:.25rem}') },
   popup: { value: '15px', source: src('.rounded-\\[15px\\]{border-radius:15px}') },
   full: { value: '3.40282e38px', source: src('.rounded-full{border-radius:3.40282e+38px}') },
+  faq: { value: '12px', source: 'bundle 541 : item FAQ style borderRadius 12px' },
+  cookie: { value: '6px', source: 'docs/research/pages/home/cookie-banner.json — .cky-consent-bar border-radius 6px' },
+  'cookie-btn': { value: '2px', source: 'docs/research/pages/home/cookie-banner.json — .cky-btn border-radius 2px' },
 };
 for (const n of ['xs', 'sm', 'md', 'lg', 'xl', '2xl']) {
   const d = utility(`shadow-${n}`);
   const m = d && d.match(/--tw-shadow:([^;]+)/);
   tokens.shadow[n] = { value: m ? m[1].replace(/var\(--tw-shadow-color,([^)]+)\)/g, '$1') : null, source: src(`.shadow-${n}{--tw-shadow:…}`) };
 }
+
+tokens.shadow.faq = { value: '0 1px 4px rgba(0,0,0,0.06)', source: 'bundle 541 : item FAQ style boxShadow 0 1px 4px rgba(0,0,0,0.06)' };
 
 // 6) Points de rupture réels (@media).
 const bp = { sm: '40rem', md: '48rem', lg: '64rem', xl: '80rem', '2xl': '96rem' };

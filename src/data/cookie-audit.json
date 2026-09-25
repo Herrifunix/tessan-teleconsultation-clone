@@ -1,0 +1,287 @@
+{
+ "categories": [
+  {
+   "slug": "necessary",
+   "title": "Nécessaire",
+   "description": "<p>Les cookies nécessaires sont cruciaux pour les fonctions de base du site Web et celui-ci ne fonctionnera pas comme prévu sans eux.Ces cookies ne stockent aucune donnée personnellement identifiable.</p>",
+   "cookies": [
+    {
+     "id": "_cfuvid",
+     "duration": "session",
+     "description": "Cloudflare sets this cookie to track users across sessions to optimize user experience by maintaining session consistency and providing personalized services"
+    },
+    {
+     "id": "__cf_bm",
+     "duration": "1 heure",
+     "description": "Cloudflare a placé ce témoin pour prendre en charge la gestion des robots Cloudflare."
+    },
+    {
+     "id": "cookietest",
+     "duration": "session",
+     "description": "The cookietest cookie is typically used to determine whether the user's browser accepts cookies, essential for website functionality and user experience."
+    },
+    {
+     "id": "cookieyes-*",
+     "duration": "1 an",
+     "description": "CookieYes sets this cookie for consent solution management."
+    },
+    {
+     "id": "__hs_do_not_track",
+     "duration": "6 mois",
+     "description": "HubSpot sets this cookie to prevent the tracking code from sending any information to HubSpot."
+    },
+    {
+     "id": "__hs_opt_out",
+     "duration": "6 mois",
+     "description": "HubSpot sets this cookie, which is used by the opt-in privacy policy to remember not to ask the visitor to accept cookies again.  This cookie is set when you give visitors the choice to opt out of cookies."
+    }
+   ]
+  },
+  {
+   "slug": "functional",
+   "title": "Fonctionnelle",
+   "description": "<p>Les cookies fonctionnels permettent d'exécuter certaines fonctionnalités telles que le partage du contenu du site Web sur des plateformes de médias sociaux, la collecte de commentaires et d'autres fonctionnalités tierces.</p>",
+   "cookies": [
+    {
+     "id": "gtm_id",
+     "duration": "1 an",
+     "description": "No description available."
+    },
+    {
+     "id": "recent_write",
+     "duration": "Moins d'une minute",
+     "description": "Description is currently not available."
+    },
+    {
+     "id": "intercom-id-*",
+     "duration": "8 mois 26 jour 1 heure",
+     "description": "Intercom d&eacute;finit ce cookie qui permet aux visiteurs de voir toutes les conversations qu'ils ont eues sur les sites Web Intercom."
+    },
+    {
+     "id": "intercom-session-*",
+     "duration": "7 jour",
+     "description": "Intercom d&eacute;finit ce cookie qui permet aux visiteurs de voir toutes les conversations qu'ils ont eues sur les sites Web Intercom."
+    },
+    {
+     "id": "intercom-device-id-*",
+     "duration": "8 mois 26 jour 1 heure",
+     "description": "Intercom d&eacute;finit ce cookie qui permet aux visiteurs de voir toutes les conversations qu'ils ont eues sur les sites Web Intercom."
+    },
+    {
+     "id": "ytidb::LAST_RESULT_ENTRY_KEY",
+     "duration": "N'expire jamais",
+     "description": "The cookie ytidb::LAST_RESULT_ENTRY_KEY is used by YouTube to store the last search result entry that was clicked by the user. This information is used to improve the user experience by providing more relevant search results in the future."
+    },
+    {
+     "id": "AWSALBTGCORS",
+     "duration": "7 jour",
+     "description": "No description available."
+    },
+    {
+     "id": "AWSALBTG",
+     "duration": "7 jour",
+     "description": "No description available."
+    }
+   ]
+  },
+  {
+   "slug": "analytics",
+   "title": "Analytique",
+   "description": "<p>Les cookies analytiques sont utilisés pour comprendre comment les visiteurs interagissent avec le site Web. Ces cookies aident à fournir des informations sur le nombre de visiteurs, le taux de rebond, la source de trafic, etc.</p>",
+   "cookies": [
+    {
+     "id": "_ga",
+     "duration": "1 an 1 mois 4 jour",
+     "description": "Google Analytics utilise ce témoin pour calculer les données relatives aux visiteurs, aux sessions et aux campagnes et suivre l’utilisation du site pour le rapport d’analyse du site. Le témoin stocke les informations de manière anonyme et attribue un numéro généré de manière aléatoire pour reconnaître les visiteurs uniques."
+    },
+    {
+     "id": "_ga_*",
+     "duration": "1 an 1 mois 4 jour",
+     "description": "Google Analytics définit ce cookie pour stocker et compter les pages vues."
+    },
+    {
+     "id": "vuid",
+     "duration": "1 an 1 mois 4 jour",
+     "description": "Vimeo installe ce témoin pour collecter des informations de suivi en définissant un identifiant unique pour intégrer des vidéos sur le site web."
+    },
+    {
+     "id": "landing_page",
+     "duration": "session",
+     "description": "The _landing_page cookie tracks the first page a user visits on a website, helping to analyze user behavior and optimize the site's performance."
+    },
+    {
+     "id": "__hstc",
+     "duration": "6 mois",
+     "description": "Hubspot définit ce cookie principal pour le suivi des visiteurs. Il contient le domaine, l'horodatage initial (première visite), le dernier horodatage (dernière visite), l'horodatage actuel (cette visite) et le nombre de sessions (incrémenté pour chaque session suivante)."
+    },
+    {
+     "id": "hubspotutk",
+     "duration": "6 mois",
+     "description": "HubSpot définit ce cookie pour assurer le suivi des visiteurs du site internet. Ce cookie est transmis à HubSpot lors de la soumission du formulaire et utilisé lors de la déduplication des contacts."
+    },
+    {
+     "id": "__hssrc",
+     "duration": "session",
+     "description": "Ce cookie est défini par Hubspot chaque fois qu'il modifie le cookie de session. Le cookie __hssrc défini à 1 indique que l'utilisateur a redémarré le navigateur, et si le cookie n'existe pas, on suppose qu'il s'agit d'une nouvelle session."
+    },
+    {
+     "id": "__hssc",
+     "duration": "1 heure",
+     "description": "HubSpot définit ce cookie pour assurer le suivi des sessions et pour déterminer si HubSpot doit incrémenter le nombre de sessions et les horodatages dans le cookie __hstc."
+    },
+    {
+     "id": "FPID",
+     "duration": "1 an 1 mois 4 jour",
+     "description": "Google Tag Manager sets this cookie for server-side tagging."
+    },
+    {
+     "id": "FPLC",
+     "duration": "20 heure",
+     "description": "Google Tag Manager sets this cookie for tracking between domains."
+    }
+   ]
+  },
+  {
+   "slug": "performance",
+   "title": "Performance",
+   "description": "<p>Les cookies de performance sont utilisés pour comprendre et analyser les indices de performance clés du site Web, ce qui permet de fournir une meilleure expérience utilisateur aux visiteurs.</p>",
+   "cookies": [
+    {
+     "id": "INGRESSCOOKIE",
+     "duration": "session",
+     "description": "This cookie is used for load balancing and session stickiness. This technical session identifier is required for some website features."
+    }
+   ]
+  },
+  {
+   "slug": "advertisement",
+   "title": "Publicité",
+   "description": "<p>Les cookies de publicité sont utilisés pour fournir aux visiteurs des publicités personnalisées basées sur les pages visitées précédemment et analyser l'efficacité de la campagne publicitaire.</p>",
+   "cookies": [
+    {
+     "id": "VISITOR_PRIVACY_METADATA",
+     "duration": "6 mois",
+     "description": "YouTube sets this cookie to store the user's cookie consent state for the current domain."
+    },
+    {
+     "id": "YSC",
+     "duration": "session",
+     "description": "YouTube place ce témoin pour suivre les vues des vidéos intégrées dans les pages YouTube."
+    },
+    {
+     "id": "VISITOR_INFO1_LIVE",
+     "duration": "6 mois",
+     "description": "YouTube utilise ce témoin pour mesurer la bande passante et déterminer si l’utilisateur obtient la nouvelle ou l’ancienne interface du lecteur."
+    },
+    {
+     "id": "__Secure-YEC",
+     "duration": "passé(e)",
+     "description": "Description is currently not available."
+    },
+    {
+     "id": "_fbp",
+     "duration": "3 mois",
+     "description": "Facebook définit ce témoin pour afficher des publicités lorsque vous êtes sur Facebook ou sur une plateforme numérique alimentée par la publicité de Facebook après avoir visité le site Internet."
+    },
+    {
+     "id": "test_cookie",
+     "duration": "15 minute",
+     "description": "doubleclick.net place ce témoin pour déterminer si le navigateur de l’utilisateur accepte les témoins."
+    },
+    {
+     "id": "_ttp",
+     "duration": "3 mois",
+     "description": "TikTok a défini ce cookie pour suivre et améliorer les performances des campagnes publicitaires, ainsi que pour personnaliser l'expérience utilisateur."
+    },
+    {
+     "id": "bcookie",
+     "duration": "1 an",
+     "description": "LinkedIn définit ce témoin à partir des boutons de partage LinkedIn et des balises publicitaires pour reconnaître les identifiants du navigateur."
+    },
+    {
+     "id": "MUID",
+     "duration": "1 an 24 jour",
+     "description": "Bing utilise ce témoin pour reconnaître les navigateurs uniques qui visitent les sites Microsoft. Ce témoin est utilisé pour la publicité, l’analyse des sites et d’autres opérations."
+    },
+    {
+     "id": "_tt_enable_cookie",
+     "duration": "3 mois",
+     "description": "Tiktok a défini ce cookie pour collecter des données sur le comportement et les activités sur le site Web et pour mesurer l'efficacité de la publicité."
+    },
+    {
+     "id": "_gcl_au",
+     "duration": "3 mois",
+     "description": "Google Tag Manager place le t&eacute;moin pour exp&eacute;rimenter l&rsquo;efficacit&eacute; publicitaire des sites web utilisant leurs services."
+    },
+    {
+     "id": "lidc",
+     "duration": "1 jour",
+     "description": "LinkedIn définit le témoin lidc pour faciliter la sélection du centre de données."
+    },
+    {
+     "id": "li_gc",
+     "duration": "6 mois",
+     "description": "Linkedin place ce témoin pour stocker le consentement du visiteur concernant l’utilisation des témoins à des fins non essentielles."
+    },
+    {
+     "id": "IDE",
+     "duration": "1 an 24 jour",
+     "description": "Les témoins Google DoubleClick IDE stockent des informations sur la façon dont l’utilisateur utilise le site Internet afin de lui présenter des annonces pertinentes en fonction de son profil."
+    },
+    {
+     "id": "__Secure-YNID",
+     "duration": "6 mois",
+     "description": "Description is currently not available."
+    },
+    {
+     "id": "__Secure-ROLLOUT_TOKEN",
+     "duration": "6 mois",
+     "description": "Description is currently not available."
+    },
+    {
+     "id": "ttcsid_*",
+     "duration": "3 mois",
+     "description": "TikTok sets this cookie as a session identification cookie to support user tracking and session continuity across a website."
+    }
+   ]
+  },
+  {
+   "slug": "other",
+   "title": "Non classé",
+   "description": "<p>Les autres cookies non classés sont ceux qui sont en cours d'analyse et qui n'ont pas encore été classés dans une catégorie.</p>",
+   "cookies": [
+    {
+     "id": "__hs_initial_opt_in",
+     "duration": "7 jour",
+     "description": "Records a visitor’s initial consent choice to manage cookie banner behavior, suppress repeated prompts, and configure analytics tracking preferences accordingly."
+    },
+    {
+     "id": "tessan_origin",
+     "duration": "3 mois",
+     "description": "Stores the visitor’s original traffic source from the blog to attribute visits and conversions, personalize content, and improve marketing analytics."
+    },
+    {
+     "id": "FPGSID",
+     "duration": "1 heure",
+     "description": "Stores a temporary session identifier for analytics, linking pageviews and events to a visitor session, enabling engagement measurement and attribution."
+    },
+    {
+     "id": "ttcsid",
+     "duration": "3 mois",
+     "description": "Stores a session identifier for TikTok Pixel to measure site interactions, attribute ad conversions, optimize campaigns, and support audience retargeting."
+    },
+    {
+     "id": "_dd_s",
+     "duration": "15 minute",
+     "description": "No description available."
+    }
+   ]
+  }
+ ],
+ "labels": {
+  "cky_audit_table_empty_text": "Aucun cookie à afficher",
+  "cky_audit_table_header_id": "Cookie",
+  "cky_audit_table_header_duration": "Durée",
+  "cky_audit_table_header_description": "Description"
+ }
+}

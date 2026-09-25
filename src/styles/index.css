@@ -1,0 +1,38 @@
+/* Tailwind v4 SANS le thème par défaut : seules les variables de ./tokens.css (générées depuis
+   docs/research/tokens.json) existent. */
+@layer theme, base, leaflet, components, utilities;
+@import 'tailwindcss/preflight.css' layer(base);
+@import 'tailwindcss/utilities.css' layer(utilities);
+@import './tokens.css';
+
+
+/* Couche base identique à l'original (@layer base de 323d88a92ac6be07.css). */
+@layer base {
+  * {
+    border-color: var(--color-border);
+    outline-color: color-mix(in oklab, var(--color-ring) 50%, transparent);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+  }
+  /* Accessibilité : focus clavier toujours visible (l'original n'en définit pas sur la plupart des liens). */
+  :where(a, button, input, [tabindex]):focus-visible {
+    outline: 2px solid var(--color-tessan-green-hover);
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0s !important;
+    scroll-behavior: auto !important;
+  }
+}

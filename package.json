@@ -4,6 +4,16 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "dev": "vite",
+    "tokens": "node tools/build-tokens.mjs && node tools/gen-tokens-css.mjs",
+    "build": "node tools/gen-tokens-css.mjs && vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "typecheck": "tsc -p tsconfig.json",
+    "test:e2e": "playwright test",
+    "capture:clone": "node tools/capture-clone.mjs",
+    "diff": "node tools/diff.mjs",
+    "verify": "npm run lint && npm run typecheck && npm run build && npm run test:e2e && npm run capture:clone && npm run diff",
     "done-check": "node tools/check-checklist.mjs"
   },
   "devDependencies": {
@@ -35,6 +45,7 @@
     "node": ">=22.22.0 <23"
   },
   "dependencies": {
+    "@fontsource/roboto": "5.3.0",
     "leaflet": "1.9.4",
     "lucide-react": "1.48.0",
     "react": "19.3.0",

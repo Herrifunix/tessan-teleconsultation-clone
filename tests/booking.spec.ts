@@ -18,8 +18,12 @@ test('réservation : spécialité → créneaux → e-mail → confirmation', as
   await expect(dialog.getByText('29/09 de 9h30 à 11h30')).toBeVisible();
   const confirm = dialog.getByRole('button', { name: 'Confirmer mon créneau prioritaire' });
   await expect(confirm).toBeDisabled();
+  // Comme l'original : actif dès que le champ est non vide (pas de contrôle de format côté client) ;
+  // une adresse refusée produit le message d'erreur rouge de l'original.
   await dialog.getByRole('textbox', { name: 'Votre e-mail' }).fill('pas-un-email');
-  await expect(confirm).toBeDisabled();
+  await expect(confirm).toBeEnabled();
+  await confirm.click();
+  await expect(dialog.getByText('Une erreur est survenue.')).toBeVisible();
   await dialog.getByRole('textbox', { name: 'Votre e-mail' }).fill('patient@example.fr');
   await expect(confirm).toBeEnabled();
   await confirm.click();

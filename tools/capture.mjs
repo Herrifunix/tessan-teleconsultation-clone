@@ -82,10 +82,20 @@ export async function capture({ side, baseUrl, outDir, templates = Object.keys(T
       // Bannière cookies : refus (même geste des deux côtés).
       const refuse = page.getByRole('button', { name: 'Refuser', exact: true }).first();
       if (await refuse.isVisible().catch(() => false)) { await refuse.click(); await sleep(800); }
+      await page.mouse.move(0, 0); // aucun survol résiduel
       await settle(page);
       const file = `${outDir}/${tpl}-${w}.png`;
       await page.screenshot({ path: file, fullPage: true, animations: 'disabled', caret: 'hide' });
+      // Zones intrinsèquement différentes à masquer dans le diff : cartes (tuiles), grilles dépendantes des données.
+      const masks = await page.evaluate(() => {
+        const out = [];
+        const add = (el, kind) => { const r = el.getBoundingClientRect(); if (r.width && r.height) out.push({ kind, x: Math.round(r.x), y: Math.round(r.y + window.scrollY), w: Math.round(r.width), h: Math.round(r.height) }); };
+        document.querySelectorAll('div.overflow-hidden.shadow-md').forEach((el) => { if (el.querySelector('.gm-style, .leaflet-container, [aria-label="Carte"]') || /Faites défiler|Chargement de la carte/.test(el.textContent || '')) add(el, 'carte'); });
+        document.querySelectorAll('div.grid.grid-cols-2').forEach((el) => { if (el.querySelector('button p')) add(el, 'grille-zones'); });
+        return out;
+      });
       meta[`${tpl}-${w}`] = {
+        masks,
         url, file, title: await page.title(),
         description: await page.locator('meta[name="description"]').getAttribute('content').catch(() => null),
         scrollHeight: await page.evaluate(() => document.documentElement.scrollHeight),

@@ -21,10 +21,10 @@ for (const tz of ['Europe/Paris', 'America/New_York', 'Asia/Tokyo']) {
       await expect(statusOf(page)).toHaveText(/^Fermé\s*•\s*Ouvre demain à 09:00$/);
     });
 
-    test('pause de midi (vendredi 12:45) : Fermé · Réouvre à 14:30', async ({ page }) => {
+    test('pause de midi (vendredi 12:45) : Fermé · Réouvre 14:30 (sans « à », comme l’original)', async ({ page }) => {
       await page.clock.setFixedTime(new Date('2026-09-25T12:45:00+02:00'));
       await page.goto(URLS.nice);
-      await expect(statusOf(page)).toHaveText(/^Fermé\s*•\s*Réouvre à 14:30$/);
+      await expect(statusOf(page)).toHaveText(/^Fermé\s*•\s*Réouvre 14:30$/);
     });
 
     test('dimanche (27/09 11:00) : Fermé · Ouvre demain à 09:00', async ({ page }) => {
@@ -35,11 +35,11 @@ for (const tz of ['Europe/Paris', 'America/New_York', 'Asia/Tokyo']) {
   });
 }
 
-test('matin avant ouverture (lundi 08:00) : Fermé · Ouvre à 09:00', async ({ page }) => {
+test('matin avant ouverture (lundi 08:00) : Fermé · Ouvre 09:00', async ({ page }) => {
   await dismissCookies(page);
   await page.clock.setFixedTime(new Date('2026-09-28T08:00:00+02:00'));
   await page.goto(URLS.nice);
-  await expect(statusOf(page)).toHaveText(/^Fermé\s*•\s*Ouvre à 09:00$/);
+  await expect(statusOf(page)).toHaveText(/^Fermé\s*•\s*Ouvre 09:00$/);
 });
 
 test('horaires absents : traités comme « Fermé » sans plantage', async ({ page }) => {

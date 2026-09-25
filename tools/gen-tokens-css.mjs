@@ -9,13 +9,21 @@ const lines = [];
 const add = (name, value, comment) => lines.push(`  ${name}: ${value};${comment ? ` /* ${comment} */` : ''}`);
 
 // Couleurs (palette Tailwind émise par l'original + marque + valeurs arbitraires nommées).
-for (const [k, v] of Object.entries(t.color)) add(`--color-${k}`, v.value);
+for (const [k, v] of Object.entries(t.color)) {
+  if (/\dpx/.test(v.value)) add(`--shadow-${k.replace(/-shadow$/, '')}`, v.value); // ombre mesurée (ex. bannière cookies)
+  else add(`--color-${k}`, v.value);
+}
 // Typographie.
 add('--font-sans', '"Plus Jakarta Sans", "Plus Jakarta Sans Fallback", sans-serif', 'body de l’original');
 add('--font-serif', '"TC Serif", "TC Serif Fallback", sans-serif', 'substitut calibré de Recoleta');
 add('--font-map', t.font.map.value, 'popup de carte (.gm-style)');
 add('--font-cluster', t.font.cluster.value, 'texte SVG des clusters');
-for (const [k, v] of Object.entries(t.text)) add(`--text-${k}`, v.value);
+for (const [k, v] of Object.entries(t.text)) {
+  if (k.endsWith('--line-height')) continue;
+  add(`--text-${k}`, v.value);
+  if (v.lineHeight) add(`--text-${k}--line-height`, v.lineHeight);
+}
+for (const [k, v] of Object.entries(t.text)) if (k.endsWith('--line-height')) add(`--text-${k}`, v.value);
 for (const [k, v] of Object.entries(t.fontWeight)) add(`--font-weight-${k}`, v.value);
 for (const [k, v] of Object.entries(t.leading)) add(`--leading-${k}`, v.value);
 // Espacements, conteneurs, rayons, ombres.
@@ -27,6 +35,9 @@ add('--radius-md', 'calc(var(--radius) - 2px)');
 add('--radius-DEFAULT', t.radius.DEFAULT.value);
 add('--radius-popup', t.radius.popup.value);
 add('--radius-full', 'calc(infinity * 1px)');
+add('--radius-cookie', t.radius.cookie.value);
+add('--radius-faq', t.radius.faq.value);
+add('--radius-cookie-btn', t.radius['cookie-btn'].value);
 for (const [k, v] of Object.entries(t.shadow)) add(`--shadow-${k}`, v.value);
 // Points de rupture réels.
 for (const [k, v] of Object.entries(t.breakpoint)) if (!k.includes('-')) add(`--breakpoint-${k}`, v.value);

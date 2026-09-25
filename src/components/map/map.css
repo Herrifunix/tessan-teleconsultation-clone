@@ -1,0 +1,74 @@
+/* Leaflet placé dans une couche en cascade : les utilitaires Tailwind gardent la priorité (popup, liens). */
+@import 'leaflet/dist/leaflet.css' layer(leaflet);
+
+@layer components {
+  /* Équivalent de .gm-style (police de la carte Google : 400 11px Roboto). */
+  .tc-map .leaflet-container {
+    font: 400 11px Roboto, Arial, sans-serif;
+    background: var(--color-slate-100);
+  }
+  .tc-cluster {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+  .tc-popup .leaflet-popup-content-wrapper {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+    color: var(--color-foreground);
+  }
+  .tc-popup .leaflet-popup-content {
+    margin: 0;
+    width: 380px !important;
+    font: 400 11px Roboto, Arial, sans-serif;
+    line-height: normal;
+  }
+  .tc-popup .leaflet-popup-content p {
+    margin: 0;
+  }
+  .tc-popup .leaflet-popup-tip-container {
+    display: none;
+  }
+  .tc-popup {
+    margin-bottom: 0;
+  }
+  .tc-popup a {
+    color: inherit;
+  }
+  .tc-popup-arrow {
+    bottom: -10px;
+    width: 20px;
+    height: 10px;
+    clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
+    filter: drop-shadow(0 4px 6px rgb(0 0 0 / 0.1));
+  }
+  /* Contrôles façon Google Maps (plein écran, caméra). */
+  .tc-map-ctrl {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-white);
+    border-radius: 2px;
+    box-shadow: rgb(0 0 0 / 0.3) 0 1px 4px -1px;
+    cursor: pointer;
+    color: #666;
+    font: 400 22px Roboto, Arial, sans-serif;
+  }
+  .tc-map .leaflet-control-attribution {
+    font: 400 10px Roboto, Arial, sans-serif;
+    background: rgb(245 245 245 / 0.7);
+    color: #444;
+  }
+  .tc-map .leaflet-control-attribution a {
+    color: #444;
+  }
+  .tc-map .leaflet-marker-icon:focus-visible {
+    outline: 2px solid var(--color-tessan-green-hover);
+    outline-offset: 2px;
+  }
+}
