@@ -58,7 +58,7 @@
   "url": "http://localhost:4173/fr/france-FR/nice/results",
   "file": "docs/qa/clone/results-1440.png",
   "title": "Téléconsultation à Nice (france-FR) - Tessan",
-  "description": "Trouvez une cabine de téléconsultation en pharmacie près de chez vous et consultez un médecin en quelques minutes grâce aux dispositifs Tessan",
+  "description": "Trouvez une cabine de téléconsultation à Nice. Consultez un médecin rapidement.",
   "scrollHeight": 2996,
   "scrollWidth": 1440,
   "console": []
@@ -90,7 +90,7 @@
   "url": "http://localhost:4173/provence-alpes-cote-d-azur/alpes-maritimes/nice/557/pharmacie-saint-barthelemy",
   "file": "docs/qa/clone/fiche-1440.png",
   "title": "Pharmacie Saint Barthélémy - Téléconsultation à Nice",
-  "description": "Trouvez une cabine de téléconsultation en pharmacie près de chez vous et consultez un médecin en quelques minutes grâce aux dispositifs Tessan",
+  "description": "Consultez un médecin en téléconsultation à Pharmacie Saint Barthélémy, 51 Av. Alfred Borriglione, 06100 Nice.",
   "scrollHeight": 6169,
   "scrollWidth": 1440,
   "console": []
@@ -187,7 +187,7 @@
   "url": "http://localhost:4173/fr/france-FR/nice/results",
   "file": "docs/qa/clone/results-375.png",
   "title": "Téléconsultation à Nice (france-FR) - Tessan",
-  "description": "Trouvez une cabine de téléconsultation en pharmacie près de chez vous et consultez un médecin en quelques minutes grâce aux dispositifs Tessan",
+  "description": "Trouvez une cabine de téléconsultation à Nice. Consultez un médecin rapidement.",
   "scrollHeight": 6765,
   "scrollWidth": 375,
   "console": []
@@ -219,7 +219,7 @@
   "url": "http://localhost:4173/fr/france-FR/nice/results",
   "file": "docs/qa/clone/results-768.png",
   "title": "Téléconsultation à Nice (france-FR) - Tessan",
-  "description": "Trouvez une cabine de téléconsultation en pharmacie près de chez vous et consultez un médecin en quelques minutes grâce aux dispositifs Tessan",
+  "description": "Trouvez une cabine de téléconsultation à Nice. Consultez un médecin rapidement.",
   "scrollHeight": 5461,
   "scrollWidth": 768,
   "console": []
@@ -251,7 +251,7 @@
   "url": "http://localhost:4173/provence-alpes-cote-d-azur/alpes-maritimes/nice/557/pharmacie-saint-barthelemy",
   "file": "docs/qa/clone/fiche-375.png",
   "title": "Pharmacie Saint Barthélémy - Téléconsultation à Nice",
-  "description": "Trouvez une cabine de téléconsultation en pharmacie près de chez vous et consultez un médecin en quelques minutes grâce aux dispositifs Tessan",
+  "description": "Consultez un médecin en téléconsultation à Pharmacie Saint Barthélémy, 51 Av. Alfred Borriglione, 06100 Nice.",
   "scrollHeight": 12880,
   "scrollWidth": 375,
   "console": []
@@ -283,7 +283,7 @@
   "url": "http://localhost:4173/provence-alpes-cote-d-azur/alpes-maritimes/nice/557/pharmacie-saint-barthelemy",
   "file": "docs/qa/clone/fiche-768.png",
   "title": "Pharmacie Saint Barthélémy - Téléconsultation à Nice",
-  "description": "Trouvez une cabine de téléconsultation en pharmacie près de chez vous et consultez un médecin en quelques minutes grâce aux dispositifs Tessan",
+  "description": "Consultez un médecin en téléconsultation à Pharmacie Saint Barthélémy, 51 Av. Alfred Borriglione, 06100 Nice.",
   "scrollHeight": 9108,
   "scrollWidth": 768,
   "console": []

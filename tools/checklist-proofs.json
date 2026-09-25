@@ -316,8 +316,8 @@
   ""
  ],
  "P5-01": [
-  "fail",
-  ""
+  "pass",
+  "Dépôt public https://github.com/Herrifunix/tessan-teleconsultation-clone (visibility public, branche par défaut main) ; main mis à jour en fast-forward depuis la branche de travail (git push origin HEAD:main, jamais de force-push) ; historique thématique (ETAT-06)."
  ],
  "P5-02": [
   "pass",
@@ -344,36 +344,36 @@
   "docs/qa/e2e-public.txt : PLAYWRIGHT_BASE_URL=https://tessan-teleconsultation-clone.vercel.app npx playwright test → 120 passed."
  ],
  "P5-08": [
-  "fail",
-  ""
+  "pass",
+  "README.md : 1ʳᵉ ligne de liste = lien du site https://tessan-teleconsultation-clone.vercel.app, 2ᵉ = lien du dépôt."
  ],
  "P5-09": [
-  "fail",
-  ""
+  "pass",
+  "README.md § Original et clone côte à côte : docs/qa/readme/home-1440.png … docs/qa/readme/fiche-375.png (desktop et mobile, générés par tools/readme-composites.mjs) + docs/qa/results-1440-composite.png."
  ],
  "P5-10": [
-  "fail",
-  ""
+  "pass",
+  "README.md § Stack et décisions, avec renvoi vers docs/DECISIONS.md."
  ],
  "P5-11": [
-  "fail",
-  ""
+  "pass",
+  "README.md § Commandes : npm install, npm run dev, npm run build, npm run verify (plus preview, done-check, e2e contre l'URL publique)."
  ],
  "P5-12": [
-  "fail",
-  ""
+  "pass",
+  "README.md § Fonctionnalités reproduites."
  ],
  "P5-13": [
-  "fail",
-  ""
+  "pass",
+  "README.md § Écarts connus et raisons (police, tuiles, données, suggestions, fuseau, réservation, pied de page, DOM, processus)."
  ],
  "P5-14": [
-  "fail",
-  ""
+  "pass",
+  "README.md § Méthode (reconnaissance Playwright, jetons mesurés, specs, tests d'abord, boucle de diff, évaluateurs indépendants, suivi)."
  ],
  "P5-15": [
-  "fail",
-  ""
+  "pass",
+  "README.md § Pistes."
  ],
  "P5-16": [
   "fail",
@@ -452,20 +452,20 @@
   "120 tests e2e verts (tests/, y compris tests/matrix.spec.ts et les cas limites CL-*) en local et contre l'URL publique (docs/qa/e2e-public.txt) ; interactions listées dans docs/research/interactions.md."
  ],
  "DOD-04": [
-  "fail",
-  ""
+  "pass",
+  "docs/qa/verify.txt : npm run verify → exit 0 (lint, typecheck, build, 120 passed, captures, diff) ; console vide vérifiée par tests/navigation.spec.ts."
  ],
  "DOD-05": [
   "fail",
   ""
  ],
  "DOD-06": [
-  "fail",
-  ""
+  "pass",
+  "Dépôt public poussé (P5-01) ; site https://tessan-teleconsultation-clone.vercel.app ; racine et route profonde en 200 sans authentification (docs/qa/curl-public.txt) ; e2e verts contre l'URL publique (docs/qa/e2e-public.txt)."
  ],
  "DOD-07": [
-  "fail",
-  ""
+  "pass",
+  "README.md complet (liens, composites desktop/mobile, stack, commandes, fonctionnalités, écarts, méthode, pistes)."
  ],
  "DOD-08": [
   "fail",
@@ -476,11 +476,11 @@
   ""
  ],
  "GARDE-01": [
-  "fail",
-  ""
+  "pass",
+  "Aucun force-push (main mis à jour en fast-forward, vérifié par git merge-base --is-ancestor) ; aucun autre dépôt touché ; nouveau projet Vercel dédié, les 2 projets existants du compte non modifiés (vercel project ls avant déploiement, docs/progress.md) ; aucun secret (P3-08) ; code de l'original et pages brutes exclus du dépôt (.gitignore) et du déploiement (.vercelignore) ; aucune suppression hors du dossier de travail."
  ],
  "GARDE-02": [
-  "fail",
-  ""
+  "pass",
+  "Écarts volontaires limités à la sémantique, à la sécurité et aux contraintes du sujet (docs/DECISIONS.md § Sécurité et sémantique, mention de non-affiliation, réservation sans envoi) ; aucune fonctionnalité absente de l'original ajoutée ; idées d'évolution reportées dans README.md § Pistes."
  ]
 }

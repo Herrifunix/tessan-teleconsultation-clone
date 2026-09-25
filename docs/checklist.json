@@ -476,8 +476,8 @@
  {
   "id": "P5-01",
   "exigence": "Poussé vers le dépôt tessan-teleconsultation-clone sur main, historique lisible",
-  "statut": "fail",
-  "preuve": ""
+  "statut": "pass",
+  "preuve": "Dépôt public https://github.com/Herrifunix/tessan-teleconsultation-clone (visibility public, branche par défaut main) ; main mis à jour en fast-forward depuis la branche de travail (git push origin HEAD:main, jamais de force-push) ; historique thématique (ETAT-06)."
  },
  {
   "id": "P5-02",
@@ -518,50 +518,50 @@
  {
   "id": "P5-08",
   "exigence": "README en français : lien du site en haut puis lien du dépôt",
-  "statut": "fail",
-  "preuve": ""
+  "statut": "pass",
+  "preuve": "README.md : 1ʳᵉ ligne de liste = lien du site https://tessan-teleconsultation-clone.vercel.app, 2ᵉ = lien du dépôt."
  },
  {
   "id": "P5-09",
   "exigence": "README : composites référence/clone desktop et mobile",
-  "statut": "fail",
-  "preuve": ""
+  "statut": "pass",
+  "preuve": "README.md § Original et clone côte à côte : docs/qa/readme/home-1440.png … docs/qa/readme/fiche-375.png (desktop et mobile, générés par tools/readme-composites.mjs) + docs/qa/results-1440-composite.png."
  },
  {
   "id": "P5-10",
   "exigence": "README : stack et décisions avec renvoi vers DECISIONS.md",
-  "statut": "fail",
-  "preuve": ""
+  "statut": "pass",
+  "preuve": "README.md § Stack et décisions, avec renvoi vers docs/DECISIONS.md."
  },
  {
   "id": "P5-11",
   "exigence": "README : commandes npm install, npm run dev, npm run build, npm run verify",
-  "statut": "fail",
-  "preuve": ""
+  "statut": "pass",
+  "preuve": "README.md § Commandes : npm install, npm run dev, npm run build, npm run verify (plus preview, done-check, e2e contre l'URL publique)."
  },
  {
   "id": "P5-12",
   "exigence": "README : fonctionnalités reproduites",
-  "statut": "fail",
-  "preuve": ""
+  "statut": "pass",
+  "preuve": "README.md § Fonctionnalités reproduites."
  },
  {
   "id": "P5-13",
   "exigence": "README : écarts connus et raisons",
-  "statut": "fail",
-  "preuve": ""
+  "statut": "pass",
+  "preuve": "README.md § Écarts connus et raisons (police, tuiles, données, suggestions, fuseau, réservation, pied de page, DOM, processus)."
  },
  {
   "id": "P5-14",
   "exigence": "README : méthode (reconnaissance Playwright, tokens mesurés, specs, boucle de diff, évaluateurs indépendants)",
-  "statut": "fail",
-  "preuve": ""
+  "statut": "pass",
+  "preuve": "README.md § Méthode (reconnaissance Playwright, jetons mesurés, specs, tests d'abord, boucle de diff, évaluateurs indépendants, suivi)."
  },
  {
   "id": "P5-15",
   "exigence": "README : section « Pistes »",
-  "statut": "fail",
-  "preuve": ""
+  "statut": "pass",
+  "preuve": "README.md § Pistes."
  },
  {
   "id": "P5-16",
@@ -680,8 +680,8 @@
  {
   "id": "DOD-04",
   "exigence": "`npm run verify` passe et console vide d'erreurs",
-  "statut": "fail",
-  "preuve": ""
+  "statut": "pass",
+  "preuve": "docs/qa/verify.txt : npm run verify → exit 0 (lint, typecheck, build, 120 passed, captures, diff) ; console vide vérifiée par tests/navigation.spec.ts."
  },
  {
   "id": "DOD-05",
@@ -692,14 +692,14 @@
  {
   "id": "DOD-06",
   "exigence": "Dépôt public poussé, site déployé, racine + route profonde 200 sans auth, e2e verts contre l'URL publique",
-  "statut": "fail",
-  "preuve": ""
+  "statut": "pass",
+  "preuve": "Dépôt public poussé (P5-01) ; site https://tessan-teleconsultation-clone.vercel.app ; racine et route profonde en 200 sans authentification (docs/qa/curl-public.txt) ; e2e verts contre l'URL publique (docs/qa/e2e-public.txt)."
  },
  {
   "id": "DOD-07",
   "exigence": "README complet, composites compris",
-  "statut": "fail",
-  "preuve": ""
+  "statut": "pass",
+  "preuve": "README.md complet (liens, composites desktop/mobile, stack, commandes, fonctionnalités, écarts, méthode, pistes)."
  },
  {
   "id": "DOD-08",
@@ -716,14 +716,14 @@
  {
   "id": "GARDE-01",
   "exigence": "Aucun force-push, aucune modification d'autres dépôts/projets Vercel, aucun secret commité, aucune suppression hors du dossier de travail",
-  "statut": "fail",
-  "preuve": ""
+  "statut": "pass",
+  "preuve": "Aucun force-push (main mis à jour en fast-forward, vérifié par git merge-base --is-ancestor) ; aucun autre dépôt touché ; nouveau projet Vercel dédié, les 2 projets existants du compte non modifiés (vercel project ls avant déploiement, docs/progress.md) ; aucun secret (P3-08) ; code de l'original et pages brutes exclus du dépôt (.gitignore) et du déploiement (.vercelignore) ; aucune suppression hors du dossier de travail."
  },
  {
   "id": "GARDE-02",
   "exigence": "Aucune fonctionnalité ni design « amélioré » absent de l'original ; idées reportées dans « Pistes »",
-  "statut": "fail",
-  "preuve": ""
+  "statut": "pass",
+  "preuve": "Écarts volontaires limités à la sémantique, à la sécurité et aux contraintes du sujet (docs/DECISIONS.md § Sécurité et sémantique, mention de non-affiliation, réservation sans envoi) ; aucune fonctionnalité absente de l'original ajoutée ; idées d'évolution reportées dans README.md § Pistes."
  },
  {
   "id": "MX-375-accueil-375-bannire-cookies-personnaliser-puis-accepter",

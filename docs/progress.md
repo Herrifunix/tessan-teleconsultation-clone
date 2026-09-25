@@ -79,3 +79,10 @@ Correction : calibration refaite aux tailles d'usage (`tools/fonts/calibrate-ser
 
 Les itérations 1 et 2 comparaient les pixels sans réalignement : une grille de zones plus courte décalait toute la suite de la page. L'itération 3 réaligne les segments entre masques appariés et intègre les corrections (serif recalibré, interligne de la FAQ, départements de l'échantillon, métadonnées).
 Mise en page élément par élément (itération 3, `docs/qa/layout-report.json`) : 98 à 100 % des éléments textuels appariés à ±2 px. Tous les écarts restants sont horizontaux (≤ 8 px, largeur du texte serif qui précède sur la même ligne), sauf un de 24 px (« PHARMACIE DE FAMAJOR » en capitales grasses). Aucun écart de style (taille, graisse, interligne, couleur, fond, interlettrage).
+
+## Phase 5 — Livraison
+- Dépôt `Herrifunix/tessan-teleconsultation-clone` (public) : branche de travail poussée, puis `main` en fast-forward (`git merge-base --is-ancestor origin/main HEAD` vérifié avant `git push origin HEAD:main`).
+- Vercel : `vercel whoami` → herrifunix ; `vercel project ls` avant déploiement : seuls `portfolio` et `wuwa-calculator` existaient, donc aucun conflit de nom. Nouveau projet `tessan-teleconsultation-clone` créé, les autres non touchés. `.vercelignore` n'envoie que ce que le build utilise (ni captures, ni pages, ni code de l'original). 1ʳᵉ tentative : « fetch failed » réseau après l'envoi, relancée avec succès.
+- `curl -sSI` : 200 sur `/`, `/fr/france-FR/nice/results`, la fiche et `robots.txt`, avec `x-robots-tag: noindex, nofollow` (`docs/qa/curl-public.txt`).
+- e2e contre l'URL publique : 120 passed (`docs/qa/e2e-public.txt`). Captures du site déployé à 375 et 1440 px : `docs/qa/deployed/`, hauteurs identiques au build local.
+- `npm run verify` : exit 0 en 3 min 18 s (`docs/qa/verify.txt`).
