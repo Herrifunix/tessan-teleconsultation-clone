@@ -27,7 +27,7 @@ const clusterSvg = (count: number) =>
 const ESRI = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}';
 const OSM = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
 const ATTRIBUTION =
-  'Tuiles &copy; <a href="https://www.esri.com/">Esri</a> — Esri, HERE, Garmin, USGS, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
+  '&copy; <a href="https://www.esri.com/">Esri</a>, HERE, Garmin, USGS, <a href="https://www.openstreetmap.org/copyright">OSM</a>';
 
 const markerIcon = L.icon({ iconUrl: '/marker.svg', iconSize: [32, 48], iconAnchor: [16, 48] });
 const reducedMotion = () => typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;

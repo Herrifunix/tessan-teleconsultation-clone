@@ -13,11 +13,12 @@ const analysis = JSON.parse(readFileSync('docs/research/css-analysis.json', 'utf
 const load = (f) => JSON.parse(readFileSync(f, 'utf8'));
 
 function utility(sel) {
-  // Renvoie la 1re déclaration CSS de l'utilitaire (échappements Tailwind compris).
+  // Renvoie les déclarations CSS de l'utilitaire, toutes règles confondues (Tailwind 4 en émet parfois deux :
+  // `.shadow-md{box-shadow:…}` puis `.shadow-md{--tw-shadow:…}`), échappements Tailwind compris.
   const esc = sel.replace(/[[\]#/.()%]/g, (c) => '\\' + c);
-  const re = new RegExp('\\.' + esc.replace(/\\\\/g, '\\\\') + '\\{([^}]*)\\}');
-  const m = css.match(re);
-  return m ? m[1] : null;
+  const re = new RegExp('\\.' + esc.replace(/\\\\/g, '\\\\') + '\\{([^}]*)\\}', 'g');
+  const all = [...css.matchAll(re)].map((m) => m[1]);
+  return all.length ? all.join(';') : null;
 }
 function measured(page, width, pred, prop) {
   const f = `docs/research/pages/${page}/computed-${width}.json`;
@@ -148,6 +149,7 @@ for (const n of ['xs', 'sm', 'md', 'lg', 'xl', '2xl']) {
   tokens.shadow[n] = { value: m ? m[1].replace(/var\(--tw-shadow-color,([^)]+)\)/g, '$1') : null, source: src(`.shadow-${n}{--tw-shadow:…}`) };
 }
 
+for (const [n, t] of Object.entries(tokens.shadow)) if (!t.value) throw new Error(`jeton shadow-${n} non extrait`);
 tokens.shadow.faq = { value: '0 1px 4px rgba(0,0,0,0.06)', source: 'bundle 541 : item FAQ style boxShadow 0 1px 4px rgba(0,0,0,0.06)' };
 
 // 6) Points de rupture réels (@media).

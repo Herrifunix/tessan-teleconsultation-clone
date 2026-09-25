@@ -26,6 +26,10 @@ function writeConsent(c: Consent) {
 
 const btn = 'cky-btn flex-auto max-w-full text-sm leading-6 font-medium text-center p-2 border-2 border-solid rounded-cookie-btn cursor-pointer hover:brightness-90';
 
+// Les descriptions de l'audit CookieYes sont stockées en `<p>…</p>` : on retire ces balises (affichées en texte sinon),
+// sans jamais injecter de HTML.
+const stripParagraph = (html: string) => html.replace(/<\/?p>/g, '').trim();
+
 export function CookieConsent() {
   const [consent, setConsent] = useState<Consent | null>(() => readConsent());
   const [prefsOpen, setPrefsOpen] = useState(false);
@@ -63,7 +67,7 @@ export function CookieConsent() {
               <p>Nous utilisons les cookies pour la mesure de notre audience et pour la bonne utilisation du service.{' '}</p>
               <p>{' '}En cliquant sur « Accepter », vous consentez à notre utilisation des cookie.</p>
               <p>
-                Pour en savoir plus sur les traceurs utilisés et les traitements réalisés, vous pouvez consulter notre{' '}{' '}
+                Pour en savoir plus sur les traceurs utilisés et les traitements réalisés, vous pouvez consulter notre{'  '}
                 <a className="underline whitespace-nowrap bg-cookie-bg border border-cookie-bg focus-visible:outline-2 focus-visible:outline-cookie-link" href="https://tessan.io/cookies/" aria-label="Politique relative aux cookies">Politique relative aux cookies</a>
               </p>
             </div>
@@ -128,8 +132,9 @@ export function CookieConsent() {
                   return (
                     <div key={c.slug}>
                       <div className="flex mt-2.5">
-                        <div className="relative mr-5.5 max-[425px]:mr-3.75 pt-2" aria-hidden="true">
-                          <i className={`block size-1.5 border-r-[1.4px] border-b-[1.4px] border-cookie-text/20 transition-transform ${open ? 'rotate-45' : '-rotate-45'}`} />
+                        <div className="relative mr-5.5 max-[425px]:mr-3.75" aria-hidden="true">
+                          {/* Comme `.cky-chevron-right::before` : pastille absolue, sans largeur dans le flux. */}
+                          <i className={`absolute left-0 top-2 block size-1.5 border-r-[1.4px] border-b-[1.4px] border-cookie-text/20 transition-transform ${open ? 'rotate-45' : '-rotate-45'}`} />
                         </div>
                         <div className="flex-1">
                           <div className="flex justify-between items-center">
@@ -143,12 +148,12 @@ export function CookieConsent() {
                                 aria-label={`Activer ${c.title}`}
                                 checked={!!draft[c.slug]}
                                 onChange={(e) => setDraft((d) => ({ ...d, [c.slug]: e.target.checked }))}
-                                className="cky-switch relative appearance-none w-11 h-6 max-[425px]:w-9.5 max-[425px]:h-5.25 rounded-full cursor-pointer transition-colors bg-cookie-bg checked:bg-cookie-text shadow-[inset_0_0_0_1px_var(--color-gray-300)] checked:shadow-none before:content-[''] before:absolute before:left-0.5 before:bottom-0.5 before:size-5 max-[425px]:before:size-4.25 before:rounded-full before:bg-white before:transition-transform checked:before:translate-x-5 max-[425px]:checked:before:translate-x-4.25"
+                                className="cky-switch relative appearance-none w-11 h-6 max-[425px]:w-9.5 max-[425px]:h-5.25 rounded-full cursor-pointer transition-colors bg-cookie-bg checked:bg-cookie-text before:content-[''] before:absolute before:left-0.5 before:bottom-0.5 before:size-5 max-[425px]:before:size-4.25 before:rounded-full before:bg-white before:transition-transform checked:before:translate-x-5 max-[425px]:checked:before:translate-x-4.25"
                               />
                             )}
                           </div>
                           <div className="mt-2.5 mb-4">
-                            <p>{c.description}</p>
+                            <p>{stripParagraph(c.description)}</p>
                           </div>
                         </div>
                       </div>

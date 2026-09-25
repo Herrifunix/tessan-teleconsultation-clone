@@ -86,3 +86,18 @@ Mise en page élément par élément (itération 3, `docs/qa/layout-report.json`
 - `curl -sSI` : 200 sur `/`, `/fr/france-FR/nice/results`, la fiche et `robots.txt`, avec `x-robots-tag: noindex, nofollow` (`docs/qa/curl-public.txt`).
 - e2e contre l'URL publique : 120 passed (`docs/qa/e2e-public.txt`). Captures du site déployé à 375 et 1440 px : `docs/qa/deployed/`, hauteurs identiques au build local.
 - `npm run verify` : exit 0 en 3 min 18 s (`docs/qa/verify.txt`).
+
+## Évaluation indépendante n° 1
+### Évaluateur visuel (contexte neuf, lecture seule)
+Notes : mise en page accueil/résultats/fiche à 375/768/1440 = 5 ; couleurs 5 ; typographie 5 ; espacements 5 ; **détails de composants 3** ; **états interactifs 3**. Aucune note de 1.
+Traitement de chaque point relevé :
+1. **Ombres md/xl/2xl absentes** (jetons à `null`) — *corrigé* : `utility()` de `tools/build-tokens.mjs` ne lisait que la 1ʳᵉ règle `.shadow-md{box-shadow:…}` alors que Tailwind 4 définit `--tw-shadow` dans une seconde règle ; les règles sont désormais fusionnées, et le build échoue si une ombre manque. Valeurs issues du CSS de l'original (`docs/research/css/323d88a92ac6be07.css`). Rétablit l'ombre au survol des cartes, de la photo de fiche, des cadres de carte, de la popup et de la modale.
+2. **`<p>` affichés en texte dans les préférences cookies** — *corrigé* (balises retirées à l'affichage, sans injection de HTML).
+3. **Tuiles au zoom rue plus texturées que Google** — *justifié* : substitution imposée (Google exige une clé). Couleur moyenne mesurée sur la zone de carte de la popup : original 228/231/225, clone 225/227/222 (écart ≤ 4 niveaux). L'écart porte sur la texture (relief, bâti), pas sur la teinte. Les fonds sans clé comparés au zoom 16 sur Nice (Topo, Street, Light Gray, OSM) sont soit plus colorés, soit sans eau bleue ; Topo reste le plus proche au zoom France.
+4. **Densité de la carte d'accueil** — *justifié* : échantillon de 58 points imposé par le sujet (40–60).
+5. **Serif légèrement plus appuyée** — *justifié* : police de substitution (licence) ; largeurs, positions et retours à la ligne identiques. Un amincissement exigerait de recalibrer sans gain mesurable sur les critères.
+6. **Retour à la ligne de la dernière ligne de la bannière cookies** — *corrigé* : `&nbsp;&nbsp;` de l'original rétabli entre « notre » et le lien (l'un des deux était une espace sécable).
+7. **Interrupteurs inactifs cerclés** — *corrigé* : contour supprimé (l'original n'affiche que la pastille sur le fond `#F7F7ED`).
+8. **Catégories décalées de 7 px** — *corrigé* : le chevron est positionné en absolu comme `.cky-chevron-right::before` (1 px d'écart résiduel).
+9. **Attribution de carte sur 2 lignes à 375 px** — *corrigé* : texte raccourci en conservant tous les crédits (Esri, HERE, Garmin, USGS, OSM).
+10. **Repli sans empattement si la police échoue** — *justifié* : identique à l'original (`recoleta, "recoleta Fallback", sans-serif`) ; observé une fois lors d'un échec réseau de l'environnement de l'évaluateur.
