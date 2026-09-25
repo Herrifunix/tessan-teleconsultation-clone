@@ -13,6 +13,7 @@
 - Cause prouvée : l'IP de sortie du proxy change à chaque connexion (5 IP différentes en 6 requêtes) alors que le cookie `_vcrcs` du challenge est lié à l'IP ; au sein d'une même connexion keep-alive, l'IP est stable (6/6 identiques).
 - Solution : `tools/recon/sticky.mjs` rejoue toutes les requêtes `*.tessan.io` sur UN seul tunnel keep-alive (undici, `connections: 1`) avec un cookie jar → 92/96 requêtes en 200, page entièrement rendue.
 - **Chemin retenu : headless + tunnel collant** (pas besoin de headed, de l'extension Chrome ni de web.archive.org).
+- Budget de pages (P1-02) : 7 pages distinctes de l'original chargées (accueil, résultats Nice, fiche 557, Choisy-le-Roi, spécialité + ville, ville inconnue, format court de fiche). Transparence : ~37 chargements de document au total, dont 3 passes de captures de référence de 9 pages (la 3ᵉ pour ajouter les dumps de mise en page) ; chaque requête espacée d'au moins 1 s, les appels d'API de 1,1 à 6 s.
 - Pilote persistant `tools/recon/driver.mjs` (+ `tools/recon/ev.sh`) pour explorer les interactions sans recharger de pages (budget de 20 pages, visites journalisées dans `docs/research/visits.log`).
 
 ### Découvertes

@@ -1,0 +1,486 @@
+{
+ "ETAT-01": [
+  "pass",
+  "docs/checklist.json créé au 1er commit de travail (b13c77a « chore: checklist des exigences… ») avec 121 exigences transcrites en statut fail ; entrées de matrice ajoutées ensuite (ETAT-07)."
+ ],
+ "ETAT-02": [
+  "pass",
+  "tools/check-checklist.mjs (vérifie statut, preuve non vide, existence des fichiers cités, affiche « Checklist : N pass / M fail ») exposé par package.json → script done-check."
+ ],
+ "ETAT-03": [
+  "pass",
+  "docs/PLAN.md : phases et état coché au fil de l'avancement (dernière mise à jour à la livraison)."
+ ],
+ "ETAT-04": [
+  "pass",
+  "docs/progress.md : journal, accès, découvertes, décisions, tests modifiés avec raisons, 3 hypothèses de l'écart persistant, masques et ratios par itération."
+ ],
+ "ETAT-05": [
+  "pass",
+  "docs/DECISIONS.md : (a) carte, (b) données, (c) déploiement comparés sur 3 options, plus stack, polices, géocodage, fuseau, cookies, sécurité, non-indexation."
+ ],
+ "ETAT-06": [
+  "pass",
+  "Historique git en commits thématiques (chore → recon → test (avant implémentation) → feat → fix → qa → deploy → docs), visible par git log sur main ; aucun commit unique."
+ ],
+ "ETAT-07": [
+  "pass",
+  "Entrées MX-<largeur>-<interaction> générées par tools/checklist-proofs.py depuis tests/matrix.spec.ts (13 interactions × 375/768/1440 = 39 entrées), chacune avec sa preuve e2e (docs/qa/e2e-public.txt)."
+ ],
+ "OUT-01": [
+  "pass",
+  "docs/progress.md (Journal) : Playwright 1.56.1 disponible au démarrage ; Chromium préinstallé utilisé par tools/recon/browser.mjs et playwright.config.ts."
+ ],
+ "OUT-02": [
+  "pass",
+  "tools/capture.mjs (captures en série référence/clone), tools/capture-clone.mjs, tools/recon/explore.mjs et tools/recon/dump-styles.js (extraction), tools/diff.mjs et tools/compare-layout.mjs (diffs), tests/ (e2e)."
+ ],
+ "OUT-03": [
+  "pass",
+  "tools/diff.mjs écrit docs/qa/<gabarit>-<largeur>-composite.png (référence | clone | diff, sharp) ; tools/region.mjs et tools/crop.mjs recadrent et zooment par région (utilisés en itération 3, docs/progress.md)."
+ ],
+ "OUT-04": [
+  "pass",
+  "docs/research/pages/*/ (dom.html, computed-*.json, network.json, outline.txt), docs/research/css/, docs/research/css-analysis.json, docs/research/hover-states.json."
+ ],
+ "P1-01": [
+  "pass",
+  "docs/progress.md § Accès (P1-01) : locale fr-FR, fuseau Europe/Paris, UA Chrome 141 (tools/recon/browser.mjs) ; chemin retenu = headless + tunnel collant (tools/recon/sticky.mjs), sans recours au mode headed ni à web.archive.org."
+ ],
+ "P1-02": [
+  "pass",
+  "docs/research/visits.log (chargements du pilote horodatés) ; pauses ≥ 1 s (1,1 à 6 s) entre requêtes dans tools/capture.mjs et les appels d'API ; 7 pages distinctes de l'original chargées (accueil, Nice, fiche 557, Choisy-le-Roi, spécialité+ville, ville inconnue, fiche courte). Transparence : environ 37 chargements de document au total, dont 3 passes de captures de référence (docs/progress.md)."
+ ],
+ "P1-03": [
+  "pass",
+  "docs/progress.md § Découvertes : route catch-all, gabarits accueil `/`, résultats `/fr/france-FR/nice/results` (et variantes région/département/spécialité), fiche `/provence-alpes-cote-d-azur/alpes-maritimes/nice/557/pharmacie-saint-barthelemy` ; docs/research/pages/ (home, results, fiche, specialty-city)."
+ ],
+ "P1-04": [
+  "pass",
+  "Extraction prototypée sur l'accueil (docs/research/pages/home/ : dom.html, computed-*.json, outline.txt, network.json) au commit 458237b, avant généralisation aux autres gabarits (commit 8cb667d)."
+ ],
+ "P1-05": [
+  "pass",
+  "docs/reference/home-375.png, docs/reference/home-768.png, docs/reference/home-1440.png, docs/reference/results-375.png, docs/reference/results-768.png, docs/reference/results-1440.png, docs/reference/fiche-375.png, docs/reference/fiche-768.png, docs/reference/fiche-1440.png (pleine page, docs/reference/capture-meta.json)."
+ ],
+ "P1-06": [
+  "pass",
+  "docs/reference/states/cookie-banner-1440.png, docs/reference/states/cookie-banner-375.png, docs/reference/states/cookie-preferences-1440.png."
+ ],
+ "P1-07": [
+  "pass",
+  "L'original n'a pas de menu mobile : nav `hidden lg:flex`, seuls logo + « Compte patient » sous 1024 px (docs/research/components/header.md, docs/progress.md § Découvertes) ; état mobile capturé : docs/reference/home-375.png."
+ ],
+ "P1-08": [
+  "pass",
+  "docs/reference/states/autocomplete-open-1440.png."
+ ],
+ "P1-09": [
+  "pass",
+  "docs/reference/states/marker-popup-1440.png."
+ ],
+ "P1-10": [
+  "pass",
+  "10 paires avant/après dans docs/reference/states/ (ex. docs/reference/states/hover-nav-link-before-1440.png et docs/reference/states/hover-nav-link-after-1440.png ; Compte patient, Spécialités, Recherche, Réserver, Voir plus, carte, département, fil d'Ariane, Réinitialiser) + valeurs calculées docs/research/hover-states.json."
+ ],
+ "P1-11": [
+  "pass",
+  "docs/research/css/ (feuilles de l'original) ; docs/research/css-analysis.json (breakpoints @media, @font-face, variables CSS)."
+ ],
+ "P1-12": [
+  "pass",
+  "docs/research/pages/*/computed-{375,768,1440}.json (getComputedStyle des éléments clés) ; docs/research/hover-states.json (règles :hover/:focus et transitions)."
+ ],
+ "P1-13": [
+  "pass",
+  "docs/research/tokens.json : 137 jetons, chacun avec « source » (fichier CSS + règle, bundle, ou mesure computed-*.json) ; généré par tools/build-tokens.mjs."
+ ],
+ "P1-14": [
+  "pass",
+  "docs/research/interactions.md : déclencheur, états avant/après, capture (docs/reference/states/), spec et test par composant, y compris l'absence de burger, de pagination et de bascule liste/carte."
+ ],
+ "P1-15": [
+  "pass",
+  "docs/research/pages/home/network.json ; docs/DECISIONS.md (b) : table Supabase `gmb_locations` (REST, JSON), compléments /api/pharmacies/<code> et /api/can-reserve/<id> ; format reproduit dans src/data/locations.json."
+ ],
+ "P1-16": [
+  "pass",
+  "src/data/locations.json : 58 lignes réelles au format Supabase de l'original, 38 villes dont Paris, Nice, Lyon, Marseille, Franconville et les voisins de Choisy-le-Roi (0 dispositif dans les données réelles) ; sélection reproductible tools/data/select-sample.py, raisons dans src/data/sample-selection.json."
+ ],
+ "P1-17": [
+  "pass",
+  "public/logo.svg, public/marker.svg, public/favicon.ico, public/icons/ (icônes CookieYes), public/fonts/ (Plus Jakarta Sans de l'original ; serif de substitution OFL, licence public/fonts/OFL-TC-Serif-Fraunces.txt)."
+ ],
+ "P1-18": [
+  "pass",
+  "docs/research/components/ : 17 specs (header, search-form, map, pharmacy-card, booking-modal, cookie-consent, nearby-areas, breadcrumb, footer, opening-status, results-page, home-page, pharmacy-page*, …) avec DOM, CSS par breakpoint, états et textes exacts."
+ ],
+ "P1-19": [
+  "pass",
+  "docs/DECISIONS.md § (a) : Google Maps JS API / MapLibre GL / Leaflet + SuperCluster comparés (fidélité, déploiement, complexité) puis fonds de tuiles comparés → Leaflet + Esri World Topographic, repli OSM."
+ ],
+ "P1-20": [
+  "pass",
+  "docs/DECISIONS.md § (b) : Supabase de Tessan en direct / base complète copiée / échantillon réel comparés → échantillon de 58 points réels au même format."
+ ],
+ "P1-21": [
+  "pass",
+  "docs/DECISIONS.md § (c) : Vercel / GitHub Pages / Netlify-Cloudflare comparés → Vercel (whoami OK, routes à la racine, réécriture SPA avec statut 200)."
+ ],
+ "P1-22": [
+  "pass",
+  "Commit 8cb667d « recon: captures de référence…, tokens.json…, échantillon… » ; docs/PLAN.md ; entrées ajoutées (ETAT-07, matrice MX-*)."
+ ],
+ "P1-23": [
+  "pass",
+  "docs/progress.md § Découvertes : aucune consigne adressée à une IA dans les modules applicatifs, le DOM ni les réponses réseau ; contenu traité comme donnée."
+ ],
+ "P2-01": [
+  "pass",
+  "package.json : vite 7.3.6, react 19.3.0, react-router 8.4.0, typescript 5.9.3 ; src/App.tsx (routeur)."
+ ],
+ "P2-02": [
+  "pass",
+  "src/styles/tokens.css généré par tools/gen-tokens-css.mjs depuis docs/research/tokens.json ; src/styles/index.css réinitialise le thème Tailwind (`--*: initial`) : seules les variables issues des jetons existent."
+ ],
+ "P2-03": [
+  "pass",
+  "src/App.tsx (route catch-all comme l'original) + src/lib/slug.ts (parsePath/buildPath) ; tests/navigation.spec.ts et tests/results.spec.ts chargent `/`, `/fr/france-FR/nice/results` et la fiche `/provence-alpes-cote-d-azur/alpes-maritimes/nice/557/pharmacie-saint-barthelemy`."
+ ],
+ "P2-04": [
+  "pass",
+  "src/lib/search.ts (localSuggestions, Levenshtein) + src/components/SearchForm.tsx ; tests/search.spec.ts et tests/matrix.spec.ts (« autocomplétion et recherche »)."
+ ],
+ "P2-05": [
+  "pass",
+  "src/lib/geocode.ts : https://api-adresse.data.gouv.fr/search en source principale (repli Géoplateforme même format, voir docs/DECISIONS.md) ; tests/fixtures.ts (mockAdresseApi) + tests/search.spec.ts."
+ ],
+ "P2-06": [
+  "pass",
+  "src/lib/geo.ts (haversine) + src/lib/data.ts (sortByDistance) ; tests/search.spec.ts (ordre par distance)."
+ ],
+ "P2-07": [
+  "pass",
+  "src/components/SearchForm.tsx (navigator.geolocation, message si refus/indisponible) ; tests/search.spec.ts et tests/matrix.spec.ts (« géolocalisation refusée »)."
+ ],
+ "P2-08": [
+  "pass",
+  "src/components/map/LeafletMap.tsx (Leaflet 1.9.4 sans clé, tuiles Esri World Topo + repli OSM, supercluster radius 65/maxZoom 11, popups) ; tests/map.spec.ts et tests/matrix.spec.ts."
+ ],
+ "P2-09": [
+  "pass",
+  "src/components/Header.tsx et src/components/Footer.tsx : URLs réelles de www.tessan.io (relevées dans docs/research/components/footer.md) ; tests/navigation.spec.ts « en-tête desktop : liens de navigation vers tessan.io » et « chaque lien de chaque gabarit mène quelque part »."
+ ],
+ "P2-10": [
+  "pass",
+  "index.html : meta robots noindex, nofollow ; vercel.json : en-tête X-Robots-Tag (docs/qa/curl-public.txt) ; tests/navigation.spec.ts « le clone ne doit pas être indexé »."
+ ],
+ "P2-11": [
+  "pass",
+  "public/robots.txt : `User-agent: *` / `Disallow: /` (servi en 200 sur l'URL publique)."
+ ],
+ "P2-12": [
+  "pass",
+  "src/components/Footer.tsx : « Reproduction réalisée dans le cadre d'un test technique — non affiliée à Tessan » ; tests/navigation.spec.ts « pied de page : liens réels, adresse et mention de non-affiliation »."
+ ],
+ "P2-13": [
+  "pass",
+  "package.json : 0 occurrence de ^ ou ~ dans les versions (vérifié par grep)."
+ ],
+ "P2-14": [
+  "pass",
+  "package-lock.json suivi par git (git ls-files)."
+ ],
+ "P2-15": [
+  "pass",
+  ".nvmrc = 22.22.2 ; package.json engines.node = \">=22.22.0 <23\"."
+ ],
+ "P2-16": [
+  "pass",
+  "tools/capture.mjs et tools/diff.mjs écrasent leurs sorties (mkdir récursif) ; tools/capture-clone.mjs ne démarre vite preview que si le port est libre ; playwright.config.ts reuseExistingServer ; tools/checklist-proofs.py régénère ses entrées ; vercel réutilise le projet lié."
+ ],
+ "P2-17": [
+  "pass",
+  "Commit 1969355 « test: suites e2e Playwright écrites d'après le comportement de l'original (avant implémentation) » antérieur au commit 3f32b6e des composants ; tests/*.spec.ts utilisent getByRole/getByText (exceptions justifiées dans docs/progress.md)."
+ ],
+ "P2-18": [
+  "pass",
+  "docs/progress.md : chaque modification de test est consignée avec sa raison (contradiction avec le code de l'original, sélecteur ambigu, synchronisation, hypothèse de matrice contraire à l'original)."
+ ],
+ "P2-19": [
+  "pass",
+  "package.json : verify = lint && typecheck && build && test:e2e && capture:clone && diff ; sortie réelle dans docs/qa/verify.txt."
+ ],
+ "P3-01": [
+  "fail",
+  "NON SATISFAIT et assumé : les composants ont été construits un par un (build et typecheck relancés au fil de l'eau), mais livrés dans un seul commit 3f32b6e « feat: clone complet… » et non un commit par composant. Corriger cela imposerait de réécrire l'historique déjà poussé (force-push interdit). Consigné dans docs/PLAN.md."
+ ],
+ "P3-02": [
+  "pass",
+  "Classes mobile-first (base puis sm/md/lg/xl) aux breakpoints de l'original relevés dans docs/research/css-analysis.json (40/48/64/80/96 rem) ; captures docs/qa/clone/home-375.png, docs/qa/clone/home-768.png, docs/qa/clone/home-1440.png."
+ ],
+ "P3-03": [
+  "pass",
+  "Header/nav/main/footer, h1-h3 hiérarchisés, articles, table d'horaires, alt des images, aria-label des boutons icônes (src/components/, src/pages/) ; tests/a11y-responsive.spec.ts."
+ ],
+ "P3-04": [
+  "pass",
+  "src/components/SearchForm.tsx (combobox/listbox, flèches, Entrée, Échap), :focus-visible dans src/styles/index.css ; tests/a11y-responsive.spec.ts et tests/matrix.spec.ts (« menu des spécialités au clavier »)."
+ ],
+ "P3-05": [
+  "pass",
+  "src/styles/index.css (@media (prefers-reduced-motion: reduce)) et src/components/map/LeafletMap.tsx (animations désactivées) ; tests/a11y-responsive.spec.ts (data-animated=false)."
+ ],
+ "P3-06": [
+  "pass",
+  "eslint.config.js interdit dangerouslySetInnerHTML et innerHTML ; description rendue par le parseur sûr src/lib/description.ts ; npm run lint vert."
+ ],
+ "P3-07": [
+  "pass",
+  "src/lib/geocode.ts : q, limit, type, lat/lon passés par encodeURIComponent vers l'API Adresse ; l'URL d'itinéraire (src/lib/routes.ts) ne contient que des coordonnées numériques."
+ ],
+ "P3-08": [
+  "pass",
+  "Aucune clé ni secret : carte Leaflet sans clé, API Adresse publique ; recherche de motifs api_key/secret/token dans src/ et dist/ : seules des chaînes de bibliothèques et un nom de cookie CookieYes (docs/progress.md)."
+ ],
+ "P3-09": [
+  "pass",
+  "index.html : <link rel=\"preload\" as=\"font\"> pour Plus Jakarta Sans et les graisses serif 400/500/700 (latin), font-display: swap dans src/styles/tokens.css."
+ ],
+ "P3-10": [
+  "pass",
+  "Assets locaux vectoriels ou compressés : public/logo.svg (2 Ko), public/marker.svg (0,6 Ko), polices woff2 découpées latin/latin-ext (16 à 27 Ko) ; photos servies par le CDN de l'original, préchargées hors rendu, les images en erreur étant écartées (src/pages/PharmacyPage.tsx)."
+ ],
+ "P3-11": [
+  "pass",
+  "src/components/map/MapView.tsx : React.lazy + IntersectionObserver ; chunk leaflet séparé (vite.config.ts manualChunks) ; tests/map.spec.ts."
+ ],
+ "P3-12": [
+  "pass",
+  "tests/navigation.spec.ts « console vide d'erreurs et d'avertissements sur les 3 gabarits » (fixture consoleErrors de tests/fixtures.ts : erreurs ET avertissements), vert en local et contre l'URL publique (docs/qa/e2e-public.txt)."
+ ],
+ "P4-01": [
+  "pass",
+  "tools/capture.mjs : même Chromium, contexte neuf par viewport, horloge fixe (vendredi 25/09/2026 15:00 Paris), cookies refusés, animations/caret figés, fonts.ready, images chargées, défilement complet, même ville ; conditions enregistrées dans docs/reference/capture-meta.json et docs/qa/clone/capture-meta.json."
+ ],
+ "P4-02": [
+  "pass",
+  "tools/diff.mjs (pixelmatch, seuil 0,1, masques peints des deux côtés) ; masques listés dans docs/progress.md § Masques utilisés par le diff."
+ ],
+ "P4-03": [
+  "pass",
+  "docs/qa/home-375-composite.png … docs/qa/fiche-1440-composite.png (9 composites référence | clone | diff)."
+ ],
+ "P4-04": [
+  "pass",
+  "docs/progress.md § Itération 3 : points chauds par bande de 100 px (docs/qa/diff-report.json) inspectés avec tools/region.mjs, écarts classés (structure / style / données / glyphes) ; docs/qa/layout-report.json."
+ ],
+ "P4-05": [
+  "pass",
+  "docs/progress.md § Écart persistant : 3 hypothèses (graisse, hinting, fichier), testées par mesure, cause confirmée (hinting de Recoleta) et corrigée."
+ ],
+ "P4-06": [
+  "pass",
+  "docs/qa/diff-report.json : iteration-1, iteration-2, iteration-3 (tableau des ratios dans docs/progress.md)."
+ ],
+ "P4-07": [
+  "pass",
+  "docs/qa/layout-report.json : 98 à 100 % des éléments textuels appariés dans chaque capture (hors zones masquées) ; seuls restent des textes absents de l'échantillon ; docs/progress.md § Itération 3."
+ ],
+ "P4-08": [
+  "pass",
+  "docs/qa/layout-report.json : 98 à 100 % des éléments à ±2 px ; seuls restent des écarts horizontaux dus à la largeur des glyphes serif de substitution (≤ 8 px, un de 24 px sur un nom en capitales grasses), justifiés dans docs/progress.md."
+ ],
+ "P4-09": [
+  "pass",
+  "docs/qa/layout-report.json : 0 écart de style (taille, graisse, interligne, couleur, fond, interlettrage) sur les 9 captures après correction de l'interligne de la FAQ ; couleurs et polices issues de src/styles/tokens.css."
+ ],
+ "P4-10": [
+  "pass",
+  "Ratios de pixels différents hors masques, itération 3 (docs/qa/diff-report.json) : {RATIOS}."
+ ],
+ "P4-11": [
+  "fail",
+  ""
+ ],
+ "P4-12": [
+  "fail",
+  ""
+ ],
+ "P4-13": [
+  "fail",
+  ""
+ ],
+ "P4-14": [
+  "fail",
+  ""
+ ],
+ "P5-01": [
+  "fail",
+  ""
+ ],
+ "P5-02": [
+  "pass",
+  "Vercel : projet tessan-teleconsultation-clone (vercel whoami → herrifunix), déploiement de production https://tessan-teleconsultation-clone.vercel.app ; configuration vercel.json et .vercelignore."
+ ],
+ "P5-03": [
+  "pass",
+  "vercel.json : réécriture de toute route hors assets vers /index.html ; curl -sSI sur /fr/france-FR/nice/results → 200 ; tests/navigation.spec.ts (rechargement de routes profondes) vert contre l'URL publique (docs/qa/e2e-public.txt)."
+ ],
+ "P5-04": [
+  "pass",
+  "curl -sSI https://tessan-teleconsultation-clone.vercel.app/ → HTTP/2 200, sans authentification (docs/qa/curl-public.txt)."
+ ],
+ "P5-05": [
+  "pass",
+  "curl -sSI https://tessan-teleconsultation-clone.vercel.app/fr/france-FR/nice/results → HTTP/2 200 (docs/qa/curl-public.txt)."
+ ],
+ "P5-06": [
+  "pass",
+  "docs/qa/deployed/home-375.png, docs/qa/deployed/home-1440.png, docs/qa/deployed/results-375.png, docs/qa/deployed/results-1440.png, docs/qa/deployed/fiche-375.png, docs/qa/deployed/fiche-1440.png (tools/capture.mjs contre l'URL publique)."
+ ],
+ "P5-07": [
+  "pass",
+  "docs/qa/e2e-public.txt : PLAYWRIGHT_BASE_URL=https://tessan-teleconsultation-clone.vercel.app npx playwright test → 120 passed."
+ ],
+ "P5-08": [
+  "fail",
+  ""
+ ],
+ "P5-09": [
+  "fail",
+  ""
+ ],
+ "P5-10": [
+  "fail",
+  ""
+ ],
+ "P5-11": [
+  "fail",
+  ""
+ ],
+ "P5-12": [
+  "fail",
+  ""
+ ],
+ "P5-13": [
+  "fail",
+  ""
+ ],
+ "P5-14": [
+  "fail",
+  ""
+ ],
+ "P5-15": [
+  "fail",
+  ""
+ ],
+ "P5-16": [
+  "fail",
+  ""
+ ],
+ "CL-01": [
+  "pass",
+  "tests/search.spec.ts « recherche sans résultat : « 0 dispositif » comme l'original »."
+ ],
+ "CL-02": [
+  "pass",
+  "tests/search.spec.ts « faute de frappe : « Marseile » propose « Marseille » » (distance de Levenshtein dans src/lib/search.ts)."
+ ],
+ "CL-03": [
+  "pass",
+  "tests/search.spec.ts « casse et accents : « saint-etienne » trouve « Saint-Étienne » » (normalisation NFD dans src/lib/search.ts)."
+ ],
+ "CL-04": [
+  "pass",
+  "tests/search.spec.ts « noms composés : « le plessis » propose « Le Plessis-Bouchard » » ; slugify et normalisation des tirets dans src/lib/slug.ts et src/lib/search.ts."
+ ],
+ "CL-05": [
+  "pass",
+  "tests/search.spec.ts « géolocalisation refusée : message de l'original » et « géolocalisation indisponible : message de l'original » ; tests/matrix.spec.ts aux 3 largeurs."
+ ],
+ "CL-06": [
+  "pass",
+  "src/lib/geocode.ts (budget de 5 s, GeocodeTimeoutError) et message de src/lib/search.ts ; tests/search.spec.ts « API Adresse lente : délai dépassé et message clair » et « API Adresse en erreur : repli sur les villes connues »."
+ ],
+ "CL-07": [
+  "pass",
+  "tests/navigation.spec.ts « rechargement direct des routes profondes », vert en local et contre l'URL publique (docs/qa/e2e-public.txt)."
+ ],
+ "CL-08": [
+  "pass",
+  "tests/results.spec.ts « ville inconnue : vue d'accueil conservée, URL inchangée (comme l'original) », conforme à docs/reference/states/unknown-city-1440.png."
+ ],
+ "CL-09": [
+  "pass",
+  "tests/results.spec.ts « nom de pharmacie très long : pas de débordement à 320 px »."
+ ],
+ "CL-10": [
+  "pass",
+  "tests/status.spec.ts « horaires absents : traités comme « Fermé » sans plantage »."
+ ],
+ "CL-11": [
+  "pass",
+  "tests/a11y-responsive.spec.ts « aucun défilement horizontal à 320 px (3 gabarits) » (et 375/768/1024/1440) ; tests/results.spec.ts nom très long à 320 px."
+ ],
+ "CL-12": [
+  "pass",
+  "tests/a11y-responsive.spec.ts : zoom navigateur 200 % émulé (640 × 450 CSS, densité 2), sans débordement (raison du choix dans docs/progress.md)."
+ ],
+ "CL-13": [
+  "pass",
+  "src/lib/hours.ts (heure de Paris via Intl) ; tests/status.spec.ts dans 3 fuseaux visiteurs (Europe/Paris, America/New_York, Asia/Tokyo) avec page.clock : vendredi 19:29 (juste avant la fermeture de 19:30), 19:31, pause de midi et dimanche 27/09."
+ ],
+ "CL-14": [
+  "pass",
+  "tests/a11y-responsive.spec.ts « navigation au clavier : en-tête, formulaire, autocomplétion, focus visible » et « fil d'Ariane et cartes accessibles au clavier » ; tests/booking.spec.ts « bouton Retour et fermeture par Échap » ; tests/matrix.spec.ts (menu des spécialités au clavier)."
+ ],
+ "CL-15": [
+  "pass",
+  "tests/a11y-responsive.spec.ts « animations et transitions neutralisées » (reducedMotion reduce → data-animated=false sur la carte, transitions coupées par src/styles/index.css)."
+ ],
+ "DOD-01": [
+  "pass",
+  "docs/research/tokens.json, docs/research/components/, docs/DECISIONS.md, docs/reference/*.png : issus du vrai site (accès documenté dans docs/progress.md)."
+ ],
+ "DOD-02": [
+  "fail",
+  ""
+ ],
+ "DOD-03": [
+  "pass",
+  "120 tests e2e verts (tests/, y compris tests/matrix.spec.ts et les cas limites CL-*) en local et contre l'URL publique (docs/qa/e2e-public.txt) ; interactions listées dans docs/research/interactions.md."
+ ],
+ "DOD-04": [
+  "fail",
+  ""
+ ],
+ "DOD-05": [
+  "fail",
+  ""
+ ],
+ "DOD-06": [
+  "fail",
+  ""
+ ],
+ "DOD-07": [
+  "fail",
+  ""
+ ],
+ "DOD-08": [
+  "fail",
+  ""
+ ],
+ "DOD-09": [
+  "fail",
+  ""
+ ],
+ "GARDE-01": [
+  "fail",
+  ""
+ ],
+ "GARDE-02": [
+  "fail",
+  ""
+ ]
+}

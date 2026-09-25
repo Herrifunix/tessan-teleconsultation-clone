@@ -10,8 +10,10 @@ Mission : reproduire https://teleconsultation.tessan.io/ fidèlement, puis le d�
 5. **Livraison** — push main, déploiement, curl 200, e2e publics, README.
 
 ## État
-- [ ] Phase 1
-- [ ] Phase 2
-- [ ] Phase 3
-- [ ] Phase 4
-- [ ] Phase 5
+- [x] Phase 1 — accès documenté, 3 gabarits × 3 viewports + 33 états capturés, 137 jetons, 17 specs, modèle d'interaction (`docs/research/interactions.md`), 58 points réels.
+- [x] Phase 2 — stack figée, 120 tests e2e (dont matrice 39 cas), `npm run verify`.
+- [x] Phase 3 — 3 gabarits, carte, recherche, réservation, cookies ; a11y, sécurité, performance.
+- [x] Phase 4 — 3 itérations de diff (0,44 à 1,07 % hors masques), 2 évaluateurs indépendants (voir `docs/progress.md`).
+- [x] Phase 5 — dépôt public, Vercel, curl 200, e2e publics verts, README.
+
+Écart de processus assumé : les composants ont été livrés dans un seul commit (`3f32b6e`) au lieu d'un commit par composant (P3-01 reste en échec, sans réécriture d'historique possible sans force-push).

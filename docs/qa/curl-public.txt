@@ -1,0 +1,17 @@
+# curl -sSI contre l'URL publique — 2026-09-25T18:27:05Z
+$ curl -sSI https://tessan-teleconsultation-clone.vercel.app/
+HTTP/2 200 
+content-type: text/html; charset=utf-8
+x-robots-tag: noindex, nofollow
+$ curl -sSI https://tessan-teleconsultation-clone.vercel.app/fr/france-FR/nice/results
+HTTP/2 200 
+content-type: text/html; charset=utf-8
+x-robots-tag: noindex, nofollow
+$ curl -sSI https://tessan-teleconsultation-clone.vercel.app/provence-alpes-cote-d-azur/alpes-maritimes/nice/557/pharmacie-saint-barthelemy
+HTTP/2 200 
+content-type: text/html; charset=utf-8
+x-robots-tag: noindex, nofollow
+$ curl -sSI https://tessan-teleconsultation-clone.vercel.app/robots.txt
+HTTP/2 200 
+content-type: text/plain; charset=utf-8
+x-robots-tag: noindex, nofollow
