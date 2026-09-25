@@ -1,0 +1,13 @@
+# Seuls les fichiers nécessaires au build partent chez Vercel (ni captures, ni pages ou code de l'original).
+/docs/*
+!/docs/research
+/docs/research/*
+!/docs/research/tokens.json
+!/docs/research/serif-calibration.json
+/tests
+/tools/*
+!/tools/gen-tokens-css.mjs
+/test-results
+/playwright-report
+/dist
+/node_modules

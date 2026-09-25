@@ -1,0 +1,197 @@
+{
+ "home-375": {
+  "masks": [
+   {
+    "kind": "carte",
+    "x": 48,
+    "y": 897,
+    "w": 279,
+    "h": 600
+   },
+   {
+    "kind": "grille-zones",
+    "x": 56,
+    "y": 1873,
+    "w": 263,
+    "h": 560
+   },
+   {
+    "kind": "grille-zones",
+    "x": 56,
+    "y": 2753,
+    "w": 263,
+    "h": 632
+   }
+  ],
+  "url": "https://tessan-teleconsultation-clone.vercel.app/",
+  "file": "docs/qa/deployed/home-375.png",
+  "title": "Trouvez le dispositif de téléconsultation Tessan",
+  "description": "Trouvez une cabine de téléconsultation en pharmacie près de chez vous et consultez un médecin en quelques minutes grâce aux dispositifs Tessan",
+  "scrollHeight": 5573,
+  "scrollWidth": 375,
+  "console": []
+ },
+ "home-1440": {
+  "masks": [
+   {
+    "kind": "carte",
+    "x": 88,
+    "y": 525,
+    "w": 1264,
+    "h": 600
+   },
+   {
+    "kind": "grille-zones",
+    "x": 88,
+    "y": 1365,
+    "w": 1264,
+    "h": 176
+   },
+   {
+    "kind": "grille-zones",
+    "x": 88,
+    "y": 1741,
+    "w": 1264,
+    "h": 200
+   }
+  ],
+  "url": "https://tessan-teleconsultation-clone.vercel.app/",
+  "file": "docs/qa/deployed/home-1440.png",
+  "title": "Trouvez le dispositif de téléconsultation Tessan",
+  "description": "Trouvez une cabine de téléconsultation en pharmacie près de chez vous et consultez un médecin en quelques minutes grâce aux dispositifs Tessan",
+  "scrollHeight": 2672,
+  "scrollWidth": 1440,
+  "console": [
+   "error: Failed to load resource: the server responded with a status of 502 (Bad Gateway)"
+  ]
+ },
+ "results-375": {
+  "masks": [
+   {
+    "kind": "carte",
+    "x": 48,
+    "y": 1729,
+    "w": 279,
+    "h": 888
+   },
+   {
+    "kind": "grille-zones",
+    "x": 56,
+    "y": 2993,
+    "w": 263,
+    "h": 584
+   },
+   {
+    "kind": "grille-zones",
+    "x": 56,
+    "y": 3897,
+    "w": 263,
+    "h": 680
+   }
+  ],
+  "url": "https://tessan-teleconsultation-clone.vercel.app/fr/france-FR/nice/results",
+  "file": "docs/qa/deployed/results-375.png",
+  "title": "Téléconsultation à Nice (france-FR) - Tessan",
+  "description": "Trouvez une cabine de téléconsultation à Nice. Consultez un médecin rapidement.",
+  "scrollHeight": 6765,
+  "scrollWidth": 375,
+  "console": []
+ },
+ "results-1440": {
+  "masks": [
+   {
+    "kind": "carte",
+    "x": 550,
+    "y": 537,
+    "w": 802,
+    "h": 888
+   },
+   {
+    "kind": "grille-zones",
+    "x": 88,
+    "y": 1665,
+    "w": 1264,
+    "h": 200
+   },
+   {
+    "kind": "grille-zones",
+    "x": 88,
+    "y": 2065,
+    "w": 1264,
+    "h": 200
+   }
+  ],
+  "url": "https://tessan-teleconsultation-clone.vercel.app/fr/france-FR/nice/results",
+  "file": "docs/qa/deployed/results-1440.png",
+  "title": "Téléconsultation à Nice (france-FR) - Tessan",
+  "description": "Trouvez une cabine de téléconsultation à Nice. Consultez un médecin rapidement.",
+  "scrollHeight": 2996,
+  "scrollWidth": 1440,
+  "console": []
+ },
+ "fiche-375": {
+  "masks": [
+   {
+    "kind": "carte",
+    "x": 56,
+    "y": 4992,
+    "w": 263,
+    "h": 500
+   },
+   {
+    "kind": "grille-zones",
+    "x": 56,
+    "y": 9092,
+    "w": 263,
+    "h": 560
+   },
+   {
+    "kind": "grille-zones",
+    "x": 56,
+    "y": 9988,
+    "w": 263,
+    "h": 680
+   }
+  ],
+  "url": "https://tessan-teleconsultation-clone.vercel.app/provence-alpes-cote-d-azur/alpes-maritimes/nice/557/pharmacie-saint-barthelemy",
+  "file": "docs/qa/deployed/fiche-375.png",
+  "title": "Pharmacie Saint Barthélémy - Téléconsultation à Nice",
+  "description": "Consultez un médecin en téléconsultation à Pharmacie Saint Barthélémy, 51 Av. Alfred Borriglione, 06100 Nice.",
+  "scrollHeight": 12880,
+  "scrollWidth": 375,
+  "console": []
+ },
+ "fiche-1440": {
+  "masks": [
+   {
+    "kind": "carte",
+    "x": 740,
+    "y": 2614,
+    "w": 588,
+    "h": 500
+   },
+   {
+    "kind": "grille-zones",
+    "x": 112,
+    "y": 4798,
+    "w": 1216,
+    "h": 200
+   },
+   {
+    "kind": "grille-zones",
+    "x": 112,
+    "y": 5214,
+    "w": 1216,
+    "h": 200
+   }
+  ],
+  "url": "https://tessan-teleconsultation-clone.vercel.app/provence-alpes-cote-d-azur/alpes-maritimes/nice/557/pharmacie-saint-barthelemy",
+  "file": "docs/qa/deployed/fiche-1440.png",
+  "title": "Pharmacie Saint Barthélémy - Téléconsultation à Nice",
+  "description": "Consultez un médecin en téléconsultation à Pharmacie Saint Barthélémy, 51 Av. Alfred Borriglione, 06100 Nice.",
+  "scrollHeight": 6169,
+  "scrollWidth": 1440,
+  "console": []
+ },
+ "_fixedTime": "2026-09-25T13:00:00.000Z"
+}
