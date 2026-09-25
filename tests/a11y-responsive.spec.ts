@@ -32,9 +32,12 @@ test.describe('zoom navigateur 200 % (fenêtre 1280 × 900 → 640 × 450 px CSS
 });
 
 test('navigation au clavier : en-tête, formulaire, autocomplétion, focus visible', async ({ page }) => {
-  // La bannière cookies est la 1ʳᵉ étape de tabulation (comme l'original, testé dans evaluation.spec.ts) : consentement déjà donné ici.
+  // Comme l'original (docs/research/pages/home/outline.txt) : le bouton « Choix de consentement » est le 1er élément
+  // de <body>, donc la 1ʳᵉ étape de tabulation ; la bannière elle-même est testée dans evaluation.spec.ts.
   await dismissCookies(page);
   await page.goto(URLS.home);
+  await page.keyboard.press('Tab');
+  await expect(page.getByRole('button', { name: 'Choix de consentement' })).toBeFocused();
   await page.keyboard.press('Tab');
   await expect(page.getByRole('link', { name: 'Logo Tessan' })).toBeFocused();
   for (let i = 0; i < 4; i++) await page.keyboard.press('Tab');

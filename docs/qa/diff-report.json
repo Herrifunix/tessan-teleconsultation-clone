@@ -550,8 +550,8 @@
    ]
   },
   {
-   "label": "latest",
-   "date": "2026-09-25T18:32:49.794Z",
+   "label": "iteration-4",
+   "date": "2026-09-25T18:40:38.664Z",
    "rows": [
     {
      "key": "home-1440",
@@ -770,9 +770,9 @@
      "height": 12876,
      "refHeight": 12876,
      "cloneHeight": 12880,
-     "diffPixels": 29527,
+     "diffPixels": 29401,
      "maskedPixels": 471296,
-     "ratio": 0.00678,
+     "ratio": 0.00675,
      "composite": "docs/qa/fiche-375-composite.png",
      "masks": 3,
      "hotspots": [
@@ -805,9 +805,9 @@
      "height": 9068,
      "refHeight": 9068,
      "cloneHeight": 9108,
-     "diffPixels": 34874,
+     "diffPixels": 34586,
      "maskedPixels": 858048,
-     "ratio": 0.00571,
+     "ratio": 0.00566,
      "composite": "docs/qa/fiche-768-composite.png",
      "masks": 3,
      "hotspots": [
@@ -840,9 +840,9 @@
      "height": 6129,
      "refHeight": 6129,
      "cloneHeight": 6169,
-     "diffPixels": 35508,
+     "diffPixels": 35042,
      "maskedPixels": 780400,
-     "ratio": 0.00441,
+     "ratio": 0.00436,
      "composite": "docs/qa/fiche-1440-composite.png",
      "masks": 3,
      "hotspots": [
@@ -871,8 +871,8 @@
    ]
   },
   {
-   "label": "iteration-4",
-   "date": "2026-09-25T18:40:38.664Z",
+   "label": "latest",
+   "date": "2026-09-25T19:10:16.193Z",
    "rows": [
     {
      "key": "home-1440",
