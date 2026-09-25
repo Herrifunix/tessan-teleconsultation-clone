@@ -37,7 +37,7 @@ npm install          # dépendances (versions figées)
 npm run dev          # serveur de développement Vite (http://localhost:5173)
 npm run build        # jetons → CSS, puis build de production dans dist/
 npm run preview      # sert dist/ sur http://localhost:4173
-npm run verify       # lint + typecheck + build + 120 tests e2e + captures du clone + diff avec l'original
+npm run verify       # lint + typecheck + build + 134 tests e2e + captures du clone + diff avec l'original
 npm run done-check   # vérifie docs/checklist.json (chaque exigence a une preuve vérifiable)
 ```
 
@@ -90,7 +90,7 @@ Autres décisions notables : police serif (Recoleta est commerciale → Fraunces
 
 1. **Reconnaissance** (Playwright, fr-FR, Europe/Paris, UA réel, rythme humain) : le site est protégé par le « Vercel Security Checkpoint », dont le cookie est lié à l'IP ; l'IP de sortie de l'environnement changeant à chaque connexion, toutes les requêtes passent par **un seul tunnel keep-alive** (`tools/recon/sticky.mjs`). Cartographie des gabarits, captures de référence à 375, 768 et 1440 px plus 33 états (survols, menus, popups, modale, cookies) dans `docs/reference/`.
 2. **Mesure plutôt qu'estimation** : feuilles de style de l'original, `getComputedStyle` des éléments clés, états de survol → `docs/research/tokens.json` (137 jetons, chacun avec sa provenance). Lecture des modules applicatifs pour reproduire les règles métier (tri, règle du minimum, textes de statut, créneaux). 17 specs de composants et un modèle d'interaction (`docs/research/components/`, `docs/research/interactions.md`).
-3. **Tests d'abord** : 9 suites e2e (61 tests déclarés, certains répétés par fuseau horaire ou par largeur) écrites d'après le comportement de l'original **avant** les composants (commit `1969355`, localisateurs par rôle et texte), complétées ensuite par une matrice gabarit × largeur × interaction ; 120 tests exécutés au total, verts en local et contre l'URL publique. Toute modification de test est justifiée dans `docs/progress.md`.
+3. **Tests d'abord** : 9 suites e2e (61 tests déclarés, certains répétés par fuseau horaire ou par largeur) écrites d'après le comportement de l'original **avant** les composants (commit `1969355`, localisateurs par rôle et texte), complétées ensuite par une matrice gabarit × largeur × interaction ; 134 tests exécutés au total (dont 14 de non-régression issus de l’évaluation indépendante), verts en local et contre l'URL publique. Toute modification de test est justifiée dans `docs/progress.md`.
 4. **Boucle de diff** (`tools/capture.mjs`, `tools/diff.mjs`, `tools/compare-layout.mjs`) : captures dans des conditions identiques, pixelmatch avec masques des zones dépendant des données, réalignement entre zones masquées, composites « original | clone | diff », points chauds inspectés région par région, comparaison élément par élément (position ±2 px, styles calculés). 3 itérations. Un écart persistant (noms en gras trop étroits) a été résolu en testant 3 hypothèses par la mesure : le hinting de Recoleta rend ses largeurs non proportionnelles à la taille.
 5. **Évaluation indépendante** : deux sous-agents en lecture seule (fidélité visuelle ; fonctionnel et responsive), notes 1/3/5, puis corrections et seconde évaluation.
 6. **Suivi** : `docs/checklist.json` (chaque exigence du sujet avec une preuve vérifiable, contrôlé par `npm run done-check`), `docs/PLAN.md`, `docs/progress.md`, `docs/DECISIONS.md`.
@@ -109,7 +109,7 @@ Autres décisions notables : police serif (Recoleta est commerciale → Fraunces
 ```
 src/            application (pages, composants, lib, données, styles générés depuis les jetons)
 public/         logo, marqueur, favicon, icônes, polices
-tests/          tests e2e Playwright (120)
+tests/          tests e2e Playwright (134)
 tools/          reconnaissance, captures, diff, génération des jetons, calibration des polices, données
 docs/           checklist, plan, journal, décisions, recherche (jetons, specs), captures de référence et QA
 ```

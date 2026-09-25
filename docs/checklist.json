@@ -513,7 +513,7 @@
   "id": "P5-07",
   "exigence": "Tests e2e rejoués et verts contre l'URL publique",
   "statut": "pass",
-  "preuve": "docs/qa/e2e-public.txt : PLAYWRIGHT_BASE_URL=https://tessan-teleconsultation-clone.vercel.app npx playwright test → 120 passed."
+  "preuve": "docs/qa/e2e-public.txt : PLAYWRIGHT_BASE_URL=https://tessan-teleconsultation-clone.vercel.app npx playwright test → 134 passed."
  },
  {
   "id": "P5-08",
@@ -675,13 +675,13 @@
   "id": "DOD-03",
   "exigence": "Toutes les interactions inventoriées fonctionnent de bout en bout, couvertes par des e2e verts, cas limites compris",
   "statut": "pass",
-  "preuve": "120 tests e2e verts (tests/, y compris tests/matrix.spec.ts et les cas limites CL-*) en local et contre l'URL publique (docs/qa/e2e-public.txt) ; interactions listées dans docs/research/interactions.md."
+  "preuve": "134 tests e2e verts (tests/, y compris tests/matrix.spec.ts et les cas limites CL-*) en local et contre l'URL publique (docs/qa/e2e-public.txt) ; interactions listées dans docs/research/interactions.md."
  },
  {
   "id": "DOD-04",
   "exigence": "`npm run verify` passe et console vide d'erreurs",
   "statut": "pass",
-  "preuve": "docs/qa/verify.txt : npm run verify → exit 0 (lint, typecheck, build, 120 passed, captures, diff) ; console vide vérifiée par tests/navigation.spec.ts."
+  "preuve": "docs/qa/verify.txt : npm run verify → exit 0 (lint, typecheck, build, 134 passed, captures, diff) ; console vide vérifiée par tests/navigation.spec.ts."
  },
  {
   "id": "DOD-05",

@@ -61,9 +61,7 @@
   "description": "Trouvez une cabine de téléconsultation en pharmacie près de chez vous et consultez un médecin en quelques minutes grâce aux dispositifs Tessan",
   "scrollHeight": 2672,
   "scrollWidth": 1440,
-  "console": [
-   "error: Failed to load resource: the server responded with a status of 502 (Bad Gateway)"
-  ]
+  "console": []
  },
  "results-375": {
   "masks": [

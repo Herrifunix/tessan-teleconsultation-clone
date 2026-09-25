@@ -341,7 +341,7 @@
  ],
  "P5-07": [
   "pass",
-  "docs/qa/e2e-public.txt : PLAYWRIGHT_BASE_URL=https://tessan-teleconsultation-clone.vercel.app npx playwright test → 120 passed."
+  "docs/qa/e2e-public.txt : PLAYWRIGHT_BASE_URL=https://tessan-teleconsultation-clone.vercel.app npx playwright test → 134 passed."
  ],
  "P5-08": [
   "pass",
@@ -449,11 +449,11 @@
  ],
  "DOD-03": [
   "pass",
-  "120 tests e2e verts (tests/, y compris tests/matrix.spec.ts et les cas limites CL-*) en local et contre l'URL publique (docs/qa/e2e-public.txt) ; interactions listées dans docs/research/interactions.md."
+  "134 tests e2e verts (tests/, y compris tests/matrix.spec.ts et les cas limites CL-*) en local et contre l'URL publique (docs/qa/e2e-public.txt) ; interactions listées dans docs/research/interactions.md."
  ],
  "DOD-04": [
   "pass",
-  "docs/qa/verify.txt : npm run verify → exit 0 (lint, typecheck, build, 120 passed, captures, diff) ; console vide vérifiée par tests/navigation.spec.ts."
+  "docs/qa/verify.txt : npm run verify → exit 0 (lint, typecheck, build, 134 passed, captures, diff) ; console vide vérifiée par tests/navigation.spec.ts."
  ],
  "DOD-05": [
   "fail",
