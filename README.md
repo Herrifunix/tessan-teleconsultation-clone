@@ -37,7 +37,7 @@ npm install          # dépendances (versions figées)
 npm run dev          # serveur de développement Vite (http://localhost:5173)
 npm run build        # jetons → CSS, puis build de production dans dist/
 npm run preview      # sert dist/ sur http://localhost:4173
-npm run verify       # lint + typecheck + build + 134 tests e2e + captures du clone + diff avec l'original
+npm run verify       # lint + typecheck + build + 142 tests e2e + captures du clone + diff avec l'original
 npm run done-check   # vérifie docs/checklist.json (chaque exigence a une preuve vérifiable)
 ```
 
@@ -84,13 +84,32 @@ Autres décisions notables : police serif (Recoleta est commerciale → Fraunces
 | Détails de DOM sans effet visuel | Horaires en `<table>`, cartes en `<article>`, lien de distance avec une vraie URL (l'original utilise `href="#"`), description rendue par un parseur sûr au lieu de `dangerouslySetInnerHTML`. |
 | Processus | Les composants ont été livrés dans un seul commit au lieu d'un commit par composant (exigence P3-01 laissée en échec dans la checklist : la corriger demanderait un force-push). |
 
-<!-- EVALUATEURS -->
+## Évaluation indépendante
+
+Deux sous-agents évaluateurs, lancés dans un contexte neuf et en lecture seule, ont noté le clone de 1 à 5 (1 = cassé, 3 = défaut visible, 5 = fidèle ou solide). Ils ont été relancés une fois après corrections. Détail point par point : `docs/progress.md` § Évaluation indépendante n° 1 et n° 2.
+
+| Évaluateur | 1ʳᵉ passe | 2ᵉ passe (après corrections) |
+|---|---|---|
+| Fidélité visuelle | mise en page 5 (9/9), couleurs 5, typographie 5, espacements 5, composants **3**, états **3** | mise en page 5 (9/9), typographie 5, espacements 5, couleurs **3**, composants **3**, états **3** (« proche de 5 ») |
+| Fonctionnel et responsive | géolocalisation 5, horaires 5, responsive 5, sept critères à **3** | navigation 5, géolocalisation 5, carte 5, réservation 5, horaires 5, responsive 5, robustesse 5 ; recherche, cookies, accessibilité **3** |
+
+**Aucune note de 1.** Chaque note de 3 a été corrigée ou justifiée :
+- **Corrigé** : 6 points à la 1ʳᵉ passe et 3 à la 2ᵉ pour le visuel ; 17 puis 10 pour le fonctionnel. Exemples : ombres, rayon `rounded`, focus des modales et de la carte au clavier, exception Leaflet, Entrée et noms de zone dans la recherche, statut à la minute pile. Couverts par 22 tests de non-régression (`tests/evaluation.spec.ts`).
+- **Justifié**, sans correction :
+  - la palette des tuiles au zoom France (voir *Écarts connus*) ;
+  - la graisse et la largeur du serif de substitution à 30 px ;
+  - la densité de la carte et l'ordre des suggestions, qui viennent de l'échantillon de données ;
+  - la popup rognée sur mobile et l'absence de contrôle d'un créneau déjà commencé, identiques à l'original ;
+  - l'en-tête à 320 px, qui a les mêmes classes que l'original.
+
+Les notes de 3 de la 2ᵉ passe portent sur ces points justifiés et sur des défauts corrigés ensuite.
+
 
 ## Méthode
 
 1. **Reconnaissance** (Playwright, fr-FR, Europe/Paris, UA réel, rythme humain) : le site est protégé par le « Vercel Security Checkpoint », dont le cookie est lié à l'IP ; l'IP de sortie de l'environnement changeant à chaque connexion, toutes les requêtes passent par **un seul tunnel keep-alive** (`tools/recon/sticky.mjs`). Cartographie des gabarits, captures de référence à 375, 768 et 1440 px plus 33 états (survols, menus, popups, modale, cookies) dans `docs/reference/`.
 2. **Mesure plutôt qu'estimation** : feuilles de style de l'original, `getComputedStyle` des éléments clés, états de survol → `docs/research/tokens.json` (137 jetons, chacun avec sa provenance). Lecture des modules applicatifs pour reproduire les règles métier (tri, règle du minimum, textes de statut, créneaux). 17 specs de composants et un modèle d'interaction (`docs/research/components/`, `docs/research/interactions.md`).
-3. **Tests d'abord** : 9 suites e2e (61 tests déclarés, certains répétés par fuseau horaire ou par largeur) écrites d'après le comportement de l'original **avant** les composants (commit `1969355`, localisateurs par rôle et texte), complétées ensuite par une matrice gabarit × largeur × interaction ; 134 tests exécutés au total (dont 14 de non-régression issus de l’évaluation indépendante), verts en local et contre l'URL publique. Toute modification de test est justifiée dans `docs/progress.md`.
+3. **Tests d'abord** : 9 suites e2e (61 tests déclarés, certains répétés par fuseau horaire ou par largeur) écrites d'après le comportement de l'original **avant** les composants (commit `1969355`, localisateurs par rôle et texte), complétées ensuite par une matrice gabarit × largeur × interaction ; 142 tests exécutés au total (dont 22 de non-régression issus des évaluations indépendantes), verts en local et contre l'URL publique. Toute modification de test est justifiée dans `docs/progress.md`.
 4. **Boucle de diff** (`tools/capture.mjs`, `tools/diff.mjs`, `tools/compare-layout.mjs`) : captures dans des conditions identiques, pixelmatch avec masques des zones dépendant des données, réalignement entre zones masquées, composites « original | clone | diff », points chauds inspectés région par région, comparaison élément par élément (position ±2 px, styles calculés). 3 itérations. Un écart persistant (noms en gras trop étroits) a été résolu en testant 3 hypothèses par la mesure : le hinting de Recoleta rend ses largeurs non proportionnelles à la taille.
 5. **Évaluation indépendante** : deux sous-agents en lecture seule (fidélité visuelle ; fonctionnel et responsive), notes 1/3/5, puis corrections et seconde évaluation.
 6. **Suivi** : `docs/checklist.json` (chaque exigence du sujet avec une preuve vérifiable, contrôlé par `npm run done-check`), `docs/PLAN.md`, `docs/progress.md`, `docs/DECISIONS.md`.
@@ -109,7 +128,7 @@ Autres décisions notables : police serif (Recoleta est commerciale → Fraunces
 ```
 src/            application (pages, composants, lib, données, styles générés depuis les jetons)
 public/         logo, marqueur, favicon, icônes, polices
-tests/          tests e2e Playwright (134)
+tests/          tests e2e Playwright (142)
 tools/          reconnaissance, captures, diff, génération des jetons, calibration des polices, données
 docs/           checklist, plan, journal, décisions, recherche (jetons, specs), captures de référence et QA
 ```

@@ -447,31 +447,31 @@
   "id": "P4-10",
   "exigence": "Ratio de pixels différents hors masques noté dans checklist.json pour chaque capture",
   "statut": "pass",
-  "preuve": "Ratios de pixels différents hors masques, itération 3 (docs/qa/diff-report.json) : home-1440 0.68 %, home-375 0.80 %, home-768 0.73 %, results-375 1.07 %, results-768 0.91 %, results-1440 0.92 %, fiche-375 0.68 %, fiche-768 0.57 %, fiche-1440 0.44 %."
+  "preuve": "Ratios de pixels différents hors masques, dernière exécution de npm run verify (docs/qa/diff-report.json, itération « latest » ; itérations 1 à 4 dans le même fichier) : home-1440 0.68 %, home-375 0.80 %, home-768 0.73 %, results-375 1.06 %, results-768 0.91 %, results-1440 0.92 %, fiche-375 0.67 %, fiche-768 0.56 %, fiche-1440 0.43 %."
  },
  {
   "id": "P4-11",
   "exigence": "Évaluateur indépendant fidélité visuelle (contexte neuf, lecture seule) lancé",
-  "statut": "fail",
-  "preuve": ""
+  "statut": "pass",
+  "preuve": "Évaluateur « fidélité visuelle » lancé en sous-agent indépendant (contexte neuf, lecture seule, notes 1/3/5) ; rapport et traitement de chaque point : docs/progress.md § Évaluation indépendante n° 1 ; synthèse README.md § Évaluation indépendante."
  },
  {
   "id": "P4-12",
   "exigence": "Évaluateur indépendant fonctionnel/responsive (contexte neuf, lecture seule) lancé",
-  "statut": "fail",
-  "preuve": ""
+  "statut": "pass",
+  "preuve": "Évaluateur « fonctionnel et responsive » lancé en sous-agent indépendant (contexte neuf, lecture seule, scripts Playwright contre l'URL publique, notes 1/3/5) ; rapport et traitement : docs/progress.md § Évaluation indépendante n° 1."
  },
  {
   "id": "P4-13",
   "exigence": "Aucune note de 1 ; chaque 3 corrigé ou justifié dans le README",
-  "statut": "fail",
-  "preuve": ""
+  "statut": "pass",
+  "preuve": "Aucune note de 1 dans les 4 rapports ; chaque note de 3 corrigée (tests de non-régression tests/evaluation.spec.ts) ou justifiée dans README.md § Évaluation indépendante et § Écarts connus, détail dans docs/progress.md."
  },
  {
   "id": "P4-14",
   "exigence": "Évaluateurs relancés une fois après corrections",
-  "statut": "fail",
-  "preuve": ""
+  "statut": "pass",
+  "preuve": "Les deux évaluateurs relancés une fois après corrections (nouveaux sous-agents) : docs/progress.md § Évaluation indépendante n° 2 ; leurs nouveaux points sont corrigés ou justifiés, puis verify (docs/qa/verify.txt) et e2e publics (docs/qa/e2e-public.txt) sont repassés."
  },
  {
   "id": "P5-01",
@@ -513,7 +513,7 @@
   "id": "P5-07",
   "exigence": "Tests e2e rejoués et verts contre l'URL publique",
   "statut": "pass",
-  "preuve": "docs/qa/e2e-public.txt : PLAYWRIGHT_BASE_URL=https://tessan-teleconsultation-clone.vercel.app npx playwright test → 134 passed."
+  "preuve": "docs/qa/e2e-public.txt : PLAYWRIGHT_BASE_URL=https://tessan-teleconsultation-clone.vercel.app npx playwright test → 142 passed."
  },
  {
   "id": "P5-08",
@@ -566,8 +566,8 @@
  {
   "id": "P5-16",
   "exigence": "Fichiers temporaires hors tools/ et docs/ supprimés",
-  "statut": "fail",
-  "preuve": ""
+  "statut": "pass",
+  "preuve": "Supprimés du dossier de travail : test-results/ et dist/ (sorties régénérables), script de débogage « .q.mjs » du dossier des outils (commité par erreur, retiré par un nouveau commit, sans réécriture d'historique) ; pilote de reconnaissance et serveur de prévisualisation arrêtés. Restent hors git : node_modules/, .vercel/ (lien du projet), et docs/research/js/ + docs/research/pages/home/bodies/ (code et réponses de l'original, exclus par .gitignore). Détail : docs/progress.md § Clôture."
  },
  {
   "id": "CL-01",
@@ -668,26 +668,26 @@
  {
   "id": "DOD-02",
   "exigence": "Chaque gabarit reproduit aux trois viewports ; critères de sortie phase 4 atteints ou écarts justifiés",
-  "statut": "fail",
-  "preuve": ""
+  "statut": "pass",
+  "preuve": "3 gabarits × 375/768/1440 reproduits (docs/qa/clone/, composites docs/qa/*-composite.png) ; critères de sortie de la phase 4 : aucun écart de structure ni de style (docs/qa/layout-report.json), 98 à 100 % des éléments à ±2 px, ratios hors masques de 0,43 à 1,06 % (docs/qa/diff-report.json) ; écarts restants justifiés (README.md § Écarts connus)."
  },
  {
   "id": "DOD-03",
   "exigence": "Toutes les interactions inventoriées fonctionnent de bout en bout, couvertes par des e2e verts, cas limites compris",
   "statut": "pass",
-  "preuve": "134 tests e2e verts (tests/, y compris tests/matrix.spec.ts et les cas limites CL-*) en local et contre l'URL publique (docs/qa/e2e-public.txt) ; interactions listées dans docs/research/interactions.md."
+  "preuve": "142 tests e2e verts (tests/, y compris tests/matrix.spec.ts et les cas limites CL-*) en local et contre l'URL publique (docs/qa/e2e-public.txt) ; interactions listées dans docs/research/interactions.md."
  },
  {
   "id": "DOD-04",
   "exigence": "`npm run verify` passe et console vide d'erreurs",
   "statut": "pass",
-  "preuve": "docs/qa/verify.txt : npm run verify → exit 0 (lint, typecheck, build, 134 passed, captures, diff) ; console vide vérifiée par tests/navigation.spec.ts."
+  "preuve": "docs/qa/verify.txt : npm run verify → exit 0 (lint, typecheck, build, 142 passed, captures, diff) ; console vide vérifiée par tests/navigation.spec.ts."
  },
  {
   "id": "DOD-05",
   "exigence": "Les deux évaluateurs : aucune note de 1, chaque 3 corrigé ou justifié",
-  "statut": "fail",
-  "preuve": ""
+  "statut": "pass",
+  "preuve": "Deux évaluateurs, deux passes : aucune note de 1 ; chaque note de 3 corrigée ou justifiée (README.md § Évaluation indépendante, docs/progress.md)."
  },
  {
   "id": "DOD-06",
@@ -705,13 +705,13 @@
   "id": "DOD-08",
   "exigence": "`npm run done-check` passe",
   "statut": "fail",
-  "preuve": ""
+  "preuve": "NON SATISFAIT par construction : npm run done-check échoue tant que P3-01 est en échec (un commit par composant non respecté, non rattrapable sans force-push) ; toutes les autres exigences sont prouvées. Sortie réelle dans docs/qa/done-check.txt."
  },
  {
   "id": "DOD-09",
   "exigence": "Dernier message : récapitulatif autonome (URL site, URL dépôt, extraits réels de verify, e2e publics, done-check, écarts restants)",
-  "statut": "fail",
-  "preuve": ""
+  "statut": "pass",
+  "preuve": "Récapitulatif final autonome (URL du site, URL du dépôt, extraits réels de verify, des e2e publics et de done-check, écarts restants) : docs/qa/recap.md, repris tel quel dans le dernier message de la session."
  },
  {
   "id": "GARDE-01",

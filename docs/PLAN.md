@@ -11,7 +11,7 @@ Mission : reproduire https://teleconsultation.tessan.io/ fidèlement, puis le d�
 
 ## État
 - [x] Phase 1 — accès documenté, 3 gabarits × 3 viewports + 33 états capturés, 137 jetons, 17 specs, modèle d'interaction (`docs/research/interactions.md`), 58 points réels.
-- [x] Phase 2 — stack figée, 134 tests e2e (dont matrice 39 cas et 14 tests de non-régression), `npm run verify`.
+- [x] Phase 2 — stack figée, 142 tests e2e (dont matrice 39 cas et 22 tests de non-régression), `npm run verify`.
 - [x] Phase 3 — 3 gabarits, carte, recherche, réservation, cookies ; a11y, sécurité, performance.
 - [x] Phase 4 — 3 itérations de diff (0,44 à 1,07 % hors masques), 2 évaluateurs indépendants (voir `docs/progress.md`).
 - [x] Phase 5 — dépôt public, Vercel, curl 200, e2e publics verts, README.
