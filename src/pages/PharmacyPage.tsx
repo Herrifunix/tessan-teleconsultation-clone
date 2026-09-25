@@ -215,7 +215,10 @@ export function PharmacyPage() {
   const [all, setAll] = useState<Pharmacy[] | null>(null);
   useEffect(() => { loadPharmacies().then(setAll, () => setAll([])); }, []);
   const p = all?.find((x) => x.id === id) ?? null;
-  useDocumentTitle(p ? `${p.nom} - Téléconsultation à ${p.ville}` : all ? 'Pharmacie non trouvée - Tessan' : 'Tessan');
+  useDocumentTitle(
+    p ? `${p.nom} - Téléconsultation à ${p.ville}` : all ? 'Pharmacie non trouvée - Tessan' : 'Tessan',
+    p ? `Consultez un médecin en téléconsultation à ${p.nom}, ${p.adresse}, ${p.codePostal} ${p.ville}.` : undefined,
+  );
   useEffect(() => { window.scrollTo({ top: 0 }); }, [id]);
 
   const others = useMemo(() => (p && all ? nearest(all.filter((x) => x.id !== p.id), p.coordonnees) : []), [p, all]);

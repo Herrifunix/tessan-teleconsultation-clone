@@ -4,6 +4,7 @@ import { matchLabel, parsePath } from './slug';
 import { specialtyBySlug } from './specialties';
 
 const HOME_TITLE = 'Trouvez le dispositif de téléconsultation Tessan';
+export const HOME_DESCRIPTION = 'Trouvez une cabine de téléconsultation en pharmacie près de chez vous et consultez un médecin en quelques minutes grâce aux dispositifs Tessan';
 const cap = (slug: string) => slug.split('-').map((w) => (w ? w[0].toUpperCase() + w.slice(1) : w)).join('-');
 const nameOf = (seg: string) => matchLabel(seg, DEPARTMENTS) ?? matchLabel(seg, REGIONS);
 
@@ -28,8 +29,19 @@ export function titleForPath(pathname: string): string {
   return place ? `Téléconsultation à ${place} - Tessan` : HOME_TITLE;
 }
 
-export function useDocumentTitle(title: string) {
+/** Description de page de l'original : « Trouvez une cabine de téléconsultation à Nice. Consultez un médecin rapidement. » */
+export function descriptionForPath(pathname: string): string {
+  const { segments } = parsePath(pathname);
+  const segs = segments[segments.length - 1] === 'results' ? segments.slice(0, -1) : segments;
+  if (!segs.length) return HOME_DESCRIPTION;
+  const last = segs[segs.length - 1];
+  const place = (segs.length === 1 ? nameOf(last) : null) ?? cap(last);
+  return `Trouvez une cabine de téléconsultation à ${place}. Consultez un médecin rapidement.`;
+}
+
+export function useDocumentTitle(title: string, description: string = HOME_DESCRIPTION) {
   useEffect(() => {
     document.title = title;
-  }, [title]);
+    document.querySelector('meta[name="description"]')?.setAttribute('content', description);
+  }, [title, description]);
 }

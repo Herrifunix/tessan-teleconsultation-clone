@@ -9,7 +9,7 @@ import { DEPARTMENTS, REGIONS, departmentNameOf, haversineKm, regionOf, type Lat
 import { buildPath, matchLabel, parsePath, type Crumb } from '../lib/slug';
 import { filterBySpecialty, specialtyByLabel, specialtyBySlug } from '../lib/specialties';
 import type { SearchOutput } from '../lib/search';
-import { useDocumentTitle, titleForPath } from '../lib/title';
+import { useDocumentTitle, titleForPath, descriptionForPath } from '../lib/title';
 
 type View = {
   mode: 'home' | 'results';
@@ -82,7 +82,7 @@ export function LocationPage() {
   const [all, setAll] = useState<Pharmacy[] | null>(null);
   const [override, setOverride] = useState<{ key: string; view: View } | null>(null);
   const [error, setError] = useState(false);
-  useDocumentTitle(titleForPath(location.pathname));
+  useDocumentTitle(titleForPath(location.pathname), descriptionForPath(location.pathname));
 
   useEffect(() => {
     loadPharmacies().then(setAll, () => setError(true));

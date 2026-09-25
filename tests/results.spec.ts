@@ -10,6 +10,7 @@ const cards = (page: import('@playwright/test').Page) => page.getByRole('article
 test('résultats Nice : titre, fil d’Ariane, liste triée par distance', async ({ page }) => {
   await page.goto(URLS.nice);
   await expect(page).toHaveTitle('Téléconsultation à Nice (france-FR) - Tessan');
+  await expect(page.locator('meta[name="description"]')).toHaveAttribute('content', 'Trouvez une cabine de téléconsultation à Nice. Consultez un médecin rapidement.');
   await expect(page.getByRole('heading', { name: '5 dispositifs de téléconsultation Tessan autour de vous' })).toBeVisible();
   const crumbs = page.getByRole('navigation', { name: 'breadcrumb' });
   await expect(crumbs.getByRole('listitem')).toHaveText(['Trouver un dispositif de téléconsultation', 'Spécialités médicales', 'Provence-Alpes-Côte d\'Azur', 'Alpes-Maritimes', 'Nice']);

@@ -5,6 +5,7 @@ test.beforeEach(async ({ page }) => dismissCookies(page));
 test('fiche : titre, en-tête, coordonnées et actions', async ({ page }) => {
   await page.goto(URLS.fiche);
   await expect(page).toHaveTitle('Pharmacie Saint Barthélémy - Téléconsultation à Nice');
+  await expect(page.locator('meta[name="description"]')).toHaveAttribute('content', 'Consultez un médecin en téléconsultation à Pharmacie Saint Barthélémy, 51 Av. Alfred Borriglione, 06100 Nice.');
   await expect(page.getByRole('heading', { level: 1, name: 'Votre dispositif de téléconsultation Tessan à Nice' })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Effectuer une nouvelle recherche' })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Pharmacie Saint Barthélémy' })).toBeVisible();

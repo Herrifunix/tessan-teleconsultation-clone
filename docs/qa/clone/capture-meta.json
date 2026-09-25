@@ -45,12 +45,12 @@
     "x": 88,
     "y": 1665,
     "w": 1264,
-    "h": 176
+    "h": 200
    },
    {
     "kind": "grille-zones",
     "x": 88,
-    "y": 2041,
+    "y": 2065,
     "w": 1264,
     "h": 200
    }
@@ -59,7 +59,7 @@
   "file": "docs/qa/clone/results-1440.png",
   "title": "Téléconsultation à Nice (france-FR) - Tessan",
   "description": "Trouvez une cabine de téléconsultation en pharmacie près de chez vous et consultez un médecin en quelques minutes grâce aux dispositifs Tessan",
-  "scrollHeight": 2972,
+  "scrollHeight": 2996,
   "scrollWidth": 1440,
   "console": []
  },
@@ -75,14 +75,14 @@
    {
     "kind": "grille-zones",
     "x": 112,
-    "y": 4792,
+    "y": 4798,
     "w": 1216,
-    "h": 176
+    "h": 200
    },
    {
     "kind": "grille-zones",
     "x": 112,
-    "y": 5184,
+    "y": 5214,
     "w": 1216,
     "h": 200
    }
@@ -91,7 +91,7 @@
   "file": "docs/qa/clone/fiche-1440.png",
   "title": "Pharmacie Saint Barthélémy - Téléconsultation à Nice",
   "description": "Trouvez une cabine de téléconsultation en pharmacie près de chez vous et consultez un médecin en quelques minutes grâce aux dispositifs Tessan",
-  "scrollHeight": 6139,
+  "scrollHeight": 6169,
   "scrollWidth": 1440,
   "console": []
  },
@@ -174,21 +174,21 @@
     "x": 56,
     "y": 2993,
     "w": 263,
-    "h": 560
+    "h": 584
    },
    {
     "kind": "grille-zones",
     "x": 56,
-    "y": 3873,
+    "y": 3897,
     "w": 263,
-    "h": 632
+    "h": 680
    }
   ],
   "url": "http://localhost:4173/fr/france-FR/nice/results",
   "file": "docs/qa/clone/results-375.png",
   "title": "Téléconsultation à Nice (france-FR) - Tessan",
   "description": "Trouvez une cabine de téléconsultation en pharmacie près de chez vous et consultez un médecin en quelques minutes grâce aux dispositifs Tessan",
-  "scrollHeight": 6693,
+  "scrollHeight": 6765,
   "scrollWidth": 375,
   "console": []
  },
@@ -206,12 +206,12 @@
     "x": 56,
     "y": 2821,
     "w": 656,
-    "h": 368
+    "h": 392
    },
    {
     "kind": "grille-zones",
     "x": 56,
-    "y": 3421,
+    "y": 3445,
     "w": 656,
     "h": 416
    }
@@ -220,7 +220,7 @@
   "file": "docs/qa/clone/results-768.png",
   "title": "Téléconsultation à Nice (france-FR) - Tessan",
   "description": "Trouvez une cabine de téléconsultation en pharmacie près de chez vous et consultez un médecin en quelques minutes grâce aux dispositifs Tessan",
-  "scrollHeight": 5437,
+  "scrollHeight": 5461,
   "scrollWidth": 768,
   "console": []
  },
@@ -236,23 +236,23 @@
    {
     "kind": "grille-zones",
     "x": 56,
-    "y": 9080,
+    "y": 9092,
     "w": 263,
-    "h": 536
+    "h": 560
    },
    {
     "kind": "grille-zones",
     "x": 56,
-    "y": 9952,
+    "y": 9988,
     "w": 263,
-    "h": 632
+    "h": 680
    }
   ],
   "url": "http://localhost:4173/provence-alpes-cote-d-azur/alpes-maritimes/nice/557/pharmacie-saint-barthelemy",
   "file": "docs/qa/clone/fiche-375.png",
   "title": "Pharmacie Saint Barthélémy - Téléconsultation à Nice",
   "description": "Trouvez une cabine de téléconsultation en pharmacie près de chez vous et consultez un médecin en quelques minutes grâce aux dispositifs Tessan",
-  "scrollHeight": 12796,
+  "scrollHeight": 12880,
   "scrollWidth": 375,
   "console": []
  },
@@ -268,14 +268,14 @@
    {
     "kind": "grille-zones",
     "x": 56,
-    "y": 6422,
+    "y": 6428,
     "w": 656,
-    "h": 368
+    "h": 392
    },
    {
     "kind": "grille-zones",
     "x": 56,
-    "y": 7038,
+    "y": 7068,
     "w": 656,
     "h": 416
    }
@@ -284,7 +284,7 @@
   "file": "docs/qa/clone/fiche-768.png",
   "title": "Pharmacie Saint Barthélémy - Téléconsultation à Nice",
   "description": "Trouvez une cabine de téléconsultation en pharmacie près de chez vous et consultez un médecin en quelques minutes grâce aux dispositifs Tessan",
-  "scrollHeight": 9078,
+  "scrollHeight": 9108,
   "scrollWidth": 768,
   "console": []
  }

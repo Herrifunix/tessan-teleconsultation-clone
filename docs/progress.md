@@ -52,3 +52,29 @@ Correction : calibration refaite aux tailles d'usage (`tools/fonts/calibrate-ser
 ### Itération 3 (captures de référence refaites avec `layout.json`, comparaison élément par élément `tools/compare-layout.mjs`)
 - Écart de style réel : `h2` « Foire Aux Questions » en `line-height: normal` alors que l'original calcule 60 px (hérité de `html`, 1,5 × 40 px) aux 3 largeurs → jeton `faq-title` corrigé (provenance : `docs/research/pages/fiche/computed-*.json`). Il décalait toute la FAQ de 6 px (12 px à 375 px, titre sur 2 lignes).
 - Écart de données : sur Nice, l'original liste Alpes-de-Haute-Provence, Hautes-Alpes, Drôme, Gard et Isère parmi les départements à proximité ; l'échantillon n'en avait aucun (grille réordonnée, « Alpes-de-Haute-Provence » sur 2 lignes rehausse la 1ʳᵉ rangée de 12 px). Ajout d'un point réel par département (58 points, ≤ 60) et de ses compléments (`/api/pharmacies/<code>` et `/api/can-reserve/<id>`, 10 requêtes espacées de 3 s).
+- Outil corrigé : `tools/diff.mjs` ne recopiait pas la bande de l'ancre (lignes du masque « carte ») dans le clone réaligné → la liste à gauche de la carte était comparée à du blanc (results-1440 à 4,21 %). La bande est désormais recopiée ; le rapport liste aussi les 5 bandes de 100 px les plus différentes (`hotspots`).
+- `tools/compare-layout.mjs` : éléments situés dans une zone masquée exclus, et l'écart de hauteur d'une grille masquée retranché des éléments situés dessous (vérifié : les écarts résiduels de 24/52/56 px du pied de page à 375 px sont exactement les écarts de hauteur des grilles de zones, dus aux données).
+- Métadonnées : `meta description` des pages ville (« Trouvez une cabine de téléconsultation à Nice. Consultez un médecin rapidement. ») et fiche (« Consultez un médecin en téléconsultation à <nom>, <adresse>, <cp> <ville>. ») alignées sur l'original (relevées dans `docs/reference/capture-meta.json`), assertions e2e ajoutées.
+- Inspection région par région (points chauds) : titres serif (formes de glyphes de la police de substitution, mêmes tailles/positions/retours à la ligne), noms de pharmacie en gras (±2 % de largeur), carte « à proximité » identique au pixel près (distance soulignée, statut, boutons), mention d'urgence identique (seule l'imbrication `<i><b>` diffère dans le DOM), horaires rendus en `<table>` (`th`/`td`) au lieu de `span` : choix sémantique, rendu identique.
+
+### Masques utilisés par le diff (enregistrés dans `capture-meta.json`, peints en gris sur les deux côtés)
+| Masque | Gabarits | Raison |
+|---|---|---|
+| `carte` — conteneur de la carte | accueil, résultats, fiche | Tuiles Google Maps (clé API propriétaire) ≠ tuiles Esri/OSM du clone ; marqueurs et clusters vérifiés par e2e |
+| `grille-zones` × 2 — cartes « départements / régions à proximité » | accueil, résultats, fiche | Libellés et nombres de dispositifs issus des données (échantillon de 58 points au lieu d'environ 1 400) ; la structure de la grille reste comparée hors masque (titres, paragraphes, cadre) |
+
+### Ratios de diff (pixels différents hors masques, pixelmatch seuil 0,1)
+| Capture | Itération 1 | Itération 2 | Itération 3 |
+|---|---|---|---|
+| home-375 | 8,27 % | 7,63 % | 0,80 % |
+| home-768 | 1,88 % | 2,01 % | 0,73 % |
+| home-1440 | 2,76 % | 2,87 % | 0,68 % |
+| results-375 | 8,38 % | 7,74 % | 1,07 % |
+| results-768 | 5,10 % | 4,23 % | 0,91 % |
+| results-1440 | 5,18 % | 5,26 % | 0,92 % |
+| fiche-375 | 7,16 % | 6,96 % | 0,68 % |
+| fiche-768 | 6,06 % | 3,85 % | 0,57 % |
+| fiche-1440 | 3,48 % | 3,48 % | 0,44 % |
+
+Les itérations 1 et 2 comparaient les pixels sans réalignement : une grille de zones plus courte décalait toute la suite de la page. L'itération 3 réaligne les segments entre masques appariés et intègre les corrections (serif recalibré, interligne de la FAQ, départements de l'échantillon, métadonnées).
+Mise en page élément par élément (itération 3, `docs/qa/layout-report.json`) : 98 à 100 % des éléments textuels appariés à ±2 px. Tous les écarts restants sont horizontaux (≤ 8 px, largeur du texte serif qui précède sur la même ligne), sauf un de 24 px (« PHARMACIE DE FAMAJOR » en capitales grasses). Aucun écart de style (taille, graisse, interligne, couleur, fond, interlettrage).

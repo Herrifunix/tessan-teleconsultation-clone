@@ -50,6 +50,8 @@ for (const key of Object.keys(refMeta).filter((k) => !k.startsWith('_'))) {
   let rPrev = 0, cPrev = 0;
   for (const [ra, ca] of anchors) {
     copyRows(cPrev, rPrev, Math.min(ra.y - rPrev, ca.y - cPrev));
+    // La bande de l'ancre elle-même (ce qui est à côté du masque, ex. la liste à gauche de la carte) est recopiée aussi.
+    copyRows(ca.y, ra.y, Math.min(ra.h, ca.h));
     rPrev = ra.y + ra.h; cPrev = ca.y + ca.h;
   }
   copyRows(cPrev, rPrev, Math.min(H - rPrev, rawClone.height - cPrev));
@@ -62,6 +64,10 @@ for (const key of Object.keys(refMeta).filter((k) => !k.startsWith('_'))) {
   const seen = new Uint8Array(W * H);
   for (const r of masks) for (let y = Math.max(0, r.y); y < Math.min(H, r.y + r.h); y++) for (let x = Math.max(0, r.x); x < Math.min(W, r.x + r.w); x++) if (!seen[y * W + x]) { seen[y * W + x] = 1; masked++; }
   const ratio = n / (W * H - masked);
+  // Points chauds : bandes de 100 px les plus différentes (à inspecter avec tools/region.mjs).
+  const BAND = 100; const bands = new Array(Math.ceil(H / BAND)).fill(0);
+  for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) { const i = (y * W + x) * 4; if (diff.data[i] === 255 && diff.data[i + 1] < 100) bands[Math.floor(y / BAND)]++; }
+  const hotspots = bands.map((c, i) => ({ y: i * BAND, px: c })).sort((p, q) => q.px - p.px).slice(0, 5).filter((b) => b.px > 0);
   // Composite référence | clone | diff (largeur réduite pour le survol ; les recadrages sont à 100 %).
   const panel = async (png) => sharp(PNG.sync.write(png)).png().toBuffer();
   const [pa, pb, pd] = await Promise.all([panel(ref), panel(clone), panel(diff)]);
@@ -70,8 +76,8 @@ for (const key of Object.keys(refMeta).filter((k) => !k.startsWith('_'))) {
   const compFile = `${OUT}/${key}-composite.png`;
   const scale = W > 800 ? 0.5 : 1;
   await sharp(await comp.png().toBuffer()).resize({ width: Math.round((W * 3 + gap * 2) * scale) }).png({ compressionLevel: 9 }).toFile(compFile);
-  rows.push({ key, aligned: anchors.length, width: W, height: H, refHeight: a.height, cloneHeight: b.height, diffPixels: n, maskedPixels: masked, ratio: +ratio.toFixed(5), composite: compFile, masks: masks.length });
-  console.log(`${key.padEnd(12)} ${String(W).padStart(4)}×${String(H).padEnd(5)} réf ${a.height}px / clone ${b.height}px  diff ${(ratio * 100).toFixed(2)} % hors masques (${masks.length} masques, ${anchors.length ? 'réaligné' : 'non réaligné'})`);
+  rows.push({ key, aligned: anchors.length, width: W, height: H, refHeight: a.height, cloneHeight: b.height, diffPixels: n, maskedPixels: masked, ratio: +ratio.toFixed(5), composite: compFile, masks: masks.length, hotspots });
+  console.log(`${key.padEnd(12)} ${String(W).padStart(4)}×${String(H).padEnd(5)} réf ${a.height}px / clone ${b.height}px  diff ${(ratio * 100).toFixed(2)} % hors masques (${masks.length} masques, ${anchors.length ? 'réaligné' : 'non réaligné'})  chauds : ${hotspots.map((b) => `${b.y}:${b.px}`).join(' ')}`);
 }
 report.iterations = report.iterations.filter((it) => it.label !== label);
 report.iterations.push({ label, date: new Date().toISOString(), rows });
