@@ -227,7 +227,7 @@ export default function LeafletMap({ pharmacies, focusedPharmacy, onPharmacyClic
           </>
         )}
         <button type="button" className="tc-map-ctrl rounded-full" aria-expanded={camera} onClick={() => setCamera((c) => !c)} title="Commandes de la caméra de la carte" aria-label="Commandes de la caméra de la carte">
-          <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="#666" d="M12 2 9 5h6l-3-3zm0 20 3-3H9l3 3zM2 12l3 3V9l-3 3zm20 0-3-3v6l3-3z" /></svg>
+          <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="none" stroke="#666" strokeWidth="2" d="M9.5 6.5 12 4 14.5 6.5M9.5 17.5 12 20 14.5 17.5M6.5 9.5 4 12 6.5 14.5M17.5 9.5 20 12 17.5 14.5" /></svg>
         </button>
       </div>
       {selected &&

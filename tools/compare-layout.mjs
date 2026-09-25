@@ -7,7 +7,7 @@ import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 
 const keys = process.argv.slice(2).length ? process.argv.slice(2) : ['home', 'results', 'fiche'].flatMap((t) => [375, 768, 1440].map((w) => `${t}-${w}`));
 const norm = (t) => t.replace(/\s+/g, ' ').trim();
-const STYLE = ['fontSize', 'fontWeight', 'lineHeight', 'color', 'backgroundColor', 'letterSpacing'];
+const STYLE = ['fontSize', 'fontWeight', 'lineHeight', 'color', 'backgroundColor', 'letterSpacing', 'boxShadow'];
 const report = {};
 const refMeta = JSON.parse(readFileSync('docs/reference/capture-meta.json', 'utf8'));
 const cloneMeta = JSON.parse(readFileSync('docs/qa/clone/capture-meta.json', 'utf8'));

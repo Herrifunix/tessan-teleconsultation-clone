@@ -23,7 +23,7 @@ L'original utilise **Google Maps JavaScript API** (clé d'API liée au domaine `
 | CARTO Voyager / Positron | ❌ en 2026, tuiles filigranées « API KEY REQUIRED » |
 | OpenStreetMap standard | ✅ sans clé, mais très coloré (occupations du sol), éloigné du style Google |
 | Esri World Street Map | ✅ sans clé, dominante beige |
-| **Esri World Topographic** | ✅ sans clé, sol gris clair, routes grises, eau bleu clair : **le plus proche** du style Google actuel aux zooms de travail |
+| **Esri World Topographic** | ✅ sans clé, sol gris clair, routes grises, eau bleu clair : le plus proche des fonds sans clé **pour la teinte générale aux zooms ville** (couleur moyenne à ±4 niveaux au zoom 16) ; **écart assumé au zoom France** : palette pâle (mer ≈ 214/242/255, terre ≈ 243/248/238) face au cyan et au vert d'eau de Google (mer 120/213/233, terre 193/239/218), libellés en anglais, relief et bâti plus marqués au zoom rue. Un filtre de couleur calibré a été écarté : passer de ces teintes peu contrastées aux teintes saturées de Google demanderait des pentes de 2,5 à 4,3 par canal, ce qui dégraderait routes, libellés et texture. |
 
 **Choix : Esri World Topographic**, avec bascule tuile par tuile vers OpenStreetMap en cas d'erreur, attributions affichées. Les tuiles restent un écart intrinsèque : elles sont **masquées** dans les diffs pixel.
 

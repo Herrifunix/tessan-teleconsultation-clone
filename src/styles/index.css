@@ -24,14 +24,13 @@
 }
 
 /* Accessibilité : focus clavier toujours visible et contrasté (≥ 3:1). Hors couche pour l'emporter sur les
-   `outline-none` + anneaux pâles hérités de shadcn/ui ; ne s'affiche qu'à la navigation au clavier. */
-:where(a, button, [role='button'], [role='switch'], [tabindex]:not([tabindex='-1'])):focus-visible {
+   `outline-none` + anneaux pâles hérités de shadcn/ui ; actif seulement en navigation au clavier (html[data-kbd],
+   posé par src/main.tsx), pour garder à la souris les anneaux de l'original. */
+:root[data-kbd] :where(a, button, input, [role='button'], [role='switch'], [role='listbox'], [tabindex]:not([tabindex='-1'])):focus-visible {
   outline: 2px solid var(--color-tessan-green-hover);
   outline-offset: 2px;
 }
-/* Champs texte : l'anneau d'origine (1 px gris) est remplacé par un anneau vert de 2 px, sans décaler la mise en page. */
-input:where([type='text'], [type='email'], [type='search']):focus-visible {
-  outline: 2px solid var(--color-tessan-green-hover);
+:root[data-kbd] input:where([type='text'], [type='email'], [type='search']):focus-visible {
   outline-offset: 0;
 }
 

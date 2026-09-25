@@ -16,15 +16,19 @@ export function App() {
   // Navigation côté client : le focus passe au titre de la nouvelle page (sinon il reste sur <body>).
   useEffect(() => {
     if (first.current) { first.current = false; return; }
-    let tries = 0;
-    let raf = 0;
+    // Le titre n'existe qu'une fois les données chargées : on l'attend (observateur du DOM, 5 s au plus).
     const focusTitle = () => {
-      const h1 = document.querySelector<HTMLElement>('main h1, h1');
-      if (h1) { h1.tabIndex = -1; h1.focus({ preventScroll: true }); }
-      else if (tries++ < 30) raf = requestAnimationFrame(focusTitle);
+      const h1 = document.querySelector<HTMLElement>('h1:not([data-loading])'); // pas le titre provisoire « Chargement... »
+      if (!h1) return false;
+      h1.tabIndex = -1;
+      h1.focus({ preventScroll: true });
+      return true;
     };
-    raf = requestAnimationFrame(focusTitle);
-    return () => cancelAnimationFrame(raf);
+    if (focusTitle()) return;
+    const obs = new MutationObserver(() => { if (focusTitle()) obs.disconnect(); });
+    obs.observe(document.body, { childList: true, subtree: true });
+    const stop = setTimeout(() => obs.disconnect(), 5000);
+    return () => { obs.disconnect(); clearTimeout(stop); };
   }, [key]);
   return (
     <>

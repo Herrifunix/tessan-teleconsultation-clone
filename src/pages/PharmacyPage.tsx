@@ -227,7 +227,7 @@ export function PharmacyPage() {
     return (
       <div className="max-w-page mx-auto px-4 py-20 text-center">
         <LoaderCircle className="animate-spin mx-auto mb-4" size={48} aria-hidden="true" />
-        <h1 className="text-2xl text-gray-800">Chargement...</h1>
+        <h1 data-loading="" className="text-2xl text-gray-800">Chargement...</h1>
       </div>
     );
   }

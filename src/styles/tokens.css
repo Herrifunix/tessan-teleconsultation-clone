@@ -103,10 +103,9 @@
   --container-lg: 32rem;
   --container-page: 1328px;
   --container-footer: 1300px;
-  --radius: .625rem; /* shadcn --radius */
-  --radius-lg: var(--radius);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-DEFAULT: .25rem;
+  --radius: .25rem; /* .rounded{border-radius:.25rem} de l’original */
+  --radius-lg: .625rem; /* shadcn --radius */
+  --radius-md: calc(.625rem - 2px); /* shadcn calc(var(--radius) - 2px) */
   --radius-popup: 15px;
   --radius-full: calc(infinity * 1px);
   --radius-cookie: 6px;

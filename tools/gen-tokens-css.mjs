@@ -29,10 +29,11 @@ for (const [k, v] of Object.entries(t.leading)) add(`--leading-${k}`, v.value);
 // Espacements, conteneurs, rayons, ombres.
 add('--spacing', t.spacing.base.value);
 for (const [k, v] of Object.entries(t.container)) add(`--container-${k}`, v.value);
-add('--radius', t.radius.base.value, 'shadcn --radius');
-add('--radius-lg', 'var(--radius)');
-add('--radius-md', 'calc(var(--radius) - 2px)');
-add('--radius-DEFAULT', t.radius.DEFAULT.value);
+// Tailwind 4 résout l'utilitaire nu `rounded` sur `--radius` : il doit valoir .25rem comme `.rounded` de l'original.
+// La variable shadcn `--radius` (.625rem) de l'original n'alimente que rounded-lg / rounded-md : valeurs littérales.
+add('--radius', t.radius.DEFAULT.value, '.rounded{border-radius:.25rem} de l’original');
+add('--radius-lg', t.radius.base.value, 'shadcn --radius');
+add('--radius-md', `calc(${t.radius.base.value} - 2px)`, 'shadcn calc(var(--radius) - 2px)');
 add('--radius-popup', t.radius.popup.value);
 add('--radius-full', 'calc(infinity * 1px)');
 add('--radius-cookie', t.radius.cookie.value);

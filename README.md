@@ -64,7 +64,7 @@ Playwright utilise le Chromium installé (`npx playwright install chromium` si b
 Vite 7 · React 19 · TypeScript 5.9 · React Router 8 · Tailwind CSS 4.1.14 (même version que l'original, **thème par défaut vidé** : seules les variables issues de `docs/research/tokens.json` existent) · Leaflet 1.9 + supercluster · Playwright · déploiement Vercel.
 
 Les choix sont comparés et motivés dans [`docs/DECISIONS.md`](docs/DECISIONS.md) :
-(a) **carte** : Google Maps / MapLibre / Leaflet → Leaflet + tuiles Esri World Topographic, les plus proches du rendu Google sans clé d'API (repli OSM) ;
+(a) **carte** : Google Maps / MapLibre / Leaflet → Leaflet + tuiles Esri World Topographic, le fond sans clé d'API le plus proche en teinte aux zooms ville (repli OSM ; écart de palette au zoom France documenté) ;
 (b) **données** : Supabase de Tessan en direct / base complète / échantillon → **58 points de vente réels** au format de la table de l'original (`src/data/locations.json`, sélection justifiée ligne par ligne dans `src/data/sample-selection.json`) ;
 (c) **déploiement** : Vercel / GitHub Pages / Netlify → Vercel (routes à la racine, réécriture SPA en 200).
 
@@ -75,7 +75,7 @@ Autres décisions notables : police serif (Recoleta est commerciale → Fraunces
 | Écart | Raison |
 |---|---|
 | Forme des lettres des titres (serif) | Recoleta est une police commerciale (© Latinotype) : non redistribuable. Remplacée par des instances de **Fraunces** (OFL) choisies par recherche systématique et **calibrées aux tailles d'usage** (`size-adjust`, métriques verticales) : même encombrement à ±2 % et mêmes retours à la ligne, mais les glyphes diffèrent. |
-| Fond de carte | Google Maps exige une clé et une facturation. Tuiles Esri sans clé, marqueurs, clusters et popups identiques. La carte est masquée dans le diff pixel. |
+| Fond de carte | Google Maps exige une clé et une facturation. Les tuiles Esri, sans clé, ont des marqueurs, clusters, popups et commandes identiques, mais une **palette plus pâle au zoom France** (mer bleu très clair et terre blanche au lieu du cyan et du vert d'eau de Google), des **libellés en anglais** et un relief plus marqué au zoom rue. Mesures et options écartées dans `docs/DECISIONS.md`. La carte est masquée dans le diff pixel. |
 | Nombres de dispositifs, départements et régions à proximité | Échantillon de 58 points (l'original en a environ 1 800) : les listes sont exactes pour les villes échantillonnées (Nice : mêmes 5 résultats, mêmes distances, même ordre), mais les compteurs par zone diffèrent. Grilles masquées dans le diff. |
 | Suggestions d'adresse | L'original utilise Google Places (clé requise) ; le clone combine les villes de l'échantillon et l'API Adresse, avec le même comportement. |
 | Statut ouvert / fermé | L'original le calcule avec l'heure **locale du navigateur** ; le clone utilise l'heure de Paris, comme l'exige le sujet (identique pour un visiteur en France). |

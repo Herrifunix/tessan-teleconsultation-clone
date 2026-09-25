@@ -204,7 +204,8 @@ export function SearchForm({ onSearchSubmit, initialCity = '', initialSpecialtyI
     else if (e.key === 'Escape') { e.preventDefault(); setMenuOpen(false); triggerRef.current?.focus(); }
     else if (e.key === 'Tab') setMenuOpen(false);
   };
-  useEffect(() => { if (menuOpen) listboxMenuRef.current?.focus(); }, [menuOpen]);
+  const focusMenuRef = useRef(false);
+  useEffect(() => { if (menuOpen && focusMenuRef.current) listboxMenuRef.current?.focus(); }, [menuOpen]);
 
   const listId = `${uid}-suggestions`;
   const menuId = `${uid}-specialites`;
@@ -220,7 +221,14 @@ export function SearchForm({ onSearchSubmit, initialCity = '', initialSpecialtyI
           aria-haspopup="listbox"
           aria-expanded={menuOpen}
           aria-controls={menuOpen ? menuId : undefined}
-          onClick={() => setMenuOpen((o) => !o)}
+          onClick={(e) => {
+            // Ouverture au clavier (detail = 0) : le focus passe dans la liste ; à la souris il reste sur le bouton (anneau bleu de l'original).
+            focusMenuRef.current = e.detail === 0;
+            setMenuOpen((o) => !o);
+          }}
+          onKeyDown={(e) => {
+            if (menuOpen && (e.key === 'ArrowDown' || e.key === 'ArrowUp')) { e.preventDefault(); listboxMenuRef.current?.focus(); onMenuKey(e as unknown as KeyboardEvent<HTMLDivElement>); }
+          }}
           className={`w-full h-11 flex items-center font-semibold justify-between space-x-2 border rounded-lg px-4 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-300 cursor-pointer ${selected ? 'border-tessan-green bg-tessan-green text-white' : 'border-tessan-green-hover text-tessan-green-hover hover:bg-tessan-green-hover hover:text-white'}`}
         >
           <span className="truncate">{selected ? selected.label : 'Spécialités médicales'}</span>

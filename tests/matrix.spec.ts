@@ -77,8 +77,18 @@ for (const vp of VIEWPORTS) {
       test(`accueil ${vp.width} · carte : clic sur un cluster (zoom +3) et Réinitialiser`, async ({ page }) => {
         await page.goto(URLS.home);
         const map = await showMap(page);
-        const cluster = map.getByRole('button', { name: /^Groupe de \d+ dispositifs$/ }).first();
-        await cluster.click();
+        // Les clusters sont aussi rendus dans une marge hors cadre (bounds.pad(0.5)) : on clique le premier réellement
+        // visible dans la carte, comme le ferait un utilisateur (hors bouton « Réinitialiser » superposé).
+        const clusters = map.getByRole('button', { name: /^Groupe de \d+ dispositifs$/ });
+        const idx = await map.evaluate((m) => {
+          const r = m.getBoundingClientRect();
+          return [...m.querySelectorAll('[aria-label^="Groupe de"]')].findIndex((c) => {
+            const b = c.getBoundingClientRect();
+            return b.left >= r.left + 10 && b.right <= r.right - 10 && b.top >= r.top + 110 && b.bottom <= r.bottom - 60;
+          });
+        });
+        expect(idx).toBeGreaterThanOrEqual(0);
+        await clusters.nth(idx).click();
         await expect(map).toHaveAttribute('data-zoom', '9');
         await map.getByRole('button', { name: 'Réinitialiser la vue' }).click();
         await expect(map).toHaveAttribute('data-zoom', '6');
