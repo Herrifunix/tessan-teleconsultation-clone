@@ -40,6 +40,8 @@ export function CookieConsent() {
   const titleId = useId();
   const closeRef = useRef<HTMLButtonElement>(null);
   const dialogRef = useRef<HTMLDivElement>(null);
+  const showMoreRef = useRef<HTMLButtonElement>(null);
+  const showLessRef = useRef<HTMLButtonElement>(null);
 
   const decide = (action: Consent['action'], categories: Categories) => {
     const c = { action, categories };
@@ -47,6 +49,11 @@ export function CookieConsent() {
     setConsent(c);
     setDraft(categories);
     setPrefsOpen(false);
+  };
+  // Chaque ouverture repart des choix enregistrés : des bascules non enregistrées puis annulées ne persistent pas.
+  const openPrefs = () => {
+    setDraft(Object.fromEntries(OPTIONAL.map((s) => [s, readConsent()?.categories?.[s] ?? false])));
+    setPrefsOpen(true);
   };
   const all = (v: boolean) => Object.fromEntries(OPTIONAL.map((s) => [s, v]));
 
@@ -66,7 +73,7 @@ export function CookieConsent() {
               </p>
             </div>
             <div role="group" className="flex flex-wrap items-center gap-2 mt-4 max-[440px]:flex-col max-[440px]:items-stretch max-[440px]:gap-2.5 max-[440px]:px-6 max-[352px]:text-xs">
-              <button type="button" onClick={() => setPrefsOpen(true)} className={`${btn} bg-cookie-customize-bg border-cookie-customize-bg text-cookie-text max-[440px]:order-2`}>Personnaliser</button>
+              <button type="button" data-cky-customize onClick={openPrefs} className={`${btn} bg-cookie-customize-bg border-cookie-customize-bg text-cookie-text max-[440px]:order-2`}>Personnaliser</button>
               <button type="button" onClick={() => decide('reject', all(false))} className={`${btn} bg-cookie-bg border-cookie-bg text-cookie-text max-[440px]:order-3`}>Refuser</button>
               <button type="button" onClick={() => decide('accept', all(true))} className={`${btn} bg-cookie-text border-cookie-text text-cookie-bg max-[440px]:order-1`}>Accepter</button>
             </div>
@@ -76,7 +83,7 @@ export function CookieConsent() {
 
       {consent && !prefsOpen && (
         <div className="fixed z-[999999] bottom-3.75 left-3.75 max-[480px]:bottom-2 max-[480px]:left-2 group">
-          <button type="button" data-cky-revisit aria-label="Choix de consentement" onClick={() => setPrefsOpen(true)} className="size-11.25 max-[480px]:size-9 rounded-full bg-cookie-text flex items-center justify-center cursor-pointer">
+          <button type="button" data-cky-revisit aria-label="Choix de consentement" onClick={openPrefs} className="size-11.25 max-[480px]:size-9 rounded-full bg-cookie-text flex items-center justify-center cursor-pointer">
             <img src="/icons/cky-revisit.svg" alt="" className="size-7.5 max-[480px]:size-5.5" />
           </button>
           <span className="pointer-events-none absolute left-[calc(100%+7px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded bg-cookie-tooltip text-white text-xs px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity">Choix de consentement</span>
@@ -86,7 +93,7 @@ export function CookieConsent() {
       {prefsOpen && (
         <>
           <div className="fixed inset-0 bg-black opacity-40 z-[99999998]" onClick={() => setPrefsOpen(false)} />
-          <ModalFocus container={dialogRef} initial={closeRef} onClose={() => setPrefsOpen(false)} fallback={() => document.querySelector<HTMLElement>('[data-cky-revisit]')} />
+          <ModalFocus container={dialogRef} initial={closeRef} onClose={() => setPrefsOpen(false)} fallback={() => document.querySelector<HTMLElement>('[data-cky-revisit], [data-cky-customize]')} />
           <div ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby={titleId} className="fixed z-[99999999] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-211.25 max-w-[calc(100%-16px)] max-[576px]:max-w-full max-h-[79vh] max-[576px]:max-h-screen flex flex-col overflow-hidden rounded-cookie bg-cookie-bg border border-cookie-bg text-cookie-text">
             <div className="flex items-center justify-between px-6 py-5.5 max-[352px]:py-4">
               <span id={titleId} role="heading" aria-level={2} className="text-lg leading-6 font-bold max-[352px]:text-base">Personnaliser les préférences en matière de consentement</span>
@@ -101,7 +108,7 @@ export function CookieConsent() {
                   Les cookies qui sont catégorisés comme « nécessaires » sont stockés sur votre navigateur car ils sont essentiels pour permettre les fonctionnalités de base du site.
                   {showMore ? ' ' : '... '}
                   {!showMore && (
-                    <button type="button" onClick={() => setShowMore(true)} className="text-cookie-link underline whitespace-nowrap cursor-pointer">Afficher plus</button>
+                    <button ref={showMoreRef} type="button" onClick={() => { setShowMore(true); requestAnimationFrame(() => showLessRef.current?.focus()); }} className="text-cookie-link underline whitespace-nowrap cursor-pointer">Afficher plus</button>
                   )}
                 </p>
                 {showMore && (
@@ -109,7 +116,7 @@ export function CookieConsent() {
                     <p>Nous utilisons également des cookies tiers qui nous aident à analyser la façon dont vous utilisez ce site web, à enregistrer vos préférences et à vous fournir le contenu et les publicités qui vous sont pertinents. Ces cookies ne seront stockés dans votre navigateur qu'avec votre consentement préalable.</p>
                     <p>
                       Vous pouvez choisir d'activer ou de désactiver tout ou partie de ces cookies, mais la désactivation de certains d'entre eux peut affecter votre expérience de navigation.{' '}
-                      <button type="button" onClick={() => setShowMore(false)} className="text-cookie-link underline whitespace-nowrap cursor-pointer">Afficher moins</button>
+                      <button ref={showLessRef} type="button" onClick={() => { setShowMore(false); requestAnimationFrame(() => showMoreRef.current?.focus()); }} className="text-cookie-link underline whitespace-nowrap cursor-pointer">Afficher moins</button>
                     </p>
                   </>
                 )}

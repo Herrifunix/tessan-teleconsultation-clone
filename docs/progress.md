@@ -135,3 +135,19 @@ Notes : mise en page 5 partout (3 gabarits × 3 largeurs) ; typographie 5 ; espa
 5. **Nom de la fiche en 30 px gras 4,6 % plus large** — *justifié* : la face 700 est calibrée à 20 px (noms des cartes, 1 % d'écart), et une seule valeur de `size-adjust` par face est possible ; le titre tient sur une ligne comme dans l'original.
 6. **Ordre des suggestions et grilles à proximité** — *justifié* (données de l'échantillon ; l'original utilise Google Places).
 - **Instabilités de tests traitées à la racine** : (a) le focus du titre après navigation échouait sous charge, car la fiche affiche d'abord un `<h1>Chargement...</h1>` provisoire qui recevait le focus avant d'être remplacé ; ce titre porte désormais `data-loading` et est ignoré, avec une attente par observateur du DOM (8/8 en parallèle). (b) Le clic sur le 1er cluster à 375 px était parfois perdu : ce cluster pouvait se trouver dans la marge de rendu hors cadre (`pad(0.5)`), et le faire défiler dans la vue décalait le conteneur de la carte. Le test clique maintenant le premier cluster réellement visible (30/30 en répétition). Suite complète : 134/134 deux fois de suite.
+
+### Évaluateur fonctionnel et responsive (relance)
+Notes : navigation 5, géolocalisation 5, carte 5, réservation 5, horaires 5, responsive 5, robustesse 5 ; **recherche 3**, **cookies 3**, **accessibilité 3**. Aucune note de 1. Toutes les corrections de l'évaluation n° 1 revérifiées et confirmées par l'évaluateur.
+Traitement (tests de non-régression : 7 cas ajoutés à `tests/evaluation.spec.ts`) :
+1. **Nom de département ou de région + Entrée après l'arrivée des suggestions → commune homonyme** (« Var » → Vares) — *corrigé* : pas de sélection automatique pour un nom de zone, qui est traité comme la zone entière (spec § 4.5). Ailleurs, la 1ʳᵉ suggestion n'est retenue que si elle correspond vraiment à la saisie.
+2. **Code postal d'une géolocalisation conservé pour une nouvelle ville** — *corrigé* : toute saisie l'annule.
+3. **Texte brut géocodé sur un lieu-dit** (« St-Etienne ») — *corrigé* : recherche de commune d'abord (`type=municipality`), puis recherche libre.
+4. **Préférences cookies fermées avant tout choix : focus perdu** — *corrigé* : focus rendu à « Personnaliser ».
+5. **Bascules non enregistrées conservées après annulation** — *corrigé* : chaque ouverture repart des choix enregistrés.
+6. **Focus perdu aux changements d'étape de la modale et sur « Afficher plus/moins »** — *corrigé* : focus sur le champ ou le titre de la nouvelle étape, et passage entre les deux boutons.
+7. **Focus perdu à la fermeture d'une fiche de carte et après un zoom de cluster au clavier** — *corrigé* : retour au marqueur, puis au conteneur de la carte (focalisable, déplacement aux flèches).
+8. **Statut mis à jour jusqu'à 60 s en retard** — *corrigé* : rafraîchissement calé sur le début de chaque minute (test à 19:29:20 + 45 s).
+9. **Popup de carte rognée sur mobile** — *justifié* : identique à l'original (spec `map.md` § 7) ; aucun débordement horizontal de page.
+10. **« Me géolocaliser » perd le focus pendant la recherche** — *corrigé* (`aria-disabled` au lieu de `disabled`).
+11. **Créneau déjà commencé encore confirmable** — *justifié* : l'original n'a pas non plus de contrôle côté client ; le clone n'envoie de toute façon rien.
+12. **Apostrophe typographique dans une alerte** — *corrigé* (apostrophe droite, comme la spec § 5).

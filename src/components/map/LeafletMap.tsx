@@ -110,7 +110,11 @@ export default function LeafletMap({ pharmacies, focusedPharmacy, onPharmacyClic
         if (!node) return;
         node.dataset.key = key;
         node.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); m.fire('click'); }
+          if (e.key !== 'Enter' && e.key !== ' ') return;
+          e.preventDefault();
+          m.fire('click');
+          // Un cluster disparaît au zoom : le focus passe au conteneur de la carte (focalisable, flèches = déplacement).
+          if (key.startsWith('c-')) requestAnimationFrame(() => el.current?.focus({ preventScroll: true }));
         });
       });
     };
@@ -234,7 +238,12 @@ export default function LeafletMap({ pharmacies, focusedPharmacy, onPharmacyClic
         showInfoWindow &&
         createPortal(
           <div className="relative w-95" role="dialog" aria-label={selected.nom}>
-            <button type="button" onClick={() => setSelected(null)} className="absolute -top-2 -right-2 z-10 bg-white rounded-full p-1 shadow-lg hover:bg-gray-100 transition" aria-label="Fermer la fiche">
+            <button type="button" onClick={() => {
+                const key = `p-${selected.id}`;
+                setSelected(null);
+                // Retour du focus au marqueur de la fiche fermée.
+                requestAnimationFrame(() => el.current?.querySelector<HTMLElement>(`[data-key="${key}"]`)?.focus({ preventScroll: true }));
+              }} className="absolute -top-2 -right-2 z-10 bg-white rounded-full p-1 shadow-lg hover:bg-gray-100 transition" aria-label="Fermer la fiche">
               <X size={16} className="text-gray-600" aria-hidden="true" />
             </button>
             <div className="shadow-2xl rounded-popup overflow-hidden bg-white">

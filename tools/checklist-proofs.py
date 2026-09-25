@@ -5,7 +5,7 @@ import json, re, sys
 P = 'docs/checklist.json'
 items = json.load(open(P))
 by = {e['id']: e for e in items}
-ratios = {r['key']: r['ratio'] for it in json.load(open('docs/qa/diff-report.json'))['iterations'] if it['label'] == 'iteration-3' for r in it['rows']}
+ratios = {r['key']: r['ratio'] for it in json.load(open('docs/qa/diff-report.json'))['iterations'] if it['label'] == 'latest' for r in it['rows']}
 ratio_txt = ', '.join(f"{k} {v*100:.2f} %" for k, v in ratios.items())
 
 PROOFS = json.load(open('tools/checklist-proofs.json'))

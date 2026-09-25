@@ -1,5 +1,5 @@
 import { CalendarDays, ChevronDown, ChevronLeft, ChevronUp, CircleCheck, Clock, Mail, X } from 'lucide-react';
-import { useId, useMemo, useRef, useState } from 'react';
+import { useEffect, useId, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import type { Pharmacy } from '../lib/data';
 import { DERMATO_ALLOWED, isValidEmail, isWithinSchedule, SERVICES, slotRange, upcomingSlots, type ServiceId, type Slot } from '../lib/booking';
@@ -28,6 +28,16 @@ export function BookingModal({ pharmacy: p, onClose }: { pharmacy: Pharmacy; onC
 
   const boxRef = useRef<HTMLDivElement>(null);
   useModalFocus(boxRef, onClose, closeRef);
+  // Changement d'étape : l'élément focalisé disparaît ; le focus passe au champ de l'étape, sinon à son titre.
+  const stepRef = useRef<HTMLDivElement>(null);
+  const firstStep = useRef(true);
+  useEffect(() => {
+    if (firstStep.current) { firstStep.current = false; return; }
+    const root = stepRef.current;
+    if (!root || root.contains(document.activeElement)) return;
+    const target = root.querySelector<HTMLElement>('input') ?? root.querySelector<HTMLElement>('h4');
+    if (target) { if (target.tagName === 'H4') target.tabIndex = -1; target.focus(); }
+  }, [step]);
 
   const confirm = () => {
     if (!email || !service) return;
@@ -57,7 +67,7 @@ export function BookingModal({ pharmacy: p, onClose }: { pharmacy: Pharmacy; onC
           </button>
         </div>
         <div className="border-t border-gray-200 mb-4" />
-        <div>
+        <div ref={stepRef}>
           {step !== 'confirmation' && (
             <h4 id={titleId} className="text-lg md:text-xl font-bold text-gray-800 mb-3 font-serif">
               Réserver un créneau <span className="text-tessan-green">— Passage prioritaire</span>

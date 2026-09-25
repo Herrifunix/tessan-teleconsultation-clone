@@ -1,4 +1,4 @@
-# npm run verify — 2026-09-25T19:10:24Z — exit=0
+# npm run verify — 2026-09-25T19:50:11Z — exit=0
 > tessan-teleconsultation-clone@1.0.0 verify
 > npm run lint && npm run typecheck && npm run build && npm run test:e2e && npm run capture:clone && npm run diff
 > tessan-teleconsultation-clone@1.0.0 lint
@@ -7,7 +7,7 @@
 > tsc -p tsconfig.json
 > tessan-teleconsultation-clone@1.0.0 build
 > node tools/gen-tokens-css.mjs && vite build
-src/styles/tokens.css : 127 variables, 8 @font-face TC Serif
+src/styles/tokens.css : 126 variables, 8 @font-face TC Serif
 vite v7.3.6 building client environment for production...
 transforming...
 ✓ 2016 modules transformed.
@@ -23,14 +23,14 @@ dist/assets/roboto-latin-700-normal-BZpUvMxY.woff2   22.24 kB
 dist/assets/pharmacy-extras-Cmbo3ioV.json           276.80 kB │ gzip:  29.51 kB
 dist/assets/locations-Dbf-CGgU.json                 369.90 kB │ gzip:  20.82 kB
 dist/assets/LeafletMap-DavR-hVh.css                  17.56 kB │ gzip:   7.01 kB
-dist/assets/index-C_w3hM2q.css                       53.45 kB │ gzip:  10.10 kB
-dist/assets/LeafletMap-BPuco8h2.js                    8.16 kB │ gzip:   3.61 kB
+dist/assets/index-Czm3FGC0.css                       53.55 kB │ gzip:  10.14 kB
+dist/assets/LeafletMap-zAFh1RuG.js                    8.43 kB │ gzip:   3.69 kB
 dist/assets/leaflet-CPFtmAcz.js                     159.70 kB │ gzip:  47.51 kB
-dist/assets/index-BcP6GBH0.js                       365.15 kB │ gzip: 115.91 kB
-✓ built in 3.87s
+dist/assets/index-Dwt47Vrt.js                       366.56 kB │ gzip: 116.35 kB
+✓ built in 3.47s
 > tessan-teleconsultation-clone@1.0.0 test:e2e
 > playwright test
-  134 passed (1.2m)
+  141 passed (1.1m)
 > tessan-teleconsultation-clone@1.0.0 capture:clone
 > node tools/capture-clone.mjs
 clone home-375 → docs/qa/clone/home-375.png (5573px)
@@ -44,15 +44,15 @@ clone fiche-768 → docs/qa/clone/fiche-768.png (9108px)
 clone fiche-1440 → docs/qa/clone/fiche-1440.png (6169px)
 > tessan-teleconsultation-clone@1.0.0 diff
 > node tools/diff.mjs
-home-1440    1440×2632  réf 2632px / clone 2672px  diff 0.68 % hors masques (3 masques, réaligné)  chauds : 1200:5605 1600:5352 100:5152 2600:1163 0:36
-home-375      375×5597  réf 5597px / clone 5573px  diff 0.80 % hors masques (3 masques, réaligné)  chauds : 100:3349 1600:2624 2600:2294 2500:1787 1700:1686
+home-1440    1440×2632  réf 2632px / clone 2672px  diff 0.68 % hors masques (3 masques, réaligné)  chauds : 1200:5605 1600:5352 100:5152 2600:1163
+home-375      375×5597  réf 5597px / clone 5573px  diff 0.79 % hors masques (3 masques, réaligné)  chauds : 100:3349 1600:2624 2600:2294 2500:1787 1700:1686
 home-768      768×4271  réf 4271px / clone 4311px  diff 0.73 % hors masques (3 masques, réaligné)  chauds : 100:5233 2100:4621 1500:3941 1600:1580 4200:1163
-results-375   375×6761  réf 6761px / clone 6765px  diff 1.07 % hors masques (3 masques, réaligné)  chauds : 100:3580 3700:2803 2700:2539 700:2460 800:1785
+results-375   375×6761  réf 6761px / clone 6765px  diff 1.06 % hors masques (3 masques, réaligné)  chauds : 100:3580 3700:2803 2700:2539 700:2460 800:1785
 results-768   768×5421  réf 5421px / clone 5461px  diff 0.91 % hors masques (3 masques, réaligné)  chauds : 700:5788 3300:5170 2700:4163 100:3059 200:2174
 results-1440 1440×2956  réf 2956px / clone 2996px  diff 0.92 % hors masques (3 masques, réaligné)  chauds : 1500:5605 1900:5352 100:5152 500:3047 400:2738
 fiche-375     375×12876 réf 12876px / clone 12880px  diff 0.67 % hors masques (3 masques, réaligné)  chauds : 6700:2833 9800:2797 8800:2539 200:2006 8900:1771
 fiche-768     768×9068  réf 9068px / clone 9108px  diff 0.57 % hors masques (3 masques, réaligné)  chauds : 6300:5422 6900:5170 5900:3584 5300:3239 200:3199
-fiche-1440   1440×6129  réf 6129px / clone 6169px  diff 0.44 % hors masques (3 masques, réaligné)  chauds : 4700:5594 4300:5389 5100:5352 4000:4635 3900:4137
-real	3m25.647s
-user	1m56.207s
-sys	0m28.006s
+fiche-1440   1440×6129  réf 6129px / clone 6169px  diff 0.43 % hors masques (3 masques, réaligné)  chauds : 4700:5594 4300:5389 5100:5352 4000:4635 3900:4137
+real	3m23.476s
+user	1m53.203s
+sys	0m26.262s

@@ -157,3 +157,85 @@ test('bannière cookies : atteinte en premier au clavier ; préférences avec fo
   await expect(dialog).toBeHidden();
   await expect(revisit).toBeFocused();
 });
+
+// Non-régression des points relevés par l'évaluation indépendante n° 2 (docs/progress.md).
+test.describe('évaluation n° 2', () => {
+  test.beforeEach(async ({ page }) => {
+    await dismissCookies(page);
+    await mockAdresseApi(page);
+  });
+
+  test('nom de département + Entrée : toute la zone, pas une commune homonyme suggérée', async ({ page }) => {
+    for (const host of GEOCODERS) await page.route(host, (r) => r.fulfill({ json: { features: [{ geometry: { coordinates: [-0.51, 45.1] }, properties: { label: 'Vares', city: 'Vares', name: 'Vares', postcode: '33000', type: 'municipality', context: '' } }] } }));
+    await page.goto(URLS.home);
+    const input = page.getByRole('combobox', { name: 'Ville / Code postal' });
+    await input.fill('Var');
+    await expect(page.getByRole('option', { name: /^Vares/ })).toBeVisible();
+    await input.press('Enter');
+    await expect(page).toHaveURL(/\/provence-alpes-cote-d-azur\/var$/);
+  });
+
+  test('géolocalisation puis nouvelle ville : le code postal de la position est oublié', async ({ page, context }) => {
+    await context.grantPermissions(['geolocation']);
+    await context.setGeolocation({ latitude: 43.7102, longitude: 7.262 });
+    await page.goto(URLS.home);
+    await page.getByRole('search').getByRole('button', { name: 'Me géolocaliser' }).click();
+    const input = page.getByRole('combobox', { name: 'Ville / Code postal' });
+    await expect(input).toHaveValue('Nice');
+    await input.fill('Lyon');
+    await input.press('Escape');
+    await page.getByRole('search').getByRole('button', { name: 'Recherche', exact: true }).click();
+    await expect(page).toHaveURL(/\/auvergne-rhone-alpes\/rhone\/lyon$/);
+  });
+
+  test('réservation : le focus suit le changement d’étape', async ({ page }) => {
+    await page.goto(URLS.nice);
+    await page.getByRole('article').first().getByRole('button', { name: 'Réserver un créneau' }).click();
+    const dialog = page.getByRole('dialog', { name: /Réserver un créneau/ });
+    await dialog.getByRole('button', { name: 'Médecine générale' }).click();
+    expect(await dialog.evaluate((d) => d.contains(document.activeElement))).toBe(true);
+    await dialog.getByRole('button', { name: '16h00 - 18h00' }).first().click();
+    await expect(dialog.getByRole('textbox')).toBeFocused();
+  });
+
+  test('statut : bascule à l’heure pile (19:30), pas jusqu’à une minute plus tard', async ({ page }) => {
+    await page.clock.install({ time: new Date('2026-09-25T19:29:20+02:00') });
+    await page.goto(URLS.fiche);
+    const closing = page.getByTestId('opening-status').filter({ hasText: 'Ferme à 19:30' });
+    await expect(closing.first()).toBeVisible();
+    await page.clock.runFor(45_000); // 19:30:05
+    await expect(closing).toHaveCount(0);
+  });
+
+  test('carte : fermer la fiche au clavier rend le focus au marqueur', async ({ page }) => {
+    await page.goto(URLS.nice);
+    const marker = page.getByRole('region', { name: 'Carte' }).getByRole('button', { name: 'Pharmacie Saint-Isidore', exact: true });
+    await marker.focus();
+    await page.keyboard.press('Enter');
+    const popup = page.getByRole('dialog', { name: 'Pharmacie Saint-Isidore' });
+    await popup.getByRole('button', { name: 'Fermer la fiche' }).focus();
+    await page.keyboard.press('Enter');
+    await expect(popup).toBeHidden();
+    await expect(page.getByRole('region', { name: 'Carte' }).getByRole('button', { name: 'Pharmacie Saint-Isidore', exact: true })).toBeFocused();
+  });
+});
+
+test.describe('cookies (évaluation n° 2)', () => {
+  test('préférences fermées avant tout choix : focus rendu à « Personnaliser »', async ({ page }) => {
+    await page.goto(URLS.home);
+    const customize = page.getByRole('region', { name: 'Nous respectons votre vie privée.' }).getByRole('button', { name: 'Personnaliser' });
+    await customize.click();
+    await page.keyboard.press('Escape');
+    await expect(page.getByRole('region', { name: 'Nous respectons votre vie privée.' }).getByRole('button', { name: 'Personnaliser' })).toBeFocused();
+  });
+
+  test('préférences : une bascule annulée n’est pas conservée', async ({ page }) => {
+    await page.goto(URLS.home);
+    await page.getByRole('button', { name: 'Personnaliser' }).click();
+    const dialog = page.getByRole('dialog', { name: 'Personnaliser les préférences en matière de consentement' });
+    await dialog.getByRole('switch', { name: 'Activer Fonctionnelle' }).check();
+    await page.keyboard.press('Escape');
+    await page.getByRole('button', { name: 'Personnaliser' }).click();
+    await expect(dialog.getByRole('switch', { name: 'Activer Fonctionnelle' })).not.toBeChecked();
+  });
+});

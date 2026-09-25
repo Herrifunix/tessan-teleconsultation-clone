@@ -297,7 +297,7 @@
  ],
  "P4-10": [
   "pass",
-  "Ratios de pixels différents hors masques, itération 3 (docs/qa/diff-report.json) : {RATIOS}."
+  "Ratios de pixels différents hors masques, dernière exécution de npm run verify (docs/qa/diff-report.json, itération « latest » ; itérations 1 à 4 dans le même fichier) : {RATIOS}."
  ],
  "P4-11": [
   "fail",

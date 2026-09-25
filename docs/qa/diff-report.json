@@ -872,7 +872,7 @@
   },
   {
    "label": "latest",
-   "date": "2026-09-25T19:10:16.193Z",
+   "date": "2026-09-25T19:49:57.768Z",
    "rows": [
     {
      "key": "home-1440",
@@ -881,9 +881,9 @@
      "height": 2632,
      "refHeight": 2632,
      "cloneHeight": 2672,
-     "diffPixels": 17344,
+     "diffPixels": 17272,
      "maskedPixels": 1233664,
-     "ratio": 0.00678,
+     "ratio": 0.00676,
      "composite": "docs/qa/home-1440-composite.png",
      "masks": 3,
      "hotspots": [
@@ -902,10 +902,6 @@
       {
        "y": 2600,
        "px": 1163
-      },
-      {
-       "y": 0,
-       "px": 36
       }
      ]
     },
@@ -916,9 +912,9 @@
      "height": 5597,
      "refHeight": 5597,
      "cloneHeight": 5573,
-     "diffPixels": 12763,
+     "diffPixels": 12691,
      "maskedPixels": 501936,
-     "ratio": 0.00799,
+     "ratio": 0.00795,
      "composite": "docs/qa/home-375-composite.png",
      "masks": 3,
      "hotspots": [
@@ -951,9 +947,9 @@
      "height": 4271,
      "refHeight": 4271,
      "cloneHeight": 4311,
-     "diffPixels": 17159,
+     "diffPixels": 17087,
      "maskedPixels": 923648,
-     "ratio": 0.00728,
+     "ratio": 0.00725,
      "composite": "docs/qa/home-768-composite.png",
      "masks": 3,
      "hotspots": [
@@ -986,9 +982,9 @@
      "height": 6761,
      "refHeight": 6761,
      "cloneHeight": 6765,
-     "diffPixels": 20691,
+     "diffPixels": 20619,
      "maskedPixels": 593860,
-     "ratio": 0.01066,
+     "ratio": 0.01062,
      "composite": "docs/qa/results-375-composite.png",
      "masks": 3,
      "hotspots": [
@@ -1021,9 +1017,9 @@
      "height": 5421,
      "refHeight": 5421,
      "cloneHeight": 5461,
-     "diffPixels": 27780,
+     "diffPixels": 27708,
      "maskedPixels": 1112576,
-     "ratio": 0.00911,
+     "ratio": 0.00908,
      "composite": "docs/qa/results-768-composite.png",
      "masks": 3,
      "hotspots": [
@@ -1056,9 +1052,9 @@
      "height": 2956,
      "refHeight": 2956,
      "cloneHeight": 2996,
-     "diffPixels": 27962,
+     "diffPixels": 27890,
      "maskedPixels": 1217776,
-     "ratio": 0.0092,
+     "ratio": 0.00918,
      "composite": "docs/qa/results-1440-composite.png",
      "masks": 3,
      "hotspots": [
@@ -1091,9 +1087,9 @@
      "height": 12876,
      "refHeight": 12876,
      "cloneHeight": 12880,
-     "diffPixels": 29401,
+     "diffPixels": 29329,
      "maskedPixels": 471296,
-     "ratio": 0.00675,
+     "ratio": 0.00673,
      "composite": "docs/qa/fiche-375-composite.png",
      "masks": 3,
      "hotspots": [
@@ -1126,9 +1122,9 @@
      "height": 9068,
      "refHeight": 9068,
      "cloneHeight": 9108,
-     "diffPixels": 34586,
+     "diffPixels": 34514,
      "maskedPixels": 858048,
-     "ratio": 0.00566,
+     "ratio": 0.00565,
      "composite": "docs/qa/fiche-768-composite.png",
      "masks": 3,
      "hotspots": [
@@ -1161,9 +1157,9 @@
      "height": 6129,
      "refHeight": 6129,
      "cloneHeight": 6169,
-     "diffPixels": 35042,
+     "diffPixels": 34970,
      "maskedPixels": 780400,
-     "ratio": 0.00436,
+     "ratio": 0.00435,
      "composite": "docs/qa/fiche-1440-composite.png",
      "masks": 3,
      "hotspots": [

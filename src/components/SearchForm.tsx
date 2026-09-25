@@ -1,7 +1,7 @@
 import { ChevronDown, LoaderCircle, LocateFixed, Search } from 'lucide-react';
 import { useEffect, useId, useMemo, useRef, useState, type FormEvent, type KeyboardEvent } from 'react';
 import { loadPharmacies, type Pharmacy } from '../lib/data';
-import type { LatLng } from '../lib/geo';
+import { DEPARTMENTS, REGIONS, type LatLng } from '../lib/geo';
 import { geocode, reverseGeocode } from '../lib/geocode';
 import { localSuggestions, norm, runSearch, SearchMessageError, toSuggestion, type SearchOutput, type Suggestion } from '../lib/search';
 import { SPECIALTIES, specialtyById } from '../lib/specialties';
@@ -17,6 +17,13 @@ type Props = {
 const MSG_GENERIC = 'Une erreur est survenue lors de la recherche. Veuillez réessayer.';
 
 /** Formulaire de recherche (spécialité, ville / code postal, géolocalisation) — reproduction du formulaire de l'original. */
+const isAreaName = (text: string) => {
+  const first = norm(text.split(',')[0]);
+  return [...REGIONS, ...DEPARTMENTS].some((a) => norm(a) === first);
+};
+/** Suggestion locale (préfixe ou faute de frappe tolérée) ou nom commençant par la saisie. */
+const matchesInput = (s: Suggestion, text: string) => s.id.startsWith('local-') || norm(s.name).startsWith(norm(text.split(',')[0]));
+
 export function SearchForm({ onSearchSubmit, initialCity = '', initialSpecialtyId = null, initialSubmitted = false }: Props) {
   const uid = useId();
   const [city, setCity] = useState(initialCity);
@@ -131,7 +138,9 @@ export function SearchForm({ onSearchSubmit, initialCity = '', initialSpecialtyI
       if (open && active >= 0) { e.preventDefault(); void choose(suggestions[active]); }
       // Comme l'original (1ʳᵉ prédiction Google) : Entrée sans sélection prend la 1ʳᵉ suggestion, sinon le texte brut.
       // Une position déjà connue (géolocalisation, sélection) est conservée.
-      else if (!coordsRef.current && city.trim() && suggestions.length) { e.preventDefault(); void choose(suggestions[0]); }
+      // Seulement si la suggestion correspond vraiment à la saisie, et jamais pour un nom de région/département
+      // (l'original les traite comme une zone entière, § 4.5).
+      else if (!coordsRef.current && city.trim() && suggestions.length && !isAreaName(city) && matchesInput(suggestions[0], city)) { e.preventDefault(); void choose(suggestions[0]); }
     } else if (e.key === 'Escape') {
       if (listOpen) { e.preventDefault(); setListOpen(false); setActive(-1); }
     }
@@ -169,7 +178,7 @@ export function SearchForm({ onSearchSubmit, initialCity = '', initialSpecialtyI
             setCity(r.city || r.postcode || r.label);
           } else window.alert('Impossible de déterminer votre adresse');
         } catch {
-          window.alert('Le service de géolocalisation n’est pas disponible');
+          window.alert("Le service de géolocalisation n'est pas disponible");
         } finally {
           setLocating(false);
         }
@@ -297,7 +306,7 @@ export function SearchForm({ onSearchSubmit, initialCity = '', initialSpecialtyI
             setActive(-1);
             coordsRef.current = null;
             setCoords(null);
-            if (!e.target.value.trim()) setPostalCode(null);
+            setPostalCode(null); // une nouvelle saisie annule le code postal d'une géolocalisation ou d'une sélection
           }}
           onFocus={() => city && setListOpen(true)}
           onBlur={() => setTimeout(() => setListOpen(false), 150)}
@@ -346,9 +355,10 @@ export function SearchForm({ onSearchSubmit, initialCity = '', initialSpecialtyI
         )}
         <button
           type="button"
-          onClick={locate}
-          disabled={locating}
-          className="absolute top-1/2 right-4 -translate-y-1/2 text-gray-400 hover:text-tessan-green-hover transition-colors disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+          onClick={() => { if (!locating) locate(); }}
+          // aria-disabled plutôt que disabled : le bouton garde le focus clavier pendant la recherche de position.
+          aria-disabled={locating}
+          className="absolute top-1/2 right-4 -translate-y-1/2 text-gray-400 hover:text-tessan-green-hover transition-colors aria-disabled:opacity-50 aria-disabled:cursor-not-allowed cursor-pointer"
           title="Me géolocaliser"
           aria-label="Me géolocaliser"
         >

@@ -92,7 +92,10 @@ export async function runSearch(all: Pharmacy[], input: SearchInput, geocodeCach
   } else if (text.trim()) {
     const q = text.includes(',') ? text.split(',')[0].trim() : text;
     try {
-      const g = await geocode(q, { limit: 1 });
+      // Commune d'abord (comme la prédiction Google « (cities) »), puis adresse quelconque : « St-Etienne » ne doit pas
+      // tomber sur un lieu-dit homonyme.
+      let g = await geocode(q, { limit: 1, type: 'municipality' });
+      if (!g[0]) g = await geocode(q, { limit: 1 });
       if (g[0]) { coords = g[0].coords; results = nearest(all, coords).slice(0, 20); }
       else results = cityMatch(all, q);
     } catch (e) {
