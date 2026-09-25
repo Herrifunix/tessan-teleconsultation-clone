@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="48" viewBox="0 0 32 48">
+  <!-- Pin shape with shadow -->
+  <ellipse cx="16" cy="45" rx="4" ry="2" fill="#000" opacity="0.2"/>
+
+  <!-- Main pin body -->
+  <path d="M16 0C9.373 0 4 5.373 4 12c0 9 12 28 12 28s12-19 12-28c0-6.627-5.373-12-12-12z"
+        fill="#0F352D" stroke="#fff" stroke-width="1.5"/>
+
+  <!-- White circle background for cross -->
+  <circle cx="16" cy="12" r="7" fill="#fff"/>
+
+  <!-- Green cross (French pharmacy symbol) -->
+  <path d="M16 7v10M11 12h10" stroke="#0F352D" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

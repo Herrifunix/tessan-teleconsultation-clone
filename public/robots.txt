@@ -1,0 +1,4 @@
+# Reproduction réalisée dans le cadre d'un test technique — non affiliée à Tessan.
+# Ce site ne doit pas être indexé.
+User-agent: *
+Disallow: /

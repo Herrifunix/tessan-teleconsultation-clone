@@ -1,0 +1,106 @@
+###### 1440
+~ | '' | x0 y2021 w1440 h611 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0 | '' | x70 y2021 w1300 h611 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0 | '' | x102 y2069 w1236 h438 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:0 | '' | x102 y2069 w150 h438 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:0>div:0 | '' | x102 y2069 w150 h26.8 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:0>div:0>img:0 | '' | x102 y2069 w120 h26.8 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:0>div:1 | '' | x102 y2135.8 w150 h106 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:0>div:1>h3:0 | 'Adresse' | x102 y2135.8 w150 h20 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:0>div:1>p:1 | 'TESSAN 10 Rue Pergolèse 75016 Paris' | x102 y2163.8 w150 h78 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:0>div:1>p:1>br:0 | '' | x164 y2165.8 w0 h21 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:0>div:1>p:1>br:1 | '' | x237 y2191.8 w0 h21 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:0>div:2 | '' | x102 y2265.8 w150 h72 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:0>div:2>a:0 | 'Nous contacter' | x102 y2265.8 w153 h72 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:0>div:2>a:0>span:0 | '→' | x215 y2287.8 w20 h28 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:0>div:3 | '' | x102 y2369.8 w150 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:0>div:3>a:0 | '' | x102 y2369.8 w24 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:0>div:3>a:1 | '' | x142 y2369.8 w24 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:0>div:3>a:2 | '' | x182 y2369.8 w24 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:0>div:3>a:3 | '' | x222 y2369.8 w24 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1 | '' | x364 y2069 w974 h438 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:0 | '' | x364 y2069 w169.2 h438 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:0>h3:0 | 'PARTENAIRES' | x364 y2069 w169.2 h20 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:0>ul:1 | '' | x364 y2103 w169.2 h204 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:0>ul:1>li:0 | '' | x364 y2103 w169.2 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:0>ul:1>li:0>a:0 | 'Pharmaciens' | x364 y2104 w103 h21 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:0>ul:1>li:1 | '' | x364 y2139 w169.2 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:0>ul:1>li:1>a:0 | 'Opticiens' | x364 y2140 w79 h21 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:0>ul:1>li:2 | '' | x364 y2175 w169.2 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:0>ul:1>li:2>a:0 | 'Infirmiers' | x364 y2176 w73 h21 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:0>ul:1>li:3 | '' | x364 y2211 w169.2 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:0>ul:1>li:3>a:0 | 'Collectivités' | x364 y2212 w102 h21 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:0>ul:1>li:4 | '' | x364 y2247 w169.2 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:0>ul:1>li:4>a:0 | 'Dirigeants' | x364 y2248 w83 h21 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:0>ul:1>li:5 | '' | x364 y2283 w169.2 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:0>ul:1>li:5>a:0 | 'EHPAD' | x364 y2284 w53 h21 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:1 | '' | x565.2 y2069 w169.2 h438 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:1>h3:0 | 'SOLUTIONS' | x565.2 y2069 w169.2 h20 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:1>ul:1 | '' | x565.2 y2103 w169.2 h404 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:1>ul:1>li:0 | '' | x565.2 y2103 w169.2 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:1>ul:1>li:0>a:0 | 'Nos solutions' | x565.2 y2104 w109 h21 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:1>ul:1>li:1 | '' | x565.2 y2139 w169.2 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:1>ul:1>li:1>a:0 | 'La cabine Premium' | x565.2 y2140 w148 h21 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:1>ul:1>li:2 | '' | x565.2 y2175 w169.2 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:1>ul:1>li:2>a:0 | 'La cabine Slim' | x565.2 y2176 w112 h21 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:1>ul:1>li:3 | '' | x565.2 y2211 w169.2 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:1>ul:1>li:3>a:0 | 'La borne' | x565.2 y2212 w70 h21 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:1>ul:1>li:4 | '' | x565.2 y2247 w169.2 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:1>ul:1>li:4>a:0 | 'La console' | x565.2 y2248 w87 h21 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:1>ul:1>li:5 | '' | x565.2 y2283 w169.2 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:1>ul:1>li:5>a:0 | 'La mallette' | x565.2 y2284 w88 h21 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:1>ul:1>li:6 | '' | x565.2 y2319 w169.2 h48 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:1>ul:1>li:6>a:0 | 'La table de téléophtalmologie' | x565.2 y2320 w149 h45 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:1>ul:1>li:7 | '' | x565.2 y2379 w169.2 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:1>ul:1>li:7>a:0 | 'Tessan IA' | x565.2 y2380 w75 h21 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:1>ul:1>li:8 | '' | x565.2 y2415 w169.2 h32 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:1>ul:1>li:8>a:0 | '- Téléconsultation' | x565.2 y2424 w147 h21 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:1>ul:1>li:9 | '' | x565.2 y2459 w169.2 h48 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:1>ul:1>li:9>a:0 | 'La téléexpertise dermatologique' | x565.2 y2460 w130 h45 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:2 | '' | x766.4 y2069 w180 h438 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:2>h3:0 | 'MEDECINS' | x766.4 y2069 w180 h20 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:2>ul:1 | '' | x766.4 y2103 w180 h156 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:2>ul:1>li:0 | '' | x766.4 y2103 w180 h48 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:2>ul:1>li:0>a:0 | 'Médecins généralistes' | x766.4 y2104 w100 h45 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:2>ul:1>li:1 | '' | x766.4 y2163 w180 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:2>ul:1>li:1>a:0 | 'Dermatologues' | x766.4 y2164 w125 h21 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:2>ul:1>li:2 | '' | x766.4 y2199 w180 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:2>ul:1>li:2>a:0 | 'Ophtalmologues' | x766.4 y2200 w136 h21 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:2>ul:1>li:3 | '' | x766.4 y2235 w180 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:2>ul:1>li:3>a:0 | 'Pédiatres' | x766.4 y2236 w77 h21 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:3 | '' | x967.6 y2069 w169.2 h438 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:3>h3:0 | 'PATIENTS' | x967.6 y2069 w169.2 h20 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:3>ul:1 | '' | x967.6 y2103 w169.2 h288 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:3>ul:1>li:0 | '' | x967.6 y2103 w169.2 h48 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:3>ul:1>li:0>a:0 | 'La téléconsultation augmentée' | x967.6 y2104 w156 h45 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:3>ul:1>li:1 | '' | x967.6 y2163 w169.2 h48 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:3>ul:1>li:1>a:0 | 'Tarifs et remboursements' | x967.6 y2164 w137 h45 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:3>ul:1>li:2 | '' | x967.6 y2223 w169.2 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:3>ul:1>li:2>a:0 | 'Médecine générale' | x967.6 y2224 w153 h21 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:3>ul:1>li:3 | '' | x967.6 y2259 w169.2 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:3>ul:1>li:3>a:0 | 'Dermatologie' | x967.6 y2260 w110 h21 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:3>ul:1>li:4 | '' | x967.6 y2295 w169.2 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:3>ul:1>li:4>a:0 | 'Ophtalmologie' | x967.6 y2296 w121 h21 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:3>ul:1>li:5 | '' | x967.6 y2331 w169.2 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:3>ul:1>li:5>a:0 | 'Pneumologie' | x967.6 y2332 w105 h21 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:3>ul:1>li:6 | '' | x967.6 y2367 w169.2 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:3>ul:1>li:6>a:0 | 'Gériatrie' | x967.6 y2368 w70 h21 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:4 | '' | x1168.8 y2069 w169.2 h438 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:4>h3:0 | 'RESSOURCES' | x1168.8 y2069 w169.2 h20 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:4>ul:1 | '' | x1168.8 y2103 w169.2 h132 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:4>ul:1>li:0 | '' | x1168.8 y2103 w169.2 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:4>ul:1>li:0>a:0 | 'Blog' | x1168.8 y2104 w37 h21 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:4>ul:1>li:1 | '' | x1168.8 y2139 w169.2 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:4>ul:1>li:1>a:0 | 'FAQ' | x1168.8 y2140 w34 h21 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:4>ul:1>li:2 | '' | x1168.8 y2175 w169.2 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:4>ul:1>li:2>a:0 | 'Qui sommes-nous ?' | x1168.8 y2176 w158 h21 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:4>ul:1>li:3 | '' | x1168.8 y2211 w169.2 h24 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:0>div:1>div:4>ul:1>li:3>a:0 | 'Carrières' | x1168.8 y2212 w74 h21 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:1 | '' | x102 y2531 w1236 h53 | {borderTopColor: oklab(0.999994 0.0000455678 0.0000200868 / 0.2), ff: PJS}
+~>div:0>div:1>p:0 | '© 2025 Tessan. Tous droits réservés.' | x102 y2564 w242 h20 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:1>div:1 | '' | x667 y2564 w671 h20 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:1>div:1>a:0 | 'Politique de confidentialité' | x667 y2564 w176 h20 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:1>div:1>a:1 | 'CGU' | x859 y2564 w32 h20 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:1>div:1>a:2 | 'Mentions légales' | x907 y2564 w109 h20 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:1>div:1>a:3 | 'Cookies' | x1032 y2564 w57 h20 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}
+~>div:0>div:1>div:1>a:4 | 'CGV Téléexpertise dermatologique' | x1105 y2564 w233 h20 | {borderTopColor: oklch(0.92 0.004 286.32), ff: PJS}

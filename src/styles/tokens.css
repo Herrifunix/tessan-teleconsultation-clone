@@ -1,0 +1,247 @@
+/* FICHIER GÉNÉRÉ par tools/gen-tokens-css.mjs depuis docs/research/tokens.json — ne pas éditer. */
+@theme {
+  --*: initial;
+  --color-red-500: oklch(63.7% .237 25.331);
+  --color-red-600: oklch(57.7% .245 27.325);
+  --color-orange-50: oklch(98% .016 73.684);
+  --color-orange-200: oklch(90.1% .076 70.697);
+  --color-orange-600: oklch(64.6% .222 41.116);
+  --color-emerald-50: oklch(97.9% .021 166.113);
+  --color-emerald-100: oklch(95% .052 163.051);
+  --color-emerald-500: oklch(69.6% .17 162.48);
+  --color-emerald-600: oklch(59.6% .145 163.225);
+  --color-emerald-700: oklch(50.8% .118 165.612);
+  --color-blue-50: oklch(97% .014 254.604);
+  --color-blue-100: oklch(93.2% .032 255.585);
+  --color-blue-300: oklch(80.9% .105 251.813);
+  --color-blue-500: oklch(62.3% .214 259.815);
+  --color-blue-700: oklch(48.8% .243 264.376);
+  --color-slate-50: oklch(98.4% .003 247.858);
+  --color-slate-100: oklch(96.8% .007 247.896);
+  --color-gray-50: oklch(98.5% .002 247.839);
+  --color-gray-100: oklch(96.7% .003 264.542);
+  --color-gray-200: oklch(92.8% .006 264.531);
+  --color-gray-300: oklch(87.2% .01 258.338);
+  --color-gray-400: oklch(70.7% .022 261.325);
+  --color-gray-500: oklch(55.1% .027 264.364);
+  --color-gray-600: oklch(44.6% .03 256.802);
+  --color-gray-700: oklch(37.3% .034 259.733);
+  --color-gray-800: oklch(27.8% .033 256.848);
+  --color-black: #000;
+  --color-white: #fff;
+  --color-tessan-green: #0f352d;
+  --color-tessan-green-hover: #1d5c4d;
+  --color-background: oklch(100% 0 0);
+  --color-foreground: oklch(14.1% .005 285.823);
+  --color-muted-foreground: oklch(55.2% .016 285.938);
+  --color-border: oklch(92% .004 286.32);
+  --color-input: oklch(92% .004 286.32);
+  --color-ring: oklch(70.5% .015 286.067);
+  --color-primary: oklch(21% .006 285.885);
+  --color-primary-foreground: oklch(98.5% 0 0);
+  --color-accent: oklch(96.7% .001 286.375);
+  --color-accent-foreground: oklch(21% .006 285.885);
+  --color-destructive: oklch(57.7% .245 27.325);
+  --color-dark-green-hover: #153f3f;
+  --color-yellow-cta: #fff198;
+  --color-yellow-cta-hover: #f5e76b;
+  --color-cream-hover: #fcf5cc;
+  --color-footer-contact: #feee80;
+  --color-footer-contact-hover: #f0e060;
+  --color-footer-contact-text: #1a4d4d;
+  --color-open-green: #238700;
+  --color-footer-bg: #0f352d;
+  --color-faq-border: #f0ece4;
+  --color-cookie-bg: #f7f7ed;
+  --color-cookie-text: #0f352d;
+  --color-cookie-customize-bg: #feffed;
+  --color-cookie-shadow: rgba(172, 171, 171, 0.3) 0px -1px 10px 0px;
+  --font-sans: "Plus Jakarta Sans", "Plus Jakarta Sans Fallback", sans-serif; /* body de l’original */
+  --font-serif: "TC Serif", "TC Serif Fallback", sans-serif; /* substitut calibré de Recoleta */
+  --font-map: Roboto, Arial, sans-serif; /* popup de carte (.gm-style) */
+  --font-cluster: Montserrat, sans-serif; /* texte SVG des clusters */
+  --text-xs: .75rem;
+  --text-xs--line-height: calc(1/.75);
+  --text-sm: .875rem;
+  --text-sm--line-height: calc(1.25/.875);
+  --text-base: 1rem;
+  --text-base--line-height: calc(1.5/1);
+  --text-lg: 1.125rem;
+  --text-lg--line-height: calc(1.75/1.125);
+  --text-xl: 1.25rem;
+  --text-xl--line-height: calc(1.75/1.25);
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: calc(2/1.5);
+  --text-3xl: 1.875rem;
+  --text-3xl--line-height: calc(2.25/1.875);
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --leading-relaxed: 1.625;
+  --spacing: .25rem;
+  --container-md: 28rem;
+  --container-lg: 32rem;
+  --container-page: 1328px;
+  --container-footer: 1300px;
+  --radius: .625rem; /* shadcn --radius */
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-DEFAULT: .25rem;
+  --radius-popup: 15px;
+  --radius-full: calc(infinity * 1px);
+  --shadow-xs: 0 1px 2px 0 #0000000d;
+  --shadow-sm: 0 1px 3px 0 #0000001a,0 1px 2px -1px #0000001a;
+  --shadow-md: null;
+  --shadow-lg: 0 10px 15px -3px #0000001a,0 4px 6px -4px #0000001a;
+  --shadow-xl: null;
+  --shadow-2xl: null;
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+  --breakpoint-2xl: 96rem;
+  --default-transition-duration: .15s;
+  --default-transition-timing-function: cubic-bezier(.4,0,.2,1);
+  --animate-spin: spin 1s linear infinite;
+  --animate-bounce: bounce 1s infinite;
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(-25%); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+    50% { transform: none; animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  }
+}
+
+/* Plus Jakarta Sans (SIL OFL 1.1) — fichiers identiques à ceux servis par l'original. */
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/fonts/plus-jakarta-sans-latin.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/fonts/plus-jakarta-sans-latin-ext.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Plus Jakarta Sans Fallback";
+  src: local("Arial");
+  ascent-override: 98.88%;
+  descent-override: 21.15%;
+  line-gap-override: 0%;
+  size-adjust: 104.98%;
+}
+
+/* TC Serif : instances de Fraunces (SIL OFL 1.1) calibrées sur Recoleta (docs/research/serif-calibration.json). */
+@font-face {
+  font-family: "TC Serif";
+  src: url("/fonts/tc-serif-400-latin.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  size-adjust: 93.9%;
+  ascent-override: 106.50%;
+  descent-override: 38.34%;
+  line-gap-override: 0%;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "TC Serif";
+  src: url("/fonts/tc-serif-400-latin-ext.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  size-adjust: 93.9%;
+  ascent-override: 106.50%;
+  descent-override: 38.34%;
+  line-gap-override: 0%;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "TC Serif";
+  src: url("/fonts/tc-serif-500-latin.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  size-adjust: 94.2%;
+  ascent-override: 106.16%;
+  descent-override: 38.22%;
+  line-gap-override: 0%;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "TC Serif";
+  src: url("/fonts/tc-serif-500-latin-ext.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  size-adjust: 94.2%;
+  ascent-override: 106.16%;
+  descent-override: 38.22%;
+  line-gap-override: 0%;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "TC Serif";
+  src: url("/fonts/tc-serif-600-latin.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  size-adjust: 95%;
+  ascent-override: 105.26%;
+  descent-override: 37.89%;
+  line-gap-override: 0%;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "TC Serif";
+  src: url("/fonts/tc-serif-600-latin-ext.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  size-adjust: 95%;
+  ascent-override: 105.26%;
+  descent-override: 37.89%;
+  line-gap-override: 0%;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "TC Serif";
+  src: url("/fonts/tc-serif-700-latin.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  size-adjust: 94.2%;
+  ascent-override: 106.16%;
+  descent-override: 38.22%;
+  line-gap-override: 0%;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "TC Serif";
+  src: url("/fonts/tc-serif-700-latin-ext.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  size-adjust: 94.2%;
+  ascent-override: 106.16%;
+  descent-override: 38.22%;
+  line-gap-override: 0%;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "TC Serif Fallback";
+  src: local("Arial");
+  ascent-override: 100.82%;
+  descent-override: 36.29%;
+  line-gap-override: 0%;
+  size-adjust: 99.19%;
+}

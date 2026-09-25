@@ -4,7 +4,8 @@
 import http from 'node:http';
 import { appendFileSync } from 'node:fs';
 import { launch, newContext, sleep } from './browser.mjs';
-import { installSticky, stats } from './sticky.mjs';
+import { installSticky, stats, stickyGet } from './sticky.mjs';
+globalThis.stickyGet = stickyGet;
 
 const browser = await launch();
 const ctx = await newContext(browser, { width: 1440, height: 900 });

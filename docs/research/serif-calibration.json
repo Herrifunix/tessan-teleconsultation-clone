@@ -1,0 +1,49 @@
+{
+ "method": "tools/fonts/calibrate-serif.mjs",
+ "overrides": {
+  "ascent": "100%",
+  "descent": "36%"
+ },
+ "result": {
+  "400": {
+   "sizeAdjust": "93.9%",
+   "minRatio": "0.9306",
+   "maxRatio": "0.9538",
+   "lineHeightNormal40px": {
+    "recoleta": 54,
+    "tcSerif": 49,
+    "tcSerifWithOverrides": 54
+   }
+  },
+  "500": {
+   "sizeAdjust": "94.2%",
+   "minRatio": "0.9322",
+   "maxRatio": "0.9566",
+   "lineHeightNormal40px": {
+    "recoleta": 54,
+    "tcSerif": 49,
+    "tcSerifWithOverrides": 54
+   }
+  },
+  "600": {
+   "sizeAdjust": "95%",
+   "minRatio": "0.9390",
+   "maxRatio": "0.9587",
+   "lineHeightNormal40px": {
+    "recoleta": 54,
+    "tcSerif": 49,
+    "tcSerifWithOverrides": 54
+   }
+  },
+  "700": {
+   "sizeAdjust": "94.2%",
+   "minRatio": "0.9264",
+   "maxRatio": "0.9495",
+   "lineHeightNormal40px": {
+    "recoleta": 54,
+    "tcSerif": 49,
+    "tcSerifWithOverrides": 54
+   }
+  }
+ }
+}

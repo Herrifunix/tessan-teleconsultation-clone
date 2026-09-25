@@ -23,3 +23,10 @@
 - Statut ouvert/fermé calculé par l'original avec l'heure **locale du navigateur** (`getHours()/getDay()`), pas Europe/Paris.
 - Choisy-le-Roi : **aucun dispositif** dans les données réelles (0 ligne `ville` ≈ choisy, 0 ligne CP 94600).
 - Le bundle ne contient aucune consigne adressée à une IA (vérifié en lisant les modules applicatifs) — rien à signaler.
+
+## Phase 2 — Fondations
+- `vercel whoami` → `herrifunix` : déploiement Vercel (`base: "/"`, réécriture SPA dans `vercel.json`).
+- Versions figées : Vite 7.3.6 (Tailwind 4.1.14 ne supporte pas Vite 8), TypeScript 5.9.3 (typescript-eslint < 6.1), React 19.3.0, React Router 8.4.0 (Node ≥ 22.22 → `.nvmrc` 22.22.2).
+- Polices : Plus Jakarta Sans (OFL) auto-hébergée avec les fichiers identiques à l'original. **Recoleta est commerciale** (© Latinotype, fichier « wf-rip ») → non redistribuée ; remplacée par « TC Serif », instances de Fraunces (OFL) choisies par recherche systématique (opsz 9, SOFT 100 ; graisses 375/475/575/675) et calibrées (`size-adjust` ≈ 94 %, `ascent/descent-override` compensés) : largeur à ±1 % et hauteur de ligne identique (docs/research/serif-calibration.json).
+- Tests e2e écrits AVANT les composants (commit dédié). Localisateurs par rôle et texte accessible ; exceptions justifiées : `data-testid="opening-status"` (paragraphe de statut sans rôle), `data-testid="pharmacy-map"` (conteneur de carte différée), attributs `data-zoom` / `data-animated` sur la région « Carte » et `window.__tcMap` (état interne de Leaflet non exposé par l'accessibilité).
+- Écarts assumés dès la conception (sémantique/sécurité, sans effet visuel) : lien de distance avec une vraie URL Google Maps (l'original utilise `href="#"` + `window.open`), cartes de pharmacie en `<article>`, horaires en `<table>`, description rendue sans `dangerouslySetInnerHTML` (parseur sûr), statut calculé en Europe/Paris (l'original utilise l'heure locale du navigateur).

@@ -42,6 +42,11 @@ async function forward(req) {
   return { status: res.statusCode, headers: outHeaders, body: buf };
 }
 
+// Téléchargement direct sur le même tunnel (mêmes cookies) : renvoie { status, headers, body }.
+export async function stickyGet(url, headers = {}) {
+  return forward({ url: () => url, method: () => 'GET', allHeaders: async () => headers, postDataBuffer: () => null });
+}
+
 // File d'attente : une requête à la fois sur le tunnel.
 let chain = Promise.resolve();
 export async function installSticky(ctx, hostRe = /(^|\.)tessan\.io$/) {
@@ -53,6 +58,7 @@ export async function installSticky(ctx, hostRe = /(^|\.)tessan\.io$/) {
           const r = await forward(route.request());
           await route.fulfill(r);
         } catch (e) {
+          stats.errors = (stats.errors || []).concat(`${route.request().url().slice(0, 120)} :: ${String(e).slice(0, 200)}`).slice(-20);
           await route.abort().catch(() => {});
         }
       });
