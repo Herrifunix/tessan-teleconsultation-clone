@@ -49,12 +49,24 @@ export function normalize(r: LocationRow, x?: Extras): Pharmacy {
 
 let cache: Promise<Pharmacy[]> | null = null;
 /** Charge l'échantillon (équivalent de la requête Supabase paginée de l'original). */
+/** Requête JSON avec 2 nouvelles tentatives (0,5 s puis 1 s) sur erreur réseau ou 5xx transitoire. */
+async function fetchJson<T>(url: string, attempts = 3): Promise<T> {
+  for (let i = 0; ; i++) {
+    let r: Response | null = null;
+    try {
+      r = await fetch(url);
+    } catch (e) {
+      if (i >= attempts - 1) throw e; // erreur réseau : nouvelle tentative
+    }
+    if (r?.ok) return (await r.json()) as T;
+    if (r && (r.status < 500 || i >= attempts - 1)) throw new Error(`HTTP ${r.status}`);
+    await new Promise((res) => setTimeout(res, 500 * (i + 1)));
+  }
+}
+
 export function loadPharmacies(): Promise<Pharmacy[]> {
-  cache ??= Promise.all([fetch(locationsUrl), fetch(extrasUrl)])
-    .then(async ([a, b]) => {
-      if (!a.ok || !b.ok) throw new Error('Données indisponibles');
-      const rows = (await a.json()) as LocationRow[];
-      const extras = (await b.json()) as Record<string, Extras>;
+  cache ??= Promise.all([fetchJson<LocationRow[]>(locationsUrl), fetchJson<Record<string, Extras>>(extrasUrl)])
+    .then(([rows, extras]) => {
       return rows
         .filter((r) => r.statut === 'Open' || r.statut == null)
         .map((r) => normalize(r, extras[r.code_magasin]));

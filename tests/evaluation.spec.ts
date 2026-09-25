@@ -239,3 +239,15 @@ test.describe('cookies (évaluation n° 2)', () => {
     await expect(dialog.getByRole('switch', { name: 'Activer Fonctionnelle' })).not.toBeChecked();
   });
 });
+
+test('données : une erreur 502 transitoire sur le fichier de points de vente est rattrapée', async ({ page }) => {
+  await dismissCookies(page);
+  let failed = 0;
+  await page.route(/\/assets\/locations-[^/]+\.json$/, async (route) => {
+    if (failed++ === 0) return route.fulfill({ status: 502, body: 'Bad Gateway' });
+    return route.fallback();
+  });
+  await page.goto(URLS.nice);
+  await expect(page.getByRole('heading', { name: '5 dispositifs de téléconsultation Tessan autour de vous' })).toBeVisible();
+  expect(failed).toBeGreaterThanOrEqual(2);
+});
